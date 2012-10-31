@@ -12,6 +12,7 @@
 <!--#include virtual="/includes/connection.asp"-->
 <!--#include virtual="/includes/displayFormat.asp"-->
 <!--#include virtual="/includes/generator4OSA-Courses.asp"-->
+
 <script language="JavaScript" type="text/javascript" src="/js/tableH.js"></script>
 <script language="JavaScript" type="text/javascript" src="/js/courses.js"></script>
 <script type="text/javascript" src="/js/cities_combo.js"></script>
@@ -339,8 +340,8 @@ else if (ns6||ie4) ld.display="none";
 					  
 					  'Function For Displaying Question Format'
 					 
-					'Set tsoObject = fsoObject.OpenTextFile("C:\ITILstudy\dateslocation\ITILstudy-Classes-ITILstudy-Training-OSA-"&Session("CountryOrigin")&".txt")
-					Set tsoObject = fsoObject.OpenTextFile("E:\vhosts\ITILstudy.com\httpdocs\dateslocation\ITILstudy-Classes-ITILstudy-Training-OSA-"&Session("CountryOrigin")&".txt")
+					Set tsoObject = fsoObject.OpenTextFile("C:\GitHub\ITILstudy\dateslocation\ITILstudy-Classes-ITILstudy-Training-OSA-"&Session("CountryOrigin")&".txt")
+					'Set tsoObject = fsoObject.OpenTextFile("E:\vhosts\ITILstudy.com\httpdocs\dateslocation\ITILstudy-Classes-ITILstudy-Training-OSA-"&Session("CountryOrigin")&".txt")
  
 					  StrMain = tsoObject.ReadAll
 					  

@@ -616,7 +616,7 @@
                 <tr><td colspan="4" style="text-align:center; width:280px;"><br /><input type="checkbox" name="check" id="check" />&nbsp;&nbsp;<span style=" position:relative; top:-2px;">I have read and agree to the <a href="/termsAndConditions.asp" target="_blank">Terms & Conditions </a></span><br/><span class="Required"><% = Errorcheck %></span></td></tr>
   
                 <input type="hidden" name="CourseType" value="<% = rqCourseType %>" />
-                <input type="hidden" name="ClassType" value="<% = rqClasstype %>" />
+                <input type="hidden" Id="ClassType"  name="ClassType" value="<% = rqClasstype %>" />
                   <input type="hidden" name="step1" value="I accept">
                   <input type="hidden" name="usInstEmailId" value="<% = rqUsInstEmailId %>" />
                   <td colspan="4"><br />

@@ -2,9 +2,10 @@
 
 function findEmail()
 
-{ 
-var cityname=document.getElementById('Disountvoucher').value;
+{
 
+var cityname=document.getElementById('Disountvoucher').value;
+var ClassType = document.getElementById('ClassType').value;
 document.getElementById('txtHint1').style.display="inline";
 xmlHttp=GetXmlHttpObject();
 if (xmlHttp==null)
@@ -13,7 +14,7 @@ if (xmlHttp==null)
   return;
   } 
 var url="getDiscount.asp";
-url=url+"?HRID="+cityname;
+url = url + "?HRID=" + cityname + "&ClassType=" + ClassType;
 xmlHttp.onreadystatechange=stateChanged;
 xmlHttp.open("GET",url,true);
 xmlHttp.send(null);
