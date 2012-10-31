@@ -1,0 +1,39 @@
+<BR><BR><table width="880" border="0" cellspacing="0" cellpadding="0"><tr><td width="10px"></td><td colspan="2"><font style="font-family:Arial, Helvetica, sans-serif; color:#2F95D3; font-size: 13px; font-weight: bold; font-style: normal;">Question No: 2</font><BR><BR></td></tr><tr><td width="10px"></td><td colspan="2"><font face="Arial,sans-serif" size="3"><b>Scenario:</b> A nuclear  power company is faced with various levels of legislative compliance. This  requires the company to have a robust business continuity plan that must be regularly  tested and updated if any issues are identified.
+<p>The power  generation products of the company must be managed very carefully as  disruptions in production or quality can pose risks to public safety. The  business continuity (BC) manager is therefore concerned about the ongoing  assurance that risks are managed appropriately, to ensure that the company can  continue operating without disruption to its critical business services which  were identified in the business impact analysis.</p>
+<p>The IT service  continuity (ITSC) manager has been working in the field of ITSC for the last 15  years.<br>
+  Within this  company, the processes and procedures are all clearly defined, organized, and maintained.  When BC or ITSC testing is carried out, it is normal for the tests to work well  and for the staff involved to be able to perform their role. The BC manager and  ITSC manager are not only old friends, but also work well together.</p></font><BR><BR></td></tr><tr><td colspan="3">&nbsp;</td></tr><tr><td width="10px"></td><td colspan="2"><font face="Arial,sans-serif" size="3"><b>Question:</b> Which one of the following options BEST represents your contribution as the continual service improvement (CSI) manager to business continuity management (BCM) and IT service continuity management (ITSCM) in this company?</font><BR><BR></td></tr><tr><td colspan="3">&nbsp;</td></tr><tr><td width=" ">&nbsp;</td><td width="7%"><font style="font-family:Arial, Helvetica, sans-serif; color:#2F95D3; font-size: 13px; font-weight: bold; font-style: normal;">Choice 1 </font></td><td><font face="Arial,sans-serif" size="3">CSI can complement these activities and therefore help to deliver business benefit.
+CSI can assess the results of any risk management activities and review BCM or ITSCM test results to identify potential service improvements (such as risk mitigation measures). This will also serve to enhance the ongoing assurance that the critical business services are covered in the event of a disaster.
+</td></tr><tr><td colspan="3">&nbsp;</font></td></tr><tr><td width=" ">&nbsp;</td><td width=" "><font style="font-family:Arial, Helvetica, sans-serif; color:#2F95D3; font-size: 13px; font-weight: bold; font-style: normal;">Choice 2 </font></td><td><font face="Arial,sans-serif" size="3"> You should assess the relationship between the ITSC manager and the BC manager, as personal relationships could have a detrimental effect on the quality of work. You should also check whether risk management activities are conducted during the design phase of the ITIL service lifecycle, as the managers should not wait until the critical business services are live before reviewing them.</td></tr><tr><td colspan="3">&nbsp;</font></td></tr><tr><td width=" ">&nbsp;</td><td width=" "><font style="font-family:Arial, Helvetica, sans-serif; color:#2F95D3; font-size: 13px; font-weight: bold; font-style: normal;">Choice 3 </font></td><td><font face="Arial,sans-serif" size="3"> You can contribute most effectively by participating in the annual ITSCM process review that the 
+ITSC manager has developed, and providing feedback on any improvement efforts identified. You should produce a complementary report that identifies any errors, omissions, incompleteness and which indicates where you believe there are further improvement opportunities for BCM. This will assure the business that it is adequately covered in the event of a disaster.
+</td></tr><tr><td colspan="3">&nbsp;</font></td></tr><tr><td width=" ">&nbsp;</td><td width=" "><font style="font-family:Arial, Helvetica, sans-serif; color:#2F95D3; font-size: 13px; font-weight: bold; font-style: normal;">Choice 4 </font></td><td><font face="Arial,sans-serif" size="3">You need to assess the current procedures that the ITSC manager has already developed and is using. Also, you can positively contribute by providing baselines and benchmarking information in order to identify potential gaps and omissions in the plans, in association with industry best practice. 
+The ITSC manager will then decide if the information provided by CSI is relevant or not.
+</font></td></tr><td colspan="3">&nbsp;</td></tr><tr><td>&nbsp;</td</tr><tr><td width=" ">&nbsp;</td><td width=" " colspan="2"><font style="font-family:Arial, Helvetica, sans-serif; color:#2F95D3; font-size: 13px; font-weight: bold; font-style: normal;">Correct Choice : A</font></td> </tr><tr><td colspan="3">&nbsp;</td></tr><tr><td width="10px"></td><td colspan="2"><font style="font-family:Arial, Helvetica, sans-serif; color:#2F95D3; font-size: 13px; font-weight: bold; font-style: normal;">Justification : </font><BR><BR></td></tr><tr><td width=" ">&nbsp;</td><td valign="top" colspan="2"><font face="Arial,sans-serif" size="3"><table border="1" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="154" valign="top"><p><strong><em>QUESTION</em></strong></p></td>
+    <td width="45" valign="top"><p><strong>CHOICE</strong></p></td>
+    <td width="402" valign="top"><p align="center"><strong>RATIONALE</strong></p></td>
+  </tr>
+  <tr>
+    <td width="154" valign="top"><p><strong><em>MOST CORRECT (5)</em></strong></p></td>
+    <td width="45" valign="top"><p>A</p></td>
+    <td width="402" valign="top"><p>This is the correct answer. IT service continuity management (ITSCM) is    largely about mitigating potential risk which, from a CSI perspective, should    be continually assessed. A well-functioning business continuity management    (BCM) plan alone does not ensure that additional risks which did not exist    previously might not now be present. CSI must have a role to help ensure that    the BCM plan is integrated with the ITSCM process. CSI can be crucial in this    scenario to areas such as identification of risks, probability of occurrence,    mitigating actions, roles and responsibilities, etc. </p></td>
+  </tr>
+  <tr>
+    <td width="154" valign="top"><p><strong><em>SECOND BEST (3)</em></strong></p></td>
+    <td width="45" valign="top"><p>D</p></td>
+    <td width="402" valign="top"><p>This is partially correct. The provision of baselines and benchmarking    information is, of course, correct but it is incomplete. Simply providing    baselines and information on industry best practice serves no purpose. In    this situation, the CSI manager is not adding value. </p></td>
+  </tr>
+  <tr>
+    <td width="154" valign="top"><p><strong><em>THIRD BEST (1)</em></strong></p></td>
+    <td width="45" valign="top"><p>C</p></td>
+    <td width="402" valign="top"><p>This answer is only partially correct. This is a rather weak answer as    the contribution is limited to reports. Of course, someone must review    documents but this is not really the only contribution that CSI can make to    the process.<br>
+      The CSI manager should provide data, analysis, and recommendations. </p></td>
+  </tr>
+  <tr>
+    <td width="154" valign="top"><p><strong><em>DISTRACTER (0)</em></strong></p></td>
+    <td width="45" valign="top"><p>B</p></td>
+    <td width="402" valign="top"><p>This is the distracter answer. The answer serves to distract the    candidate by questioning the relationship of the business continuity manager    and the IT service continuity manager. Simply pointing areas for improvement    to show where people fail is not a significant contribution. </p></td>
+  </tr>
+</table>
+
+</td></tr><tr><td colspan="3">&nbsp;</font></td></tr>

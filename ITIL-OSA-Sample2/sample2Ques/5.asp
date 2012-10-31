@@ -1,0 +1,28 @@
+<!--#include virtual="/ITIL-OSA-Sample2/sample2Ques/validOSA.asp"--><BR><BR><form  method="post" action="./index.asp"><div class="overflowTest"><table width="880" border="0" cellspacing="0" cellpadding="0"><tr><td width="10px"></td><td colspan="2"><font face="Arial,sans-serif" size="3"><b>Scenario:</b> A large  insurance company has grown rapidly in the past several years through a series  of acquisitions. The acquired companies continue to operate fairly autonomously,  each with its own IT Department; however, several corporate systems, such as  e-mail and an Enterprise Resource Planning (ERP) system, have been deployed. A  new corporate Document Management System (DMS) is in the process of being  deployed.
+<p>A centralized  Service Desk provides a single point of contact for managing Incidents and the  separate IT Departments each support their own systems and also provide second  and third-line support for the corporate systems to their respective user  communities. A common set of high-level Incident Management procedures are  being followed, although each of the IT Departments is still using its own logging  and management system.</p>
+<p>The Chief  Executive Officer (CEO) oversees a Chief Information Officer (CIO) Group comprised  of the CIO from each of the separate IT Departments. The CEO has challenged  this Group to identify opportunities to reduce costs, share resources, and  consolidate operational activities. The CEO is also frustrated by recent  Problems deploying the new DMS and significant outages affecting the ERP System.  To date, a lack of data gathering standards have made it difficult to  investigate and analyse these Problems. Because both of these systems are  critical to the company’s overall success, the CIO Group needs to quickly  determine why these Problems are occurring and determine ways of minimizing the  impact.</p>
+Discussion is  under way to determine how to make best use of existing resources –  particularly the Technical and Application Management resources – to deal with  these issues. Each of the IT Departments is experiencing staffing shortages and  most CIOs indicate that their Technical and Application Management functions  are currently over-utilized.<br></font><BR><BR></td></tr><tr><td colspan="3">&nbsp;</td></tr><tr><td width="10px"></td><td colspan="2"><font face="Arial,sans-serif" size="3"><b>Question:</b> Which one of the following options is the BEST approach to resolve these challenges and support the CEO’s goals?</font><BR><BR></td></tr><tr><td colspan="3">&nbsp;</td></tr><tr><td width=" ">&nbsp;</td><td width="7%"><font face="Arial,sans-serif" size="3">1 &nbsp;&nbsp; <INPUT TYPE="radio" NAME="SelectedChoice" VALUE=A></font></td><td><font face="Arial,sans-serif" size="3"><ul>
+  <li>Expand the scope of the centralized Service Desk to  include all services</li>
+  <li>Ensure the Service Desk is logging all Incidents and  Problems</li>
+  <li>Provide training and have the Service Desk update a  Known Error Database (KEDB) as Incidents are resolved</li>
+  <li>Provide users with self-service access to the KEDB</li>
+  <li>Ensure Technical and Application Management resources  are involved in Continual Service Improvement activities</li>
+</ul></td></tr><tr><td colspan="3">&nbsp;</font></td></tr><tr><td width=" ">&nbsp;</td><td width=" "><font face="Arial,sans-serif" size="3">2 &nbsp;&nbsp; <INPUT TYPE="radio" NAME="SelectedChoice" VALUE=B></font></td><td><font face="Arial,sans-serif" size="3"> <ul>
+  <li>Delegate routine maintenance, back up, restore and  monitoring activities to IT Operations Management</li>
+  <li>Initiate a project to define and deploy a common set  of Incident and Problem categories</li>
+  <li>Establish virtual teams to handle Problems; using  specialists as needed</li>
+  <li>Use Technical and Application Management resources to  populate and maintain the KEDB</li>
+  <li>Ensure Technical and Application Management resources  are engaged early in the service lifecycle</li>
+</ul></td></tr><tr><td colspan="3">&nbsp;</font></td></tr><tr><td width=" ">&nbsp;</td><td width=" "><font face="Arial,sans-serif" size="3">3 &nbsp;&nbsp; <INPUT TYPE="radio" NAME="SelectedChoice" VALUE=C></font></td><td><font face="Arial,sans-serif" size="3"> <ul>
+  <li>Delegate backup, restore and routine maintenance  activities to IT Operations Management</li>
+  <li>Delegate monitoring activities to the centralized  Service Desk</li>
+  <li>Use Technical and Application Management resources to  populate and maintain the KEDB</li>
+  <li>Provide users with self-service access to the KEDB</li>
+  <li>Ensure Technical and Application Management resources are  involved in Continual Service Improvement activities</li>
+</ul></td></tr><tr><td colspan="3">&nbsp;</font></td></tr><tr><td width=" ">&nbsp;</td><td width=" "><font face="Arial,sans-serif" size="3">4 &nbsp;&nbsp; <INPUT TYPE="radio" NAME="SelectedChoice" VALUE=D></font></td><td><font face="Arial,sans-serif" size="3"><ul>
+  <li>Delegate monitoring activities to IT Operations  Management</li>
+  <li>Initiate a project to define and deploy a common set  of Incident and Problem categories</li>
+  <li>Ensure the Service Desk is logging all Incidents and  Problems</li>
+  <li>Establish a corporate Problem Management team and hire  or transfer individuals skilled in problem investigation and diagnosis  techniques</li>
+  <li>Use Technical and Application Management resources to  populate and maintain the KEDB </li>
+</ul></td></tr><tr><td colspan="3">&nbsp;</font></td></tr>

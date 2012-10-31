@@ -1,0 +1,246 @@
+
+
+body, .zpStandard {
+  font-family:verdana, arial, times,sans-serif;
+  font-size:12px;
+  color:#000000;
+  background-color:white;
+  margin-right:auto;
+  margin-top:0px;
+}
+
+body {
+  
+  -moz-box-sizing: border-box;
+}
+
+.topMenuHeader {
+  border-top: 20px solid #FFFFFF;
+  border-bottom: 3px solid #AFAFB8;
+  width:778px;
+  height:55px;
+}
+
+.logo {
+  float:left;
+  margin-top:5px;
+  margin-left:10px;
+  margin-bottom:5px;
+}
+
+.phoneNumber {
+  float: right;
+  color:#ff3333;
+  font-weight: bold;
+  margin-right:8px;
+}
+
+.menu {
+  margin-top:10px;
+  float:right;
+}
+
+.pageMain {
+  margin-top:0px;
+  width:778px;
+  margin-bottom:1px;
+}
+
+.btn1 {
+  float:right;
+  margin-top:30px;
+  margin-bottom:-3px;
+  margin-right:0px;
+  margin-left: auto;
+}
+
+.btn2 {
+  float:right;
+  margin-top:30px;
+  margin-bottom:-3px;
+  margin-right:0px;
+}
+
+.maroonseparator {
+  background-image: url(../images/maroonline.gif);
+  background-repeat: no-repeat;
+  background-position: center center; 
+}
+
+/* Static */
+.leftSide-static {
+  float:left;
+  width:180px;
+  height:auto;
+  border-right:1px solid #6F8DB9;
+  border-bottom:1px solid #6F8DB9;
+}
+
+.rightSide-static {
+  margin-left:1px;
+  float:left;
+  clear:right;
+  width:580px;
+  height:auto;
+}
+
+.leftSide, .rightSide {
+  position:absolute;
+  top:85px;
+}
+
+.leftSide {
+  float:left;
+  width:180px;
+  left:0px;
+}
+
+.rightSide {
+  left:175px;
+}
+
+.leftBGMenu {
+  border-top:1px solid #EBEBEB;
+  float:left;
+  width:180px;
+  height:29px;
+}
+
+.leftMenu {
+  float:left;
+  margin-top:7px;
+  margin-left:10px;
+}
+
+.leftBGTab {
+  background: #EBEBEB;
+  width:180px;
+  font-family:verdana, arial, times,sans-serif;
+  font-size:14px;
+  color:#003066;
+}
+
+.leftTab {
+  text-align: center;
+  font-family:verdana, arial, times,sans-serif;
+  font-size:14px;
+}
+
+.pageImage {
+  background: url(../images/zapatec.jpg) no-repeat left top; 
+  height: 50px;   
+  margin-left:0;
+}
+
+.frameContent {
+  float:left;
+  margin-bottom:10px;
+  width:100%;
+}
+
+.pageContent {
+  float:left;
+  margin-bottom:10px;
+  padding:10px 10px 10px 20px;
+  width:100%;
+}
+
+.footer {
+  margin-top:-12px;
+  border-top: 1px solid #6F8DB9;
+  width:778px;
+  border-bottom:10px;
+  padding:5px 5px 5px 5px;
+  float:left;
+}
+
+/* ----------------- --------------------------------*/
+.content {
+  font-family: verdana, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #000000;
+  line-height: 16px;
+}
+
+.content-staff {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  color: #000000;
+}
+
+.lnkblue {
+  font-family: verdana, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #003066;
+  text-decoration: none;
+}
+
+.lnkblue:hover {
+  font-family: verdana, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #003066;
+  text-decoration: underline;
+}
+
+.lnksubpage {
+  font-family: verdana, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  color: #000000;
+  text-decoration: none;
+}
+
+.lnksubpage:hover {
+  font-family: verdana, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #000000;
+  text-decoration: none;
+}
+
+.lnksubpage:active {
+  font-family: verdana, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #000000;
+  text-decoration: none;
+}
+
+.discountPrice,  .promo {
+  color:#ff6600;
+}
+
+.promo {
+  padding-left:2em;
+  padding-right:2em;
+  padding-bottom:1em;
+  font-family: verdana, Arial, Helvetica, sans-serif;
+  font-size:9pt;
+  font-weight:bold;
+}
+
+.discountPrice {
+  font-weight:bold;
+}
+
+.promoButton {
+  background: url(../images/special.gif) repeat left top;
+  padding:.3em 1em .3em 1em;
+}
+
+.promoBox {
+  background-color: #ddf0fe;
+  padding:1em;
+  border:solid 2px  #cccccc;
+}
+
+.zpSiteCustomerLogo {
+  text-align: center;
+}
+
+.zpImageSpace{padding-right: 5px;}
+.zpPricingBg {background: url(../images/pricing-bg.jpg) no-repeat top right; height: 111px;}
+.zpLicenseText{ width: 500px; padding-right:10px;}
+.zpPaddingLeft {padding-left: 50px;}

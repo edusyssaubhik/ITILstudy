@@ -1,0 +1,40 @@
+BODY
+{
+}
+.month
+{
+    BACKGROUND-COLOR: silver;
+    COLOR: black;
+    FONT-FAMILY: Arial;
+    FONT-WEIGHT: bolder
+}
+.weekday
+{
+    BACKGROUND-COLOR: white;
+    COLOR: black;
+    FONT-FAMILY: Arial;
+    FONT-WEIGHT: bolder
+}
+.eventLabel
+{
+    COLOR: black;
+    FONT-FAMILY: Arial;
+    FONT-WEIGHT: bolder;
+    TEXT-ALIGN: right
+}
+.eventText
+{
+    COLOR: black
+}
+.selectedDay
+{
+    BACKGROUND-COLOR: yellow
+}
+.day
+{
+    BACKGROUND-COLOR: white
+}
+.notaDay
+{
+    BACKGROUND-COLOR: silver
+}

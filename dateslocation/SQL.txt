@@ -1,0 +1,11 @@
+=========== generate-courses ================
+
+
+
+USE [itilstudy]
+
+
+CREATE TABLE [dbo].[generate_course](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[date] [datetime] NULL,
+	[country] [varchar](100) NULL) 

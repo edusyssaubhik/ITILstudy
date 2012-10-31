@@ -1,0 +1,103 @@
+/*faqs*/
+
+.expanded, .collapsed {
+font-family: Arial, Helvetica, sans-serif;
+	background-repeat: repeat-x;
+	background-position: left center;
+	height: 29px;
+	color: #034963!important;		/*have to override what's happening in the rico script*/
+	font-weight: bold!important;
+	cursor: pointer;
+	padding: 0 0 0 26px;
+	line-height: 29px;
+	border-bottom: 1px solid #b9d0e2;
+}
+
+/*#mainContent.faqGroup h2 {
+	font-size: 140%;
+	color: #3D6882;
+	letter-spacing: -1px;
+	margin: 12px 0;
+	line-height: 18px;
+	padding: 0;
+	font-weight: bold;
+	font-style: normal;
+	background: none;
+	width: auto;
+	height: auto;
+	text-transform: none;
+}*/
+
+#mainContent.faqGroup .collapsed, #mainContent.faqGroup .expanded {
+font-family: Arial, Helvetica, sans-serif;
+	background: url(/images/buttons/bg_plus.gif) no-repeat 0px 7px;
+	background-color: #FFFFFF !important;
+	vertical-align: middle;
+	border: none !important;
+	padding-left: 18px;
+	vertical-align: middle;
+	width: 625px;
+}
+
+#mainContent.faqGroup .collapsed h3, #mainContent.faqGroup .expanded h3 {
+font-family: Arial, Helvetica, sans-serif;
+	line-height: 22px;
+	height: 22px;
+	width: 95%;
+	vertical-align: middle;
+	color: #000000; /* font color */
+	font-weight: normal;
+}
+
+#mainContent .expanded {
+	background: #fbf8f1 url(/images/buttons/bg_minus.gif) no-repeat 0px 7px !important;
+}
+
+#mainContent.faqGroup .expanded h3 {
+	color: #000000; /* font color when it expanded */
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.answer, .panel {
+	border: none !important;
+}
+
+.outerFAQContainer {
+	background: url(/images/bg_faq_top.gif) no-repeat left top;
+	padding-top: 6px;
+}
+
+.outerFAQContainerBottom {
+	font-size: 1px;
+	height: 6px;
+	overflow: hidden;
+	background: url(/images/bg_faq_bottom.gif) no-repeat left top;
+}
+
+
+.innerFAQContainer {
+	width: 608px;
+	background: url(/images/bg_faq.gif) repeat-y left;
+	padding: 4pt 9px 9px 9px;
+}
+
+.faqItemContent {
+	margin-left: 20px;
+}
+h3, .sub_section_headline {
+	font-size: 100%;
+	font-weight: bold;
+	color: black;
+	margin: 0 0 12px 0;
+}
+#mainContent.faqGroup .collapsed h3, #mainContent.faqGroup .expanded h3 {
+				line-height: 14px !important;
+				padding-top: 3px;
+				}
+				#mainContent.faqGroup .expanded, #mainContent.faqGroup .collapsed {
+				height: 34px;
+				}
+/*end faqs*/
+
+
+

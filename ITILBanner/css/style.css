@@ -1,0 +1,180 @@
+@charset "utf-8";
+/* CSS Document */
+
+.banner-main {
+	height: 300px;
+	width: 883px;
+	margin: 100px auto;
+	font-family: arial;
+}
+#banner-navigation {
+	position: absolute;
+	width: 648px;
+	height: 32px;
+	z-index: 3;
+	margin-top: 260px;
+	margin-left: 12px;
+	overflow: visible;
+}
+#banner-contents {
+	position: absolute;
+	width: 671px;
+	height: 300px;
+	z-index: 2;
+	background: #f2f2f2;
+}
+#banner-contents .slide {
+	height: 300px;
+	width: 671px;
+	background-repeat: no-repeat;
+	background-position: left top;
+	display: none;
+	margin: 0;
+	position: absolute;
+}
+#banner-body {
+	position: absolute;
+	width: 340px;
+	height: 236px;
+	z-index: 2;
+	margin-top: 10px;
+	margin-left: 10px;
+	background-image: url(../images/bg-banner-body.png);
+	background-repeat: repeat;
+	border-radius: 5px;
+}
+#banner-list {
+	margin: 5px 0px 0px 0px;
+	padding-left: 25px;
+	padding-right: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #fff;
+}
+#banner-list a, #banner-free-list a {
+	text-decoration: none;
+	font-style: italic;
+	color: #0CF;
+}
+#banner-list a:hover, #banner-free-list a:hover {
+	text-decoration: none;
+	color: #09C;
+}
+#banner-free-list a {
+	text-decoration: none;
+	font-style: italic;
+	color: #333333;
+}
+#banner-free-list a:hover {
+	text-decoration: none;
+	color: #0CC;
+}
+#banner-list li {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+#banner-list ul {
+	margin: 0;
+	padding-left: 15px;
+	padding-right: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #fff;
+}
+#banner-list li {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+#banner-list ul li {
+	padding-top: 0px;
+	list-style-position: outside;
+	list-style-image: url(../images/tick-mark.png);
+}
+#banner-body span {
+	color: #fff;
+	padding-top: 20px;
+	display: block;
+	font-family: Arial, Helvetica, sans-serif;
+	padding-left: 20px;
+}
+#banner-free {
+	position: absolute;
+	width: 212px;
+	height: 300px;
+	z-index: 1;
+	margin-left: 671px;
+	background: #09c;
+}
+.banner-navi-button {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	color: #666;
+	width: 160px;
+	height: 25px;
+	background-image: url(../images/bg-banner.png);
+	background-repeat: repeat-x;
+	text-align: center;
+	display: inline-block;
+	float: left;
+	padding-top: 5px;
+	border:solid 1px #ccc;
+	background-position: left center;
+}
+.banner-navi-button:first-child {
+	border-radius: 5px 0 0 5px;
+}
+.banner-navi-button:last-child {
+	border-radius: 0 5px 5px 0;
+}
+.banner-navi-button:hover, .banner-navi-button.banner-selected {
+	background-image: url(../images/bg-banner.png);
+	cursor: pointer;
+	height: 25px;
+	background-repeat: repeat-x;
+	color: #fff;
+	border: solid 1px #006600;
+	background-position: left top;
+}
+#banner-free-header {
+	position: absolute;
+	width: 192px;
+	height: 25px;
+	z-index: 1;
+	background-color: #06C;
+	background-image: url(../images/bg-banner.png);
+	background-repeat: repeat-x;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #FFF;
+	font-weight: bold;
+	padding-top: 5px;
+	padding-left: 20px;
+	border-width: 1px;
+	border-style: solid;
+	border-color:#069;
+	border-width:1px 0 1px 0;
+
+	
+	background-position: left bottom;
+}
+#banner-free-body {
+	position: absolute;
+	width: 212px;
+	height: 270px;
+	z-index: 2;
+	margin-top: 30px;
+}
+#banner-free-list {
+	margin:5px 0 0 0;
+	padding-left: 25px;
+	padding-right: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #FFF;
+}
+#banner-free-list li {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	list-style-position: outside;
+	list-style-image: url(../images/tick-mark.png);
+}

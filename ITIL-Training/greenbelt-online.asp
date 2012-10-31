@@ -1,0 +1,1 @@
+<% response.Redirect("http://www.projstudy.com/PRINCE2-Training/greenbelt-online.asp")%>

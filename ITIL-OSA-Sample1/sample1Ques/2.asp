@@ -1,0 +1,30 @@
+<!--#include virtual="/ITIL-OSA-Sample1/sample1Ques/validOSA.asp"--><BR><BR><form  method="post" action="./index.asp"><div class="overflowTest"><table width="880" border="0" cellspacing="0" cellpadding="0"><tr><td width="10px"></td><td colspan="2"><font face="Arial,sans-serif" size="3"><b>Scenario:</b> In an effort  to reduce costs and avoid expanding its corporate Headquarters, a large company  has made the decision to launch a telecommuting programme. Participants in this  program will work at home using corporate laptops and will access corporate  systems via the Internet. Participants will commute to the corporate  Headquarters no more than once a month and will utilize designated work areas  that will be reserved in advance, much like a hotel room.
+<p>An initial  pilot of the programme is in the planning stage and will involve 100 senior  employees. No more than five employees per department may participate in the  programme and participants must have at least five years of service with the  Company. It is expected that in time the programme will be expanded  considerably and may grow to include thousands of employees.</p>
+<p>The corporate  Headquarters is comprised of three large buildings. Open work areas are  available in each of these buildings. Optimally, telecommuters will reserve a  work area in the building where the telecommuter’s Supervisor and team members  reside. However, telecommuters may at times have to walk from one building to  another to attend meetings, participate in training classes, and other activities.  Telecommuters will scan their corporate badge to gain access to the buildings.  They will proceed to the reserved cubicle and “check-in” using an online  reservation system called “TOffice.”</p>
+<p>You represent  the Service Desk and are participating on a team that is determining what  changes must be made to the Access Management process to accommodate this new  program. The Access Management process is working well and is based on ITIL  best practices. The organization adopted ITIL more than 10 years ago and its IT  Service Management practices in general are quite mature.</p>
+The team  working on this project includes representatives from Human Resources,  Information Security Management, and all of the Service Operation functions.  Following a revision of the new Information Security Policy and an initial  brainstorming session, the team is preparing to present a recommendation to  Management.</br></font><BR><BR></td></tr><tr><td colspan="3">&nbsp;</td></tr><tr><td width="10px"></td><td colspan="2"><font face="Arial,sans-serif" size="3"><b>Question:</b> Which one of the following options is the BEST set of Access Management-related activities that must be undertaken to accommodate the telecommuter programme?</font><BR><BR></td></tr><tr><td colspan="3">&nbsp;</td></tr><tr><td width=" ">&nbsp;</td><td width="7%"><font face="Arial,sans-serif" size="3">1 &nbsp;&nbsp; <INPUT TYPE="radio" NAME="SelectedChoice" VALUE=A></font></td><td><font face="Arial,sans-serif" size="3"><ul>
+  <li>Create a Service Request model for use to authorize or revoke  telecommuter status</li>
+  <li>Identify Managers authorized to approve telecommuter access requests</li>
+  <li>Identify any potential role conflicts and determine how they will be  resolved</li>
+  <li>Establish Access Monitoring and Control to ensure rights are being  properly used</li>
+  <li>Work with Incident Management to resolve incidents caused by incorrect  telecommuter access settings</li>
+</ul></td></tr><tr><td colspan="3">&nbsp;</font></td></tr><tr><td width=" ">&nbsp;</td><td width=" "><font face="Arial,sans-serif" size="3">2 &nbsp;&nbsp; <INPUT TYPE="radio" NAME="SelectedChoice" VALUE=B></font></td><td><font face="Arial,sans-serif" size="3"> <ul>
+  <li>Update the Information Security Policy to include programme rules and regulations</li>
+  <li>Add the telecommuter programme to the Service Catalogue and create  Service Level Agreements</li>
+  <li>Create a user profile for each employee participating in the  telecommuter pilot</li>
+  <li>Use a Request for Change to grant pilot participants access to the TOffice  application</li>
+  <li>Ensure Building Security is notified immediately when a telecommuter is  terminated</li>
+</ul></td></tr><tr><td colspan="3">&nbsp;</font></td></tr><tr><td width=" ">&nbsp;</td><td width=" "><font face="Arial,sans-serif" size="3">3 &nbsp;&nbsp; <INPUT TYPE="radio" NAME="SelectedChoice" VALUE=C></font></td><td><font face="Arial,sans-serif" size="3"> <ul>
+  <li>Create a Service Request model for use to authorize or revoke  telecommuter status</li>
+  <li>Create a telecommuter group and reflect associated rights in the  Directory of Services</li>
+  <li>Establish Access Monitoring and Control to ensure rights are being  properly used</li>
+  <li>Measure telecommuter access requests, instances of access granted and  related incidents</li>
+  <li>Work with Incident Management to resolve incidents caused by incorrect  telecommuter access settings</li>
+</ul></td></tr><tr><td colspan="3">&nbsp;</font></td></tr><tr><td width=" ">&nbsp;</td><td width=" "><font face="Arial,sans-serif" size="3">4 &nbsp;&nbsp; <INPUT TYPE="radio" NAME="SelectedChoice" VALUE=D></font></td><td><font face="Arial,sans-serif" size="3"><ul>
+  <li>Create a Service Request model for use to authorize or revoke  telecommuter status</li>
+  <li>Identify any potential role conflicts and determine how they will be  resolved</li>
+  <li>Use a Request for Change to grant pilot participants access to the  TOffice application</li>
+  <li>Use the Directory of Services to grant and manage TOffice access and  rights</li>
+  <li>Revoke access immediately when a telecommuter is terminated</li>
+</ul>
+</td></tr><tr><td colspan="3">&nbsp;</font></td></tr>

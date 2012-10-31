@@ -1,0 +1,913 @@
+/***********************************************/
+/* emx_nav_left.css                            */
+/* Use with template Halo_leftNav.html         */
+/***********************************************/
+
+/***********************************************/
+/* HTML tag styles                             */
+/***********************************************/
+body{
+	font-family:Verdana;
+	color: #333333;
+	line-height: 1.166;
+	position:relative;	
+	margin: 2px;	
+	/*padding: 0px;
+	background: url("grid_bg_trans.gif") fixed;*/
+}
+
+.ex {
+	font-family:Arial;
+
+}	
+	
+
+/******* hyperlink and anchor tag styles *******/
+
+a:link, a:visited{
+	color: #0000CD;
+	font-weight:600;
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+/************** header tag styles **************/
+
+h1{
+ font: bold 120% vardana;
+ color: #334d55;
+ margin: 0px;
+ padding: 0px;
+}
+
+h2{
+ font: bold 114% vardana;
+ color: #006699;
+ margin: 0px;
+ padding: 0px;
+}
+
+#h3{
+	font-family:Verdana;
+	font-size:10px;
+	color:#333333;
+	font-weight:100;
+	margin: 0px;
+	padding: 0px;
+}
+
+.h3{
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:20px;
+  font-weight:400;  
+  color:#00B0EC;  
+  }  
+
+h4{
+ font: 100% vardana;
+ color: #333333;
+ margin: 0px;
+ padding: 0px;
+}
+
+h5{
+ font: 100% vardana;
+ color: #334d55;
+ margin: 0px;
+ padding: 0px;
+}
+
+
+/*************** list tag styles ***************/
+
+ul{ 
+ padding-left:15px;
+ list-style:none;
+ list-style-position:outside; 
+}
+
+/*ul ul{
+ list-style-type: disc;
+}
+
+ul ul ul{
+ list-style-type: none;
+}*/
+
+/********* form and related tag styles *********/
+
+form {
+	margin: 0;
+	padding: 0;
+}
+
+label{
+ font: bold 1em vardana;
+ color: #334d55;
+}
+				
+input{
+font-family: vardana;
+}
+
+/***********************************************/
+/* Layout Divs                                 */
+/***********************************************/
+#pagecell1{
+	position:relative;
+	/*border-left:4px solid #D32027;
+	border-right: 1px solid #D32027;
+	border-bottom:1px solid #D32027;
+	background-color:#CCCCCC;
+	border-right: 1px solid #D32027;
+	 border-top:1px solid #CC1E35; */	
+	top: 0px;
+	left: 27px;
+	width:800px;
+	z-index: 05;
+
+}
+
+#pageNav{
+	position: relative;
+	top: 00px;
+	float:left;
+	width:176px;
+	height:200px;
+	padding: 0px;
+	/*background-color: #D32027;*/
+	font: small;
+	font-family:Verdana;
+	left: 16px;
+}
+
+
+
+/***********************************************/
+/* Component Divs                              */
+/***********************************************/
+#siteName{
+	margin: 0px;
+	padding: 24px 0px 8px 0px;
+	color: #ffffff;
+	font-weight: normal;
+}
+/******************table borders********************/
+/*.tblborder{
+ border:1px solid #ff0000;*/
+
+/************** utility styles *****************/
+
+#utility{
+	font: 60% Verdana;
+	position: absolute;
+	top: 1px;
+	right: 0px;
+	color: #D32027;
+	left: 514px;
+	width: 179px;
+	z-index: 120;
+	visibility: visible;
+}
+
+#utility a{
+	color:#D32027;
+}
+
+#utility a:hover{
+	text-decoration: underline;
+}
+
+
+
+/************* globalNav styles ****************/
+
+#globalNav{
+	position:relative;
+	width: 100%;
+	min-width: 640px;
+	height: 25px;
+	color: #D32027;
+	margin: 0px;
+/*	background-image:url(../images/menubg.png);*/
+	z-index: 200;
+	left: 0;
+	
+}
+
+
+/************* news styles ****************/
+
+#news{
+position:relative;
+	width: 99%;	
+	height: 16px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:600;
+	color:#333333;
+	margin: 0px;	
+	z-index: 201;
+	border:	1px solid #000033;
+	padding:2px 2px 2px 2px;
+	
+}
+
+/************* currency styles ****************/
+
+#currency {
+position:relative;
+	width: 98%;	
+	height: 16px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:600;
+	color:#333333;
+	margin: 0px;	
+	z-index: 201;
+	border:	1px solid #000033;
+	padding:2px 2px 2px 2px;
+}
+
+/************* flight styles ****************/
+
+#flight {
+	position:relative;
+	height:auto;
+	width:331;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:500;
+	color:#333333;
+	margin: 0px;
+	z-index: 300;
+	border:	1px solid #000033;
+	padding:2px 2px 2px 2px;
+	background-color: #5AA5D5;
+}
+
+#flight input{
+  font-size: 100%;
+  margin: 0px  0px 0px 10px;
+ }
+ 
+#flight a:link, #flight a:visited {
+	font-size: 12px;
+	font-family:Geneva, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color:#FFFFFF;
+	
+}
+
+#flight a:hover{
+	margin: 0px;
+	color:#CCCCCC;
+	text-decoration:none;
+}
+
+/************* Hotel Search ****************/
+
+#chSch {
+	position:relative;
+	width:174px;
+	height:auto;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:500;
+	color:#333333;
+	margin: 0px;
+	z-index: 300;	
+	padding:2px 2px 2px 2px;
+	/*background-color: #5AA5D5;
+	border:	1px solid #000033;*/
+}
+
+#chSch input{
+  font-size: 100%;
+  margin: 0px  0px 0px 10px;
+ }
+ 
+#chSch a:link, #chSch a:visited {
+	font-size: 12px;
+	font-family:Geneva, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color:#FFFFFF;
+	
+}
+
+#chSch a:hover{
+	margin: 0px;
+	color:#CCCCCC;
+	text-decoration:none;
+}
+
+
+/************* Hotel Search ****************/
+
+#hSch {
+	position:relative;
+	width:98%;
+	height:auto;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:500;
+	color:#333333;
+	margin: 0px;
+	z-index: 300;	
+	padding:2px 2px 2px 2px;
+	/*background-color: #5AA5D5;
+	border:	1px solid #000033;*/
+}
+
+#hSch input{
+  font-size: 100%;
+  margin: 0px  0px 0px 10px;
+ }
+ 
+#hSch a:link, #hSch a:visited {
+	font-size: 12px;
+	font-family:Geneva, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color:#FFFFFF;
+	
+}
+
+#hSch a:hover{
+	margin: 0px;
+	color:#CCCCCC;
+	text-decoration:none;
+}
+
+
+/************* sub Search ****************/
+
+#sub {
+	position:relative;
+	width:98%;
+	height:auto;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:500;
+	color:#333333;
+	margin: 0px;
+	z-index: 300;	
+	padding:2px 2px 2px 2px;
+	/*background-color: #5AA5D5;
+	border:	1px solid #000033;*/
+}
+
+#sub input{
+  font-size: 100%;
+  margin: 0px  0px 0px 10px;
+ }
+ 
+#sub a:link, #sub a:visited {
+	font-size: 10px;
+	font-family:Geneva, Arial, Helvetica, sans-serif;
+	font-weight: 500;
+	color:#FFFFFF;
+	
+}
+
+#sub a:hover{
+	margin: 0px;
+	color:#CCCCCC;
+	text-decoration:none;
+}
+
+
+/************* splOff styles ****************/
+
+#splOff {
+	position:relative;
+	width:437px;
+	height:auto;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:500;
+	color:#333333;
+	margin: 0px;
+	z-index: 300;
+	border:	1px solid #000033;
+	padding:2px 2px 2px 2px;
+	background-color: #5AA5D5;
+}
+
+#splOff input{
+  font-size: 100%;
+  margin: 0px  0px 0px 10px;
+ }
+ 
+#splOff a:link, #splOff a:visited {
+	font-size: 12px;
+	font-family:Geneva, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color:#FFFFFF;
+	
+}
+
+#splOff a:hover{
+	margin: 0px;
+	color:#CCCCCC;
+	text-decoration:none;
+}
+
+
+/************* deals styles ****************/
+
+#deals {
+	position:relative;
+	width:100%;
+	left:0px;
+	height:auto;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:500;
+	color:#333333;
+	margin: 0px;
+	z-index: 300;	
+	padding:2px 2px 2px 2px;
+	/*background-color: #5AA5D5;
+	border:	1px solid #000033;*/
+}
+
+#deals input{
+  font-size: 100%;
+  margin: 0px  0px 0px 10px;
+ }
+ 
+#deals a:link, #deals a:visited {
+	font-size: 12px;
+	font-family:Geneva, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color:#0099FF;
+	
+}
+
+#deals a:hover{
+	margin: 0px;
+	color:#6666FF;
+	text-decoration:none;
+}
+/************* hotel Map styles ****************/
+
+#htMap {
+	position:none;
+	width:787px;
+	left:0px;
+	height:auto;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:500;
+	color:#333333;
+	margin: 0px;
+	z-index: 300;	
+	padding:2px 2px 2px 2px;
+	/*background-color: #5AA5D5;
+	border:	1px solid #000033;*/
+}
+
+
+#htMap1 {
+	position:none;
+	left:0px;
+	height:auto;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:500;
+	color:#333333;
+	margin: 0px;
+	z-index: 300;	
+	padding:2px 2px 2px 2px;
+	/*background-color: #5AA5D5;
+	border:	1px solid #000033;*/
+}
+#htMap input{
+  font-size: 100%;
+    margin: 0px  0px 0px 0px;
+ 
+ }
+ 
+#htMap a:link, #htMap a:visited {
+	font-size: 12px;
+	font-family:Geneva, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color:#0099FF;
+	
+}
+
+#htMap a:hover{
+	margin: 0px;
+	color:#6666FF;
+	text-decoration:none;
+}
+/*************** search styles *****************/
+
+#search{
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	z-index: 101;
+}
+
+#search input{
+  font-size: 70%;
+  margin: 0px  0px 0px 10px;
+ }
+ 
+#search a:link, #search a:visited {
+	font-size: 80%;
+	font-weight: bold;
+	
+}
+
+#search a:hover{
+	margin: 0px;
+}
+
+
+
+
+/************** feature styles *****************/
+
+
+html>body .feature {height: auto;}
+
+.feature h3{
+	font: bold 175% vardana;
+	color: #000000;
+	padding: 30px 0px 5px 0px;
+}
+
+.feature img{
+	float: left;
+	padding: 0px 10px 0px 0px;
+}
+
+
+/*************** story styles ******************/
+.bodytext {
+	/*FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #333333; FONT-FAMILY: Verdana; TEXT-DECORATION: none*/
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #222a30; FONT-FAMILY: verdana;
+}
+.textcnt {
+	padding: 10px 10px 10px 10px;
+	font-size: 80%;
+	font-family:Verdana;
+}
+
+.story h3{
+	font: bold 125% vardana;
+	color: #000000;
+}
+
+.story p {
+	padding: 0px 0px 10px 0px;
+}
+
+.story a.capsule{
+font-family:Verdana;
+	font: bold 12px;
+	color: #005FA9;
+	display:block;
+	padding-bottom: 5px;
+}
+
+.story a.capsule:hover{
+	text-decoration: underline;
+}
+
+td.storyLeft{
+font-family:Verdana;
+padding: 12px 12px 12px 12px;
+}
+
+.text {
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #222a30; FONT-FAMILY: verdana;
+	}
+
+/************** siteInfo styles ****************/
+
+#siteInfo{
+	clear: both;
+	font-size: small;
+	color:#333333;
+	z-index:1000;
+	/*border-top:	1px solid #D32027;	
+	border-bottom:1px solid	 #D32027;		
+	padding: 0px 0px 0px 0px;
+	background-color: #D32027;
+	margin-top: -1px;*/
+}
+
+#siteInfo img{
+	padding: 4px 4px 4px 0px;
+	vertical-align: middle;
+}
+#siteInfo a:link, #siteInfo a:visited {
+	font-family:Verdana;		
+	color: #825f5b;
+}
+
+#siteInfo a:hover{	
+
+
+}
+
+
+/************ navItem Links styles **************/
+
+#navItem{
+    position:relative;
+	height:24px;
+	top: 10px;	
+	margin: 0px;
+	padding: 0px;
+}
+
+
+
+#navItem a:link, #navItem a:visited {	
+	border-top: 2px solid #000000;
+	height:24px;
+	/*border-bottom: 2px solid #E6F2FC;*/
+	/*border-left:2px solid #D3D3D3;*/
+	font-family:Verdana;	
+	background-image:url('../images/menubg.png');
+	font-weight: normal;
+	font-size:11px;
+	align:right;
+	color:#000000; padding-left:3px; padding-right:3px; padding-top:2px; padding-bottom:2px
+}
+
+
+
+#navItem a:hover{
+	/*border-top: 1px solid #cccccc;*/
+	height:24px;
+	border-right:2px solid #E6F2FC;
+	background-image:url('../images/menubg2.png');	
+	/*	font-weight: bold;*/
+	text-decoration: none;
+	color:#1987E0
+}
+/*#navItem a:active{
+	border-top: 1px solid #cccccc;
+	border-right:2px solid #ffb68f;
+	background-image:url(../images/369bg_act.gif);
+	background-color: #f34f00;
+		font-weight: bold;
+	text-decoration: none;
+	color:#FFFFFF;
+}*/
+
+
+
+
+
+/************* relatedLinks styles **************/
+
+.relatedLinks{
+	margin: 0px;
+	padding: 0px 0px 10px 10px;
+	border-bottom: 1px solid #cccccc;
+}
+
+.relatedLinks h3{
+	padding: 10px 0px 2px 0px;
+}
+
+.relatedLinks a{
+	display: block; 
+}
+
+
+/**************** advert styles *****************/
+
+#advert{
+	padding: 10px;
+}
+
+#advert img{
+	display: block;
+}
+
+/********************* end **********************/
+
+
+.sechead {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:600;
+	color:#333333;
+	}
+	
+	.sechead2 {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:normal;
+	color:#FFFFFF;
+	}
+	
+	.dbborder3 {	
+	border-right:1px solid #00B0EC;
+	border-left:1px solid #00B0EC;
+	background-color: #FFFFFF;
+}
+
+.dbborder {	
+	border:1px solid #00B0EC;
+	padding:5px 5px 5px 5px;
+	
+}
+.dbborder1 {
+	font-family:MS Sans Serif;
+	font-size:2;
+	border-left:1px solid #00B0EC;
+	border-top:1px solid #00B0EC;
+	width:880px;
+	height:1930px;
+	margin-left:70px;
+	margin-top:-3px;
+	
+	}
+
+.button{
+
+   background-image:url('../images/button.jpg');
+   font-family:Arial, Helvetica, sans-serif;
+   font-size:10px;
+   font-weight:600;
+   border: medium groove #006dab; 
+  color:#FFFFFF
+   }
+.select{
+}   
+.amnUnavbl{
+background-image:url('../images/unavbamn.jpg');
+background-repeat:no-repeat;
+padding-left:15px;
+text-decoration:line-through;
+color:#999999
+}
+
+.amnavbl{
+background-image:url('../images/avbamn.jpg');
+background-repeat:no-repeat;
+padding-left:15px
+}
+
+.topline{
+
+border-top:1px solid #00B0EC; 
+padding:5px 5px 5px 5px;
+}
+.taboff{
+border:2px #53C3F7 groove; background-color:#8FCDEB; line-height:16px; color:#999999;}
+.tabon{
+border:2px #53C3F7 groove; background-color:#8FCDEB; line-height:16px; color:#000000;}
+
+.rowOdd {
+	background-color: #EEEEEE;
+	 border: 0px solid #EEEEEE; 
+	padding: 4px;
+
+}
+.rowEven {
+	background-color: #FFFFFF;
+	 border: 2px solid #FFFFFF; 
+	padding: 4px;}
+
+.rowOddBut {
+	background-color: #EEEEEE;
+	 border: 1px solid #EEEEEE;	 	
+	font-size: 12px;
+	font-family:Geneva, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color:#0099FF;
+	
+}
+.rowEvenBut {
+	background-color: #FFFFFF;
+	 border: 1px solid #FFFFFF; 	
+	font-size: 12px;
+	font-family:Geneva, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color:#0099FF;
+}
+
+.buttonm{
+
+   background-image:url('../images/button.jpg');
+   font-family:Arial, Helvetica, sans-serif;
+   width:200px;
+   font-size:10px;
+   font-weight:600;
+   border: medium groove #006dab; 
+  color:#FFFFFF;
+   }
+   
+.buttonc{
+
+   background-image:url('../images/button.jpg');
+   font-family:Arial, Helvetica, sans-serif;
+   font-size:10px;
+   font-weight:600;
+   border: 2px groove #006dab; 
+  color:#FFFFFF;
+   }
+
+.buttond{
+
+   background-image:url('../images/button.jpg');
+   font-family:Arial, Helvetica, sans-serif;
+   font-size:12px;
+   font-weight:600;
+   border: medium groove #006dab; 
+  color:#FFFFFF;
+   }  
+    
+.buttont{
+
+   background:#FFFFFF;
+   font-family:Arial, Helvetica, sans-serif;
+   width:200px;
+   font-size:10px;
+   font-weight:600;
+    border: 2px solid #FFFFFF; 
+
+  color:#FF6600;
+   }
+   
+   .cuscmt{
+
+   background:#FFFFFF;
+   font-family:Arial, Helvetica, sans-serif;
+   width:200px;
+   font-size:11px;
+   font-weight:600;
+    border: 2px solid #FFFFFF; 
+
+  color:#FF6600;
+   }
+   
+    .cusrate{
+
+   background:#FFFFFF;
+   font-family:Arial, Helvetica, sans-serif;
+   width:200px;
+   font-size:11px;
+   font-weight:600;
+    border: 2px solid #FFFFFF; 
+
+  color:#66CC33;
+   }
+
+   
+   
+   .botline{
+   border-bottom:1px solid #00B0EC; 
+}
+
+.strike{
+text-decoration:line-through;
+background-color:#666666;
+color:#CCCCCC
+}
+
+
+
+.height{
+td.height:25px;
+}
+
+.citydiv{
+
+font-family:Arial, Helvetica, sans-serif;
+font-size:16px;
+font-style:normal;
+color:#BD24CE;
+}
+.titlediv{
+
+font-family:Arial, Helvetica, sans-serif;
+font-size:14px;
+font-style:normal;
+color:#4155B1;
+}
+.descdiv{
+
+font-family:Arial, Helvetica, sans-serif;
+font-size:14px;
+font-style:normal;
+color:;
+}
+.paticipantsdiv{
+font-family:Arial, Helvetica, sans-serif;
+font-size:16px;
+font-style:normal;
+color:#46AC48;
+}

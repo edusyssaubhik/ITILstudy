@@ -1,0 +1,1 @@
+<% response.Redirect("/ITIL-Training/instructors.asp") %>

@@ -1,0 +1,112 @@
+@charset "utf-8";
+/* CSS Document */
+
+#bodysection_container
+{
+	float:left;
+	width:100%;
+	height:auto;
+    background:url(/images/back/container_bg.jpg);
+	background-repeat:repeat-y;
+	
+}
+
+#bodysection
+{
+	float:left;
+	width:96%;
+	height:auto;
+	padding-top:10px;
+	padding-bottom:15px;
+	padding-left:30px;
+	
+}
+
+#bodysection_left
+{
+	float:left;
+	width:21%;
+	height:auto;
+	padding-bottom:20px;
+	
+
+}
+
+#left_navigation {
+	position:relative;
+	width:200px;
+	height:399px;
+	z-index:1;
+}
+
+#my_menu #selected{
+    background-color:#09a0d6;
+    color:#fff;
+    }
+	
+div.sdmenu {
+	width: 200px;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	padding-bottom: 10px;
+	background: url(bottom.gif) no-repeat  right bottom;
+	color: #FFF;
+}
+
+div.sdmenu div {
+	background:url(/images/back/title.gif) repeat-y;
+	overflow: hidden;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCC;
+}
+
+div.sdmenu div span:hover {
+	cursor:pointer;
+	}
+div.sdmenu div:first-child {
+	background:url(/images/back/toptitle.gif) no-repeat;
+}
+div.sdmenu div.collapsed {
+	height: 25px;
+}
+div.sdmenu div span {
+	display: block;
+	padding: 5px 25px;
+	font-weight: bold;
+	color: #DBE0DC;
+	cursor: default;
+	border-bottom: 1px solid #ddd;
+	text-align: left;
+	/*background-image:url(/images/back/expanded.png);*/
+	background-repeat: no-repeat;
+	background-position: 10px center;
+	height:15px;
+	
+}
+div.sdmenu div.collapsed span {
+	background-image:url(/images/back/collapsed.png);
+}
+div.sdmenu div a {
+	background: none repeat scroll 0 0 #EEEEEE;
+    border-bottom: 1px solid #DDDDDD;
+    color: #006666;
+    display: block;
+    padding: 5px 23px;
+    text-align: left;
+    text-decoration: none;
+}
+
+div.sdmenu div a.current {
+	background : #ccc;
+}
+div.sdmenu div a:hover {
+	color: #09A0D6;
+	text-decoration: none;
+	background-color: #DFF3FD;
+	background-image:url(/images/back/linkarrow.gif);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+

@@ -1,0 +1,228 @@
+<!-- Footer Starts -->
+
+<div valign="top" style="height:16px; width: 940px; padding-left:6px">
+<span class="copyright">
+© 2011 Edusys Services Private Limited,  All Rights Reserved
+</span>
+</div>
+
+
+<!-- Footer Ends -->
+
+<div align="left" style="width:900px;height:50px; margin-left:14px; text-align:justify" valign="top" >
+
+     
+
+<p><font size="1px"><a href="/index.asp">Home</a> | <a href="/aboutus.asp">About Us</a>
+   <% If Session("CountryOrigin") = "Other" OR  Session("CountryOrigin") = "United Kingdom"  Then %>
+|  <a href="/ITIL-Training/courseBenefits-Online.asp">Online Course Benefits </a> 
+<%End If%>
+ <%  If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "India" OR Session("CountryOrigin") = "UAE" OR Session("CountryOrigin") = "Singapore"  OR Session("CountryOrigin") = "United Kingdom" Then %>
+|  <a href="/ITIL-Training/courseBenefits.asp">ITIL Classroom Course Benefits </a> |  <a href="/ITIL-Training/better-than-competitors.asp">Better Than Competitors </a>
+  |  <a href="/ITIL-Training/comprehensive.asp">Most Comprehensive and Effective </a>
+    <%  If Session("CountryOrigin") = "United Kingdom"  Then %>
+  | <a href="/ITIL-Training/free-onlinecertification.asp">Classroom - Risk Management Certification Course</a>
+ <% End If %>
+   | <a href="/enrollClass.asp">Enrol for Classroom Course</a>
+   | <a href="/ITIL-Courses.asp">ITIL Classroom Course</a>
+    | <a href="/classroomTraining.asp">Foundation Class Methodology </a> 
+	   | <a href="/ITIL-Foundation-Course.asp">ITIL Foundation Course</a>
+	<% End If %>
+ | <a href="/ITIL-Training/classroom-FAQ.asp"> ITIL FAQs</a>
+
+    | <a href="/ITIL-Online-Courses.asp">ITIL Online Courses</a>
+	
+	  | <a href="/methodology/Online-Training.asp">Foundation Online Training </a> 
+	 | <a href="/affiliates.asp">Affiliate</a> | <a href="#">Login</a> | <a href="/contactus.asp">Contact</a> | <a href="/contactus.asp#feedback">Feedback</a> | <a href="/sitemap.asp">Sitemap</a></font></p></div>
+    
+    
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<%  If Session("CountryOrigin") = "Germany" Then %>
+<script type="text/javascript">
+
+$(window).scroll(function(e){
+  $el = $('#contact-box'); 
+  if ($(this).scrollTop() > 350 ){ 
+  
+    $('#contact-box').css({'position': 'fixed', 'top': '0px'}); 
+  } 
+  else{
+  $('#contact-box').css({'position': 'relative', 'top': 'auto'});
+ }
+ 
+});
+
+</script>
+<% ElseIf Session("CountryOrigin") = "United Kingdom" Then %>
+<script type="text/javascript">
+
+
+$(window).scroll(function(e){
+  $el = $('#left_navigation'); 
+  if ($(this).scrollTop() > 540 ){ 
+    $('#left_navigation').css({'position': 'fixed', 'top': '0px'}); 
+  } 
+  else{
+  $('#left_navigation').css({'position': 'relative', 'top': 'auto'});
+ }
+ 
+});
+
+</script>
+<% End If %>  
+
+
+<!--<div align="center"><font size="1px">ITIL<sup>&reg;</sup> is a Registered Trade Mark of the Office of Government Commerce in the United Kingdom and other countries.</font></div>
+-->
+
+<div align="center"><font size="1px">The Swirl logo™ is a trade mark of the Cabinet Office.</font></div>
+<div align="center"><font size="1px">ITIL<sup>&reg;</sup> is a registered trade mark of the Cabinet Office.</font></div>
+
+<div align="center"><font size="1px">IT Infrastructure Library<sup>&reg;</sup> is a registered trade mark of the Cabinet Office.</font></div>
+
+
+<script type="text/javascript" src="/js/highlight.js"></script>
+<script type="text/javascript" src="/js/popup.js"></script>
+
+
+
+<% If Session("CountryOrigin") = "United Kingdom" Then %> 
+
+<!--Request call back-->
+
+<div style="position:fixed; height:92px; width:190px; bottom:50px; right:0px; float:right" id="reqcallback-window">
+<div style="position:absolute; margin-right:10px; margin-top:10px; width:10px; height:10px; cursor:pointer; z-index:1000" title="close"  onclick="document.getElementById('reqcallback-window').style.display='none'"><img src="/images/chatUK1/cross.png" style="padding-left:170px;" alt="Close"/></div>
+<a href="/callBack.asp" onclick="makeActive();"><img src="/images/buttons/Request-callback.gif" border="0" usemap="#callback-bottomMap" id="callback-bottom" style="border:none"/>
+</a>
+</div>
+
+
+<!--Chat option-->
+
+<!--<div style="position:fixed; height:133px; width:152px; bottom:10px; left:0px; float:left" id="callback-window">
+<div style="position:absolute; margin-left:179px; margin-top:10px; width:10px; height:10px; cursor:pointer; z-index:1000" title="close"  onclick="document.getElementById('callback-window').style.display='none'"><img src="/images/chatUK1/cross.png" width="10" height="10" alt="Close"/></div>-->
+ <!-- BEGIN LivePerson Button Code --> 
+<!-- <style type="text/css">
+.lpPoweredBy, .lpEmtStarRating { display:none; }
+</style>
+<style>
+.lpStaticButtonTR td {
+    background: none;
+}
+</style>
+
+<div id="lpButDivID-1343208625207" style="position:absolute; margin:0; width:142px;"></div>
+<script type="text/javascript" charset="UTF-8" src="https://server.iad.liveperson.net/hc/54663397/?cmd=mTagRepstate&site=54663397&buttonID=1&divID=lpButDivID-1343208625207&bt=1&c=1"></script>-->
+<!-- END LivePerson Button code -->
+<!--</div> -->
+
+
+<!--<div style="position:fixed; height:543px; width:393px; top:100px; display:none" id="chatNow-window" >
+
+<div style="position:absolute; width:543px; height:393px;">
+ <img src="/images/chatUK/chatnow.png" border="0" style="border:none"  />
+ </div>
+ 
+ <div style="position:absolute; margin:170PX 318PX;">
+  <img src="/images/chatUK/no-thanks-button.gif" width="106" height="35" border="0" usemap="#chatnow-middleMap" id="chatnow-middle" style="border:none;cursor:pointer;"  onclick="chatNowClicked('close')" /></div>
+
+
+<style type="text/css">
+.lpPoweredBy, .lpEmtStarRating { display:none; }
+</style>
+<div id="lpButDivID-1343209562805" style="position:absolute;  margin:120PX 300PX; width:142px;"></div>
+<script type="text/javascript" charset="UTF-8" src="https://server.iad.liveperson.net/hc/54663397/?cmd=mTagRepstate&site=54663397&buttonID=13&divID=lpButDivID-1343209562805&bt=1&c=1"></script>
+
+
+</div>-->
+
+<!--<map name="chatnow-middleMap" id="chatNow-window">
+   <area shape="rect" coords="1,1,97,30" href="#" onclick="chatNowClicked('close')" />
+ </map>-->
+
+<script type="text/javascript">
+
+
+function getCookie(c_name)
+{
+var i,x,y,ARRcookies=document.cookie.split(";");
+for (i=0;i<ARRcookies.length;i++)
+  {
+  x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+  y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+  x=x.replace(/^\s+|\s+$/g,"");
+  if (x==c_name)
+    {
+    return unescape(y);
+    }
+  }
+}
+
+function setCookie(c_name,value,exdays)
+{
+var exdate=new Date();
+exdate.setTime(exdate.getTime() + (60 * 60 * 5000));
+var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+document.cookie=c_name + "=" + c_value;
+}
+
+
+function checkCookie()
+{
+var isVisited=getCookie("isVisited");
+if (isVisited!=null && isVisited!="")
+  {
+  }
+else{
+
+    var t=setTimeout(showChatNow, 60000);
+
+    }
+}
+
+// Script to find out browser width 
+
+var myWidth;
+if( typeof( window.innerWidth ) == 'number' ) { 
+myWidth = window.innerWidth;
+myHeight = window.innerHeight; 
+} else if( document.documentElement && 
+( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) { 
+myWidth = document.documentElement.clientWidth; 
+myHeight = document.documentElement.clientHeight; 
+} else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) { 
+myWidth = document.body.clientWidth; 
+}
+
+// End
+function showChatNow(){
+    var bWidth=myWidth/2;
+    bWidth-=270;
+    document.getElementById('chatNow-window').style.display='block';
+    document.getElementById('chatNow-window').style.left=bWidth+"px";
+    }
+function chatNowClicked(elem){
+    if(elem=='link'){
+        setCookie("isVisited",'yes',1);
+        return true;
+        }
+        else{
+            setCookie("isVisited",'yes',1);
+            document.getElementById('chatNow-window').style.display='none';
+
+
+            }
+    }
+checkCookie()
+
+</script>
+
+
+
+<% End If %>
+
+</div>
+</body>
+</html>
+
+ 

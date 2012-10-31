@@ -1,0 +1,48 @@
+<BR><BR><table width="880" border="0" cellspacing="0" cellpadding="0"><tr><td width="10px"></td><td colspan="2"><font style="font-family:Arial, Helvetica, sans-serif; color:#2F95D3; font-size: 13px; font-weight: bold; font-style: normal;">Question No: 7</font><BR><BR></td></tr><tr><td width="10px"></td><td colspan="2"><font face="Arial,sans-serif" size="3"><b>Scenario:</b> As the  continual service improvement manager for a company, you have been asked to  help the service transition team improve the use of knowledge management within  the company. Knowledge management is now seen as an absolute requirement, since  there are underlying support issues that could be rectified with its  introduction.
+<p>Currently,  customers and users log service requests or report incidents by calling the  service desk or completing standard online forms from a self-service menu.</p>
+<p>There is no  formal change advisory board in existence, however each business unit  authorizes their own changes and informal, but good, service release records  are kept within each unit. The process of service portfolio management is  healthy and includes a 12 month advance window for future service needs.</p>
+To assist you  in your task, you have been briefed about the following issues within the  company that require improvement:
+<ul>
+ <li> There is a lack of conformance to process across the  company which the service transition manager believes could be addressed if all  process documentation was held in a single knowledge management repository</li>
+ <li>There is no consistency of reporting and it appears  that this leads to a lot of duplication of effort</li>
+ <li> When new regulations are needed, introducing them  across the company seems to take a long time and is often costly</li>
+ <li> Although the configuration management system is  accurate, there is not full usage of it across the company.</li>
+ </ul>
+You believe  that you need to consider the following additional opportunities:
+<ul>
+ <li> A review of the self-service menu</li>
+ <li> Provision of board reports for the executives</li>
+ <li> Storage of all the regulatory standards</li>
+ <li> Wide, but controlled, access for the service release records  and service portfolio information.</li>
+ </ul>
+You have produced a  service improvement plan with the service transition manager and are now  considering the information items needed to populate a service knowledge  management system that would improve the quality of decision-making.<br/></font><BR><BR></td></tr><tr><td colspan="3">&nbsp;</td></tr><tr><td width="10px"></td><td colspan="2"><font face="Arial,sans-serif" size="3"><b>Question:</b> Which one of  the following options contains the <strong>BEST </strong>items for inclusion in the  service knowledge management system (SKMS) to address the issues the company is  facing?</font><BR><BR></td></tr><tr><td colspan="3">&nbsp;</td></tr><tr><td width=" ">&nbsp;</td><td width="7%"><font style="font-family:Arial, Helvetica, sans-serif; color:#2F95D3; font-size: 13px; font-weight: bold; font-style: normal;">Choice 1 </font></td><td><font face="Arial,sans-serif" size="3">It is necessary to include all the configuration management databases (CMDBs) that individual teams are holding when populating the configuration management system (CMS) and SKMS. The definitive media library information for the service release records also needs to be included. Meeting records for areas such as the change advisory board (CAB), management policy and process meetings, and the production of the monthly reports must also be included in the SKMS.</td></tr><tr><td colspan="3">&nbsp;</font></td></tr><tr><td width=" ">&nbsp;</td><td width=" "><font style="font-family:Arial, Helvetica, sans-serif; color:#2F95D3; font-size: 13px; font-weight: bold; font-style: normal;">Choice 2 </font></td><td><font face="Arial,sans-serif" size="3"> The current CMS needs to be checked for accuracy and then linked to the SKMS. The details of all process documentation and regulatory standards need to be stored in the SKMS to allow easy access. Service portfolio information and service release records can be populated in the SKMS, but with controlled access. Executive board reports will be far easier to produce and be more accurate if the supporting information is maintained in the SKMS. All self-service menus also need to be transported into the SKMS, which will improve functionality for the customers.</td></tr><tr><td colspan="3">&nbsp;</font></td></tr><tr><td width=" ">&nbsp;</td><td width=" "><font style="font-family:Arial, Helvetica, sans-serif; color:#2F95D3; font-size: 13px; font-weight: bold; font-style: normal;">Choice 3 </font></td><td><font face="Arial,sans-serif" size="3"> It is necessary to hold details of all central records in the SKMS for consistency of information, and to prevent duplication. This will include the process documentation, all service release records and any minutes from meetings such as service reviews and the CAB. It is not necessary to hold the CMS in the SKMS as it can stand alone, but there does need to be some communication to all teams to ensure its widespread usage. There is clearly an issue with reporting at present and this needs addressing so that the executive board reports and general reports can be produced.</td></tr><tr><td colspan="3">&nbsp;</font></td></tr><tr><td width=" ">&nbsp;</td><td width=" "><font style="font-family:Arial, Helvetica, sans-serif; color:#2F95D3; font-size: 13px; font-weight: bold; font-style: normal;">Choice 4 </font></td><td><font face="Arial,sans-serif" size="3">It would be appropriate to hold details of all process documentation and regulatory standards in the SKMS so that people within IT have easy access to the required standards. It would also be useful to hold the service portfolio and service release records in the SKMS, but with controlled access. The current CMS needs to be linked to the SKMS. By presenting all the information in a single SKMS, the production of reports will be more effective, preventing duplication and controlling the level of accuracy.</font></td></tr><td colspan="3">&nbsp;</td></tr><tr><td>&nbsp;</td</tr><tr><td width=" ">&nbsp;</td><td width=" " colspan="2"><font style="font-family:Arial, Helvetica, sans-serif; color:#2F95D3; font-size: 13px; font-weight: bold; font-style: normal;">Correct Choice : D</font></td> </tr><tr><td colspan="3">&nbsp;</td></tr><tr><td width="10px"></td><td colspan="2"><font style="font-family:Arial, Helvetica, sans-serif; color:#2F95D3; font-size: 13px; font-weight: bold; font-style: normal;">Justification : </font><BR><BR></td></tr><tr><td width=" ">&nbsp;</td><td valign="top" colspan="2"><font face="Arial,sans-serif" size="3"><table border="1" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="154" valign="top"><p><strong><em>QUESTION</em></strong></p></td>
+    <td width="45" valign="top"><p><strong>CHOICE</strong></p></td>
+    <td width="402" valign="top"><p align="center"><strong>RATIONALE</strong></p></td>
+  </tr>
+  <tr>
+    <td width="154" valign="top"><p><strong><em>MOST CORRECT (5)</em></strong></p></td>
+    <td width="45" valign="top"><p>D</p></td>
+    <td width="402" valign="top"><p>All items for inclusion in the SKMS would directly improve the issues    being faced today: a centralized repository for process documentation and    regulatory standards, controlled access for the service portfolio and service    release records, with links to an accurate configuration management system    (CMS).<br>
+      With all information centrally available, this will aid the production    of organizational reporting. </p></td>
+  </tr>
+  <tr>
+    <td width="154" valign="top"><p><strong><em>SECOND BEST (3)</em></strong></p></td>
+    <td width="45" valign="top"><p>B</p></td>
+    <td width="402" valign="top"><p>There are many accurate statements; however, while the CMS does need    to be linked into the SKMS, the scenario has already stated that it is    accurate. <br>
+      The reference to the self-service menu and improved functionality is    not relevant to the SKMS. </p></td>
+  </tr>
+  <tr>
+    <td width="154" valign="top"><p><strong><em>THIRD BEST (1)</em></strong></p></td>
+    <td width="45" valign="top"><p>C</p></td>
+    <td width="402" valign="top"><p>This answer has many inaccuracies. While process documentation should    be held in the SKMS, the organization does not have a change advisory board    (CAB) and there is no evidence of service review meetings. The usage of the    CMS does need to be communicated to the IT team, but it is certainly a key    part of the SKMS and is not planned to be linked in. While the answer    recognizes the issues with reporting it does not indicate how it can be    resolved. </p></td>
+  </tr>
+  <tr>
+    <td width="154" valign="top"><p><strong><em>DISTRACTER (0)</em></strong></p></td>
+    <td width="45" valign="top"><p>A</p></td>
+    <td width="402" valign="top"><p>While many items are relevant for a SKMS, this particular company does    not hold formal CAB meetings. The scenario states that only informal service    release records are kept within each unit so a formal definitive media library    (DML) does not exist. It also clearly states in the scenario that the CMS is    accurate so it is not appropriate to repeat any exercise of gathering items    from each configuration management database (CMDB). Finally, in order to    share the information around processes, it is the process documentation    needed not process minutes. </p></td>
+  </tr>
+</table>
+
+</td></tr><tr><td colspan="3">&nbsp;</font></td></tr>

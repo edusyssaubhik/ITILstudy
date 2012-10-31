@@ -1,0 +1,1 @@
+<% response.Redirect("http://www.itilstudy.com/ITIL-Courses.asp") %>

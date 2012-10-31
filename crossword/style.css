@@ -1,0 +1,192 @@
+@charset "utf-8";
+body{
+	background-color:#FCFCFC;
+	margin-top: 5px;
+}
+
+.global {
+	background-color: #FFF;
+	width: 1000px;
+	border: 1px solid #ccc;
+	position: relative;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #333;
+	margin: auto;
+	height: 579px;
+}
+#newWindow {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #333;
+	height: auto;
+	margin: 10px;
+}
+#hintsWindow {
+	height: auto;
+	border: 1px solid #ccc;
+	padding: 10px;
+	color: #999;
+	background-color: #FFF;
+	background-repeat: repeat-x;
+}
+
+#itext {
+	color: #999;
+	background-color: #FCFCFC;
+	border: 1px solid #CCC;
+	width: 378px;
+	margin-bottom:10px;
+}
+
+#itext:focus {
+	background-color: #FFF;
+	border: 1px solid #666;
+	color: #666;
+}
+
+#hint {
+	height: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	display: block;
+	color: #C00;
+	background-color: #F2F2F2;
+	border: 1px solid #CCC;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+#hintButtons {
+	display: block;
+	text-align: right;
+}
+#error {
+	font-size: 10px;
+	color: #F00;
+	display: block;
+}
+#puzzleTable td{
+	height: 25px;
+	width: 25px;
+	text-align: center;
+	vertical-align: middle;
+	color: #333;
+	text-transform: capitalize;
+}
+td.pCell {
+	background-color: #FFF;
+	border: 1px solid #ccc;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+td.selected {
+	background-color: #F4F4F4;
+}
+td.errors {
+	background-color: #FFEAEA;
+}
+#right-con {
+	background-color: #F9F9F9;
+	height: 559px;
+	width: 420px;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #CCC;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+#smsg {
+	font-weight: bold;
+	color: #C00;
+	display: block;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	background-color: #fff;
+	text-align: center;
+	border: 1px solid #CCC;
+	padding: 5px;
+	margin: 10px;
+}
+#reviewWindow {
+	background-color: #FCFCFC;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #ccc;
+	position: absolute;
+	display: block;
+	width: 420px;
+	bottom: 0px;
+}
+#info {
+	position: absolute;
+	display: block;
+	width: 400px;
+	bottom: 173px;
+	background-color: #fff;
+	border-top: solid 1px #f2f2f2;
+	padding: 10px;
+}
+#info table td {
+	text-align: left;
+	vertical-align: middle;
+	font-size: 11px;
+}
+
+#info span {
+	border: 1px solid #ccc;
+	width: 15px;
+	display: block;
+	height: 15px;
+	float: right;
+}
+
+
+#reviewHeader {
+	font-weight: bold;
+	display: block;
+	height: 20px;
+	padding-left: 10px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #ccc;
+	padding-top: 4px;
+	background-color: #F9F9F9;
+}
+#reviewM {
+	display: block;
+	line-height: 20px;
+	padding: 10px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #ccc;
+	background-color: #fff;
+	font-size: 11px;
+}
+td.correct {
+	background-color: #EAFAFF;
+}
+#sField {
+	display: block;
+	vertical-align: middle;
+	font-size: 11px;
+	text-align: right;
+	padding-right: 20px;
+}
+#submitF {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 11px;
+	color: #C00;
+	margin: 10px;
+}
+#submitF td:first-child {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 11px;
+	color: #C00;
+	margin-right: 10px;
+}

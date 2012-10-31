@@ -1,0 +1,148 @@
+.chromestyle{
+	width: 100%;
+	text-decoration: none;
+	margin: 0px;
+	padding: 0px;
+	clear: right;
+}
+
+.chromestyle:after{ /*Add margin between menu and rest of content in Firefox*/
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+	text-decoration: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.chromestyle ul{
+	width: 100%;
+	text-align: center;
+	text-decoration: none;
+	background-repeat: repeat-x;
+	background-attachment: scroll;
+	background-position: left top;
+	border: 1px none #BBB;
+	margin: 0;
+	padding: 0px;
+	
+}
+
+.chromestyle ul li{
+	display: inline;
+	margin: 0px;
+	padding: 0px;
+}
+
+.chromestyle ul li a{
+	
+	text-decoration: none;
+	
+}
+
+.chromestyle ul li a:hover{
+	text-decoration: none;
+	background-color: #ffffff;
+}
+
+
+/*.chromestyle ul li a{
+	color: #65BDED;
+	text-decoration: none;
+	border-right-color: #DADADA;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	border-top-color: #DADADA;
+	border-bottom-color: #FFFFFF;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 0;
+	margin-left: 0;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 1px;
+	padding-left: 0px;
+}
+
+.chromestyle ul li a:hover{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #65BDED;
+	background-color: #FFFFFF;
+	padding: 0px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #FFFFFF;
+}*/
+
+.chromestyle ul li a[rel]:after{ /*HTML to indicate drop down link*/
+content: "";
+/*content: " " url(downimage.gif); /*uncomment this line to use an image instead*/
+}
+
+
+/* ######### Style for Drop Down Menu ######### */
+
+.dropmenudiv{
+	position:absolute; /*THEME CHANGE HERE*/	
+	border-bottom-width: 1px;
+	line-height:25px;
+	z-index:100;
+	background-color: white;
+	width: 270px;
+	visibility: hidden;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style:solid;
+	border-left-style: solid;
+	border-top-color: #C1C1C1;
+	border-right-color: #C1C1C1;
+	border-bottom-color: #C1C1C1;
+	border-left-color: #C1C1C1;
+	font-style: normal;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0px;
+	padding: 0px;
+	
+	
+/*filter: progid:DXImageTransform.Microsoft.Shadow(color=#CACACA,direction=135,strength=4); /*Add Shadow in IE. Remove if desired*/
+}
+
+.dropmenudiv a{
+	width: auto;
+	display: block;
+	text-indent: 11px;
+	text-decoration: none;
+	/*color: #3891C0;*/
+	border-bottom:1px solid #BBB;
+	/*border-top:1px solid #BBB;*/
+	padding-top: 0px;
+	padding-right: 0;
+	padding-bottom: 2px;
+	padding-left: 0;
+	
+}
+
+* html .dropmenudiv a{ /*IE only hack*/
+width: 100%;
+}
+
+.dropmenudiv  a:link, .dropmenudiv  a:visited{
+	 color: #000000;
+	 text-decoration:none
+}
+
+.dropmenudiv  a:hover{
+	color: #ffffff; 
+	background-color: #016db6;
+}
+
+

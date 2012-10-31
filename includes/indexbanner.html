@@ -1,0 +1,48 @@
+<% If Session("CountryOrigin") = "India" OR Session("CountryOrigin") = "Other" Then %>
+
+<div>
+  	<div id="banner"><img src="/images/banners/Header-India.jpg" border="0" >
+    
+  	</div>
+  </div>
+
+
+
+<% ElseIf Session("CountryOrigin") = "United Kingdom" Then %>
+
+<div>
+  	<div id="banner"><img src="/images/banners/Banner_UK.jpg" border="0" usemap="#Map1">
+    
+    
+<map name="Map1" id="Map1">
+  <area shape="rect" coords="758,54,806,73" href="http://www.itilstudy.com/ITIL-Training/Success-Rate.asp" />
+  <area shape="rect" coords="849,83,902,103" href="http://www.itilstudy.com/ITIL-Training/moneyBack.asp" />
+  <area shape="rect" coords="726,116,770,131" href="http://www.itilstudy.com/ITIL-Training/instructors.asp" />
+  <area shape="rect" coords="840,169,882,183" href="http://www.itilstudy.com/ITIL-Training/comprehensive.asp" />
+</map>
+    
+  	</div>
+  </div>
+
+
+
+<% Else %>
+<div>
+  	<div id="banner"><img src="/images/banners/Banner_US.jpg" border="0" usemap="#Map1">
+        <map name="Map1" id="Map1">
+          <area shape="rect" coords="746,56,801,73" href="http://www.itilstudy.com/ITIL-Training/Success-Rate.asp">
+          <area shape="rect" coords="852,86,904,101" href="http://www.itilstudy.com/ITIL-Training/moneyBack.asp">
+          <area shape="rect" coords="729,117,780,131" href="http://www.itilstudy.com/ITIL-Training/instructors.asp">
+          <area shape="rect" coords="748,170,797,186" href="http://www.itilstudy.com/2-Day-ITIL-Training.asp">
+        </map>
+  	
+    
+  	</div>
+  </div>
+
+<% End If %>
+  <!-- Banner Starts -->
+  <div>
+  	<div id="placeholderdiv"></div>
+  </div>
+  <!-- Banner Ends -->

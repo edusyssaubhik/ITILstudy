@@ -1,0 +1,292 @@
+<!--#include virtual="/includes/header.asp"-->
+<!--#include virtual="/includes/innermethodologybanner.html"-->
+<!--#include virtual="/includes/connection.asp"-->
+<% If Session("FirstName") = "" Then 
+response.Redirect("/memberlogin.asp")
+Else
+%>
+<!-- Body Starts -->
+<% 
+'======================================================='
+'Written By : Priyanka'
+'Last UpDated : 21/09/2010'
+'Description :'
+'This Page is Complaint log Page'
+'======================================================='
+
+Dim rqAction,objRs1,strRollNo,rqPage ,rqRow, rollNo, rqquery
+
+   
+'Creating the Recordset objects'
+SET objRs1 = Server.CreateObject("ADODB.Recordset")
+
+'Retrive the values from this page'
+rqAction = Request.QueryString("action")
+rqPage = Request.QueryString("page")
+rqRow  = Request.QueryString("row")
+rollNo = request.form("rollNo")
+enrollId = request.form("enrollId")
+ rollNo = Session("rollNo")
+ enrollId = Session("ID")
+rqquery = Request.Form("queryType")
+response.Write(rqquery)
+'selecting a rollno to enter into the database based on this roll.no
+strRollNo = "SELECT rollno FROM PaypalDB where rollno= '"& rollNo &"' "
+objRs1.Open strRollNo, ConnObj
+'response.Write(strRollNo)
+Do Until objRs1.EOF 
+		   
+   rollNo = objRs1("rollno")
+   
+objRs1.Movenext
+Loop
+objRs1.Close
+%>
+
+<script type="text/javascript">
+
+				function validate_required(field,alerttxt)
+					{
+						with (field)
+						{
+							if (field.value=="")
+							  {alert(alerttxt);return false}
+							else {return true}
+						}
+					}
+					
+					function validate_form(thisform)
+					
+					{
+					   with (thisform)
+						 {
+
+						// Check The subject Field Empty Or Not
+
+						if (validate_required(subject,"Please Enter subject")==false)
+							  {subject.focus();return false}
+							  
+						// Check The complaint Field Empty Or Not
+
+						if (validate_required(complaint,"Please Enter complaint")==false)
+							  {complaint.focus();return false}
+                     
+					     }
+					 
+  						 if (thisform.queryType.value == "--Select--") 
+							  {
+								alert("Please select query Type");
+								thisform.queryType.focus();
+								return(false);
+							  }
+							  
+					     if (thisform.courseType.value == "--Select--") 
+							  {
+								alert("Please select course Type");
+								thisform.courseType.focus();
+								return(false);
+							  }
+					
+					}
+					
+		function getoptions(a)
+{
+	if (a.value !="Course related")
+	{
+		document.getElementById('op2').style.display="none";
+
+	}
+	else
+	{
+		document.getElementById('op2').style.display="table-row";
+
+	}
+	
+}
+
+</script>
+
+<div>
+  <table width="930" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+    
+    <td height="235" align="left" valign="top" bgcolor="#FFFFFF">
+    
+    <table width="100%" border="0" cellspacing="0" cellpadding="8">
+      <tr>
+        <td width="2%" class="Header">&nbsp;</td>
+        <td width="25%" class="PageTitle">&nbsp;</td>
+        <td width="73%" class="PageTitle">Got a Query/ Suggestion - Write to us  <% If Session("State") = "verified1" OR Session("State") = "verified2" OR Session("State") = "verified3" OR Session("State") = "verified5" OR Session("State") = "verified6" OR Session("State") = "verified7" OR Session("State") = "verified13"  Then %><a href="/ITIL/help.asp#Query" style="float:right; margin-right:20px;"><img src="/images/buttons/Help.png" height="20px" style="border-color:#FFFFFF" onmouseover="this.src='/images/buttons/help_h.png'" onmouseout="this.src='/images/buttons/Help.png'"></a> <% End If %></td>
+      </tr>
+      <tr>
+      
+      <!--#include virtual="/includes/innerLeftMenu.asp"-->
+      <td width="73%" rowspan="4" background="/images/back/left_line.jpg" class="general-body">
+      
+      <div style="margin-top:-12px;">
+        <!-- Content Start From Here-->
+        
+
+    <%  
+	
+	'Retriving email, name from PaypalDB based on rollno 
+	strQuery = "select payer_email, first_name, last_name from PaypalDB where rollno= '"& rollNo  &"' "
+	objRs1.Open strQuery, ConnObj
+	'response.Write(strQuery)
+       Do Until objRs1.EOF
+	            Email      =  objRs1("payer_email")
+		   		FirstName  =  objRs1("first_name")
+				LastName   =  objRs1("last_name")
+		   objRs1.Movenext
+		   Loop
+		   objRs1.Close
+	
+	 %>
+    
+        
+      <form name="complaint" action="insertQuery.asp" method="post" onSubmit="return validate_form(this)">
+		<input type="hidden" name="Email" value="<% = Email %>" />
+        <input type="hidden" name="FirstName" value="<% = FirstName %>" />
+        <input type="hidden" name="LastName" value="<% = LastName %>" />
+        
+ 
+     <table border="0" cellspacing="5" cellpadding="0" width="100%" >
+		 <tr id="op1">
+		<td width="20%"><span class="general-bodyBold">Query Type:</span></td>
+        <td >
+        <select name="queryType" id="queryType" onchange="getoptions(this)">
+                    <% If Session("State") = "verified1" OR Session("State") = "verified2" OR Session("State") = "verified3" OR Session("State") = "verified5" OR Session("State") = "verified6" OR Session("State") = "verified7" OR Session("State") = "verified13"  Then  %>
+         <option value="Course related">Course related</option>
+        <% Else %>
+         <option name="--Select--">--Select--</option>
+         <option value="Course related">Course related</option>
+        <% End If %>
+                  
+                  <option value="Website/Login issues">Website/Login issues</option>
+                  <option value="Venue related comments">Venue related comments</option>
+                  <option value="Other Material related issues">Other Material related issues</option>
+                  <option value="Payment related">Payment related</option>
+                  <option value="Reschedule/Cancellation related queries"> Reschedule/Cancellation related queries </option>
+                  <option value="Feedback"> Feedback</option>
+                  <option value="Examination related queries">Examination related queries</option>
+                  <option value="Miscellaneous Issues">Miscellaneous Issues</option>
+                 
+        </select>
+        </td>
+        </tr>
+        <% If Session("State") = "verified1" OR Session("State") = "verified2" OR Session("State") = "verified3" OR Session("State") = "verified5" OR Session("State") = "verified6" OR Session("State") = "verified7" OR Session("State") = "verified13"  Then %>
+        
+        
+         <% 'If query = "Course related" Then %>
+         <tr id="op2" >
+        <td width="193px"><span class="general-bodyBold">Course:</span></td>
+       <td> <select name="course">
+        <option name="--Select--">--Select--</option>
+        <option name="Introduction">Introduction</option>
+        <option name="Service Strategy">Service Strategy</option>
+        <option name="Service Design">Service Design</option>
+        <option name="Service Transition">Service Transition</option>
+        <option name="Service Operation">Service Operation</option>
+        <option name="Continual Service Improvement">Continual Service Improvement</option>
+        <option name="Mock Test">Mock Test</option>
+        <option value="Sample Papers">Sample Papers</option>
+        </select></td>
+        <tr>
+          <%' End If %>   
+      
+         
+        <td><span class="general-bodyBold" id="courseType">Course Type:</span></td>
+        <td><% = "ITIL" %></td>
+   
+        </tr>
+        <% End If %>
+         <% If Session("State") = "verified9" Then %>
+         <tr>
+        <td><span class="general-bodyBold">Course Type:</span></td>
+        <td>ITIL Intermediate (CSI) online course</td>
+        </tr>
+        <% End If %>
+		 <% If Session("State") = "verified11" Then %>
+         <tr>
+        <td><span class="general-bodyBold">Course Type:</span></td>
+        <td>ITIL Intermediate (OSA) online course</td>
+        </tr>
+        <% End If %>
+         <% If Session("State") = "verified14" Then %>
+         <tr>
+        <td><span class="general-bodyBold">Course Type:</span></td>
+        <td>Service Strategy online course</td>
+        </tr>
+        <% End If %>
+         <% If Session("State") = "verified15" Then %>
+         <tr>
+        <td><span class="general-bodyBold">Course Type:</span></td>
+        <td>Service Transition online course</td>
+        </tr>
+        <% End If %>
+         <% If Session("State") = "verified16" Then %>
+         <tr>
+        <td><span class="general-bodyBold">Course Type:</span></td>
+        <td>Service Design online course</td>
+        </tr>
+        <% End If %>
+         <% If Session("State") = "verified17" Then %>
+         <tr>
+        <td><span class="general-bodyBold">Course Type:</span></td>
+        <td>Service Operation online course</td>
+        </tr>
+        <% End If %>
+         <% If Session("State") = "verified18" Then %>
+         <tr>
+        <td><span class="general-bodyBold">Course Type:</span></td>
+        <td> ITIL Intermediate PPO course</td>
+        </tr>
+        <% End If %>
+         <% If Session("State") = "verified19" Then %>
+         <tr>
+        <td><span class="general-bodyBold">Course Type:</span></td>
+        <td> ITIL Intermediate SOA course</td>
+        </tr>
+        <% End If %>
+         <% If Session("State") = "verified20" Then %>
+         <tr>
+        <td><span class="general-bodyBold">Course Type:</span></td>
+        <td> ITIL Intermediate RCV course</td>
+        </tr>
+        <% End If %>
+        <tr>
+        <td><span class="general-bodyBold">Subject:</span></td>
+        <td><input type="text" name="subject" id="subject" size="40" /></td>
+        </tr>
+		
+        <tr>
+        <td><span class="general-bodyBold">Complaint:</span></td>
+        <td><textarea name="complaint" rows="10" cols="20"></textarea></td>
+        </tr>
+        <tr>
+        <td></td>
+        <td><input type="Submit" name="type" value="Submit" />
+        <input type="reset"  value="Reset" /></td>
+        </tr>
+        </table>
+        </form>
+         <% If Session("State") = "verified1" OR Session("State") = "verified2" OR Session("State") = "verified3" OR Session("State") = "verified5" OR Session("State") = "verified6" OR Session("State") = "verified7"  OR Session("State") = "verified9" OR Session("State") = "verified11" OR Session("State") = "verified13"  OR Session("State") = "verified14" OR Session("State") = "verified15" OR Session("State") = "verified16" OR Session("State") = "verified17" OR Session("State") = "verified18" OR Session("State") = "verified19" OR Session("State") = "verified20" Then %>
+         <p><b>Please Note :</b>
+         <ul><li>The course related queries would be handled by Subject Matter Experts or Accredited trainers and would be answered within 12 hours.</li>
+         
+         <li>Other queries will be answered within 6 business hours. All customer support emails should be sent to <a href="mailto:marketing@ITILstudy.com" target="_blank">marketing@ITILstudy.com</a> or through a feedback form.</li></ul>
+
+</p>
+ <% End If %>   
+        </td>
+        </tr>
+        </table>
+        </td></tr>
+        </table>
+<!-- Content End From Here-->
+<% End If %>
+		<!--#include virtual="/includes/connectionClose.asp"-->
+      </div>
+
+<!-- Body Ends -->
+<!--#include virtual="/includes/footer.html"-->

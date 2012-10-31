@@ -1,0 +1,110 @@
+<table border="0"  cellspacing="2" cellpadding="2" width="140px">
+  <tr>
+    <td><a href="csrHome.asp">CSRHome</a></td>
+  </tr>
+  <% if  Session("UserId") = "edusyssavita" Then %>
+  <tr>
+    <td><a href="price.asp">Update Price</a></td>
+  </tr>
+  <% End If %>
+  <tr>
+    <td><a href="upload-hoteladdress.asp" target="_blank">Update Venue Details</a></td>
+  </tr>
+   <tr>
+    <td><a href="PRINCE2upload-hoteladdress.asp" target="_blank">PM PRINCE2 Update Venue Details</a></td>
+  </tr>
+  <% if session("typeofuser") = "Admin" OR Session("typeofuser") = "SeniorCSR" Then %>
+  <tr>
+    <td><a href="city.asp">Cities</a></td>
+  </tr>
+ <!-- <tr>
+    <td><a href="location.asp">Locations</a></td>
+  </tr>-->
+  <% End If %>
+  <tr>
+    <td><a href="instructor.asp">Instructor</a></td>
+  </tr>
+  <tr>
+    <td><a href="courses.asp">Courses</a></td>
+  </tr>
+   <tr>
+    <td><a href="PRINCE2-BCourses.asp">PM PRINCE2 Courses</a></td>
+  </tr>
+<!--  <tr>
+    <td><a href="ITIL-courses.asp">PROJITIL Courses</a></td>
+  </tr>-->
+   <tr>
+    <td><a href="admin_ComplaintLog.asp">Complaint Log</a></td>
+  </tr>
+  <!--<tr>
+    <td><a href="tdsCalculations.asp">T D S</a></td>
+  </tr>
+  <tr>
+    <td><a href="customerFeedBack.asp">Queries</a></td>
+  </tr>
+  <% if session("typeofuser") = "Admin" OR Session("typeofuser") = "SeniorCSR" Then %>
+  <tr>
+    <td><a href ="uploadClassRoomPhotos.asp">Image</a></td>
+  </tr>
+  <tr>
+    <td><a href ="addParticipants.asp?action=View">Participants</a></td>
+  </tr>-->
+  <% If Session("UserId") = "Bharath"  OR Session("UserId") = "edusyssavita" Then %>
+  <tr>
+    <td><a href ="countrydetails.asp">Country Details</a></td>
+  </tr>
+  <% End If %>
+<!--  <tr>
+    <td><a href ="backOffLogistics.asp">Logistics</a></td>
+  </tr>
+  <% End If %>-->
+    <tr>
+    <td><a href ="payDecline.asp" target="_blank">Payment Decline</a></td>
+  </tr>
+   <tr>
+    <td><a href="competitors.asp">Competitors</a></td>
+  </tr> 
+  <tr>
+    <td><a href="facultyReport.asp">Feedback Module</a></td>
+  </tr> 
+  <tr>
+    <td><a href=" feedback-Report.asp"> FeedBack Report</a></td>
+  </tr>
+  <tr>
+    <td><a href="classroom_feedback.asp" target="_blank">Classroom Feedbacks</a></td>
+  </tr> 
+  <tr>
+    <td><a href="online_feedback.asp" target="_blank">Online Feedbacks</a></td>
+  </tr> 
+     
+ <% If Session("typeofuser") = "Admin" Then %>
+  <tr>
+    <td><a href="user.asp">Users</a></td>
+  </tr>
+  <tr>
+    <td><a href="admin-user.asp">Admin Users</a></td>
+  </tr>
+  <% End If %>
+  
+  <tr>
+    <td><a href ="enrolments.asp"> Enrollments</a></td>
+	
+  </tr>
+  <tr>
+   <td><a href ="venueIP.asp"> Hits on venue detail</a></td></tr>
+   <tr>
+    <td><a href ="ITILterms_definition.asp"> Foundation Terms Definition</a></td>
+  </tr>
+  <tr>
+    <td><a href ="CSIterms_definition.asp">CSI Terms Definition</a></td>
+  </tr>
+  <tr>
+    <td><a href ="OSAterms_definition.asp">OSA Terms Definition</a></td>
+  </tr>
+  <tr>
+    <td><a href ="courselocations.asp">Locations</a></td>
+  </tr>
+  <tr>
+    <td><a href="../logout.asp">Logout</a></td>
+  </tr>
+</table>

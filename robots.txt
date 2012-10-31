@@ -1,0 +1,6 @@
+# robots.txt file
+User-agent: *
+Disallow: /includes/
+Disallow: /India/
+Disallow: /CRM/
+Sitemap: http://www.itilstudy.com/sitemap.xml
