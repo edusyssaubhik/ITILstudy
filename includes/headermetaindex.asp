@@ -19,10 +19,8 @@
 
 /*Other course strip css */
 
-/*Other course strip css */
-
 #CoursesPanel {
-	width:870px;
+	width:871px;
 	height:24px;
 	/*font-weight:bold;*/
 	font-family:Arial, Helvetica, sans-serif;
@@ -76,6 +74,65 @@ a.courses:hover {
 a.courses:last-child {
 	border-right:none;
 }
+
+/* Enroll button*/
+#PM-Enrolmentbutton-Container
+{
+	width:212px;
+	height:47px;
+	float:left;
+	margin-top:253px;
+}
+
+.PM-Enrolmentbutton-Button-Background
+{  
+    width:104px;
+	height:45px;
+	float:left;
+	border:#003366 1px solid;
+	background:url(/Images/banners/Enrol-Button-Bg.png);
+	background-repeat:repeat-x;
+}
+.PM-Enrolmentbutton-Button-Background:hover
+{  
+    background:url(/Images/banners/Enrol-Button-Bg-Hover.png);
+	background-repeat:repeat-x;
+}
+	
+.PM-Enrolmentbutton
+{
+	
+	padding-left:6px;
+	padding-top:5px;
+	background:url(/Images/banners/En_ButtonArrow.png) no-repeat;
+	background-position:95% 53%;
+}
+.EM-Classroom
+{
+	color:#01518a;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+	text-shadow: 0px 1px 1px #fff;
+	text-decoration:none;
+}
+a.PM-Enroll-text
+{
+   font-family:Arial, Helvetica, sans-serif;
+   font-size:12px;
+   color:#000000;
+   text-decoration:none;
+   display:block;
+   text-align:left;
+   
+}
+
+.PM-Enrolmentbutton a:hover 
+{
+	background:none;
+color:#000000;
+	}
+
+
 
 </style>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
