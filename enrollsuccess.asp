@@ -303,14 +303,17 @@ Do Until objRs.EOF
 	x = UsedPoints
 	
 	Else
-        x = 10
-    '***********Madhav Start**************
+        If ucase(trim(rqDiscountCode1)) ="OSA200" OR ucase(trim(rqDiscountCode1)) ="CSI200" OR ucase(trim(rqDiscountCode1)) ="ST200" Then
+    '***********Discount Code**************
         Select case ucase(trim(rqDiscountCode1))
                 case "OSA200" : x = 200
                 case "CSI200" : x = 200
                 case "ST200" : x = 200
         End Select 
-    '***************Madhav Ends************
+    '***************Discount Code************
+        Else
+             x = 10
+        End If
 	End If
 	
 	'FBDiscountPrice = 5
@@ -739,27 +742,27 @@ End If
 'Response.Write(strBody)
 
 
- 		 'Set objCDOMail = Server.CreateObject("CDONTS.NewMail")
-		 'objCDOMail.From = "marketing@ITILstudy.com"
-		 'objCDOMail.To =  "<" & rqEmail & ">"
-		 'objCDOMail.cc = "marketing@ITILstudy.com"
+  		 Set objCDOMail = Server.CreateObject("CDONTS.NewMail")
+		 objCDOMail.From = "marketing@ITILstudy.com"
+		 objCDOMail.To =  "<" & rqEmail & ">"
+		 objCDOMail.cc = "marketing@ITILstudy.com"
 		 'If (Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "UAE" OR Session("CountryOrigin") = "Singapore" OR Session("CountryOrigin") = "India") Then
-		'objCDOMail.Bcc = "satpathyt@gmail.com,pmstudysales@gmail.com,itilstudysales@gmail.com, edusysgaurav@gmail.com, edusysayan@gmail.com, itilstudyleadershipteam@googlegroups.com"
+		objCDOMail.Bcc = "satpathyt@gmail.com,pmstudysales@gmail.com,itilstudysales@gmail.com, edusysgaurav@gmail.com, edusysayan@gmail.com, itilstudyleadershipteam@googlegroups.com"
 		' objCDOMail.Bcc = "edusyssavita@gmail.com"
 		' Else
 		' objCDOMail.Bcc = "satpathyt@gmail.com"
 		 'End If
-		 'objCDOMail.Importance = 2
-		 'If rqClasstype = "CSI" OR rqClasstype = "OSA" OR rqClasstype = "ST" Then
-		 'objCDOMail.Subject = "Enrollment in " & City & " ITILstudy Intermediate "&rqClasstype&" Coaching for ITIL Certification Exam"
-		 'Else 
-		 'objCDOMail.Subject = "Enrollment in " & City & " ITILstudy "&rqCourseType&" Coaching for ITIL Certification Exam"
-		 'End If
-		' objCDOMail.BodyFormat = 0
-		 'objCDOMail.MailFormat = 0
-		' objCDOMail.Body =  strBody
-		 'objCDOMail.Send
-		 'Set objCDOMail = Nothing
+		 objCDOMail.Importance = 2
+		 If rqClasstype = "CSI" OR rqClasstype = "OSA" OR rqClasstype = "ST" Then
+		 objCDOMail.Subject = "Enrollment in " & City & " ITILstudy Intermediate "&rqClasstype&" Coaching for ITIL Certification Exam"
+		 Else 
+		 objCDOMail.Subject = "Enrollment in " & City & " ITILstudy "&rqCourseType&" Coaching for ITIL Certification Exam"
+		 End If
+		 objCDOMail.BodyFormat = 0
+		 objCDOMail.MailFormat = 0
+		 objCDOMail.Body =  strBody
+		 objCDOMail.Send
+		 Set objCDOMail = Nothing
 
 %>
 <div>

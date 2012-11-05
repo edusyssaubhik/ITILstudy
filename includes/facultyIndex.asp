@@ -1,4 +1,3 @@
-
 <script src="http://code.jquery.com/jquery-1.4.2.min.js" type="text/javascript"></script>
 <script src="/js/jquery.divslideshow-1.2-min.js" type="text/javascript"></script>
 <style type="text/css">
@@ -52,8 +51,7 @@
 Set Rs7 = Server.CreateObject("ADODB.Recordset")
 Set Rs6 = Server.CreateObject("ADODB.Recordset")
 
-strQuery7 = "SELECT MAX(Id) as randno FROM ITIL_faculty"
-
+strQuery7 = "SELECT MAX(Id) as randno FROM ITILstudy.ITIL_faculty"
 Rs7.Open strQuery7,ConnObj
 randno = Rs7("randno")
 
@@ -79,14 +77,19 @@ For id = 1 to randno
 
 
 <%
-strQuery6 = "SELECT id,facultyName,Description,image,feedbackName,company FROM ITIL_faculty where id ='"&Rno&"' And (country = 'United Kingdom')"
+If Session("CountryOrigin") = "United Kingdom" Then
+strQuery6 = "SELECT id,facultyName,Description,image,feedbackName,company FROM ITILstudy.ITIL_faculty where id ='"&Rno&"' And (country = 'United Kingdom')"
+Else
+strQuery6 = "SELECT id,facultyName,Description,image,feedbackName,company FROM ITILstudy.ITIL_faculty where id ='"&Rno&"' And (country = 'Germany')"
+
+End If
 Rs6.Open strQuery6,ConnObj
 If Not Rs6.EOF Then
 %>
   <div class="slide">
     <span class="name"><% = Rs6("facultyName") %></span>
      <span class="details">
-   <img src="../images/faculty/<% = Rs6("image") %>" align="right" /> <% = Rs6("Description") %>
+   <img src="../images/faculty/<% = Rs6("image") %>" align="right"  width="75px" height="85px"/> <% = Rs6("Description") %><%if session("CountryOrigin")<>"United Kingdom" Then %> <a href="/ITIL-Training/instructors.asp#<%=Trim(Rs6("facultyName")) %>">More</a><%end if %>
    </span>
   
     </div>

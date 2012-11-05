@@ -22,5 +22,5 @@ If sIPAddress="" Then sIPAddress = Request.ServerVariables("REMOTE_ADDR")
 <%
 'Response.Redirect "./index.asp"
 
-Server.Transfer( "./index.asp")
+Server.Transfer("/index.asp")
 %>

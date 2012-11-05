@@ -1143,3 +1143,9 @@ background-position: left center;
 a#list_style:hover{
 color:#0CC;
 }
+
+span#subImage{
+
+color:#797979;
+font-size:12px;
+}

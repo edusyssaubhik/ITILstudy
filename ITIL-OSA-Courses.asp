@@ -11,8 +11,9 @@
 <!--#include virtual="/includes/learn-from-the-best-banner.asp"-->
 <!--#include virtual="/includes/connection.asp"-->
 <!--#include virtual="/includes/displayFormat.asp"-->
-<!--#include virtual="/includes/generator4OSA-Courses.asp"-->
 
+<!--#include virtual="/includes/generator4OSA-Courses.asp"-->
+response.write "
 <script language="JavaScript" type="text/javascript" src="/js/tableH.js"></script>
 <script language="JavaScript" type="text/javascript" src="/js/courses.js"></script>
 <script type="text/javascript" src="/js/cities_combo.js"></script>

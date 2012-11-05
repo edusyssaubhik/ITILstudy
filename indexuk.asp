@@ -18,5 +18,5 @@ ConnObj1.Execute "INSERT INTO countrydetails(other, created_date, source_from) v
 Set objHtp = Nothing
 Set ConnObj1 = Nothing
 
-Response.Redirect "/index.asp"
+Server.Transfer("/index.asp")
 %>

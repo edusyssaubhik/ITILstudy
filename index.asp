@@ -225,7 +225,7 @@ End If
             <% Else %>
             <td width="21%" class="Header"><img src="/images/buttons/title_courses-ol.jpg" alt="Services" ></td>
             <% End If %>
-            <% If Session("CountryOrigin")="United Kingdom" Then  %>
+            <% If Session("CountryOrigin")="United Kingdom" OR Session("CountryOrigin")="Germany" OR Session("CountryOrigin")="Netherlands" Then   %>
           <td width="24%" class="Header"><img src="/images/buttons/bestfaculty.jpg" alt="Services" ></td>
            <% Else %>
            <td width="24%" class="Header"><img src="/images/buttons/Affiliates.jpg" alt="Services" ></td>
@@ -394,7 +394,8 @@ End If
             <%' End If %>
 			 <% Else %>
 			 
-			  <p id="imageHover"><a href="/ITIL-Courses.asp"> <img src="/images/buttons/courses_basic.jpg" alt="courses" height="44px" border="0" ></a>
+			  <p id="imageHover"><a href="/ITIL-Courses.asp"> <img src="/images/buttons/courses_basic1.jpg" alt="courses" height="28px" border="0" ></a><br />
+                  <span id="subImage">For ITIL<sup>&reg;</sup> Foundation</span>
 			  <br /> 
               <h1 class="HomePageTitle">
                 <% If Session("CountryOrigin") = "United Kingdom"  Then %>
@@ -485,7 +486,8 @@ End If
           
           <% If Session("CountryOrigin") = "United Kingdom" Or   Session("CountryOrigin") = "US" or Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "India" Then %>
           
-           <p id="imageHover"><a href="/ITIL-OSA-Courses.asp"> <img src="/images/buttons/ITIL-Advanced-OSA.jpg" alt="courses" height="44px" border="0" ></a>
+           <p id="imageHover"><a href="/ITIL-OSA-Courses.asp"> <img src="/images/buttons/ITIL-Advanced-OSA1.jpg" alt="courses" height="28px" border="0" ></a><br />
+                  <span id="subImage">For ITIL<sup>&reg;</sup> Intermediate OSA</span></span>
 			    <br /> 
                 
                 
@@ -553,7 +555,8 @@ End If
                 
                 <a href="/ITIL-OSA-Courses.asp"> Click here for more classes</a>
                <br /><br />
-               <a href="/ITIL-CSI-Courses.asp"> <img src="/images/buttons/ITIL-Advanced-CSI.jpg" alt="courses" height="44px" border="0" ></a><br />
+               <a href="/ITIL-CSI-Courses.asp"> <img src="/images/buttons/ITIL-Advanced-CSI1.jpg" alt="courses" height="28px" border="0" ></a><br />
+                  <span id="subImage">For ITIL<sup>&reg;</sup> Intermediate CSI</span></span><br />
                
                  <% If Session("CountryOrigin") = "United Kingdom" Then %>
                 
@@ -663,7 +666,9 @@ ITIL Lifecycle Certificate in Continual Service Improvement (3 Days) Courses sta
 						   
               <!--ITIL Online Course -->
               	<% If (Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin")="United Kingdom") Then %>
-                <p id="imageHover"><a href="/ITIL-Training/ITIL-Led-Live-Online-Course.asp"><img src="/images/buttons/WBT.jpg" height="46px" border="0"></a><br />
+                <p id="imageHover"><a href="/ITIL-Training/ITIL-Led-Live-Online-Course.asp"><img src="/images/buttons/WBT1.jpg" height="29px" border="0"></a><br />
+                  <span id="subImage">For ITIL<sup>&reg;</sup> Live Online Courses</span></span>
+			    <br /> <br />
                  <a href="/ITIL-Training/ITIL-Led-Live-Online-Course.asp">Instructor-led Virtual Classes</a><br />
                  Courses starting at <% If Session("CountryOrigin")="United Kingdom" Then %> £ 900 (Prices are inclusive of exam fees and 100% Moneyback Guarantee)<% Else %>$ 1049
                 (Prices are inclusive of exam fees and 100% Money Back Guarantee)<% End If %>
@@ -675,7 +680,8 @@ ITIL Lifecycle Certificate in Continual Service Improvement (3 Days) Courses sta
             <% End If %>
                
 					<% If Session("CountryOrigin")="United Kingdom" Then %>
-					  <p id="imageHover"><a href="/ITIL-Online-Courses.asp"><img src="/images/buttons/edu.png"  height="44px" border="0"></a></span>
+					  <p id="imageHover"><a href="/ITIL-Online-Courses.asp"><img src="/images/buttons/edu1.png"  height="28px" border="0"></a><br />
+                  <span id="subImage">For ITIL<sup>&reg;</sup> Online Courses</span></span>
                    <br /><br />
                     <a href="/ITIL-Online-Courses.asp">ITIL Foundation Course - <% = Currency_Format_Front %> 200 <% = Currency_Format_Back %> </a>
                     </a><br />
@@ -684,14 +690,16 @@ ITIL Lifecycle Certificate in Continual Service Improvement (3 Days) Courses sta
 					<br /></p>
 					
 					<% ElseIf Session("CountryOrigin")="Australia" Then %>
-					  <p id="imageHover"><a href="/ITIL-Online-Courses.asp"><img src="/images/buttons/edu.png"  height="44px" border="0"></a></span>
+					  <p id="imageHover"><a href="/ITIL-Online-Courses.asp"><img src="/images/buttons/edu1.png"  height="28px" border="0"></a><br />
+                  <span id="subImage">For ITIL<sup>&reg;</sup> Online Courses</span></span>
                    <br /><br />
                     <a href="/ITIL-Online-Courses.asp">ITIL Foundation Course - 285 AUD </a></a><br />
 					<a href="/ITIL-Online-Courses.asp">Intermediate OSA Course - 625 AUD </a><br />
                     <a href="/ITIL-Online-Courses.asp">Intermediate CSI Course - 625 AUD </a><br />
 					<br /></p>
 					  <% Else %>
-                  <p id="imageHover"><a href="/ITIL-Online-Courses.asp"><img src="/images/buttons/edu.png"  height="44px" border="0"></a></span>
+                  <p id="imageHover"><a href="/ITIL-Online-Courses.asp"><img src="/images/buttons/edu1.png"  height="28px" border="0"></a><br />
+                  <span id="subImage">For ITIL<sup>&reg;</sup> Online Courses</span></span>
                     <br />(Prices are inclusive of all taxes)<br /><br />
                     <a href="/ITIL-Online-Courses.asp">ITIL Foundation Course - $ 300 </a><br />
 					<a href="/ITIL-Online-Courses.asp">Intermediate OSA Course - $ 665  </a><br />
@@ -703,46 +711,54 @@ ITIL Lifecycle Certificate in Continual Service Improvement (3 Days) Courses sta
 					<!--Blend Course -->
 					
 					<% If Session("CountryOrigin")="United Kingdom" Then %>
-					<p id="imageHover"><a href="/ITIL-Online-Courses.asp"><img src="/images/buttons/Blended.png"  height="44px" border="0"></a>
+					<p id="imageHover"><a href="/ITIL-Online-Courses.asp"><img src="/images/buttons/Blended1.png"  height="28px" border="0"></a><br />
+                        <span id="subImage">For ITIL<sup>&reg;</sup> Blended Courses</span>
                    <br /><br />
 					<a href="/ITIL-Online-Courses.asp">ITIL Blended Course - <% = Currency_Format_Front %> 350 <% = Currency_Format_Back %></a><br /><br />
 					</p>
 					<% ElseIf Session("CountryOrigin")="Australia" Then %>
-					<p id="imageHover"><a href="/ITIL-Online-Courses.asp"><img src="/images/buttons/Blended.png"  height="44px" border="0"></a>
+					<p id="imageHover"><a href="/ITIL-Online-Courses.asp"><img src="/images/buttons/Blended1.png"  height="28px" border="0"></a><br />
+                        <span id="subImage">For ITIL<sup>&reg;</sup> Blended Courses</span>
                    <br /><br />
 					<a href="/ITIL-Online-Courses.asp">ITIL Blended Course - 560 AUD </a><br /><br />
 					</p>
 					 <% Else %>
-					<p id="imageHover"><a href="/ITIL-Online-Courses.asp"><img src="/images/buttons/Blended.png"  height="44px" border="0"></a></span>
+					<p id="imageHover"><a href="/ITIL-Online-Courses.asp"><img src="/images/buttons/Blended1.png"  height="28px" border="0"></a><br />
+                        <span id="subImage">For ITIL<sup>&reg;</sup> Blended Courses</span></span>
                     <br />(Prices are inclusive of all taxes)<br /><br />
 					<a href="/ITIL-Online-Courses.asp">ITIL Blended Course - $ 450 </a>
 					<br /><br /></p>
 					<% End If %>
-                    
+                    <table>
+                        <tr><td rowspan="2"><a href="/freeresources/freeSimulatedTest.asp"><img src="/images/symbol/symbol_free.jpg"></a></td><td><a href="/freeresources/freeSimulatedTest.asp"><img src="/images/symbol/symbol_free_text.jpg"></a><br />ITIL<sup>&reg;</sup> Exam Practice Test</td></tr>
+                        <tr><td></td></tr>
+
+                    </table>
 				<% If Session("CountryOrigin") <> "US" AND Session("CountryOrigin") <> "Canada" Then %>
 				<p id="imageHover"><a href="/knowYourCertificate.asp"><img src="/images/buttons/KYC.png"></a></p>
                 <% End If %>
-                    <table>
-                    <tr>		
-                    
-                    <% If Session("CountryOrigin") = "United Kingdom" Then %>
-                                      
-                        <td id="imageHover">&nbsp;&nbsp;&nbsp;<img border="0" src="/images/buttons/New-UK.jpg"  border="0" /></td>
-                                      
-                    <% ElseIf Session("CountryOrigin") <> "Singapore" AND Session("CountryOrigin") <> "Other" AND Session("CountryOrigin") <> "United Kingdom" Then %>
-                    
-                            <td id="imageHover">&nbsp;&nbsp;&nbsp;<img border="0" src="/images/buttons/New.jpg"  border="0" /></td>
-                                        
-                     <% End If %>
-                                       
-                   
-                   <td><br />Based on 2011 Syllabus, Approved by APMG </td></tr></table>
+
 
                   <!-- <td width="20%" id="imageHover"><a href="/ITIL-Online-Courses.asp"><img src="/images/buttons/Blended.jpg" width="168px " height="44px" border="0"></a>
                     <br />(Prices are inclusive of all taxes)<br /><br /></td></tr> -->
                
    
-			                    <p id="imageHover"><a href="/ITIL-Training/classroom-FAQ.asp"><img src="/images/buttons/Faq.jpg" height="97" border="0"></a></p>
+			                    <p id="imageHover"><a href="/ITIL-Training/classroom-FAQ.asp"><img src="/images/buttons/Faq.jpg" height="83px" border="0"></a></p>
+                                           <table>
+                    <tr>		
+                    
+                    <% If Session("CountryOrigin") = "United Kingdom" Then %>
+                                      
+                        <td id="Td1">&nbsp;&nbsp;&nbsp;<img border="0" src="/images/buttons/New-UK.jpg"  border="0" /></td>
+                                      
+                    <% ElseIf Session("CountryOrigin") <> "Singapore" AND Session("CountryOrigin") <> "Other" AND Session("CountryOrigin") <> "United Kingdom" Then %>
+                    
+                            <td id="Td2">&nbsp;&nbsp;&nbsp;<img border="0" src="/images/buttons/New.jpg"  border="0" /></td>
+                                        
+                     <% End If %>
+                                       
+                   
+                   <td><br />Based on 2011 Syllabus, Approved by APMG </td></tr></table>
 
               </td>
               
@@ -753,7 +769,11 @@ ITIL Lifecycle Certificate in Continual Service Improvement (3 Days) Courses sta
          
 			
 <% If Session("CountryOrigin")<>"United Kingdom" Then %>
-    
+    <%If Session("CountryOrigin")="Germany" Or Session("CountryOrigin")="Netherlands"  Then%>
+                   <!--#include virtual="/includes/facultyIndex.asp"-->
+                <div align="center"><img src="/images/buttons/Affiliates.jpg" alt="Services"></div><br />
+    <%end If %>
+
 <tr><td valign="top" ><a href="http://www.SCRUMstudy.com" target="_blank"><img src="/images/buttons/scrum.jpg" border="0" align="left" /></a></td>
 <td width="80%" valign="top" ><a href="http://www.SCRUMstudy.com" target="_blank">SCRUMstudy.com</a><br />A preferred training provider for Scrum and Agile Certification</td></tr>
 <tr><td>&nbsp;</td></tr>
@@ -781,7 +801,9 @@ ITIL Lifecycle Certificate in Continual Service Improvement (3 Days) Courses sta
 	</tr>
     
     <% Else %>
+                
    <!--#include virtual="/includes/facultyIndex.asp"-->
+  
     <% End If %>
   
     <% If Session("CountryOrigin") = "United Kingdom" Then %>

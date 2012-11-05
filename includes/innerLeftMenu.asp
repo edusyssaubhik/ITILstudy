@@ -1894,6 +1894,11 @@ Select Case State
      <tr>
       <td id="imageHover"><object width="200" height="150"><iframe width="200" height="150" src="http://www.youtube.com/embed/G7sizMIi9K4?wmode=transparent" frameborder="0" allowfullscreen></iframe><br /><br /></td>
     </tr>    
+      <tr><td>              <table>
+                        <tr><td rowspan="2"><a href="/freeresources/freeSimulatedTest.asp"><img src="/images/symbol/symbol_free.jpg"></a></td><td><a href="/freeresources/freeSimulatedTest.asp"><img src="/images/symbol/symbol_free_text.jpg"></a><br />ITIL<sup>&reg;</sup> Exam <br />Practice Test</td></tr>
+                        <tr><td></td></tr>
+
+                    </table></td></tr>
 	<tr>
     <td>
     <div id="contact-box" align="center">
@@ -1905,14 +1910,28 @@ Select Case State
     
     <% else %>
     <% If Session("CountryOrigin") <> "India" AND Session("CountryOrigin") <> "UAE" AND Session("CountryOrigin") <> "Other" AND Session("CountryOrigin") <> "Australia" AND Session("CountryOrigin") <> "United Kingdom" Then %>
+
      <tr>
       <td id="imageHover"><iframe width="200" height="150" src="http://www.youtube.com/embed/G7sizMIi9K4?wmode=transparent" frameborder="0" allowfullscreen></iframe><br /><br /></td>
     </tr>
+      <tr><td>              <table>
+                        <tr><td rowspan="2"><a href="/freeresources/freeSimulatedTest.asp"><img src="/images/symbol/symbol_free.jpg"></a></td><td><a href="/freeresources/freeSimulatedTest.asp"><img src="/images/symbol/symbol_free_text.jpg"></a><br />ITIL<sup>&reg;</sup> Exam <br />Practice Test</td></tr>
+                        <tr><td></td></tr>
+
+                    </table></td></tr>
     <% End If %>
     <% If Session("CountryOrigin") <> "United Kingdom" AND Session("CountryOrigin") <> "UAE" AND Session("CountryOrigin") <> "Australia"  Then %>
+      <%If Session("CountryOrigin") = "India" OR Session("CountryOrigin") = "Other" Then %>
+                  <tr><td>              <table>
+                        <tr><td rowspan="2"><a href="/freeresources/freeSimulatedTest.asp"><img src="/images/symbol/symbol_free.jpg"></a></td><td><a href="/freeresources/freeSimulatedTest.asp"><img src="/images/symbol/symbol_free_text.jpg"></a><br />ITIL<sup>&reg;</sup> Exam <br />Practice Test</td></tr>
+                        <tr><td></td></tr>
+
+                    </table></td></tr>
+      <%end If %>
     <tr>
       <td id="imageHover"><a href="/ITIL-Courses.asp"><img src="/images/buttons/courses_basic.jpg"   border="0" ></a><br /><br /></td>
     </tr>
+
     <% End If %>
      <% If Session("CountryOrigin") = "United Kingdom" OR Session("CountryOrigin") = "UAE" OR Session("CountryOrigin") = "Australia" Then %>
      
@@ -1921,8 +1940,12 @@ Select Case State
       <td id="imageHover"><object width="200" height="150"><iframe width="200" height="150" src="http://www.youtube.com/embed/G7sizMIi9K4?wmode=transparent" frameborder="0" allowfullscreen></iframe><br /><br /></td>
    
     </tr>  
-    
-      
+    <tr><td>              <table>
+                        <tr><td rowspan="2"><a href="/freeresources/freeSimulatedTest.asp"><img src="/images/symbol/symbol_free.jpg"></a></td><td><a href="/freeresources/freeSimulatedTest.asp"><img src="/images/symbol/symbol_free_text.jpg"></a><br />ITIL<sup>&reg;</sup> Exam <br />Practice Test</td></tr>
+                        <tr><td></td></tr>
+
+                    </table></td></tr>
+
 	
     <tr>
     
