@@ -35,7 +35,6 @@ Rs.Movenext
 Loop
 
 %>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -145,7 +144,7 @@ We may cancel any particular class because of insufficient enrolments, instructo
 		<% Else %>
 		<li>The classroom training fee is inclusive of expenses toward ITIL<sup>&reg;</sup> Foundation examination, ITILstudy study material, training and refreshments during breaks for two days of training.</li>
 		<% End If %>
-		<li>The classroom training fee does not include cost that the student would have to incur towards hotel stay, travelling,<% If Session("CountryOrigin") = "India" Then%>lunch during the 2 days of training ,<% End if %> etc.</li>
+		<li>The classroom training fee does not include cost that the student would have to incur towards hotel stay, travelling,<% If Session("CountryOrigin") = "India" Then%><!--lunch during the 2 days of training ,--><% End if %> etc.</li>
 		<li>Information about your enrollment may be provided to co-workers in your company who may ask for reference about our course. <% =rqClasstype %></li>
       
       
