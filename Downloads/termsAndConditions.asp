@@ -1,4 +1,4 @@
-﻿<%@LANGUAGE="VBSCRIPT" CODEPAGE="65001"%>
+<%@LANGUAGE="VBSCRIPT" CODEPAGE="65001"%>
 <!--#include virtual="/includes/connection.asp"-->
 <%
 Dim strCountryDetails
@@ -133,7 +133,7 @@ We may cancel any particular class because of insufficient enrolments, instructo
 		Foundation 
        <% End  If %>
 
-        examination, ITILstudy study material, training<%If Session("CountryOrigin") <> "India" Then%>, lunch<%End If %> and refreshments during breaks for 
+        examination, ITILstudy study material, training, lunch and refreshments during breaks for 
         
         <% If  rqClasstype = "OSA" or rqClasstype = "CSI" Then%>
         three 
