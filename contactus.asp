@@ -259,6 +259,7 @@ function closeimgContainer(){
                     (Please note that if you paid for any online course, it will take up to 4 hours for your account to be activated and your log-in details will be sent to your email address. We do not ship out any study material for online courses.)<br />
                     <br />
                     Australia ITIL<sup>&reg;</sup> Foundation Classroom Course Queries: +61 2 88964376 <br />
+                    Praveen Jomy, ITIL - Tel No: 61-(0) 4-21440972    <br />
                     <br />
                     <span class="SubHeader">Address:</span><br>
                     Level 5, Nexus Norwest<br />
