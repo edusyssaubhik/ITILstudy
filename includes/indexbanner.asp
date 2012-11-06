@@ -98,11 +98,11 @@
     </div>
       <div id="PM-Enrolmentbutton-Container">
         <div class="PM-Enrolmentbutton-Button-Background">
-          <div class="PM-Enrolmentbutton"> <a href="http://www.ITILStudy.com/dates_location.asp" target="_blank" class="PM-Enroll-text"><b>Enroll For</b><br />
+          <div class="PM-Enrolmentbutton"> <a href="http://www.itilstudy.com/ITIL-Courses.asp" target="_blank" class="PM-Enroll-text"><b>Enroll For</b><br />
             <span class="EM-Classroom"><b>Classroom</b></span></a> </div>
         </div>
         <div class="PM-Enrolmentbutton-Button-Background">
-          <div class="PM-Enrolmentbutton"> <a href="http://www.ITILStudy.com/enroll.asp" target="_blank" class="PM-Enroll-text"><b>Enroll For</b><br />
+          <div class="PM-Enrolmentbutton"> <a href="http://www.itilstudy.com/ITIL-Online-Courses.asp " target="_blank" class="PM-Enroll-text"><b>Enroll For</b><br />
             <span class="EM-Classroom"><b>Online</b></span></a> </div>
         </div>
       </div>
