@@ -20,7 +20,7 @@
                 <h1 class="PageTitle">ABOUT ITILstudy – LEADING ITIL<sup>&reg;</sup> PREP TRAINING PROVIDER</h1>
 			
  			<ul>
-                <li>Edusys Services Private Limited is amongst the select group of <a href="http://www.apmg-international.com/AccreditedOrganisations/EdusysServices-UK.asp" target="_blank">Accredited Training Organizations (ATO)</a> accredited by APM Group,UK and <a href="http://csme.us/CSMEATOList/tabid/83/Default.aspx" target="_blank">Certification Subject Matter Experts (CSME)</a> . ITILstudy, a leading brand of Edusys Services Private Limited, is a leading training provider which specializes in conducting quality classroom training and programs to prepare students for ITIL<Sup>&reg;</sup> Foundation certification.</li>
+                <li>Edusys Services Private Limited is amongst the select group of <a href="http://www.apmg-international.com/AccreditedOrganisations/EdusysServices-UK.asp" target="_blank">Accredited Training Organizations (ATO)</a> accredited by APM Group,UK and <a href="http://www.csme.us/training-organizations.php" target="_blank">Certification Subject Matter Experts (CSME)</a> . ITILstudy, a leading brand of Edusys Services Private Limited, is a leading training provider which specializes in conducting quality classroom training and programs to prepare students for ITIL<Sup>&reg;</sup> Foundation certification.</li>
 
 <li>We are the most successful and popular service management and project management training provider globally. We have trained more than 25,000 successful professionals spanning across 160 + countries and 3500 companies for various professional courses including ITIL, PRINCE2<sup>®</sup>, PMP<sup>®</sup>, CAPM<sup>®</sup>, etc. </li>
 

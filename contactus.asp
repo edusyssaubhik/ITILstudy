@@ -322,7 +322,7 @@ function closeimgContainer(){
                     <br />
                     UAE ITIL<sup>&reg;</sup> Foundation Classroom Course Queries (not for online courses): <br />
                     <br />
-                    <b>Alaa Konswa  (Tel: 50-2757445)</b><br>
+                    <!--<b>Alaa Konswa  (Tel: 50-2757445)</b><br>-->
                     <br>
                     <span class="Header">b) Email </span><br>
                     <br />

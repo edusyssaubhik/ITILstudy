@@ -4,7 +4,7 @@
 <!--#include virtual="/includes/connection.asp"-->
  <!--#include virtual="/india/backoffice/csr/pagination.asp"-->
 <!-- Body Starts -->
-<% If Session("CountryOrigin") <> "India" AND Session("CountryOrigin") <> "United Kingdom" AND Session("CountryOrigin") <> "US" AND Session("CountryOrigin") <> "Canada" Then  
+<% If Session("CountryOrigin") <> "India" AND Session("CountryOrigin") <> "United Kingdom" AND Session("CountryOrigin") <> "US" AND Session("CountryOrigin") <> "Canada" AND Session("CountryOrigin") <> "Germany" AND Session("CountryOrigin") <> "Netherlands" Then  
  
  Response.Redirect("/index.asp")
  
@@ -19,9 +19,11 @@ rqRow  = Request.QueryString("row")
 
 
 'If Session("CountryOrigin") = "India" OR Session("CountryOrigin") ="United Kingdom" Then 
-
+If Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "Netherlands" Then
+strQuery = "SELECT * FROM classroom_feedback where country = 'United Kingdom'  order by dateofpassing DESC"
+Else
 strQuery = "SELECT * FROM classroom_feedback where country = '"&Session("CountryOrigin")&"'  order by dateofpassing DESC"
-
+End If
 'Else
 '
 'strQuery = "SELECT * FROM classroom_feedback order by dateofpassing DESC"
@@ -43,7 +45,6 @@ If Not objRs.EOF Then
 End If
 
 objRs.Close
-
 
  If Request.QueryString("page") = "" Then
 	 iPageCurrent = 1
@@ -85,7 +86,7 @@ objRs.Close
             <!--#include virtual="/includes/innerLeftMenu.asp"-->
             <td width="73%" rowspan="4" background="/images/back/left_line.jpg" class="general-body"><h1 class="PageTitle">Some Testimonials For Our ITIL<sup>&reg;</sup> Exam prep Classes</h1>
 			
-
+                
               <div>
                 <p class="Header">Feedback from some successful ITIL<sup>&reg;</sup> certified professionals enrolled with ITILstudy.com </p>
                 <ul>
