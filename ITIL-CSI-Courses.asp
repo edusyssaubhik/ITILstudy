@@ -128,7 +128,7 @@ else if (ns6||ie4) ld.display="none";
 
  <li>Valuable tips to pass the  ITIL Intermediate exam</li>
 
- <li>Free 18 PMI approved PDUs with our courses <a href="http://itilstudy.com/ITIL-Training/Intermediate_PMIPDU.asp">More</a></li>
+ <li>Free 27 PMI approved PDUs with our courses <a href="http://itilstudy.com/ITIL-Training/Intermediate_PMIPDU.asp">More</a></li>
  
  
  <% Else %>
@@ -140,7 +140,7 @@ else if (ns6||ie4) ld.display="none";
                   <li>Refreshments and Lunch during classroom sessions</li>
                   <li>Everything required for ITIL Intermediate exam would be provided, you don’t need to bring anything else to the class.</li>
                   <li>Valuable tips to pass the ITIL Intermediate exam.</li>
-                  <li>Free 18 PMI approved PDUs with our courses<a href="http://itilstudy.com/ITIL-Training/Intermediate_PMIPDU.asp">More</a></li>
+                  <li>Free 27 PMI approved PDUs with our courses<a href="http://itilstudy.com/ITIL-Training/Intermediate_PMIPDU.asp">More</a></li>
                
                    <% End If %>
 
@@ -349,9 +349,9 @@ else if (ns6||ie4) ld.display="none";
 					  
 					  'Function For Displaying Question Format'
 					 
-					Set tsoObject = fsoObject.OpenTextFile("C:\GitHub\ITILstudy\dateslocation\ITILstudy-Classes-ITILstudy-Training-CSI-"&Session("CountryOrigin")&".txt")
+					'Set tsoObject = fsoObject.OpenTextFile("C:\ITILstudy\dateslocation\ITILstudy-Classes-ITILstudy-Training-CSI-"&Session("CountryOrigin")&".txt")
 					
-				'Set tsoObject = fsoObject.OpenTextFile("E:\vhosts\ITILstudy.com\httpdocs\dateslocation\ITILstudy-Classes-ITILstudy-Training-CSI-"&Session("CountryOrigin")&".txt")
+				Set tsoObject = fsoObject.OpenTextFile("E:\vhosts\ITILstudy.com\httpdocs\dateslocation\ITILstudy-Classes-ITILstudy-Training-CSI-"&Session("CountryOrigin")&".txt")
  
 					  StrMain = tsoObject.ReadAll
 					  
