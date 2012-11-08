@@ -228,7 +228,7 @@ End If
             <% If Session("CountryOrigin")="United Kingdom" OR Session("CountryOrigin")="Germany" OR Session("CountryOrigin")="Netherlands" Then   %>
           <td width="24%" class="Header"><img src="/images/buttons/bestfaculty.jpg" alt="Services" ></td>
            <% Else %>
-           <td width="24%" class="Header"><img src="/images/buttons/Affiliates.jpg" alt="Services" ></td>
+           <td width="24%" class="Header"><img src="/images/buttons/Our-Other-Courses.jpg" alt="Our Other Courses" ></td>
            <% End If %>
           </tr>
           <tr>
@@ -729,12 +729,17 @@ ITIL Lifecycle Certificate in Continual Service Improvement (3 Days) Courses sta
 					<a href="/ITIL-Online-Courses.asp">ITIL Blended Course - $ 450 </a>
 					<br /><br /></p>
 					<% End If %>
+
+                    <% If  Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "Netherlands" Then %>
+				<p id="P1"><a href="/knowYourCertificate.asp"><img src="/images/buttons/KYC.png"></a></p>
+                <% End If %>
+
                     <table>
                         <tr><td rowspan="2"><a href="/freeresources/freeSimulatedTest.asp"><img src="/images/symbol/symbol_free.jpg"></a></td><td><a href="/freeresources/freeSimulatedTest.asp"><img src="/images/symbol/symbol_free_text.jpg"></a><br />ITIL<sup>&reg;</sup> Exam Practice Test</td></tr>
                         <tr><td></td></tr>
 
                     </table>
-				<% If Session("CountryOrigin") <> "US" AND Session("CountryOrigin") <> "Canada" Then %>
+				<% If Session("CountryOrigin") <> "US" AND Session("CountryOrigin") <> "Canada" AND Session("CountryOrigin") <> "Germany" AND Session("CountryOrigin") <> "Netherlands" Then %>
 				<p id="imageHover"><a href="/knowYourCertificate.asp"><img src="/images/buttons/KYC.png"></a></p>
                 <% End If %>
 
@@ -771,7 +776,7 @@ ITIL Lifecycle Certificate in Continual Service Improvement (3 Days) Courses sta
 <% If Session("CountryOrigin")<>"United Kingdom" Then %>
     <%If Session("CountryOrigin")="Germany" Or Session("CountryOrigin")="Netherlands"  Then%>
                    <!--#include virtual="/includes/facultyIndex.asp"-->
-                <div align="center"><img src="/images/buttons/Affiliates.jpg" alt="Services"></div><br />
+                <div align="center"><img src="/images/buttons/Our-Other-Courses.jpg" alt="Our Other Courses" ></div><br />
     <%end If %>
 
 <tr><td valign="top" ><a href="http://www.SCRUMstudy.com" target="_blank"><img src="/images/buttons/scrum.jpg" border="0" align="left" /></a></td>
@@ -797,7 +802,7 @@ ITIL Lifecycle Certificate in Continual Service Improvement (3 Days) Courses sta
 	         
 <tr><td>&nbsp;</td></tr>
 	<tr>	
-<td colspan="2">For more affiliate courses <a href="/affiliates.asp" >Click here</a></td>
+<td colspan="2">For our other courses <a href="/affiliates.asp" >Click here</a></td>
 	</tr>
     
     <% Else %>

@@ -15,8 +15,9 @@
                 	<li>Better than the industry rate. </li>
                     <li>Backed by our 100% Moneyback Guarantee</li>
                 </ul>
+                <li>Application of concepts through real life experience</li>
               <li>94% Customer satisfaction rating  by D&B - <a href="http://www.itilstudy.com/DunandBradstreet-Report.pdf" target="_blank">More</a></li>
-              <li>25+ experienced  faculty working exclusively for us - <a href="http://www.itilstudy.com/ITIL-Training/instructors.asp" target="_blank">More</a></li>
+              <li>25+ experienced  faculty - <a href="http://www.itilstudy.com/ITIL-Training/instructors.asp" target="_blank">More</a></li>
 			  <li>Specialized in ITIL trainings - <a href="http://www.itilstudy.com/ITIL-Training/better-than-competitors.asp" target="_blank">Find out here</a></li>
               <li>Great feedback from successful students - <a href="http://www.itilstudy.com/feedback_class.asp" target="_blank">Testimonials</a></li>             
           </ul>
@@ -37,8 +38,8 @@
               <li>Part of VMEdu Inc.</li>
               <% End If %>         
            	  <ul>
-                	<li>Leading global training platform company with offices in 6 countries. <a href="http://www.itilstudy.com/GlobalOffice.asp" target="_blank">More </a></li>
-                	<li>Funded by Sequoia Capital, PE firm that funded Google, Apple, Cisco, Linkedin etc. - <a href="http://www.itilstudy.com/investors.asp" target="_blank">Read more</a></li>
+                	<li>Leading global training company with offices in 6 countries.<% If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" Then %> Conducting classes in 35+ cities.<% End If %> <% If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" Then %><a href="http://www.itilstudy.com/ITIL-Courses.asp"> More </a><%Else%><a href="http://www.itilstudy.com/GlobalOffice.asp" target="_blank"> More </a><% End If %></li>
+                	<li>Funded by Sequoia Capital, PE firm that invested in Google, Apple, Cisco, etc. - <a href="http://www.itilstudy.com/investors.asp" target="_blank">Read more</a></li>
                 </ul>     
           </ul>
         </div> 	
@@ -59,6 +60,26 @@
               </ul>
     </div>
   </div>
+
+    <%
+        BestPrice  = "$1049" 
+        If Session("CountryOrigin") ="US" OR Session("CountryOrigin") = "Canada" Then
+            BestPrice  = "$ 1149"
+        ElseIf Session("CountryOrigin") ="India" Then
+            BestPrice  = "Rs.10750"
+        ElseIf Session("CountryOrigin") ="Australia" Then
+            BestPrice  = "899 AUD"
+        ElseIf Session("CountryOrigin") ="Singapore" Then
+            BestPrice  = "1600 SGD"
+        ElseIf Session("CountryOrigin") ="UAE" Then
+            BestPrice  = "$ 1000"
+        ElseIf Session("CountryOrigin") ="United Kingdom" Then
+            BestPrice  = "&euro; 950" 
+            
+        End If	
+         
+        
+         %>
   <div class="slide" style="background-image:url(/images/banners/4.jpg)"  id="i4" onmouseover="toggleAuto(0, 's')" onmouseout="toggleAuto(1, 'o')">
     <div id="banner-body">
                 <ul id="banner-list">
@@ -68,13 +89,13 @@
                       <li>Online courses  starting from $ 300 - <a href="http://www.itilstudy.com/ITIL-Online-Courses.asp" target="_blank"> More</a></li>
 
                        <% If Session("CountryOrigin") = "Netherlands" Then%> 
-                       <li>2 day ITIL Classes starting at &euro; 950 - <a href="http://www.itilstudy.com/ITIL-Courses.asp" target="_blank">More</a></li>
+                       <li>2 day ITIL Classes starting at &euro; 850 - <a href="http://www.itilstudy.com/ITIL-Courses.asp" target="_blank">More</a></li>
                        
                        <% ElseIf Session("CountryOrigin") = "Germany" Then %> 
                        <li>2 day ITIL Classes starting at &euro; 890 - <a href="http://www.itilstudy.com/ITIL-Courses.asp" target="_blank">More</a></li>
                        
                         <%Else %>
-                        <li>2 or 3 Day ITIL Classes starting at $1,049 - <a href="http://www.itilstudy.com/ITIL-Courses.asp" target="_blank">More</a></li>
+                        <li>2 or 3 Day ITIL Classes starting at <%=BestPrice %> - <a href="http://www.itilstudy.com/ITIL-Courses.asp" target="_blank">More</a></li>
                         
                         <%End If %>
                      

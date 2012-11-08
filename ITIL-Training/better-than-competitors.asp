@@ -122,6 +122,8 @@ else if (ns6||ie4) ld.display="none";
                             </ul></td>
                     </tr>
 				     <% End If %>
+                     
+
 
                      <tr onMouseOver="javascript:highlightTableRowVersionA(this, '#FFFFCC');">
                        <td>Best Documented success rate - 99.2%
@@ -361,12 +363,24 @@ else if (ns6||ie4) ld.display="none";
                        <td>Best Faculty
                        </td>
                        <td><ul>
-                            <li>All our instructors are ITIL and PMP certified with an average project and service management work experience of 15+ years in areas like Information Technology, Construction, Government, Healthcare, Manufacturing etc. Their practical examples and real life experiences make it easier for students to understand and appreciate complex concepts. <a href="/ITIL-Training/instructors.asp">More</a></li>
+                            <li>All our instructors are ITIL certified (approved by APMG or CSME) with an average project and service management work experience of 15+ years in areas like Information Technology, Construction, Government, Healthcare, Manufacturing etc. Their practical examples and real life experiences make it easier for students to understand and appreciate complex concepts. <a href="/ITIL-Training/instructors.asp">More</a></li>
                            
                        </ul></td>
                        <td><ul>
 					     <li>Do not provide correct information on their faculty in their websites or marketing collaterals. These companies may not have faculty with proper experience, communication skills or experience to teach senior professionals.</li>
                             </ul></td>
+                    </tr>
+                    
+                    
+                            <tr onMouseOver="javascript:highlightTableRowVersionA(this, '#FFFFCC');">
+                            <td>Specialized in ITIL training </td>
+                            <td><ul>
+                                  <li> We provide more focused training on ITIL. Further, we discuss case studies and role plays which relate the important concepts to real life scenarios.</li>
+                                  </ul></td>
+                             <td><ul>
+                                   <li>Do not focus on ITIL training and only prepares students for the ITIL certification exam.</li>
+                                   </ul></td>
+
                     </tr>
                     <tr onMouseOver="javascript:highlightTableRowVersionA(this, '#FFFFCC');">
                        <td>2 Day Training with Accelerated Learning Techniques 

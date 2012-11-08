@@ -33,14 +33,14 @@
           <tr>
             <td width="2%" >&nbsp;</td>
             <td width="25%" >&nbsp;</td>
-            <td width="73%" class="breadcrumb"><a href="/index.asp" title="Home">Home</a> &raquo; ABOUT US &raquo; Affiliate Courses </td>
+            <td width="73%" class="breadcrumb"><a href="/index.asp" title="Home">Home</a> &raquo; ABOUT US &raquo; Our Other Courses </td>
           </tr>
           <tr>
             <!--#include virtual="/includes/innerLeftMenu.asp"-->
             <td width="73%" rowspan="4" background="/images/back/left_line.jpg" class="general-body"><!-- Content Start From Here-->
-              <h1 class="PageTitle">Affiliate Courses </h1>
+              <h1 class="PageTitle">Our Other Courses </h1>
               <p><span class="Header">ITILstudy is a leading training provider for ITIL<sup>&reg;</sup> Certification</span></p>
-              <p class="SubHeader">Our affiliate courses include:</p>
+              <p class="SubHeader">Our other courses include:</p>
               <div id="outerFormContainer">
               <div id="mainContent" class="faqGroup">
               <div style="border-bottom: 1px solid rgb(107, 121, 165);" id="faqContainer1" class="panel">

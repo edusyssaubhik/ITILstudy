@@ -32,7 +32,7 @@
                 <p><span class="SubHeader">Our classroom course:</span>
                 <ul>
                 <li>Has been developed, assessed, and evaluated by several ITIL<sup>&reg;</sup> experts</li>
-                <li>Is delivered by ITIL and PMP certified faculty with over 15 years of project and service management experience across industries</li>
+                <li>Is delivered by ITIL certified faculty (approved by APMG or CSME) with over 15 years of project and service management experience across industries</li>
                 <li>Draws instructional elements from the three primary learning styles, i.e., visual (presentations, aids, etc.), auditory (verbal instructions, interactions, etc.) and kinesthetic (do-it-yourself)</li>
                 <%If Session("CountryOrigin") <> "India" Then %>
                 <li>Comes with a unique and unmatched 100% Moneyback Guarantee</li>

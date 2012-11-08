@@ -55,7 +55,7 @@
       <!--5th drop down menu -->
        <div style="top: 26px; left: 203px; clip: rect(0pt, auto, 94.8717px, 0pt); visibility: hidden; margin-left:26px; margin-top:5px;" id="dropmenu4" class="dropmenudiv">
 	    <a href="/aboutus.asp" onMouseOver="MM_swapImage('e','','/images/back/link_05_about_us_green.jpg',1)" onMouseOut="MM_swapImgRestore()">Who We Are </a>
-	    <a href="/Affiliates.asp" onMouseOver="MM_swapImage('e','','/images/back/link_05_about_us_green.jpg',1)" onMouseOut="MM_swapImgRestore()">ITILstudy Affiliate Courses </a> 
+	    <a href="/Affiliates.asp" onMouseOver="MM_swapImage('e','','/images/back/link_05_about_us_green.jpg',1)" onMouseOut="MM_swapImgRestore()">Our Other Courses </a> 
 		 <a href="/contactus.asp" onMouseOver="MM_swapImage('e','','/images/back/link_05_about_us_green.jpg',1)" onMouseOut="MM_swapImgRestore()">Contact Us/Feedback </a> 
           <a href="/investors.asp" onmouseover="MM_swapImage('e','','/images/back/link_05_about_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">Investors </a> </div>
      
