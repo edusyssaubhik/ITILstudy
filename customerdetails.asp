@@ -2,6 +2,7 @@
 <!--#include virtual="/includes/innerindustryrecognizedbanner.html"-->
 <!--#include virtual="/includes/connection.asp"-->
 <!--#include virtual="/includes/libfuncs.asp"-->
+<script language="JavaScript" type="text/javascript" src="/js/jquery-1.7.2.js"></script>
 
   <script type="text/javascript">
 					<!--
@@ -253,13 +254,11 @@
 						  {
 							 alert("Please Select Country");
 							 thisform.address_country.focus();
-							 return (false);
+							 return false;
 	
 						}
+						
 					}
-
-
-
 					-->
 					</script>
 <!-- Body Starts -->
@@ -273,16 +272,26 @@
 <tr>
   <td width="2%" class="Header">&nbsp;</td>
   <td width="25%" class="PageTitle">&nbsp;</td>
-  <td width="73%" class="PageTitle">Customer Enrollment</td>
+  <% if Request.Form("address_street")<>"" then 'this condition will be true only for paypal return and we will show submit button
+				%>
+  <td width="73%" class="PageTitle">Please Complete the Enrollment process</td>
+  <% else %>
+    <td width="73%" class="PageTitle">Customer Enrollment</td>  
+  <% End if %>
 </tr>
 <tr>
+        <%
+				  'code by chandan to remove session of state in mycourses page
+					 newstate=Session("State")
+				  Session.Contents.Remove("State")
+	   %>
 <!--#include virtual="/includes/innerLeftMenu.asp"-->
+ <%   Session("State") =newstate %>
 <td width="73%" rowspan="4" background="/images/back/left_line.jpg" class="general-body">
 <div style="margin-top:-10px; width:95%;">
   <!-- Content Start From Here-->
- 
- <div><%
-						'Declare The Local Variables'
+ <%
+ 					'Declare The Local Variables'
 						Dim SIPAddress1
 						
 						Set Rs4 = Server.CreateObject("ADODB.Recordset")
@@ -302,33 +311,38 @@
 							
 						
 							isChecksumOk =		verifyCheckSumAll(MerchantId, OrderId , Amount, WorkingKey, currency_type, Auth_Status, Checksum)						
-
+							
+													
 							If ((isChecksumOk = "true") and (Auth_Status = "Y")) Then
-									Auth_Status = "Y"
+									Auth_Status = "Y"						
 							
-							ElseIf ((isChecksumOk = "true") and (Auth_Status = "N")) Then
+                                                        	Else
 									Auth_Status = "N"
-							
-							ElseIf ((isChecksumOk = "true") and (Auth_Status = "B")) Then
-									Auth_Status = "N"
-							
-							Else
-									Auth_Status = "N"
-							
 							End If 
-
+							
 						
 
 						If SIPAddress1="" Then SIPAddress1 = Request.ServerVariables("REMOTE_ADDR")
-
-							If(Request.Form("item_number") = "" And Session("ItemName") = "" And Auth_Status = "N") Then
-						%>
+ 
+                               
+ %>
+ <div><% If Request.Form("item_number")="" And session("Newitem_number")="" And Request.Form("address_street")="" And Auth_Status = "N" Then %>
 						</div>
   <div class="general-body"><br /><br />Your payment was not successful. If you are finding difficulty in paying through <a href="/ITIL-Online-Courses.asp">Paypal.com</a>, please make the payment through our alternate payment processor, Google Checkout: <a href="/ITIL-Online-Courses.asp">Please click here to pay using </a> Google Checkout. Please note that payment from all countries can be made through Google Checkout.
-
-    <% Else%>
-    <%
-						'Declare The Local Variables'
+<% else %>
+					  </div>
+<div style="margin-left:-4px;">
+</br>
+</br>
+<table width="95%" border="0" cellspacing="0" cellpadding="4" class="general-body">
+            <form method="POST" action="" name="form2" onSubmit="return validate_form(this)" id="form2">
+              <tr>
+                <td><span class="general-bodyBold">Confirm Your Name</span><span class="Required">*</span> <b>:</b> 
+                  </td>
+                <td>			
+                 <%
+				 						'code by me		======================				
+	'Declare The Local Variables'
 						Dim item_name, item_number, receiver_email, payment_status, mc_currency, payer_email,first_name, last_name, SPHRPHR
 						Dim payment_date, address_street, address_zip, custom, address_country, address_city, address_state, payment_fee
 						Dim payment_gross, mc_gross, paypal_address_id, payer_id, address_status,payer_status, mc_fee, business
@@ -339,15 +353,13 @@
 						Dim course_desc, course_proc, DateValid
 						Dim objHtp1, strQuery2,rollNo,R,strQuery
 						Dim rqModeOfPayment,rqPaymentdate,rqTraDetails
-						
-						'Replace method
-						Function StrQuoteReplace(strValue)
-						StrQuoteReplace = Replace(strValue, "'", "''")
-						End Function
-						
-						Set objRs = Server.CreateObject("ADODB.Recordset")
-						
-						'Checking the email id existing or not and if its exists checking the couse validity'
+													 
+							 Session.Contents.Remove("returnUrl") 'need to be removed if user is logged in
+							 							
+                               if session("FirstName")="" then
+								Response.redirect("/ITIL-Online-Courses.asp")
+                               end if	
+                        'Checking the email id existing or not and if its exists checking the couse validity'
 						'Checking code start from here'
 						If Request.Form("manualenroll") <> "" Then
 						
@@ -381,12 +393,17 @@
 								
 						End If
 						'Checking code end here'
+													   
+                           dim form_url							   
+							   
+                           if session("Newitem_number")<>"" then 'added by chandan
+						   item_number= session("Newitem_number")
+						   end if
+						   'Response.write("item_number :"& item_number)
+						   
+						   	If Request.Form("item_number") <> "" Then
 						
-						
-						'This if conction works first time come to this page'
-						If Request.Form("item_number") <> "" Then
-						
-							item_number = Request.Form("item_number")
+							item_number = Request.Form("item_number")							
 							item_name   = Request.Form("item_name")
 							first_name = Request.Form("first_name")
 							last_name  = Request.Form("last_name")
@@ -409,10 +426,46 @@
 							phoneNo = Session("PhoneNo") 
 							Session("First_Name") = ""
 							
-						End If
+						End If	
 						
+                              'item_number=007 'hardcoded for test							  
+							Set objRs2 = Server.CreateObject("ADODB.Recordset")
+						dim strEmailID
+						strEmailID = "SELECT custom, phone FROM Customer_Accounts WHERE Id = '"&session("current_user_id")&"'"
+						objRs2.open strEmailID,ConnObj           
+			       if objRs2.eof = false then 'means there is value in recordset
+				     phone=objRs2("phone")
+					 companyname=objRs2("custom")				
+				   
+                                 end if
+							    if Len(first_name&"") = 0 then 														
+						           first_name=Session("FirstName")						           													
+						       end if
+							   if last_name="" then							  
+						           last_name=Session("LastName")					
+						       end if	
+							   if payer_email="" then
+							   payer_email=""							   							
+						           payer_email=session("loggedinEmail")
+						       end if	
+							   dim cityname,country
+							  if session("fbuserlocation") <>"" then							 
+							  dim location
+							  location=Split(session("fbuserlocation"),",")							  
+							cityname=location(0)
+							country=Trim(location(1))							
+							  end if
+							  
+
+						 ' end if
+						  
+						'end if
+						'end of code     =========================
+				 %>
+				 		<%
+						'code for paypal and ccavenue insertion						
 						
-						If (item_name = "Free Simulated Test") OR (item_name = "Understand ITIL Exam") Then
+						If (item_number = 112) OR (item_number = 0051) Then
 
 							APMG = Request.Form("APMG")
 							
@@ -451,10 +504,15 @@
 							txn_id          =  Trim(Request.Form("Order_Id"))
 							mc_currency     =  Trim(Request.Form("Currency"))
 							
-
+							payer_payment_email=payer_email 'added by cm
+							
+                             'this part do not have any insert statement from the time file has given to me need to discuss
+							 
 						Else
-
+                     'if instr(request.querystring,"payer_id=")>0 then 'this line added by  me check the redirection
+					 if Request.Form("address_street")<>"" then
 						'Read Post From PayPal System And Add 'cmd'
+						'response.write("form :"&Request.Form)
 						str = Request.Form & "&cmd=_notify-validate"
 
 						'Post Back To PayPal System To Validate'
@@ -484,6 +542,16 @@
 								  psw = psw & Mid( pChar, 1 + Int(Rnd * pCount), 1 )
 								  pass=psw
 							   Next
+							   
+							   'added later on single password demand
+						Set objRs1 = Server.CreateObject("ADODB.Recordset")		
+						strQuery = "SELECT TOP 1 Id,email,Password FROM Customer_Accounts WHERE Id='"&session("current_user_id")&"' ORDER BY Id DESC"
+						objRs1.open strQuery,ConnObj	
+						if objRs1.eof = false then		
+                             pass= objRs1("Password")			
+						end if							 
+						objRs1.close
+						'end of code single password
 							   
 					    'Assign Posted Variables To Local Variables'
 						item_number     =  Request.Form("item_number")
@@ -525,8 +593,17 @@
 						date_Val        = Request.Form("date_val")
 						txn_id          =  Trim(Request.Form("Order_Id"))
 						mc_currency     =  Trim(Request.Form("Currency"))
+						
+						payer_payment_email=payer_email 'added by me to get last row on behave of last email so that we will be able to update the same row with new values
+
 						'item_number = Session("item_number")    
 
+						'Replace method
+						Function StrQuoteReplace(strValue)
+						StrQuoteReplace = Replace(strValue, "'", "''")
+						End Function
+
+						
 						date_entered    =  Date()
 						
 						If item_number = 110 Then
@@ -797,8 +874,8 @@
 						
 						If item_number <> "" Then
 						
-						ConnObj.Execute "INSERT INTO PaypalDB (paypal_address_id, kno_passed,item_name,item_number,receiver_email,payment_status,mc_currency,payer_email,first_name,last_name,payment_date,address_street,address_zip,custom,address_country,address_city,address_state,payment_fee,payment_gross,mc_gross,payer_id,address_status,payer_status,mc_fee,business,quantity,verify_sign,address_name,payment_type,txn_id,payer_business_name,address_owner,receiver_id,ebay_address_id,txn_type,tax,notify_version, pass, date_entered, date_valid,rollno) VALUES('"&APMG&"','"&kno&"','"&item_name&"','"&item_number&"','"&receiver_email&"','"&payment_status&"','"&mc_currency&"','"&payer_email&"','"&StrQuoteReplace(first_name)&"','"&StrQuoteReplace(last_name)&"','"&payment_date&"','"&address_street&"','"&address_zip&"','"&custom&"','"&address_country&"','"&address_city&"','"&address_state&"','"&payment_fee&"','"&payment_gross&"','"&mc_gross&"','"&payer_id&"','"&address_status&"','"&payer_status&"','"&mc_fee&"','"&business&"','"&quantity&"','"&verify_sign&"','"&address_name&"','"&payment_type&"','"&txn_id&"','"&payer_business_name&"','"&SIPAddress1&"','"&receiver_id&"','"&ebay_address_id&"','"&txn_type&"','"&tax&"','"&notify_version&"','"&pass&"','"&date_entered&"','"&date_valid&"','"&R&"')"
-						
+						ConnObj.Execute "INSERT INTO PaypalDB (paypal_address_id, kno_passed,item_name,item_number,receiver_email,payment_status,mc_currency,payer_email,first_name,last_name,payment_date,address_street,address_zip,custom,address_country,address_city,address_state,payment_fee,payment_gross,mc_gross,payer_id,address_status,payer_status,mc_fee,business,quantity,verify_sign,address_name,payment_type,txn_id,payer_business_name,address_owner,receiver_id,ebay_address_id,txn_type,tax,notify_version, pass, date_entered, date_valid,rollno,customer_id) VALUES('"&APMG&"','"&kno&"','"&item_name&"','"&item_number&"','"&receiver_email&"','"&payment_status&"','"&mc_currency&"','"&payer_email&"','"&StrQuoteReplace(first_name)&"','"&StrQuoteReplace(last_name)&"','"&payment_date&"','"&address_street&"','"&address_zip&"','"&custom&"','"&address_country&"','"&address_city&"','"&address_state&"','"&payment_fee&"','"&payment_gross&"','"&mc_gross&"','"&payer_id&"','"&address_status&"','"&payer_status&"','"&mc_fee&"','"&business&"','"&quantity&"','"&verify_sign&"','"&address_name&"','"&payment_type&"','"&txn_id&"','"&payer_business_name&"','"&SIPAddress1&"','"&receiver_id&"','"&ebay_address_id&"','"&txn_type&"','"&tax&"','"&notify_version&"','"&pass&"','"&date_entered&"','"&date_valid&"','"&R&"','"&session("current_user_id")&"')"
+						Set Rs4 = Server.CreateObject("ADODB.Recordset")
 						'Query for Selecting Recently Updated ID From Paypaldb Table'
 						Rs4.Open "SELECT IDENT_CURRENT('PaypalDB') As EnrollID",ConnObj
     
@@ -841,45 +918,39 @@
 
 
 						Set objHttp1 = Nothing
+						
+						End if 'end of paypal redirection check
 
 						End If
+						
+						'end of paypal ccavenue code
 						%>
-    <!-- Header Start -->
-    <% If Session("State") <> "" Then %>
-    <div><a href="./logoff.asp">Sign Out</a>
-      <% = Session("FirstName") %>
-      &nbsp;
-      <% = Session("LastName") %>
-    </div>
-    <%
-						'Else
-						End If
-%>
-  </div>
-<div style="margin-left:-4px;">
-<table width="95%" border="0" cellspacing="0" cellpadding="4" class="general-body">
-            <form method="POST" action="/verifycustomerdetails.asp" name="form2" onSubmit="return validate_form(this)">
-              <tr>
-                <td><span class="general-bodyBold">Confirm Your Name</span><span class="Required">*</span> <b>:</b> 
-                  </td>
-                <td>				
+						
                   <input type="text" name="first_name" value="<%=first_name%>" class="TeXtField">&nbsp;&nbsp;
                   <input type="text" name="last_name" value="<%=last_name%>" class="TeXtField">
                   <input type="hidden" name="date_Val" value="<%=date_val%>" class="TeXtField">
-				  <input type="hidden" name="coursedate" value="<%=coursedate%>" class="TeXtField">
-				  <input type="hidden" name="email" value="<%=email%>" class="TeXtField">
+				  <input type="hidden" name="coursedate" value="<%=coursedate%>" class="TeXtField">				  
+                  <input type="hidden" name="email" value="<%=payer_email%>" class="TeXtField">
                   </td>
               </tr>
               <tr>
                 <td colspan="2">
-                  <span class="Header">Provide Email ID<% %> and password will allow you access to different services in ITILstudy.com.</span> </td>
+                  <span class="Header">Provide Email ID and password will allow you access to different services in ITILstudy.com.</span> </td>
               </tr>
-              <% If(payer_email<>"") then%>
+              <% If(payer_email<>"") then %>
               <tr valign="top">
+               <!-- <td class="general-bodyBold" >Email<span class="Required">*</span>: </td> commented by chandan
+                <td height="14" class="general-bodyBold"></td>-->
+				<% if Request.Form("address_street")<>"" then 'this condition will be true only for paypal return and we will show submit button
+				%>
+				 <td class="general-bodyBold" > Correspondence Email<span class="Required">*</span>: </td>
+				<% else%>
                 <td class="general-bodyBold" >Email<span class="Required">*</span>: </td>
-                <td height="14" class="general-bodyBold"><%=payer_email%></td>
+				<% end if%>
+                <td height="14" class="general-bodyBold">
+                <input type="text" name="payer_email" value="<%=payer_email%>" size="50" class="TeXtField" onChange="">
               </tr>
-              <input type="hidden" name="payer_email" value="<%=payer_email%>" size="250">
+             <!-- <input type="hidden" name="payer_email" value="<%=payer_email%>" size="250">-->
               <input type="hidden" name="pass" value="<%=pass%>" size="250">
               <%else%>
               <tr>
@@ -895,19 +966,19 @@
           
               <tr>
                 <td class="general-bodyBold">Name of Employer/Business<span class="Required">*</span>: </td>
-                <td ><input type="text" name="custom" size="50" class="TeXtField"></td>
+                <td ><input type="text" name="custom" size="50" value="<%=phone%>" class="TeXtField"></td>
               </tr>
              
               <tr>
                 <td class="general-bodyBold">Phone Number<span class="Required">*</span>: </td>
                 <td>
-				<input type="text" name="ebay_address_id" size="50" class="TeXtField"></td>
+				<input type="text" name="ebay_address_id" size="50" value="<%=companyname%>" class="TeXtField"></td>
               </tr>
 			  
 			    <%  If item_number = "0051" OR  item_number = "112" OR item_name = "Understand ITIL Exam"  Then %>
 				<tr>
               <td><b>Country<span class="Required">*</span>:</b></td>
-              <td><input type="text" name="country"  /></td>
+              <td><input type="text" name="country" value="<%=country%>" /></td>
             </tr>
               <tr>
               <td><b>State<span class="Required">*</span>:</b></td>
@@ -915,11 +986,12 @@
             </tr>
             <tr>
               <td><b>City<span class="Required">*</span>:</b></td>
-              <td><input type="text" name="city" />
+              <td><input type="text" name="city" value="<%=cityname%>" />
               </td>
             </tr>
               <% End  If%>
-              <%' If item_number = "104" Then %>
+              <%' If item_number = "104" Then 
+			  %>
           <!--    <tr >
                 <td class="general-bodyBold">Country<span class="Required">*</span>: </td>
                 <td>
@@ -928,7 +1000,8 @@
       <option value="US">US</option>
       <option value="India">India</option>
     </select></td>-->
-              <% 'End  If%>
+              <% 'End  If
+			  %>
               <tr>
 			  	<td colspan="2"><span class="Note" style="font-size:10px;">(Format: CountryCode-Area-Number) e.g. 001-612-31205138</span></td>
 			  </tr>
@@ -957,19 +1030,551 @@
                 <!-- <td><input type="text" name="other" size="100" class="TeXtField"></td>-->
               </tr>
 
-              <input type="hidden" name="verify_sign" value="<%=verify_sign%>" size="250">
+              
+              <tr>
+                
+                <!--<td colspan="2">-->
+				<% if Request.Form("address_street")<>"" then 'this condition will be true only for paypal return and we will show submit button
+				%>
+				 <% form_url="/Verifycustomerdetails.asp"%>
+				<td>
+                <input type="hidden" name="verify_sign" value="<%=verify_sign%>" size="250">
               <input type="hidden" name="item_name" value="<%=item_name%>" size="250">
               <input type="hidden" name="item_number" value="<%=item_number%>" size="250">
               <input type="hidden" name="course_desc" value="<%=course_desc%>">
               <input type="hidden" name="course_proc" value="<%=course_proc%>">
               <input type="hidden" name="APMG" value="<%=APMG%>">
-              <tr>
-                
-                <td colspan="2">
-				<div align="center"><input type="submit" value="Submit" class="ButtonGeneral" style="width:60px;"></div>
+			  <input type="hidden" name="payer_payment_email" value="<%=payer_payment_email%>" size="250"> 
+			  </td>
+			  <td>
+			    <input name="submit" type="submit" class="ButtonGeneral" value="Confirm">
+			  </td>
+				
+				<% else%>
+			<%	if item_number=0051 then %>
+			  <% form_url="/Verifycustomerdetails.asp"%>
+			  <td>
+			  <input type="hidden" name="form_url" value="<%=form_url%>">
+				 <input type="hidden" name="item_number" value="0051">
+                  <input type="hidden" name="APMG" value="APMG">
+                  <input type="hidden" name="item_name" value="Understand ITIL Exam">
 				</td>
+				 <td>
+			     <input name="submit" type="submit" class="ButtonGeneral" value="Submit">
+			  </td>
+				<%elseif item_number=112 then %>
+							  <% form_url="/Verifycustomerdetails.asp"%>
+							  <td>
+<input type="hidden" name="form_url" value="<%=form_url%>">
+				 <input type="hidden" name="item_number" value="112">
+                  <input type="hidden" name="APMG" value="APMG">
+                  <input type="hidden" name="item_name" value="Free Simulated Test">
+				</td>
+				 <td>
+			    <input name="submit" type="submit" class="ButtonGeneral" value="Submit">
+			  </td>
+				  <% elseif item_number=104 then 'start of item_no-104
+				  %> 
+				 <% if Session("CountryOrigin") = "India" Then %>
+				  
+				  <% form_url="http://mycatstudy.com/itilstudy_ccavenue.asp"%>
+				  <td>
+				   <input type="hidden" name="form_url" value="<%=form_url%>">
+ <input type="hidden" name="item_name" value="ITIL Foundation Online Course">
+                    <input type="hidden" name="item_number" value="104">				
+				</td>
+				<td>
+				<input type="submit" value="Buy - CCAvenue" class="ButtonGeneral link" >
+				</td>
+				<% Else
+				  If Session("CountryOrigin") = "Other" Then   %>
+				    <% form_url="http://www.pmstudy.com/itilOnline_ccavenue.asp"%>
+					<td>
+					<input type="hidden" name="form_url" value="<%=form_url%>">
+				   <input type=hidden name=Merchant_Id value="t_satpat1848">
+                    
+                      <input type="hidden" name="Currency" value="USD">
+                      <input type="hidden" name="ITIL_country" value="<% = ITIL_country %>">
+                      <input type="hidden" name="Order_Id" value="<%=Order_Id%>">
+                      <input type="hidden" name="TxnType" value="A">
+                      <input type="hidden" name="item_number" value="104" />
+                      <input type="hidden" name="actionID" value="txn">
+                      <input type="hidden" name="item_name" value="ITILstudy Classroom Training - <% = Session("CountryOrigin") %>">
+                    
+                      <input type="hidden" name="amount" value="300">
+                     <input name="submit" type="submit" class="ButtonGeneral link" value="Buy - CCAvenue" size="20" style="float:right;"/>
+					 <input type="hidden" name="Redirect_Url" value="http://www.itilstudy.com/payment-success.asp"/>
+					 </td>
+					 <td>
+					 <% form_url="https://www.sandbox.paypal.com/cgi-bin/webscr"%>
+					  <input type="hidden" name="form_url" value="<%=form_url%>">
+					  <input type="hidden" name="cmd" value="_xclick">
+                      <input type="hidden" name="business" value="adminsupport@projstudy.com">
+                      <input type="hidden" name="item_name" value="ITIL Foundation Online Course">
+                      <input type="hidden" name="item_number" value="104">
+					
+					  <input type="hidden" name="return" value="http://www.itilstudy.com/customerdetails.asp">
+					  <input type="hidden" name="amount" value="300">
+					   <input type="hidden" name="rm" value="2">
+					    <input type="hidden" name="currency_code" value="USD">
+					  <input name="submit" type="submit" class="ButtonGeneral link" value="Buy - Paypal" >
+                    </td>
+					                       <%end if%>
+										   <td>
+					<%  If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "UAE" OR Session("CountryOrigin") = "Singapore" OR Session("CountryOrigin") = "India" OR Session("CountryOrigin") = "Netherlands" Then %>
+					<% form_url="https://www.sandbox.paypal.com/cgi-bin/webscr"%>
+					  <input type="hidden" name="form_url" value="<%=form_url%>">
+					  <input type="hidden" name="cmd" value="_xclick">
+                      <input type="hidden" name="business" value="adminsupport@projstudy.com">
+                      <input type="hidden" name="item_name" value="ITIL Foundation Online Course">
+                      <input type="hidden" name="item_number" value="104">
+					
+					  <input type="hidden" name="return" value="http://www.itilstudy.com/customerdetails.asp">
+					  <input type="hidden" name="amount" value="300">
+                      <% ElseIf Session("CountryOrigin") = "United Kingdom" Then %>
+                      <input type="hidden" name="amount" value="200">
+					  <% ElseIf Session("CountryOrigin") = "Australia" Then %>
+                      <input type="hidden" name="amount" value="285">
+                      <% End If%>
+                      <input type="hidden" name="return" value="http://www.itilstudy.com/customerdetails.asp">
+                      <input type="hidden" name="rm" value="2">
+                      <%  If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "UAE" OR Session("CountryOrigin") = "Singapore" OR Session("CountryOrigin") = "India" OR Session("CountryOrigin") = "Netherlands" Then%>
+                      <input type="hidden" name="currency_code" value="USD">
+                      <% ElseIf Session("CountryOrigin") = "United Kingdom" Then %>
+                      <input type="hidden" name="currency_code" value="GBP">
+					   <% ElseIf Session("CountryOrigin") = "Australia" Then %>
+                      <input type="hidden" name="currency_code" value="AUD">
+                      <% End If%>                      
+                        </td>
+						<% if not Session("CountryOrigin") = "Other" Then %>
+						<td><input name="submit" type="submit" class="ButtonGeneral link" value="Buy - Paypal"></td>
+						<%end if%>
+				<%end if 'end of item_no-104
+				%>
+				  <% elseif item_number=111 then 'start of item_no-111
+				  %>
+ <% If Session("CountryOrigin") = "India" Then %>
+  <% form_url="http://mycatstudy.com/itilstudy_ccavenue.asp"%>
+  <td>
+  <input type="hidden" name="form_url" value="<%=form_url%>">
+   <input type="hidden" name="item_name" value="ITIL Intermediate OSA Online Course">
+                    <input type="hidden" name="item_number" value="111">                    
+					  </td>
+					  <td>
+				<input type="submit" value="Buy - CCAvenue" class="ButtonGeneral link" >
+				</td>
+					   <% Else 
+				If Session("CountryOrigin") = "Other" Then				
+				%>
+ <% form_url="http://www.pmstudy.com/itilOnline_ccavenue.asp"%>
+ <td>
+ <input type="hidden" name="form_url" value="<%=form_url%>">
+  <input type=hidden name=Merchant_Id value="t_satpat1848">
+                     <input type="hidden" name="ITIL_country" value="<% = ITIL_country %>">
+                      <input type="hidden" name="Currency" value="USD">
+                     <input type="hidden" name="Order_Id" value="<%=Order_Id%>">
+                      <input type="hidden" name="TxnType" value="A">
+                      <input type="hidden" name="actionID" value="txn">
+                      <input type="hidden" name="item_number" value="111" />
+                      <input type="hidden" name="item_name" value="ITIL Intermediate OSA Online Course">                     
+                      <input type="hidden" name="amount" value="665"/>
+                    
+					  <input type="hidden" name="Redirect_Url" value="http://www.itilstudy.com/payment-success.asp"/>
+                      <input name="submit" type="submit" class="ButtonGeneral link" value="Buy - CCAvenue" size="20"  style="float:right;"/>
+					  </td>
+					  <td>
+					   <% form_url="https://www.sandbox.paypal.com/cgi-bin/webscr"%>
+					  <input type="hidden" name="form_url" value="<%=form_url%>">
+                     <input type="hidden" name="cmd" value="_xclick">
+                      <input type="hidden" name="business" value="adminsupport@projstudy.com">
+                      <input type="hidden" name="item_name" value="ITIL Intermediate OSA Online Course">
+                      <input type="hidden" name="item_number" value="111">					
+					  <input type="hidden" name="return" value="http://www.itilstudy.com/customerdetails.asp">
+                      <input type="hidden" name="amount" value="665">
+					  <input type="hidden" name="rm" value="2">
+					    <input type="hidden" name="currency_code" value="USD">
+					  <input name="submit" type="submit" class="ButtonGeneral link" value="Buy - Paypal">
+                    </td>
+<% End If %>
+<td>
+ <%  If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "India"   Then %>
+ <% form_url="https://www.sandbox.paypal.com/cgi-bin/webscr"%>
+ <input type="hidden" name="form_url" value="<%=form_url%>">
+  <input type="hidden" name="cmd" value="_xclick">
+                      <input type="hidden" name="business" value="adminsupport@projstudy.com">
+                      <input type="hidden" name="item_name" value="ITIL Intermediate OSA Online Course">
+                      <input type="hidden" name="item_number" value="111">
+					
+					  <input type="hidden" name="return" value="http://www.itilstudy.com/customerdetails.asp">
+                      <input type="hidden" name="amount" value="665">
+                      <% ElseIf Session("CountryOrigin") = "United Kingdom" Then %>
+                      <input type="hidden" name="amount" value="425">
+					   <% ElseIf Session("CountryOrigin") = "Australia" Then %>
+                      <input type="hidden" name="amount" value="625">
+					  <% ElseIf Session("CountryOrigin") = "UAE" Then %>
+                      <input type="hidden" name="amount" value="665">
+					  <% ElseIf Session("CountryOrigin") = "Singapore" Then %>
+                      <input type="hidden" name="amount" value="838">
+                      <% End If%>
+                      <input type="hidden" name="return" value="http://www.itilstudy.com/customerdetails.asp">
+                      <input type="hidden" name="rm" value="2">
+                      <%  If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "UAE" OR Session("CountryOrigin") = "India" OR Session("CountryOrigin") = "Netherlands"  Then %>
+                      <input type="hidden" name="currency_code" value="USD">
+                      <% ElseIf Session("CountryOrigin") = "United Kingdom" Then %>
+                      <input type="hidden" name="currency_code" value="GBP">
+					   <% ElseIf Session("CountryOrigin") = "Australia" Then %>
+                      <input type="hidden" name="currency_code" value="AUD">
+					  <% ElseIf Session("CountryOrigin") = "Singapore" Then %>
+                      <input type="hidden" name="currency_code" value="SGD">
+                      <% End If%>
+					  </td>
+					  <% if not Session("CountryOrigin") = "Other" Then %>
+					  <td>
+                      <input name="submit" type="submit" class="ButtonGeneral link" value="Buy - Paypal">
+					  </td>
+					  <% end if%>
+					  
+<%end if 'end of item no 111
+%>
+				<% elseif item_number=109 then 'start of item_no-109
+				%>
+ <% If Session("CountryOrigin") = "India" Then %>
+  <% form_url="http://mycatstudy.com/itilstudy_ccavenue.asp"%>
+   <td>
+   <input type="hidden" name="form_url" value="<%=form_url%>">
+   <input type="hidden" name="item_name" value="ITIL Intermediate CSI Online Course">
+                    <input type="hidden" name="item_number" value="109">                   
+                     
+					 </td>
+					 <td>
+					 <input type="submit" class="ButtonGeneral link" value="Buy - CCAvenue" /></td>
+					   <% Else 
+				If Session("CountryOrigin") = "Other" Then				
+				%>
+ <% form_url="http://www.pmstudy.com/itilOnline_ccavenue.asp"%>
+   
+   <td>
+   <input type="hidden" name="form_url" value="<%=form_url%>">
+   <input type="hidden" name=Merchant_Id value="t_satpat1848">
+                     <input type="hidden" name="ITIL_country" value="<% = ITIL_country %>">
+                      <input type="hidden" name="Currency" value="USD">
+                     <input type="hidden" name="Order_Id" value="<%=Order_Id%>">
+                      <input type="hidden" name="TxnType" value="A">
+                      <input type="hidden" name="actionID" value="txn">
+                      <input type="hidden" name="item_number" value="109" />
+                      <input type="hidden" name="item_name" value="ITIL Intermediate CSI Online Course">
+                     
+                      <input type="hidden" name="amount" value="665">
+                    
+					  <input type="hidden" name="Redirect_Url" value="http://www.itilstudy.com/payment-success.asp">
+                      <input name="submit" type="submit" class="ButtonGeneral link" value="Buy - CCAvenue" size="20" style="float:right;">
+					  </td>
+					   <td>
+					   <% form_url="https://www.sandbox.paypal.com/cgi-bin/webscr"%>
+					  <input type="hidden" name="form_url" value="<%=form_url%>">
+					<input type="hidden" name="cmd" value="_xclick">
+                      <input type="hidden" name="business" value="adminsupport@projstudy.com">
+                      <input type="hidden" name="item_name" value="ITIL Intermediate CSI Online Course">
+                      <input type="hidden" name="item_number" value="109">
+					   <input type="hidden" name="amount" value="665">
+					   <input type="hidden" name="return" value="http://www.itilstudy.com/customerdetails.asp">
+                      <input type="hidden" name="rm" value="2">
+					    <input type="hidden" name="currency_code" value="USD">
+					  <input name="submit" type="submit" class="ButtonGeneral link" value="Buy - Paypal">
+                    </td>
+<% End If %>
+<td>
+ <%  If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "India" OR Session("CountryOrigin") = "Netherlands"  Then %>
+  <% form_url="https://www.sandbox.paypal.com/cgi-bin/webscr"%>
+<input type="hidden" name="form_url" value="<%=form_url%>">
+  <input type="hidden" name="cmd" value="_xclick">
+                      <input type="hidden" name="business" value="adminsupport@projstudy.com">
+                      <input type="hidden" name="item_name" value="ITIL Intermediate CSI Online Course">
+                      <input type="hidden" name="item_number" value="109">
+					   <input type="hidden" name="amount" value="665">
+                       <% ElseIf Session("CountryOrigin") = "United Kingdom" Then %>
+                      <input type="hidden" name="amount" value="425">
+					   <% ElseIf Session("CountryOrigin") = "Australia" Then %>
+                      <input type="hidden" name="amount" value="625">
+					  <% ElseIf Session("CountryOrigin") = "UAE" Then %>
+                      <input type="hidden" name="amount" value="665">
+					  <% ElseIf Session("CountryOrigin") = "Singapore" Then %>
+                      <input type="hidden" name="amount" value="838">
+                      <% End If%>
+                      <input type="hidden" name="return" value="http://www.itilstudy.com/customerdetails.asp">
+                      <input type="hidden" name="rm" value="2">
+                      <%  If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "UAE" OR Session("CountryOrigin") = "India" OR Session("CountryOrigin") = "Netherlands"  Then %>
+                      <input type="hidden" name="currency_code" value="USD">
+                      <% ElseIf Session("CountryOrigin") = "United Kingdom" Then %>
+                      <input type="hidden" name="currency_code" value="GBP">
+					   <% ElseIf Session("CountryOrigin") = "Australia" Then %>
+                      <input type="hidden" name="currency_code" value="AUD">
+					  <% ElseIf Session("CountryOrigin") = "Singapore" Then %>
+                      <input type="hidden" name="currency_code" value="SGD">
+                      <% End If%>
+					  </td>
+					  <%If not Session("CountryOrigin") = "Other" Then%>
+					  <td>
+                      <input name="submit" type="submit" class="ButtonGeneral link" value="Buy - Paypal">
+					  </td>
+					  <%end if%>
+<%end if 'end of item no 109
+%>
+
+<% elseif item_number=115 then 'start of item_no-115
+%>
+ <% If Session("CountryOrigin") = "India" Then %>
+  <% form_url="http://mycatstudy.com/itilstudy_ccavenue.asp"%>
+<td>
+<input type="hidden" name="form_url" value="<%=form_url%>">
+  <input type="hidden" name="item_name" value="ITIL Service Transition Online Course">
+                    <input type="hidden" name="item_number" value="115">                   
+                     
+	</td>	
+	<td> <input type="submit" class="ButtonGeneral link" value="Buy - CCAvenue" /></td>
+	<% Else 
+				If Session("CountryOrigin") = "Other" Then				
+				%>
+ <% form_url="http://www.pmstudy.com/itilOnline_ccavenue.asp"%>
+<td>
+<input type="hidden" name="form_url" value="<%=form_url%>">
+ <input type=hidden name=Merchant_Id value="t_satpat1848">
+                     <input type="hidden" name="ITIL_country" value="<% = ITIL_country %>">
+                      <input type="hidden" name="Currency" value="USD">
+                     <input type="hidden" name="Order_Id" value="<%=Order_Id%>">
+                      <input type="hidden" name="TxnType" value="A">
+                      <input type="hidden" name="actionID" value="txn">
+                      <input type="hidden" name="item_number" value="115" />
+                      <input type="hidden" name="item_name" value="ITIL Intermediate Service Transition Online Course">
+                     
+                      <input type="hidden" name="amount" value="665">
+                    
+					  <input type="hidden" name="Redirect_Url" value="http://www.itilstudy.com/payment-success.asp">
+					 <input name="submit" type="submit" class="ButtonGeneral link" value="Buy - CCAvenue" size="20" style="float:right;">
+					  </td>
+					   <td>
+					  <% form_url="https://www.sandbox.paypal.com/cgi-bin/webscr"%>
+  <input type="hidden" name="form_url" value="<%=form_url%>">
+   <input type="hidden" name="cmd" value="_xclick">
+                      <input type="hidden" name="business" value="adminsupport@projstudy.com">
+                      <input type="hidden" name="item_name" value="ITIL Intermediate Service Transition Online Course">
+                      <input type="hidden" name="item_number" value="115">
+                      <input type="hidden" name="amount" value="665">
+					   <input type="hidden" name="return" value="http://www.itilstudy.com/customerdetails.asp">
+                      <input type="hidden" name="rm" value="2">
+					    <input type="hidden" name="currency_code" value="USD">
+					  <input name="submit" type="submit" class="ButtonGeneral link" value="Buy - Paypal">
+                    </td>
+<% End If %>
+<td>
+ <%  If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "India" OR Session("CountryOrigin") = "Netherlands"  Then %>
+  <% form_url="https://www.sandbox.paypal.com/cgi-bin/webscr"%>
+  <input type="hidden" name="form_url" value="<%=form_url%>">
+   <input type="hidden" name="cmd" value="_xclick">
+                      <input type="hidden" name="business" value="adminsupport@projstudy.com">
+                      <input type="hidden" name="item_name" value="ITIL Intermediate Service Transition Online Course">
+                      <input type="hidden" name="item_number" value="115">
+                      <input type="hidden" name="amount" value="665">
+                      <% ElseIf Session("CountryOrigin") = "United Kingdom" Then %>
+                      <input type="hidden" name="amount" value="425">
+					   <% ElseIf Session("CountryOrigin") = "Australia" Then %>
+                      <input type="hidden" name="amount" value="625">
+					  <% ElseIf Session("CountryOrigin") = "UAE" Then %>
+                      <input type="hidden" name="amount" value="665">
+					  <% ElseIf Session("CountryOrigin") = "Singapore" Then %>
+                      <input type="hidden" name="amount" value="838">
+                      <% End If%>
+                      <input type="hidden" name="return" value="http://www.itilstudy.com/customerdetails.asp">
+                      <input type="hidden" name="rm" value="2">
+                      <%  If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "UAE" OR Session("CountryOrigin") = "India" OR Session("CountryOrigin") = "Netherlands"  Then %>
+                      <input type="hidden" name="currency_code" value="USD">
+                      <% ElseIf Session("CountryOrigin") = "United Kingdom" Then %>
+                      <input type="hidden" name="currency_code" value="GBP">
+					   <% ElseIf Session("CountryOrigin") = "Australia" Then %>
+                      <input type="hidden" name="currency_code" value="AUD">
+					  <% ElseIf Session("CountryOrigin") = "Singapore" Then %>
+                      <input type="hidden" name="currency_code" value="SGD">
+                      <% End If%>
+                      </td>
+					  <%If not Session("CountryOrigin") = "Other" Then%>
+					  <td>
+                      <input name="submit" type="submit" class="ButtonGeneral link" value="Buy - Paypal">
+					  </td>
+					  <%end if%>
+<%end if 'end of item no 115
+%>
+<% elseif item_number=106 then 'start of item_no-106
+%>
+ 
+	<% If Session("CountryOrigin") = "Other" Then				
+				%>
+ <% form_url="http://www.pmstudy.com/itilOnline_ccavenue.asp"%>
+   <td>
+   <input type="hidden" name="form_url" value="<%=form_url%>">
+   <input type="hidden" name=Merchant_Id value="t_satpat1848">
+                     
+                      <input type="hidden" name="Currency" value="USD">
+                    <input type="hidden" name="ITIL_country" value="<% = ITIL_country %>">
+                      <input type="hidden" name="Order_Id" value="<%=Order_Id%>">
+                      <input type="hidden" name="TxnType" value="A">
+                      <input type="hidden" name="actionID" value="txn">
+                      <input type="hidden" name="item_number" value="106" />
+                      <input type="hidden" name="item_name" value="ITILstudy Classroom Training - <% = Session("CountryOrigin") %>">
+                    
+                      <input type="hidden" name="amount" value="450">
+                     
+					  <input type="hidden" name="Redirect_Url" value="http://www.itilstudy.com/payment-success.asp">
+                      <input name="submit" type="submit" class="ButtonGeneral link" value="Buy - CCAvenue" size="20" style="float:right;">
+					  </td>
+					   <td>
+					 <% form_url="https://www.sandbox.paypal.com/cgi-bin/webscr"%>
+					  <input type="hidden" name="form_url" value="<%=form_url%>">
+					  <input type="hidden" name="cmd" value="_xclick">
+                       <input type="hidden" name="cmd" value="_xclick">
+                      <input type="hidden" name="business" value="adminsupport@projstudy.com">
+                      <input type="hidden" name="item_name" value="ITILstuyd Blend Course">
+                      <input type="hidden" name="item_number" value="106">
+					  <input type="hidden" name="amount" value="450">
+					   <input type="hidden" name="return" value="http://www.itilstudy.com/customerdetails.asp">
+                      <input type="hidden" name="rm" value="2">
+					    <input type="hidden" name="currency_code" value="USD">
+					  <input name="submit" type="submit" class="ButtonGeneral link" value="Buy - Paypal">
+                    </td>
+<% End If %>
+<td>
+ <%  If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "India" OR Session("CountryOrigin") = "Netherlands"  Then %>
+  <% form_url="https://www.sandbox.paypal.com/cgi-bin/webscr"%>
+  <input type="hidden" name="form_url" value="<%=form_url%>">
+  <input type="hidden" name="cmd" value="_xclick">
+                       <input type="hidden" name="cmd" value="_xclick">
+                      <input type="hidden" name="business" value="adminsupport@projstudy.com">
+                      <input type="hidden" name="item_name" value="ITILstuyd Blend Course">
+                      <input type="hidden" name="item_number" value="106">
+					  <input type="hidden" name="amount" value="450">
+                       <% ElseIf Session("CountryOrigin") = "United Kingdom" Then %>
+                      <input type="hidden" name="amount" value="400">
+					  <% ElseIf Session("CountryOrigin") = "Australia" Then %>
+                      <input type="hidden" name="amount" value="560">
+                      <% End If%>
+                      <input type="hidden" name="return" value="http://www.itilstudy.com/customerdetails.asp">
+                      <input type="hidden" name="rm" value="2">
+                      <%  If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "UAE" OR Session("CountryOrigin") = "Singapore" OR Session("CountryOrigin") = "India" OR Session("CountryOrigin") = "Netherlands" Then %>
+                      <input type="hidden" name="currency_code" value="USD">
+                      <% ElseIf Session("CountryOrigin") = "United Kingdom" Then %>
+                      <input type="hidden" name="currency_code" value="GBP">
+					   <% ElseIf Session("CountryOrigin") = "Australia" Then %>
+                      <input type="hidden" name="currency_code" value="AUD">
+                      <% End If%>
+                      </td>
+					  <%If not Session("CountryOrigin") = "Other" Then%>
+					  <td>
+                      <input name="submit" type="submit" class="ButtonGeneral link" value="Buy - Paypal">
+					  </td>
+					  <%end if%>
+					  <% 'END OF ITEM NO 106 NO END IF REQUIRED (CHECK IT PROPERLY)
+					  %>
+					  
+					  <% elseif item_number=007 then 'start of item_no-007
+					  %>
+<% form_url="https://www.sandbox.paypal.com/cgi-bin/webscr"%>
+<td>
+  <input type="hidden" name="cmd" value="_xclick">
+  <input type="hidden" name="business" value="bhus_1349950238_biz@gmail.com">
+  <input type="hidden" name="item_name" value="PMP Test 2 - 4th Edition">
+  <input type="hidden" name="item_number" value="007">
+  <input type="hidden" class="dicountedAmount" name="amount" value="1">
+  <input type="hidden" name="cancel_return" value="http://www.pmstudy.com">
+  <input type="hidden" name="return" value="http://www.itilstudy.com/customerdetails.asp">
+  <input type="hidden" name="notify_url" value="http://www.itilstudy.com/customerdetails.asp" />
+  <input type="hidden" name="rm" value="2">
+  <input type="hidden" name="currency_code" value="USD">
+  <input name="submit" type="submit" class="ButtonBuyNow" value="Buy - PayPal">
+</td><%  'end of test item no 007
+%>
+				<%end if%>
+				
+				<% end if 'end of next if comes after paypal submit if
+				%>
+				<% end if 'end of paypal submit show condition
+				%>
+<%
+ Session.Contents.Remove("Newitem_number") 'need to be removed by cm
+%>
+				<!--</td>-->
               </tr>
             </form>
+			<script type="text/javascript">
+			$(function(){
+			var furl="<%= form_url%>";
+
+$('#form2').attr('action',furl);	
+	
+$('.link').click(function(){
+//alert(this.form.first_name.value)
+if (this.first_name.value == "Please Enter Your First Name" || this.first_name.value =="" || this.first_name.value.length <2)
+  {
+    alert("Please enter first name");
+    this.first_name.focus();
+	return false;
+  }
+   if (this.last_name.value == "Please Enter Your Last Name" || this.last_name.value =="" || this.last_name.value.length<1)
+  {
+    alert("Please enter last name");
+    this.last_name.focus();
+	return false;
+  }				
+  if (this.payer_email.value == "Enter your email address")
+  {
+    alert("Please enter email id");
+    this.payer_email.focus();
+	return false;
+  }
+  if (this.custom.value == "" || this.custom.value == null)
+  {
+    alert("Please enter email id");
+    this.payer_email.focus();
+	return false;
+  } 
+  if (validate_number(this.ebay_address_id.value,"Your phone number is not a numeral")==false)
+  {
+  this.ebay_address_id.focus();
+  return false
+  }
+
+var bUrl=$(this).parents('td:first').find('input:hidden:[name=form_url]').val()
+ $('#form2').attr('action',bUrl);
+var cell=$(this).parents('td:first');
+var cellIndex = cell[0].cellIndex
+console.log("cell :",cellIndex)
+		if(cellIndex==0)
+		{
+		$(this).parents('tr:first').find('td').not(':first').remove()
+		}
+		if(cellIndex==1)
+		{
+		//$('#21').parents('tr:first').find('td:first').remove()
+		$(this).parents('tr:first').find('td:first').remove()
+}
+
+})
+
+
+			})
+			function validate_number(field,alerttxt)
+					{
+						var iChars = "0123456789-/,";
+
+						with (field)
+						{
+							for (var i = 0; i < value.length; i++) {
+								if (!(iChars.indexOf(value.charAt(i)) != -1)) {
+								alert (alerttxt);
+								return false;
+								}
+							}
+						}
+					}
+			</script>
 			<tr>
 				<td colspan="2">&nbsp;</td>
 			</tr>
@@ -985,21 +1590,20 @@
 		  </div>
           <!-- Content End From Here-->
           <!--#include virtual="/includes/connectionClose.asp"-->
-          <% End If%>
+          
       </div>
       
       </td>
       
       </tr>
       
-    </table>
+    </table>	
     </td>
     
     </tr>
     
   </table>
 </div>
-
 
 <% If (Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada") Then %>
 <!-- Google Code for ITILstudy USA Online - EF Conversion Page -->

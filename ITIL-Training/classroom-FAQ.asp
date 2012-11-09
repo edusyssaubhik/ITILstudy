@@ -511,7 +511,7 @@ While submitting the PDUs to PMI, please use the following information:<br /><br
                       <div class="faqItemContent">
                         <div class="outerFAQContainer">
                           <div class="innerFAQContainer">
-						  <p>For details of the ITIL  Foundation course syllabus please <a href="http://itilstudy.com/classroomTraining.asp">click here</a></p>
+						  <p>For details of the ITIL  Foundation course syllabus please <a href="http://www.itilstudy.com/course-syllabus.asp">click here</a></p>
                           
                           </div>
                         </div>

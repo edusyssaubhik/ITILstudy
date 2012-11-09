@@ -18,7 +18,7 @@
 		 
 		  <a href="/ITIL-Training/classroom-FAQ.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">FAQs </a>
 		
-			
+			<a href="/feedback_class.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">ITILstudy Testimonials </a>	
          <a href="/ITIL-Training/comprehensive.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">Most Comprehensive and Effective </a>
            <a href="/ITIL-Training/exam-success.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">Leading ATO – 2000+ companies</a>
            <a href="/ITIL-Training/PMI_PDU.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">PMI Approved PDUs </a>

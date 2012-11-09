@@ -119,12 +119,13 @@ function Form_Validator(theform)
           <tr>
             <td width="2%" class="Header"></td>
             <td width="25%" class="PageTitle"></td>
-            <td width="73%" class="PageTitle"><h1 class="PageTitle">Change your password</h1></td>
+            <td width="73%" class="PageTitle">Change your password</td>
           </tr>
           <tr>
             <!--#include virtual="/includes/innerLeftMenu.asp"-->
             <td width="73%" rowspan="4" background="/images/back/left_line.jpg" class="general-body"><div style="margin-top:-12px;">
                 <!-- Content Start From Here-->
+                <br />
                 <table width="95%" border="0" cellspacing="0" cellpadding="3" class="general-body">
                   <%If(Request.form("changepass")="one" OR Request.QueryString("changepass")="one") Then
 
@@ -135,7 +136,7 @@ function Form_Validator(theform)
                   <form method="POST" action="changepassword.asp" onSubmit="return Form_Validator(this)">
                     <input type="hidden" name="changepass" value="two">
                     <tr>
-                      <td colspan=2><span class="Header">Change Password Screen :</span></td>
+                      <td colspan=2><span class="Header">Change Password Screen : </span></td>
                     </tr>
                     <tr>
                       <td colspan="2">&nbsp;</td>
@@ -184,6 +185,50 @@ If Not rsQues.BOF Then
                     <td colspan="2"><p class="general-bodyBold">Your password has been updated. <a href="./memberlogin.asp">Please login again to continue </a></p></td>
                   </tr>
                   <%Else%>
+				  <%
+				  'code added by chandan for set password of Custumer_accounts ================
+				  Set RsQuery = Server.CreateObject("ADODB.Recordset")
+                  RsQuery.ActiveConnection = ConnObj
+
+				  RsQuery.Open "SELECT account_type_id,email, password from Customer_Accounts WHERE Customer_Accounts.email='"&tmp_payer_email&"'"
+If Not RsQuery.BOF Then
+if RsQuery("account_type_id")=1 then 'means user have registered througth our site
+if RsQuery("password")= tmp_passold then
+	ConnObj.Execute "UPDATE Customer_Accounts SET password='"&tmp_passnew&"' WHERE email='"&tmp_payer_email&"'"
+	'success msg
+	%>
+<tr>
+ <td colspan="2">
+   <p class="general-bodyBold">Your password has been updated. <a href="./memberlogin.asp">Please login again to continue </a></p>
+ </td>
+</tr>
+<%
+	else	
+' either Password donot match with old password
+%>
+<tr>
+   <td colspan=2><span class="Error">Sorry, your UserID and Password are not valid. Please enter again :</span></td>
+</tr><%
+End if
+else
+'login using facebook
+%>
+<tr>
+ <td colspan="2">
+   <p class="general-bodyBold">You are registered througth facebook. Go to Login and click on Flogin button</p>
+ </td>
+</tr>
+<%
+End if
+else
+'Sorry, your UserID and Password are not valid. Please enter again.
+%>
+<tr>
+  <td colspan=2><span class="Error">Sorry, your UserID and Password are not valid. Please enter again :</span></td>
+</tr><%
+End if
+'end of code=============================
+				  %>
                   <form method="POST" action="changepassword.asp" onSubmit="return Form_Validator(this)">
                     <input type="hidden" name="changepass" value="two">
                     <tr>

@@ -106,12 +106,16 @@ function popitup(url) {
 
 <td width="2%">&nbsp;</td>
 <td width="25%" class="general-body"><%  
-Dim State
+'Dim State
 State=Session("State")
 'response.Write(State)
 If(Session("State")<>"") Then%>
-  <span class="Header">Welcome <%=Session("FirstName")%>&nbsp;<%=Session("LastName")%>,</span><br />
-  <br>
+  <!--<span class="Header">Welcome <%=Session("FirstName")%>&nbsp;<%=Session("LastName")%>,</span><br />
+  <br>-->
+  <%   if session("IsProfileCompleted")<>"" then%>
+   <a href="/Profile.asp">Edit your profile</a></br>
+<%
+end if %>
   <span class="SubHeader">Your course includes :</span><br>
   <br />
   <%
@@ -159,13 +163,13 @@ Select Case State
     <tr>
       <td class="bottomBorder">&nbsp;</td>
     </tr>
-	 <tr>
+	<!-- <tr>
       <td><a href="/ITIL/chapterTestsIndex.asp" id='menulk'>Chapter Tests &nbsp; &nbsp;</a></td>
     </tr>
 	<tr>
       <td class="bottomBorder">&nbsp;</td>
     </tr>
-    
+    -->
     <tr>
       <td><a href="/query.asp"  id='menulk'>Query/Suggestion &nbsp; &nbsp;</a></td>
     </tr>
@@ -230,6 +234,13 @@ Select Case State
 	<tr>
       <td class="bottomBorder">&nbsp;</td>
     </tr>
+	<tr><td>
+			<a href="/Mycourses.asp"  id='menulk'>
+       My courses &nbsp; &nbsp;</a></td>
+    </tr>
+	<tr>
+      <td class="bottomBorder">&nbsp;</td>
+    </tr>
     <tr>
       <td><a href="/logoff.asp"  id='menulk'> 
         Sign Out &nbsp; &nbsp;</a></td>
@@ -256,6 +267,13 @@ Select Case State
 	<tr><td>
 			<a href="/changepassword.asp?changepass=one"  id='menulk'>
        Change Password &nbsp; &nbsp;</a></td>
+    </tr>
+	<tr>
+      <td class="bottomBorder">&nbsp;</td>
+    </tr>
+	<tr><td>
+			<a href="/Mycourses.asp"  id='menulk'>
+       My courses &nbsp; &nbsp;</a></td>
     </tr>
     <tr>
       <td class="SubHeader"><a href="/logoff.asp"  id='menulk'><BR>
@@ -372,11 +390,8 @@ Select Case State
     <tr>
       <td>
         <% If Session("KnoPassed") = 6 Then %>
-            <%If Session("State") = "verified5" OR Session("State")="verified7"  Then%>
-                    <a href="/ITILsim/APMG-sample-papers.asp"  id='menulk' >APMG Sample Paper &nbsp; &nbsp; </a> 
-              <%Else %>
-                    <a href="/ITILsim/practiceTestsIndex.asp"  id='menulk' >APMG Sample Paper &nbsp; &nbsp; </a> 
-              <%end If %>
+
+  <a href="/ITILsim/practiceTestsIndex.asp"  id='menulk' >APMG Sample Paper &nbsp; &nbsp; </a> 
     <%Else%>
     
        <a href="/ITIL/mockTest.asp" style="color: rgb(161, 161, 161);width:200px;"  id='menulk' onClick="return popitup('/ITIL/mockTest.asp')" >APMG Sample Paper &nbsp; &nbsp; </a>
@@ -458,6 +473,16 @@ Select Case State
 	<tr><td>
 			<a href="/changepassword.asp?changepass=one"  id='menulk'>
        Change Password &nbsp; &nbsp;</a></td>
+    </tr>
+	<tr>
+      <td class="bottomBorder">&nbsp;</td>
+    </tr>
+	<tr>
+      <td class="bottomBorder">&nbsp;</td>
+    </tr>
+	<tr><td>
+			<a href="/Mycourses.asp"  id='menulk'>
+       My courses &nbsp; &nbsp;</a></td>
     </tr>
     <tr>
       <td class="bottomBorder">&nbsp;</td>
@@ -633,6 +658,13 @@ Select Case State
 			<a href="/changepassword.asp?changepass=one"  id='menulk'>
        Change Password &nbsp; &nbsp;</a></td>
     </tr>
+	<tr>
+      <td class="bottomBorder">&nbsp;</td>
+    </tr>
+	<tr><td>
+			<a href="/Mycourses.asp"  id='menulk'>
+       My courses &nbsp; &nbsp;</a></td>
+    </tr>
     <tr>
       <td class="bottomBorder">&nbsp;</td>
     </tr>
@@ -791,6 +823,13 @@ Select Case State
 	<tr><td>
 			<a href="/changepassword.asp?changepass=one"  id='menulk'>
        Change Password &nbsp; &nbsp;</a></td>
+    </tr>
+	<tr>
+      <td class="bottomBorder">&nbsp;</td>
+    </tr>
+	<tr><td>
+			<a href="/Mycourses.asp"  id='menulk'>
+       My courses &nbsp; &nbsp;</a></td>
     </tr>
     <tr>
       <td class="bottomBorder">&nbsp;</td>
@@ -962,6 +1001,13 @@ Select Case State
 			<a href="/changepassword.asp?changepass=one"  id='menulk'>
        Change Password &nbsp; &nbsp;</a></td>
     </tr>
+	<tr>
+      <td class="bottomBorder">&nbsp;</td>
+    </tr>
+	<tr><td>
+			<a href="/Mycourses.asp"  id='menulk'>
+       My courses &nbsp; &nbsp;</a></td>
+    </tr>
     <tr>
       <td class="bottomBorder">&nbsp;</td>
     </tr>
@@ -1111,6 +1157,13 @@ Select Case State
 			<a href="/changepassword.asp?changepass=one"  id='menulk'>
        Change Password &nbsp; &nbsp;</a></td>
     </tr>
+	<tr>
+      <td class="bottomBorder">&nbsp;</td>
+    </tr>
+	<tr><td>
+			<a href="/Mycourses.asp"  id='menulk'>
+       My courses &nbsp; &nbsp;</a></td>
+    </tr>
     <tr>
       <td class="bottomBorder">&nbsp;</td>
     </tr>
@@ -1259,6 +1312,13 @@ Select Case State
 	<tr><td>
 			<a href="/changepassword.asp?changepass=one"  id='menulk'>
        Change Password &nbsp; &nbsp;</a></td>
+    </tr>
+	<tr>
+      <td class="bottomBorder">&nbsp;</td>
+    </tr>
+	<tr><td>
+			<a href="/Mycourses.asp"  id='menulk'>
+       My courses &nbsp; &nbsp;</a></td>
     </tr>
     <tr>
       <td class="bottomBorder">&nbsp;</td>
@@ -1438,6 +1498,13 @@ Select Case State
 			<a href="/changepassword.asp?changepass=one"  id='menulk'>
        Change Password &nbsp; &nbsp;</a></td>
     </tr>
+	<tr>
+      <td class="bottomBorder">&nbsp;</td>
+    </tr>
+	<tr><td>
+			<a href="/Mycourses.asp"  id='menulk'>
+       My courses &nbsp; &nbsp;</a></td>
+    </tr>
     <tr>
       <td class="bottomBorder">&nbsp;</td>
     </tr>
@@ -1575,6 +1642,13 @@ Select Case State
 			<a href="/changepassword.asp?changepass=one"  id='menulk'>
        Change Password &nbsp; &nbsp;</a></td>
     </tr>
+	<tr>
+      <td class="bottomBorder">&nbsp;</td>
+    </tr>
+	<tr><td>
+			<a href="/Mycourses.asp"  id='menulk'>
+       My courses &nbsp; &nbsp;</a></td>
+    </tr>
     <tr>
       <td class="bottomBorder">&nbsp;</td>
     </tr>
@@ -1698,6 +1772,13 @@ Select Case State
 			<a href="/changepassword.asp?changepass=one"  id='menulk'>
        Change Password &nbsp; &nbsp;</a></td>
     </tr>
+	<tr>
+      <td class="bottomBorder">&nbsp;</td>
+    </tr>
+	<tr><td>
+			<a href="/Mycourses.asp"  id='menulk'>
+       My courses &nbsp; &nbsp;</a></td>
+    </tr>
     <tr>
       <td class="bottomBorder">&nbsp;</td>
     </tr>
@@ -1784,12 +1865,12 @@ Select Case State
       <td class="bottomBorder">&nbsp;</td>
     </tr>
     <% End If %>
-     <!-- <tr>
+      <tr>
       <td><a href="/ITIL-RCV/RCV_samplePapers.asp"  id='menulk'>RCV Sample Papers &nbsp; &nbsp;</a></td>
     </tr>
     <tr>
       <td class="bottomBorder">&nbsp;</td>
-    </tr>-->
+    </tr>
 	
 	
      <% If Session("KnoPassed") = 8 Then %>
@@ -1858,6 +1939,13 @@ Select Case State
 			<a href="/changepassword.asp?changepass=one"  id='menulk'>
        Change Password &nbsp; &nbsp;</a></td>
     </tr>
+	<tr>
+      <td class="bottomBorder">&nbsp;</td>
+    </tr>
+	<tr><td>
+			<a href="/Mycourses.asp"  id='menulk'>
+       My courses &nbsp; &nbsp;</a></td>
+    </tr>
     <tr>
       <td class="bottomBorder">&nbsp;</td>
     </tr>
@@ -1894,11 +1982,6 @@ Select Case State
      <tr>
       <td id="imageHover"><object width="200" height="150"><iframe width="200" height="150" src="http://www.youtube.com/embed/G7sizMIi9K4?wmode=transparent" frameborder="0" allowfullscreen></iframe><br /><br /></td>
     </tr>    
-      <tr><td>              <table>
-                        <tr><td rowspan="2"><a href="/freeresources/freeSimulatedTest.asp"><img src="/images/symbol/symbol_free.jpg"></a></td><td><a href="/freeresources/freeSimulatedTest.asp"><img src="/images/symbol/symbol_free_text.jpg"></a><br />ITIL<sup>&reg;</sup> Exam <br />Practice Test</td></tr>
-                        <tr><td></td></tr>
-
-                    </table></td></tr>
 	<tr>
     <td>
     <div id="contact-box" align="center">
@@ -1910,28 +1993,14 @@ Select Case State
     
     <% else %>
     <% If Session("CountryOrigin") <> "India" AND Session("CountryOrigin") <> "UAE" AND Session("CountryOrigin") <> "Other" AND Session("CountryOrigin") <> "Australia" AND Session("CountryOrigin") <> "United Kingdom" Then %>
-
      <tr>
       <td id="imageHover"><iframe width="200" height="150" src="http://www.youtube.com/embed/G7sizMIi9K4?wmode=transparent" frameborder="0" allowfullscreen></iframe><br /><br /></td>
     </tr>
-      <tr><td>              <table>
-                        <tr><td rowspan="2"><a href="/freeresources/freeSimulatedTest.asp"><img src="/images/symbol/symbol_free.jpg"></a></td><td><a href="/freeresources/freeSimulatedTest.asp"><img src="/images/symbol/symbol_free_text.jpg"></a><br />ITIL<sup>&reg;</sup> Exam <br />Practice Test</td></tr>
-                        <tr><td></td></tr>
-
-                    </table></td></tr>
     <% End If %>
     <% If Session("CountryOrigin") <> "United Kingdom" AND Session("CountryOrigin") <> "UAE" AND Session("CountryOrigin") <> "Australia"  Then %>
-      <%If Session("CountryOrigin") = "India" OR Session("CountryOrigin") = "Other" Then %>
-                  <tr><td>              <table>
-                        <tr><td rowspan="2"><a href="/freeresources/freeSimulatedTest.asp"><img src="/images/symbol/symbol_free.jpg"></a></td><td><a href="/freeresources/freeSimulatedTest.asp"><img src="/images/symbol/symbol_free_text.jpg"></a><br />ITIL<sup>&reg;</sup> Exam <br />Practice Test</td></tr>
-                        <tr><td></td></tr>
-
-                    </table></td></tr>
-      <%end If %>
     <tr>
       <td id="imageHover"><a href="/ITIL-Courses.asp"><img src="/images/buttons/courses_basic.jpg"   border="0" ></a><br /><br /></td>
     </tr>
-
     <% End If %>
      <% If Session("CountryOrigin") = "United Kingdom" OR Session("CountryOrigin") = "UAE" OR Session("CountryOrigin") = "Australia" Then %>
      
@@ -1940,12 +2009,8 @@ Select Case State
       <td id="imageHover"><object width="200" height="150"><iframe width="200" height="150" src="http://www.youtube.com/embed/G7sizMIi9K4?wmode=transparent" frameborder="0" allowfullscreen></iframe><br /><br /></td>
    
     </tr>  
-    <tr><td>              <table>
-                        <tr><td rowspan="2"><a href="/freeresources/freeSimulatedTest.asp"><img src="/images/symbol/symbol_free.jpg"></a></td><td><a href="/freeresources/freeSimulatedTest.asp"><img src="/images/symbol/symbol_free_text.jpg"></a><br />ITIL<sup>&reg;</sup> Exam <br />Practice Test</td></tr>
-                        <tr><td></td></tr>
-
-                    </table></td></tr>
-
+    
+      
 	
     <tr>
     
@@ -1974,7 +2039,7 @@ Select Case State
    <tr><td>
  
 <%
-   Dim valur,svrUrl,Rqsplit
+   'Dim valur,svrUrl,Rqsplit
    ' Code for getting URL and splitting and using as per for requrement'	
 		svrHttps = request.servervariables("HTTPS")
 		svrHost = request.servervariables("HTTP_HOST")

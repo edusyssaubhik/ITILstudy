@@ -1,15 +1,15 @@
 <%
-'If InStr(Request.ServerVariables("SERVER_NAME"),"www") = 0 Then
+' If InStr(Request.ServerVariables("SERVER_NAME"),"www") = 0 Then
 
-	'Response.Status="301 Moved Permanently"
+	' Response.Status="301 Moved Permanently"
 	
-	'If Request.ServerVariables("URL") = "/index.asp" Then
-	'Response.AddHeader "Location","http://www." & Request.ServerVariables("HTTP_HOST")
-	'Else
-	'Response.AddHeader "Location","http://www." & Request.ServerVariables("HTTP_HOST") & Request.ServerVariables("URL")
-    'End If
-	'Response.End
-'End if
+	' If Request.ServerVariables("URL") = "/index.asp" Then
+	' Response.AddHeader "Location","http://www." & Request.ServerVariables("HTTP_HOST")
+	' Else
+	' Response.AddHeader "Location","http://www." & Request.ServerVariables("HTTP_HOST") & Request.ServerVariables("URL")
+    ' End If
+	' Response.End
+' End if
 %>
 
 <link rel="shortcut icon" href="/images/buttons/favicon.ico">
@@ -135,6 +135,14 @@ color:#000000;
 
 
 </style>
+    <style type="text/css">
+        span.floatRight {
+        float:right;
+        margin: 15px 10px 10px 10px;
+        display:inline-block;
+        }
+    </style>
+
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 <script type="text/javascript" src="/js/chrome.js"></script>
 <style type="text/css"></style>
@@ -170,7 +178,15 @@ function getCountry() {
 }
 -->
 </script>
-
+</script>
+<script language="JavaScript" type="text/javascript" src="/js/jquery-1.7.2.js"></script> 
+  <%If not trim(session("current_user_id")) = "" then %>
+ <script type="text/javascript">
+			  $(function(){			 		  
+			  $('#dropmenu2').append('<a href="/Mycourses.asp" onmouseover="MM_swapImage("b","","/images/back/link_02_courses_enroll_green.jpg",1)" onmouseout="MM_swapImgRestore()">My Courses</a>')
+			  })
+			  </script>
+			  <%end if %>
 <% If(Session("CountryOrigin")="United Kingdom") Then %>
 <!--Script to record the mouse movement of users on website-->
 <script type="text/javascript">
@@ -303,22 +319,49 @@ End If
       <td><div align="right">
         <table width="930" border="0" cellspacing="0" cellpadding="0">
           <tr>
-           <% If Session("CountryOrigin") = "Germany" Then %>
-           <td width="220">&nbsp;</td>
+ <% If Session("CountryOrigin") = "Germany" Then %>
+           <!--<td width="220">&nbsp;</td>-->
             <% Else %>
-           <td width="320">&nbsp;</td>
+           <!--<td width="320">&nbsp;</td>-->
              <% End If %>
-                         
-             <% If Session("CountryOrigin") = "Germany" Then %>
 
-            <td>
-				<span class="lang-Eng">
-                <a href="/indexde.asp">Deutsche</a> |</span>
-                                
-            </td>
-             <% End If %>
+              <!--When aligned to right , need to put last coming content to first-->
+
+              <span class="floatRight">
+              <span class="style1"><a href="/index.asp">Home</a> | <a href="/contactus.asp">Contact</a>  | <a href="/sitemap.asp">Sitemap</a> 
+              <%If(Session("FirstName")<>"") Then%>
+              | <a href="/Mycourses.asp">My Account</a>
+              <%Else%>
+             | <a href="/memberlogin.asp">Sign In</a>
+              <%End If%>
+              </span>
+                   <% If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" Then %>
+<% If Session("FirstName") <> "" Then %>
+                | 
+                  <a href="/logoff.asp">Sign Out</a>
+                  <%End If
+                      End If %>
+                </span>           
+             
+				 <!--Code for search option -->
+            <span class="floatRight">
+			<form action="/searchresults1.asp" id="cse-search-box" target="_blank">
+        <div style=" margin-top:0px">
+
+    <input type="hidden" name="cx" value="016011900712214369325:uxcy_lv2cqa" />
+    
+     <input type="hidden" name="cof" value="FORID:9" />
+    <input type="hidden" name="ie" value="UTF-8" />
+<input type="text" name="q" id="mainSearch_AllPages" id="mainSearch_AllPages" style="color: rgb(161, 161, 161);width:200px;" size="80"  class="TeXtField" value="Search ITILstudy" onfocus='myObj = document.getElementById("mainSearch_AllPages");if(this.value=="Search ITILstudy") myObj.value="";myObj.style.color = "#A1A1A1";' onblur='myObj = document.getElementById("mainSearch_AllPages");if(myObj.value == "") myObj.value="Search ITILstudy";myObj.style.color = "#a1a1a1";if(myObj.value!="Search ITILstudy") myObj.style.color="#A1A1A1";' size="50" />
+<input type="image" name="sa2" value="Go" id="submitbox" src="/images/buttons/search-ITIL.png"/>
+
+  </div>
+</form>
+                </span>
+             
+     
 			   <form name="myform" method="post">
-              <td> <% If Session("CountryOrigin") <> "Other" Then %>
+              <span class="floatRight"> <% If Session("CountryOrigin") <> "Other" Then %>
                       <img src="/images/countries/<% = Trim(Session("CountryOrigin")) %>.gif" height="11px" />
            <% End If %>
                 <select name="country" id="country" onChange="getCountry();">
@@ -334,33 +377,19 @@ End If
 				   <option <% If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" Then %> selected="selected" <% End If %> value="US">US/Canada</option>
                     <option <% If Session("CountryOrigin") = "Other" Then %> selected="selected" <% End If %> value="Other">Other</option>
                 </select>
-              </td>
+              </span>
             </form>
 			
-				 <!--Code for search option -->
-            <td width="240px" >
-			<form action="/searchresults1.asp" id="cse-search-box" target="_blank">
-        <div style=" margin-top:0px">
+               <% If Session("CountryOrigin") = "Germany" Then %>
+            
+            <span class="floatRight">
+				<span class="lang-Eng">
+                <a href="/indexde.asp">Deutsche</a> |</span>
+                                
+            </span>
+             <% End If %>
 
-    <input type="hidden" name="cx" value="016011900712214369325:uxcy_lv2cqa" />
-    
-     <input type="hidden" name="cof" value="FORID:9" />
-    <input type="hidden" name="ie" value="UTF-8" />
-<input type="text" name="q" id="mainSearch_AllPages" id="mainSearch_AllPages" style="color: rgb(161, 161, 161);width:200px;" size="80"  class="TeXtField" value="Search ITILstudy" onfocus='myObj = document.getElementById("mainSearch_AllPages");if(this.value=="Search ITILstudy") myObj.value="";myObj.style.color = "#A1A1A1";' onblur='myObj = document.getElementById("mainSearch_AllPages");if(myObj.value == "") myObj.value="Search ITILstudy";myObj.style.color = "#a1a1a1";if(myObj.value!="Search ITILstudy") myObj.style.color="#A1A1A1";' size="50" />
-<input type="image" name="sa2" value="Go" id="submitbox" src="/images/buttons/search-ITIL.png"/>
-
-  </div>
-</form>
-             
-      
-            <td width="215">
-              <span class="style1"><a href="/index.asp">Home</a> | <a href="/contactus.asp">Contact</a>  | <a href="/sitemap.asp">Sitemap</a> 
-              <%If(Session("FirstName")<>"") Then%>
-              | <a href="/overview.asp">My Account</a>
-              <%Else%>
-             | <a href="/memberlogin.asp">Sign In</a>
-              <%End If%>
-              </span></td><br/>
+               <!--End When aligned to right , need to put last coming content to first-->              </td>
           </tr>
         </table>
         <div>
@@ -459,14 +488,12 @@ End If
                 <li><a href="#" rel="dropmenu4"><img src="/images/back/affiliates_grey.png" alt="ITILstudy" name="d" id="d" onMouseOver="MM_swapImage('d','','/images/back/affiliates_green.png',1)" onMouseOut="MM_swapImgRestore()"  border="0" ></a></li>-->
                   
                    <% If Session("CountryOrigin") <> "US" AND Session("CountryOrigin") <> "Canada" Then %>
-                  <li id="imageHover"><a href="/memberlogin.asp" rel="dropmenu6"><img src="/images/back/link_06_login_grey.jpg" name="f" onMouseOver="MM_swapImage('f','','/images/back/link_06_login_green.jpg',1)" onMouseOut="MM_swapImgRestore()" border="0" ></a></li>
-                  <!--<%' Else %>
-                   <%' If Session("FirstName") = "" Then %>
-            <li id="imageHover"><a href="/memberlogin.asp" rel="dropmenu6"><img src="/images/back/link_06_login_grey.jpg" name="f" onMouseOver="MM_swapImage('f','','/images/back/link_06_login_green.jpg',1)" onMouseOut="MM_swapImgRestore()" border="0" ></a></li>
-            <%' Else %>
-            <li id="imageHover"><a href="/logoff.asp" rel="dropmenu6"><img src="/images/back/link_06_logout_grey.jpg" name="f" onMouseOver="MM_swapImage('f','','/images/back/link_06_logout_green.jpg',1)" onMouseOut="MM_swapImgRestore()" border="0" ></a></li>
-            <%' End If %>-->
-               <% End If %>  
+<% If Session("FirstName") = "" Then %>
+                <li id="Li1"><a href="/memberlogin.asp" rel="dropmenu6"><img src="/images/back/link_06_login_grey.jpg" name="f" onmouseover="MM_swapImage('f','','/images/back/link_06_login_green.jpg',1)" onmouseout="MM_swapImgRestore()" border="0" ></a></li>
+            <% Else %>
+            <li id="Li2"><a href="/logoff.asp" rel="dropmenu6"><img src="/images/back/link_06_logout_grey.jpg" name="f" onmouseover="MM_swapImage('f','','/images/back/link_06_logout_green.jpg',1)" onmouseout="MM_swapImgRestore()" border="0" ></a></li>
+            <% End If %>               <% End If %>  
+			   
                 </ul>
               </div>
          

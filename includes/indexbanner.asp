@@ -21,6 +21,7 @@
 			  <li>Specialized in ITIL trainings - <a href="http://www.itilstudy.com/ITIL-Training/better-than-competitors.asp" target="_blank">Find out here</a></li>
               <li>Great feedback from successful students - <a href="http://www.itilstudy.com/feedback_class.asp" target="_blank">Testimonials</a></li>             
           </ul>
+                 <span style="color:#FFF; text-align:left; margin-left:10px; padding-left:0px; margin-top:-20px;">Better than Competitors. <a href="/ITIL-Training/better-than-competitors.asp" target="_blank">More</a></span>
         </div>
   </div>
       
@@ -42,7 +43,9 @@
                 	<li>Funded by Sequoia Capital, PE firm that invested in Google, Apple, Cisco, etc. - <a href="http://www.itilstudy.com/investors.asp" target="_blank">Read more</a></li>
                 </ul>     
           </ul>
-        </div> 	
+                 <span style="color:#FFF; text-align:left; margin-left:10px; padding-left:0px; margin-top:-10px;">Better than Competitors. <a href="/ITIL-Training/better-than-competitors.asp" target="_blank">More</a></span>
+        </div>
+        <div style="margin-top:240px; margin-right:20px; text-align:right; color:#FFF; font-size:10px;">Washington DC class April 2011</div> 	
   </div>
 
   <div class="slide" style="background-image:url(/images/banners/3.jpg)"  id="i3" onmouseover="toggleAuto(0, 's')" onmouseout="toggleAuto(1, 'o')">
@@ -58,7 +61,9 @@
                     </ul>
                   <li>Customized corporate  trainings - <a href="http://www.itilstudy.com/Corporate/Corporate-Overview.asp" target="_blank">More</a></li>             
               </ul>
+              <span style="color:#FFF; text-align:left; margin-left:10px; padding-left:0px; margin-top:60px;">Better than Competitors. <a href="/ITIL-Training/better-than-competitors.asp" target="_blank">More</a></span>
     </div>
+      <div style="margin-top:240px; margin-right:20px; text-align:right; color:#FFF; font-size:10px;">Manchester UK class April 2012</div> 	
   </div>
 
     <%
@@ -78,7 +83,10 @@
             
         End If	
          
-        
+        OnlineCourseStart = "$ 300"
+        If Session("CountryOrigin") = "Australia" Then
+            OnlineCourseStart = "285 AUD"
+        End If
          %>
   <div class="slide" style="background-image:url(/images/banners/4.jpg)"  id="i4" onmouseover="toggleAuto(0, 's')" onmouseout="toggleAuto(1, 'o')">
     <div id="banner-body">
@@ -86,7 +94,7 @@
                   <li>We offer best Value  for Money for all our courses </li>
                     <ul>
                       <li>Free online simulated  practice test - <a href="http://www.itilstudy.com/freeresources/freeSimulatedTest.asp" target="_blank">More</a></li>
-                      <li>Online courses  starting from $ 300 - <a href="http://www.itilstudy.com/ITIL-Online-Courses.asp" target="_blank"> More</a></li>
+                      <li>Online courses  starting from <% = OnlineCourseStart  %> - <a href="http://www.itilstudy.com/ITIL-Online-Courses.asp" target="_blank"> More</a></li>
 
                        <% If Session("CountryOrigin") = "Netherlands" Then%> 
                        <li>2 day ITIL Classes starting at &euro; 850 - <a href="http://www.itilstudy.com/ITIL-Courses.asp" target="_blank">More</a></li>
@@ -102,7 +110,9 @@
                       <li>Additional corporate  discounts also available - <a href="http://www.itilstudy.com/contactus.asp" target="_blank">Contact us</a></li>
                     </ul>             
               </ul>
-    </div> 
+                     <span style="color:#FFF; text-align:left; margin-left:10px; padding-left:0px; margin-top:60px;">Better than Competitors. <a href="/ITIL-Training/better-than-competitors.asp" target="_blank">More</a></span>
+    </div>
+     <div style="margin-top:240px; margin-right:20px; text-align:right; color:#FFF; font-size:10px;">Boston class October 2012</div> 	 
   </div>
   </div>
   <div id="banner-free">

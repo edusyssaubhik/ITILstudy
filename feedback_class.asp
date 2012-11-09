@@ -4,7 +4,7 @@
 <!--#include virtual="/includes/connection.asp"-->
  <!--#include virtual="/india/backoffice/csr/pagination.asp"-->
 <!-- Body Starts -->
-<% If Session("CountryOrigin") <> "India" AND Session("CountryOrigin") <> "United Kingdom" AND Session("CountryOrigin") <> "US" AND Session("CountryOrigin") <> "Canada" AND Session("CountryOrigin") <> "Germany" AND Session("CountryOrigin") <> "Netherlands" Then  
+<% If Session("CountryOrigin") <> "India" AND Session("CountryOrigin") <> "United Kingdom" AND Session("CountryOrigin") <> "US" AND Session("CountryOrigin") <> "Canada" AND Session("CountryOrigin") <> "Germany" AND Session("CountryOrigin") <> "Netherlands" AND Session("CountryOrigin") <> "Australia" Then  
  
  Response.Redirect("/index.asp")
  
@@ -30,7 +30,7 @@ End If
 
 'End If
 
-
+'response.write strQuery
 objRs.Open strQuery,ConnObj
 
 'Paging'

@@ -1,8 +1,11 @@
 <!--#include virtual="/metatags/ITILOnlineFoundation_metetag.html"-->
 <!--#include virtual="/includes/headermeta.asp"-->
 <script language="JavaScript" type="text/javascript" src="/js/tableH.js"></script>
+<script language="JavaScript" type="text/javascript" src="/js/jquery-1.7.2.js"></script> 
+ 
 <!--#include virtual="/includes/innerindustryrecognizedbanner.html"-->
 <!--#include virtual="/includes/displayFormat.asp"-->
+<!--#include virtual="/includes/connection.asp"-->
 <!-- Body Starts -->
 <style type="text/css">
 <!--
@@ -32,6 +35,8 @@ body {
 
 <%
 'Cheking the IP Address'
+
+
 sIPAddress = Request.ServerVariables("HTTP_X_FORWARDED_FOR")
 
 If sIPAddress="" Then
@@ -86,11 +91,17 @@ rqType    =  Request.Form("type")
             <% End If %></td>
         </tr>
         <tr>
+		 <%
+				  'code by chandan to remove session of state in mycourses page
+				  newstate=Session("State")
+				  Session.Contents.Remove("State")
+	   %>
           <!--#include virtual="/includes/innerLeftMenu.asp"-->
+		  <%   Session("State") =newstate %>
           <td width="73%" rowspan="4" background="/images/back/left_line.jpg" class="general-body">
           <div  >
             <div>
-              <script type="text/javascript">
+              <script type="text/javascript">			 
 function popitup(url) {
 	newwindow=window.open(url,'name','toolbar=0,location=0,directories=0,status,menubar=0,scrollbars=0,minimizable=0,resizable=0,height=170,width=420,top=250,left=400');
 	if (window.focus) {newwindow.focus()}
@@ -104,7 +115,9 @@ window.open("","newwindow",'toolbar=0,location=0,directories=0,status,menubar=0,
 }
 -->
 </script>
-              <h1 class="PageTitle">ITILstudy Online courses </h1>
+              <h1 class="PageTitle">ITILstudy Online courses  </h1>	 
+			 
+
 			   <table>
                 <tbody><tr>
                   <td id="imageHover"><img border="0" src="/images/buttons/New.jpg"/></td>
@@ -121,599 +134,49 @@ window.open("","newwindow",'toolbar=0,location=0,directories=0,status,menubar=0,
                 <tr onMouseOver="javascript:highlightTableRowVersionA(this, '#FFFFCC');">
                   <td class="TableRowEven" width="60%"><a name="edu"></a><img src="/images/buttons/edu.png" ></td>
                   <td class="TableRowEven" colspan="3" ><div align="center"><span class="Header">Online Courses</span></div></td>
-                </tr>
-			<!--15 question Free Online test to understand ITIL exam -->
-                <form action="/customerdetails.asp" method="post">
-                  <input type="hidden" name="item_number" value="0051">
-                  <input type="hidden" name="APMG" value="APMG">
-                  <input type="hidden" name="item_name" value="Understand ITIL Exam">
-                  <tr onMouseOver="javascript:highlightTableRowVersionA(this, '#FFFFCC');">
-                    <td height="108" class="TableRowOdd"><a href="/test15ques.html" target="_blank"> <span class="TableCopyName"> Free 15 question test </span> <span class="TableCopyDetails">(Understand ITIL<sup>&reg;</sup> exam format in 15 minutes). This test includes all the final Foundation Exam features including Marking Questions, Countdown timer and more.</a></span></td>
-                    <td class="TableRowOdd" colspan="3"><div align="center">
-                        <% If Session("CountryOrigin") = "United Kingdom" Then %>
-                        <input name="submit" type="submit" class="ButtonBuyNow1" value="Enrol for FREE test">
-                        <% Else %>
-                        <input name="submit" type="submit" class="ButtonBuyNow1" value="Enroll for FREE test">
-                        <% End If %>
-                      </div></td>
-                  </tr>
-                </form>
-						<!--40 question Free Online test to understand ITIL exam -->
-                <form action="/customerdetails.asp" method="post">
-                  <input type="hidden" name="item_number" value="112">
-                  <input type="hidden" name="APMG" value="APMG">
-                  <input type="hidden" name="item_name" value="Free Simulated Test">
-                  <tr onMouseOver="javascript:highlightTableRowVersionA(this, '#FFFFCC');">
-                    <td height="108" class="TableRowEven"><a href="/test40ques.html" target="_blank"> <span class="TableCopyName"> Completely Free Simulated Practice Test (Test 1)!!! </span><br /><span class="TableCopyDetails">Best way to understand ITIL<sup>&reg;</sup> Foundation Exam format.<br />(40 Questions, 1 hour - available for 2 days)</a></span></td>
-                    <td class="TableRowEven" colspan="3"><div align="center">
-                        <% If Session("CountryOrigin") = "United Kingdom" Then %>
-                        <input name="submit" type="submit" class="ButtonBuyNow1" value="Enrol for FREE test">
-                        <% Else %>
-                        <input name="submit" type="submit" class="ButtonBuyNow1" value="Enroll for FREE test">
-                        <% End If %>
-                      </div></td>
-                  </tr>
-                </form>
-				<!-- ITIL Foundation Online Course -->
-               
-                <tr onMouseOver="javascript:highlightTableRowVersionA(this, '#FFFFCC');">
-                  <td height="108" class="TableRowOdd"><a href="/ITILonline.asp?action=180days" target="_blank"><span class="TableCopyName">ITILstudy ITIL Foundation (Online Course) :</span> <span class="TableCopyDetails">Priced at
-                    <%  If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "Netherlands" OR Session("CountryOrigin") = "UAE" OR Session("CountryOrigin") = "Singapore" OR Session("CountryOrigin") = "India"  OR Session("CountryOrigin") = "Other" Then %>
-                    <span class="TableCopyCost">
-                    <%' = Currency_Format_Front %>
-                    $ 300
-                    <%' = Currency_Format_Back %>
-                    </span>
-                    <% ElseIf Session("CountryOrigin") = "United Kingdom" Then %>
-                    <span class="TableCopyCost">
-                    <% = Currency_Format_Front %>
-                    200
-                    <% = Currency_Format_Back %>
-                    </span>
-					<% ElseIf Session("CountryOrigin") = "Australia" Then %>
-                    <span class="TableCopyCost">
-                    <% = Currency_Format_Front %>
-                    285 
-                    <% = Currency_Format_Back %>
-                    </span>
-                    <% End If %>
-                    for 180 Days (This includes E-learning through Study Guides, Chapter Test and podcasts for all chapters along with 18 PMI PDU Certificate) </span></a></td>
-                  <% If Session("CountryOrigin") = "India" Then %>
-                  <form method="post" action="http://mycatstudy.com/itilstudy_ccavenue.asp" onSubmit="return validate_form(this)">
-                    <input type="hidden" name="item_name" value="ITIL Foundation Online Course">
-                    <input type="hidden" name="item_number" value="104">
-                    <td class="TableRowOdd" colspan="2"><div align="center">
-                      <input type="submit" class="ButtonBuyNow" value="Buy - CCAvenue" />
-                   </div>
-                </td></form>
-                  <% Else
-				  If Session("CountryOrigin") = "Other" Then   %>
-				 
-                  <td class="TableRowOdd"><form method="post" action="http://www.pmstudy.com/itilOnline_ccavenue.asp">
-                      <input type=hidden name=Merchant_Id value="t_satpat1848">
-                    
-                      <input type="hidden" name="Currency" value="USD">
-                      <input type="hidden" name="ITIL_country" value="<% = ITIL_country %>">
-                      <input type="hidden" name="Order_Id" value="<%=Order_Id%>">
-                      <input type="hidden" name="TxnType" value="A">
-                      <input type="hidden" name="actionID" value="txn">
-                      <input type="hidden" name="item_number" value="104" />
-                      <input type="hidden" name="item_name" value="ITILstudy Classroom Training - <% = Session("CountryOrigin") %>">
-                    
-                      <input type="hidden" name="amount" value="300">
-                     
-					  <input type="hidden" name="Redirect_Url" value="http://www.itilstudy.com/payment-success.asp">
-                      <input name="submit" type="submit" class="ButtonBuyNow" value="Buy - CCAvenue" size="20">
-                    </form></td>
-					<% End If %>
-                  <td class="TableRowOdd" colspan="2"><div align="center"><form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                      <input type="hidden" name="cmd" value="_xclick">
-                      <input type="hidden" name="business" value="adminsupport@projstudy.com">
-                      <input type="hidden" name="item_name" value="ITIL Foundation Online Course">
-                      <input type="hidden" name="item_number" value="104">
-                      <%  If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "Netherlands" OR Session("CountryOrigin") = "UAE" OR Session("CountryOrigin") = "Singapore" OR Session("CountryOrigin") = "India" OR Session("CountryOrigin") = "Other"  Then %>
-                      <input type="hidden" name="amount" value="300">
-                      <% ElseIf Session("CountryOrigin") = "United Kingdom" Then %>
-                      <input type="hidden" name="amount" value="200">
-					  <% ElseIf Session("CountryOrigin") = "Australia" Then %>
-                      <input type="hidden" name="amount" value="285">
-                      <% End If%>
-                      <input type="hidden" name="return" value="http://www.itilstudy.com/customerdetails.asp">
-                      <input type="hidden" name="rm" value="2">
-                      <%  If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "Netherlands" OR Session("CountryOrigin") = "UAE" OR Session("CountryOrigin") = "Singapore" OR Session("CountryOrigin") = "India" OR Session("CountryOrigin") = "Other" Then %>
-                      <input type="hidden" name="currency_code" value="USD">
-                      <% ElseIf Session("CountryOrigin") = "United Kingdom" Then %>
-                      <input type="hidden" name="currency_code" value="GBP">
-					   <% ElseIf Session("CountryOrigin") = "Australia" Then %>
-                      <input type="hidden" name="currency_code" value="AUD">
-                      <% End If%>
-                      <input name="submit" type="submit" class="ButtonBuyNow" value="Buy - Paypal">
-                    </form></div></td>
-                  <% End If%>
-                </tr>
+                </tr>		
+			
+			<script type="text/javascript">
+			$(function(){
+			   $('.cm').click(function(){
+				var islogin="<%= session("FirstName") %>";			
+				if  (islogin=="" || islogin==null)    // this part will only call when user not logged in will show a pop up to user.
+				{
 				
-				<!--Intermediate OSA online course -->
-				
-				  <tr onMouseOver="javascript:highlightTableRowVersionA(this, '#FFFFCC');">
-                  <td height="108" class="TableRowEven"><a href="/ITILOSA.asp" target="_blank"><span class="TableCopyName">ITILstudy ITIL Intermediate OSA (Online Course) :</span> <span class="TableCopyDetails"> Priced at
-                    <%  If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "Netherlands" OR Session("CountryOrigin") = "Other" OR Session("CountryOrigin") = "India"   Then %>
-                    <span class="TableCopyCost">
-                    <%' = Currency_Format_Front %>
-                    $ 665 
-                    <%' = Currency_Format_Back %>
-                    </span>
-                    <% ElseIf Session("CountryOrigin") = "United Kingdom" Then %>
-                    <span class="TableCopyCost">
-                    <% = Currency_Format_Front %>
-                   425 
-                    <% = Currency_Format_Back %>
-                    </span>
-					<% ElseIf Session("CountryOrigin") = "Australia" Then %>
-                    <span class="TableCopyCost">
-                    <% = Currency_Format_Front %>
-                   625 
-                    <% = Currency_Format_Back %>
-                    </span>
-					<% ElseIf Session("CountryOrigin") = "UAE" Then %>
-                    <span class="TableCopyCost">
-                    <%' = Currency_Format_Front %>
-                   $ 665  
-                    <%' = Currency_Format_Back %>
-                    </span>
-					<% ElseIf Session("CountryOrigin") = "Singapore" Then %>
-                    <span class="TableCopyCost">
-                    <% = Currency_Format_Front %>
-                   838  
-                    <% = Currency_Format_Back %>
-                    </span>
-                    <% End If %>
-                    for 60 Days (This includes E-learning through Study Guides, Chapter Test and podcasts for all chapters along with 18 PMI PDU Certificate)</span></a></td>
-                  <% If Session("CountryOrigin") = "India" Then %>
-                 <form method="post" action="http://mycatstudy.com/itilstudy_ccavenue.asp" onSubmit="return validate_form(this)">
-                    <input type="hidden" name="item_name" value="ITIL Intermediate OSA Online Course">
-                    <input type="hidden" name="item_number" value="111">
-                    <td class="TableRowEven" colspan="2"><div align="center">
-                      <input type="submit" class="ButtonBuyNow" value="Buy - CCAvenue" />
-                   </div>
-                </td></form>
-                
-                <% Else 
-				If Session("CountryOrigin") = "Other" Then  
-				%>
-              <td class="TableRowEven"><form method="post" action="http://www.pmstudy.com/itilOnline_ccavenue.asp">
-                      <input type=hidden name=Merchant_Id value="t_satpat1848">
-                     <input type="hidden" name="ITIL_country" value="<% = ITIL_country %>">
-                      <input type="hidden" name="Currency" value="USD">
-                     <input type="hidden" name="Order_Id" value="<%=Order_Id%>">
-                      <input type="hidden" name="TxnType" value="A">
-                      <input type="hidden" name="actionID" value="txn">
-                      <input type="hidden" name="item_number" value="111" />
-                      <input type="hidden" name="item_name" value="ITIL Intermediate OSA Online Course">
-                     
-                      <input type="hidden" name="amount" value="665">
-                    
-					  <input type="hidden" name="Redirect_Url" value="http://www.itilstudy.com/payment-success.asp">
-                      <input name="submit" type="submit" class="ButtonBuyNow" value="Buy - CCAvenue" size="20">
-                    </form></td>
-					<% End If %>
-                  <td class="TableRowEven" colspan="2"><div align="center"><form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                      <input type="hidden" name="cmd" value="_xclick">
-                      <input type="hidden" name="business" value="adminsupport@projstudy.com">
-                      <input type="hidden" name="item_name" value="ITIL Intermediate OSA Online Course">
-                      <input type="hidden" name="item_number" value="111">
-                      <%  If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "Netherlands" OR Session("CountryOrigin") = "Other" OR Session("CountryOrigin") = "India"   Then %>
-                      <input type="hidden" name="amount" value="665">
-                      <% ElseIf Session("CountryOrigin") = "United Kingdom" Then %>
-                      <input type="hidden" name="amount" value="425">
-					   <% ElseIf Session("CountryOrigin") = "Australia" Then %>
-                      <input type="hidden" name="amount" value="625">
-					  <% ElseIf Session("CountryOrigin") = "UAE" Then %>
-                      <input type="hidden" name="amount" value="665">
-					  <% ElseIf Session("CountryOrigin") = "Singapore" Then %>
-                      <input type="hidden" name="amount" value="838">
-                      <% End If%>
-                      <input type="hidden" name="return" value="http://www.itilstudy.com/customerdetails.asp">
-                      <input type="hidden" name="rm" value="2">
-                      <%  If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "Netherlands" OR Session("CountryOrigin") = "UAE" OR Session("CountryOrigin") = "Other" OR Session("CountryOrigin") = "India"   Then %>
-                      <input type="hidden" name="currency_code" value="USD">
-                      <% ElseIf Session("CountryOrigin") = "United Kingdom" Then %>
-                      <input type="hidden" name="currency_code" value="GBP">
-					   <% ElseIf Session("CountryOrigin") = "Australia" Then %>
-                      <input type="hidden" name="currency_code" value="AUD">
-					  <% ElseIf Session("CountryOrigin") = "Singapore" Then %>
-                      <input type="hidden" name="currency_code" value="SGD">
-                      <% End If%>
-                      <input name="submit" type="submit" class="ButtonBuyNow" value="Buy - Paypal">
-                    </form></div></td>
-                  <% End If%>
-                </tr>
-				
-                
-                		<!--Intermediate CSI online course -->
-				
-				  <tr onMouseOver="javascript:highlightTableRowVersionA(this, '#FFFFCC');">
-                  <td height="108" class="TableRowOdd"><a href="/ITILCSI.asp" target="_blank"><span class="TableCopyName">ITILstudy ITIL Intermediate CSI (Online Course) :</span> <span class="TableCopyDetails"> Priced at
-                    <%  If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "Netherlands" OR Session("CountryOrigin") = "Other" OR Session("CountryOrigin") = "India"   Then %>
-                    <span class="TableCopyCost">
-                    <%' = Currency_Format_Front %>
-                    $ 665 
-                    <%' = Currency_Format_Back %>
-                    </span>
-                    <% ElseIf Session("CountryOrigin") = "United Kingdom" Then %>
-                    <span class="TableCopyCost">
-                    <% = Currency_Format_Front %>
-                   425 
-                    <% = Currency_Format_Back %>
-                    </span>
-					<% ElseIf Session("CountryOrigin") = "Australia" Then %>
-                    <span class="TableCopyCost">
-                    <% = Currency_Format_Front %>
-                   625 
-                    <% = Currency_Format_Back %>
-                    </span>
-					<% ElseIf Session("CountryOrigin") = "UAE" Then %>
-                    <span class="TableCopyCost">
-                    <%' = Currency_Format_Front %>
-                   $ 665  
-                    <%' = Currency_Format_Back %>
-                    </span>
-					<% ElseIf Session("CountryOrigin") = "Singapore" Then %>
-                    <span class="TableCopyCost">
-                    <% = Currency_Format_Front %>
-                   838  
-                    <% = Currency_Format_Back %>
-                    </span>
-                    <% End If %>
-                    for 60 Days (This includes E-learning through Study Guides, Chapter Test and podcasts for all chapters along with 18 PMI PDU Certificate)</span></a></td>
-                  <% If Session("CountryOrigin") = "India" Then %>
-                 <form method="post" action="http://mycatstudy.com/itilstudy_ccavenue.asp" onSubmit="return validate_form(this)">
-                    <input type="hidden" name="item_name" value="ITIL Intermediate CSI Online Course">
-                    <input type="hidden" name="item_number" value="109">
-                    <td class="TableRowOdd" colspan="2"><div align="center">
-                      <input type="submit" class="ButtonBuyNow" value="Buy - CCAvenue" />
-                   </div>
-                </td></form>
-                
-                <% Else 
-				If Session("CountryOrigin") = "Other" Then  
-				%>
-              <td class="TableRowOdd"><form method="post" action="http://www.pmstudy.com/itilOnline_ccavenue.asp">
-                      <input type=hidden name=Merchant_Id value="t_satpat1848">
-                     <input type="hidden" name="ITIL_country" value="<% = ITIL_country %>">
-                      <input type="hidden" name="Currency" value="USD">
-                     <input type="hidden" name="Order_Id" value="<%=Order_Id%>">
-                      <input type="hidden" name="TxnType" value="A">
-                      <input type="hidden" name="actionID" value="txn">
-                      <input type="hidden" name="item_number" value="109" />
-                      <input type="hidden" name="item_name" value="ITIL Intermediate CSI Online Course">
-                     
-                      <input type="hidden" name="amount" value="665">
-                    
-					  <input type="hidden" name="Redirect_Url" value="http://www.itilstudy.com/payment-success.asp">
-                      <input name="submit" type="submit" class="ButtonBuyNow" value="Buy - CCAvenue" size="20">
-                    </form></td>
-					<% End If %>
-                  <td class="TableRowOdd" colspan="2"><div align="center"><form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                      <input type="hidden" name="cmd" value="_xclick">
-                      <input type="hidden" name="business" value="adminsupport@projstudy.com">
-                      <input type="hidden" name="item_name" value="ITIL Intermediate CSI Online Course">
-                      <input type="hidden" name="item_number" value="109">
-                      <%  If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "Netherlands" OR Session("CountryOrigin") = "Other" OR Session("CountryOrigin") = "India"   Then %>
-                      <input type="hidden" name="amount" value="665">
-                      <% ElseIf Session("CountryOrigin") = "United Kingdom" Then %>
-                      <input type="hidden" name="amount" value="425">
-					   <% ElseIf Session("CountryOrigin") = "Australia" Then %>
-                      <input type="hidden" name="amount" value="625">
-					  <% ElseIf Session("CountryOrigin") = "UAE" Then %>
-                      <input type="hidden" name="amount" value="665">
-					  <% ElseIf Session("CountryOrigin") = "Singapore" Then %>
-                      <input type="hidden" name="amount" value="838">
-                      <% End If%>
-                      <input type="hidden" name="return" value="http://www.itilstudy.com/customerdetails.asp">
-                      <input type="hidden" name="rm" value="2">
-                      <%  If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "Netherlands" OR Session("CountryOrigin") = "UAE" OR Session("CountryOrigin") = "Other" OR Session("CountryOrigin") = "India"   Then %>
-                      <input type="hidden" name="currency_code" value="USD">
-                      <% ElseIf Session("CountryOrigin") = "United Kingdom" Then %>
-                      <input type="hidden" name="currency_code" value="GBP">
-					   <% ElseIf Session("CountryOrigin") = "Australia" Then %>
-                      <input type="hidden" name="currency_code" value="AUD">
-					  <% ElseIf Session("CountryOrigin") = "Singapore" Then %>
-                      <input type="hidden" name="currency_code" value="SGD">
-                      <% End If%>
-                      <input name="submit" type="submit" class="ButtonBuyNow" value="Buy - Paypal">
-                    </form></div></td>
-                  <% End If%>
-                </tr>
-                
-                
-                  <!--Service Transition online course -->
-				
-				  <tr onMouseOver="javascript:highlightTableRowVersionA(this, '#FFFFCC');">
-                  <td height="108" class="TableRowEven"><a href="/ITILTransition.asp" target="_blank"><span class="TableCopyName">ITILstudy ITIL Intermediate Service Transition (Online Course) :</span> <span class="TableCopyDetails"> Priced at
-                    <%  If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "Netherlands" OR Session("CountryOrigin") = "Other" OR Session("CountryOrigin") = "India"   Then %>
-                    <span class="TableCopyCost">
-                    <%' = Currency_Format_Front %>
-                    $ 665 
-                    <%' = Currency_Format_Back %>
-                    </span>
-                    <% ElseIf Session("CountryOrigin") = "United Kingdom" Then %>
-                    <span class="TableCopyCost">
-                    <% = Currency_Format_Front %>
-                   425 
-                    <% = Currency_Format_Back %>
-                    </span>
-					<% ElseIf Session("CountryOrigin") = "Australia" Then %>
-                    <span class="TableCopyCost">
-                    <% = Currency_Format_Front %>
-                   625 
-                    <% = Currency_Format_Back %>
-                    </span>
-					<% ElseIf Session("CountryOrigin") = "UAE" Then %>
-                    <span class="TableCopyCost">
-                    <%' = Currency_Format_Front %>
-                   $ 665  
-                    <%' = Currency_Format_Back %>
-                    </span>
-					<% ElseIf Session("CountryOrigin") = "Singapore" Then %>
-                    <span class="TableCopyCost">
-                    <% = Currency_Format_Front %>
-                   838  
-                    <% = Currency_Format_Back %>
-                    </span>
-                    <% End If %>
-                    for 60 Days (This includes E-learning through Study Guides, Chapter Test and podcasts for all chapters along with 18 PMI PDU Certificate)</span></a></td>
-                  <% If Session("CountryOrigin") = "India" Then %>
-                 <form method="post" action="http://mycatstudy.com/itilstudy_ccavenue.asp" onSubmit="return validate_form(this)">
-                    <input type="hidden" name="item_name" value="ITIL Service Transition Online Course">
-                    <input type="hidden" name="item_number" value="115">
-                    <td class="TableRowEven" colspan="2"><div align="center">
-                      <input type="submit" class="ButtonBuyNow" value="Buy - CCAvenue" />
-                   </div>
-                </td></form>
-                
-                <% Else 
-				If Session("CountryOrigin") = "Other" Then  
-				%>
-              <td class="TableRowEven"><form method="post" action="http://www.pmstudy.com/itilOnline_ccavenue.asp">
-                      <input type=hidden name=Merchant_Id value="t_satpat1848">
-                     <input type="hidden" name="ITIL_country" value="<% = ITIL_country %>">
-                      <input type="hidden" name="Currency" value="USD">
-                     <input type="hidden" name="Order_Id" value="<%=Order_Id%>">
-                      <input type="hidden" name="TxnType" value="A">
-                      <input type="hidden" name="actionID" value="txn">
-                      <input type="hidden" name="item_number" value="115" />
-                      <input type="hidden" name="item_name" value="ITIL Intermediate Service Transition Online Course">
-                     
-                      <input type="hidden" name="amount" value="665">
-                    
-					  <input type="hidden" name="Redirect_Url" value="http://www.itilstudy.com/payment-success.asp">
-                      <input name="submit" type="submit" class="ButtonBuyNow" value="Buy - CCAvenue" size="20">
-                    </form></td>
-					<% End If %>
-                  <td class="TableRowEven" colspan="2"><div align="center"><form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+				var item_number=$(this).parents('tr:first').find('input:hidden:[name=item_number]').val();
+				var url="/Signin.asp?n="+item_number;
+                  //window.location.href = "?n=" + name;
+				   popupWin = window.open(url,item_number,'width=800,height=490,title="Login Page"')
+				   return false;
+				}
+				else //when user is logged submit directly it will go to custumedetails drectly
+				{
+				this.form.submit();
+				return true;
+				}
+			})
+			$.fn.Passval = function(name){       
+		//console.log("opener :",name)
+		window.location.href='/customerdetails.asp';
 
-                      <input type="hidden" name="cmd" value="_xclick">
-                      <input type="hidden" name="business" value="adminsupport@projstudy.com">
-                      <input type="hidden" name="item_name" value="ITIL Intermediate Service Transition Online Course">
-                      <input type="hidden" name="item_number" value="115">
-                      <%  If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "Netherlands" OR Session("CountryOrigin") = "Other" OR Session("CountryOrigin") = "India"   Then %>
-                      <input type="hidden" name="amount" value="665">
-                      <% ElseIf Session("CountryOrigin") = "United Kingdom" Then %>
-                      <input type="hidden" name="amount" value="425">
-					   <% ElseIf Session("CountryOrigin") = "Australia" Then %>
-                      <input type="hidden" name="amount" value="625">
-					  <% ElseIf Session("CountryOrigin") = "UAE" Then %>
-                      <input type="hidden" name="amount" value="665">
-					  <% ElseIf Session("CountryOrigin") = "Singapore" Then %>
-                      <input type="hidden" name="amount" value="838">
-                      <% End If%>
-                      <input type="hidden" name="return" value="http://www.itilstudy.com/customerdetails.asp">
-                      <input type="hidden" name="rm" value="2">
-                      <%  If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "Netherlands" OR Session("CountryOrigin") = "UAE" OR Session("CountryOrigin") = "Other" OR Session("CountryOrigin") = "India"   Then %>
-                      <input type="hidden" name="currency_code" value="USD">
-                      <% ElseIf Session("CountryOrigin") = "United Kingdom" Then %>
-                      <input type="hidden" name="currency_code" value="GBP">
-					   <% ElseIf Session("CountryOrigin") = "Australia" Then %>
-                      <input type="hidden" name="currency_code" value="AUD">
-					  <% ElseIf Session("CountryOrigin") = "Singapore" Then %>
-                      <input type="hidden" name="currency_code" value="SGD">
-                      <% End If%>
-                      <input name="submit" type="submit" class="ButtonBuyNow" value="Buy - Paypal">
-                    </form></div></td>
-                  <% End If%>
-                </tr>
-                
-                
-                
-                
-                <tr>
-                  <td colspan="4" class="TableRowOdd">&nbsp;</td>
-                </tr>
-				
-				
-                <tr onMouseOver="javascript:highlightTableRowVersionA(this, '#FFFFCC');">
-                  <td class="TableRowEven" width="60%"><a name="Blend"></a><img src="/images/buttons/Blended.png" ></td>
-                  <td class="TableRowEven" colspan="3" ><div align="center"><span class="Header">Blended Course</span></div></td>
-                </tr>
-                <tr onMouseOver="javascript:highlightTableRowVersionA(this, '#FFFFCC');">
-                  <td height="108" class="TableRowOdd"><span class="TableCopyName"><a href="/ITILblend.asp" target="_blank"> ITILstudy ITIL Foundation (Online Course + Exam Voucher) :</span> <span class="TableCopyDetails">Priced at
-                    <%  If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "Netherlands" OR Session("CountryOrigin") = "UAE" OR Session("CountryOrigin") = "Singapore" OR Session("CountryOrigin") = "India" OR Session("CountryOrigin") = "Other" Then %>
-                    <span class="TableCopyCost">
-                    <%' = Currency_Format_Front %>
-                    $ 450
-                    <%' = Currency_Format_Back %>
-                    </span>
-                    <% ElseIf Session("CountryOrigin") = "United Kingdom" Then %>
-                    <span class="TableCopyCost">
-                    <% = Currency_Format_Front %>
-                    400
-                    <% = Currency_Format_Back %>
-                    </span>
-					<% ElseIf Session("CountryOrigin") = "Australia" Then %>
-                    <span class="TableCopyCost">
-                    <% = Currency_Format_Front %>
-                    560
-                    <% = Currency_Format_Back %>
-                    </span>
-                    <% End If %>
-                    for 90 Days (This includes E-learning through Study Guides, Chapter Test and podcasts for all chapters along with 18 PMI PDU Certificate) &nbsp;
-                    <%'If Session("CountryOrigin") = "United Kingdom" Then %>
-                    <!--<b> One Exam Retake</b>-->
-                    <%'End If%>
-                    </span></a><br />
-                    <br />
-                    <!--30% discount on ITIL blend course -->
-                    <% 'If Session("CountryOrigin") = "United Kingdom" Then %>
-                    <!--If you have an ITIL discount code, please enter it here:
-                    <form action="/blendPrice.asp?type=submit" method="get" id="discount" target="newwindow">
-                      <br />
-                      Email Id:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      <input type="text" name="Email" />
-                      <br />
-                      (Please provide the email id which you used in order to
-                      <% 'If Session("CountryOrigin") = "United Kingdom" Then %>
-                      enrol
-                      <% 'Else %>
-                      enroll
-                      <% 'End If %>
-                      for the PROJstudy classroom course.)<br />
-                      Discount Code:&nbsp;&nbsp;
-                      <input type="text" name="discountCode" />
-                      <input name="submit" type="submit" class="ButtonBuyNow" value="Validate" onClick="return openwindow()">
-                    </form>-->
-                    <!-- Ends here - 30% discount on ITIL blend course -->
-                    <%' End If %>
-                  </td>
-				 <% If Session("CountryOrigin") = "Other" Then   %>
-                  <td class="TableRowOdd"><form method="post" action="http://www.pmstudy.com/itilOnline_ccavenue.asp">
-                      <input type=hidden name=Merchant_Id value="t_satpat1848">
-                     
-                      <input type="hidden" name="Currency" value="USD">
-                    <input type="hidden" name="ITIL_country" value="<% = ITIL_country %>">
-                      <input type="hidden" name="Order_Id" value="<%=Order_Id%>">
-                      <input type="hidden" name="TxnType" value="A">
-                      <input type="hidden" name="actionID" value="txn">
-                      <input type="hidden" name="item_number" value="106" />
-                      <input type="hidden" name="item_name" value="ITILstudy Classroom Training - <% = Session("CountryOrigin") %>">
-                    
-                      <input type="hidden" name="amount" value="450">
-                     
-					  <input type="hidden" name="Redirect_Url" value="http://www.itilstudy.com/payment-success.asp">
-                      <input name="submit" type="submit" class="ButtonBuyNow" value="Buy - CCAvenue" size="20">
-                    </form></td>
-					<% End If %>
-                  <td class="TableRowOdd" colspan="2"><div align="center"><form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                      <input type="hidden" name="cmd" value="_xclick">
-                      <input type="hidden" name="business" value="adminsupport@projstudy.com">
-                      <input type="hidden" name="item_name" value="ITILstuyd Blend Course">
-                      <input type="hidden" name="item_number" value="106">
-                      <%  If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "Netherlands" OR Session("CountryOrigin") = "UAE" OR Session("CountryOrigin") = "Singapore" OR Session("CountryOrigin") = "India" OR Session("CountryOrigin") = "Other" Then %>
-                      <input type="hidden" name="amount" value="450">
-                      <% ElseIf Session("CountryOrigin") = "United Kingdom" Then %>
-                      <input type="hidden" name="amount" value="400">
-					  <% ElseIf Session("CountryOrigin") = "Australia" Then %>
-                      <input type="hidden" name="amount" value="560">
-                      <% End If%>
-                      <input type="hidden" name="return" value="http://www.itilstudy.com/customerdetails.asp">
-                      <input type="hidden" name="rm" value="2">
-                      <%  If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "UAE" OR Session("CountryOrigin") = "Singapore" OR Session("CountryOrigin") = "India" OR Session("CountryOrigin") = "Other"  Then %>
-                      <input type="hidden" name="currency_code" value="USD">
-                      <% ElseIf Session("CountryOrigin") = "United Kingdom" Then %>
-                      <input type="hidden" name="currency_code" value="GBP">
-					   <% ElseIf Session("CountryOrigin") = "Australia" Then %>
-                      <input type="hidden" name="currency_code" value="AUD">
-                      <% End If%>
-                      <input name="submit" type="submit" class="ButtonBuyNow" value="Buy - Paypal">
-                    </form></div></td>
-                </tr>
-                </form>
-                
-                <tr onMouseOver="javascript:highlightTableRowVersionA(this, '#FFFFCC');"></tr>
-                <tr>
-                  <td colspan="4" class="TableRowEven">&nbsp;</td>
-                </tr>
-                <!-- <td class="TableRowOdd"><%
-				
-				hour1=hour(now)
-				
-				Select Case hour1
-				
-				  Case 1
-					'Application("enable")="No"
-					'Application("int2")=0
-				
-				  Case 3
-					Application("enable")="No"
-					'Application("int1")=Application("int2")+1
-				
-				  Case 5
-					Application("enable")="No"
-					'Application("int1")=Application("int2")+1
-					
-				  Case 7
-					Application("enable")="Yes"
-					'Application("int1")=Application("int2")+1
-					
-				  Case 9
-					Application("enable")="No"
-					'Application("int1")=Application("int2")+1
-					
-				  Case 11
-					Application("enable")="No"
-					'Application("int1")=Application("int2")+1
-					
-				  Case 13
-					Application("enable")="No"
-					'Application("int1")=Application("int2")+1
-					
-				  Case 15
-					Application("enable")="No"
-					'Application("int1")=Application("int2")+1
-					
-				  Case 17
-					'Application("enable")="Yes"
-					int1=int1+1
-				
-				  Case 19
-					Application("enable")="No"
-					'Application("int1")=Application("int2")+1
-					
-				  Case 21
-					Application("enable")="No"
-					'Application("int1")=Application("int2")+1
-					
-				  Case 23
-					Application("enable")="No"
-					'Application("int1")=Application("int2")+1
-					
-				  Case Else
-					Application("enable")="No"
-					Application("count")=0
-						
-				  End Select
-				
-				
-				'If(Application("enable")="Yes" and Application("count")<10) Then
-				'If(Application("enable")<>"No") Then
-				'If(0<>0) Then
-				If Application("int2") < 50  Then 
-				
-			%>
-               
-			   
-			    <input type=hidden name="SPHRPHR" value="PHR">
-                <div align="center">
-                  <input name="Submit23" type="submit" class="ButtonGeneral" value="Enroll for FREE test">
-                </div>
-                <% Else %>
-                <div align="left"> Test reached maximum limit; please try again after sometime, or enroll in other tests below </div>
-                <% End If %>
-              </td>
-            </tr>
-          </form>
-       
- -->
-              </table>
+             }
+
+		})
+			</script>
+		<%  if syncWithFb=true then 'added later
+		session("fbRedirectUrl")="http://www.itilstudy.com/fbApp/fb-sync.asp" 'session for fblogin redirecturl
+		%>
+		<script type="text/javascript">
+		function openfbWindow(url) 
+		{
+		var url="/FbApp/Fb-Sync.asp";
+			popupWin = window.open(url,'popup','width=850,height=490,title="facebook Login"')
+		}
+		</script>
+         <% end if%>
+		 
+<!--#include virtual="/ItilFunctions/ITIL-OnlineCoursesShow.asp"-->
+			 </table>
             </div>
              </div>
 			 <div style="width:97%">
