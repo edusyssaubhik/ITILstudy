@@ -3,7 +3,9 @@
 	<%' If Session("TypeOfUser") <> "AEXP" Then %>
 		<li><a href="overview.asp">Overview</a></li>
 		<li><a href="marketingB2C.asp?action=noFollowUp">Marketing</a></li>
+		 <% If Session("CRM_Country") <> "Germany" And Session("CRM_Country") <> "Netherlands"  Then %>
 		<li><a href="marketingB2B.asp">Past Students DB</a></li>
+        <% End If %>
 		<li><a href="scheClasses.asp">Classes Scheduled</a></li>
 		<% If Session("TypeOfUser") = "Admin" Then %>
 		<li><a href="fin.asp">Finance</a></li>
