@@ -2,30 +2,55 @@
 <!--#include virtual="/includes/innerloginbanner.html"-->
 <!--#include virtual="/metatags/memberlogin_metatag.html"-->
 <script type="text/javascript">
-<!--
-function Form_Validator(theform)
+function Form_Validator(Theform)
 {
-
+    //alert("hi");
   //Check To See If The Current Password Field Is Blank
    
-  if (theform.payer_email.value == "Enter your email address")
+    if (Theform.payer_email.value == "Enter your email address")
   {
     alert("Please enter email id");
-    theform.payer_email.focus();
+    Theform.payer_email.focus();
 	return(false);
   }
 
   //Check To See If The New Password Field Is Blank
     
-  if (theform.pass.value == "********")
+    if (Theform.pass.value == "********")
   {
     alert("Please enter password");
-    theform.pass.focus();
+    Theform.pass.focus();
 	return(false);
   }
-
+  return true;
 }
--->
+
+
+function Form_Validator1(Theform) {
+    //Check To See If The Current Password Field Is Blank
+
+    if (Theform.payer_email.value == "Enter your email address") {
+        alert("Please enter email id");
+        Theform.payer_email.focus();
+        return false;
+    }
+   /* var email = Theform.payer_email.value;
+    var pattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+    if (!email.match(pattern)) {
+        alert("Please enter proper email id");
+        Theform.payer_email.focus();
+        return false;
+    }*/
+
+    //Check To See If The New Password Field Is Blank
+
+    if (Theform.pass.value == "********") {
+        alert("Please enter password");
+        Theform.pass.focus();
+        return false;
+    }
+    return true;
+}
 </script>
  <!-- Body Starts --> 
   <div>
@@ -58,7 +83,7 @@ function Form_Validator(theform)
 
 						<div>
 						  <table border="0" cellpadding="4" cellspacing="0" width="">
-						    <form method="POST" action="/verifyLogin1.asp" name="form2" onSubmit="return Form_Validator(this)">
+						    <form method="POST" action="/verifyLogin1.asp" name="form2" onsubmit="return Form_Validator1(this)">
                             
 						      <tr>
 						        <td colspan="3"><h1 class="PageTitle">User ID (Email)  and Password for Member Login</h1></td>

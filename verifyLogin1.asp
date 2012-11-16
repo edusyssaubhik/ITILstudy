@@ -25,8 +25,31 @@ function Form_Validator(theform)
   }
 
 }
+function Form_Validator1(Theform) {
+    //Check To See If The Current Password Field Is Blank
 
+    if (Theform.payer_email.value == "Enter your email address") {
+        alert("Please enter email id");
+        Theform.payer_email.focus();
+        return false;
+    }
+    /*var email = Theform.payer_email.value;
+    var pattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+    if (!email.match(pattern)) {
+        alert("Please enter proper email id");
+        Theform.payer_email.focus();
+        return false;
+    }*/
 
+    //Check To See If The New Password Field Is Blank
+
+    if (Theform.pass.value == "********") {
+        alert("Please enter password");
+        Theform.pass.focus();
+        return false;
+    }
+    return true;
+}
 </script>
  <!-- Body Starts -->
   <div>
@@ -49,7 +72,9 @@ function Form_Validator(theform)
 
 						payer_email = Request.Form("payer_email")
 						pass = Request.Form("pass")
-						
+						if Trim(payer_email) = "" Then
+                            Response.redirect "/memberlogin.asp"
+                        End IF
 						
 						'To retrive the end date from enrolled user so that we can take it in left menu
 								Dim objRs, rqVdate
@@ -91,46 +116,76 @@ function Form_Validator(theform)
 										Set rsQues2 = Server.CreateObject("ADODB.Recordset")
 										rsQues2.ActiveConnection = ConnObj
 										rsQues2.Open "SELECT paypal_address_id, date_entered,rollno,ID, item_number, item_name, date_valid, kno_passed, first_name, last_name,customer_id FROM PaypalDB WHERE PaypalDB.pass='"&pass&"' and PaypalDB.payer_email='"&payer_email&"' order by ID Desc"
-										'response.Write("SELECT paypal_address_id, date_entered,rollno,ID, item_number, item_name, date_valid, kno_passed, first_name, last_name FROM PaypalDB WHERE PaypalDB.pass='"&pass&"' and PaypalDB.payer_email='"&payer_email&"' order by ID Desc")
+										'response.Write "SELECT paypal_address_id, date_entered,rollno,ID, item_number, item_name, date_valid, kno_passed, first_name, last_name,customer_id FROM PaypalDB WHERE PaypalDB.pass='"&pass&"' and PaypalDB.payer_email='"&payer_email&"' order by ID Desc"
 										If Not rsQues2.BOF Then
 										
                        'code by chandan for doc req pt 4b					   
 					   if isNull(rsQues2("customer_id")) then
-					    'response.write("inside"& rsQues2("customer_id"))
-						Set objRs4 = Server.CreateObject("ADODB.Recordset")		
-						strQuery1 = "SELECT TOP 1 Id,email,account_type_id FROM Customer_Accounts WHERE email='"&payer_email&"' ORDER BY Id DESC"
-						objRs4.open strQuery1,ConnObj
-						if not objRs4.eof = false then	'no values in customer_accounts
-						dim R
-	                dim account_typeid
-	                account_typeid=1  'one for those user who will register through our site 	
-					ConnObj.Execute "INSERT INTO Customer_Accounts (first_name, last_name,account_type_id, email,password)VALUES('"&rsQues2("first_name")&"', '"&rsQues2("last_name")&"','"&account_typeid&"','"&payer_email&"','"&pass&"')"
-										
-					Set objRs2 = Server.CreateObject("ADODB.Recordset")
-					strQuery1 = "SELECT TOP 1 Id,email,account_type_id FROM Customer_Accounts WHERE email='"&payer_email&"' ORDER BY Id DESC"
-					objRs2.Open strQuery1,ConnObj	 
-					dim cid
-					   if objRs2.eof = false then
-					   cid=objRs2("Id")				 'get the newly inserted id  
-					   session("current_user_id")=cid
-					    session("account_type_id")=objRs2("account_type_id")
-					   session("loggedinEmail")=payer_email
-						'response.write("cid :"& cid)
-						end if
-						
-						objRs2.Close
-						Set objRs3 = Server.CreateObject("ADODB.Recordset")
-						dim strEmailID
-						strEmailID = "SELECT ID, payer_email FROM PaypalDb WHERE payer_email = '"&payer_email&"' ORDER BY id desc"
-						objRs3.open strEmailID,ConnObj           'get all paypal value using email
-						if objRs3.eof = false then
-                        Do While NOT objRs3.Eof	
-						ConnObj.Execute "UPDATE PaypalDB SET  customer_id = '"&cid&"' WHERE ID ='"&objRs3("ID")&"'"
-                              objRs3.MoveNext
-                    Loop
-					   end if				  
-					 	
-						end if
+					      'response.write("inside"& rsQues2("customer_id"))
+						    Set objRs4 = Server.CreateObject("ADODB.Recordset")		
+						    strQuery1 = "SELECT TOP 1 Id,email,account_type_id FROM Customer_Accounts WHERE email='"&payer_email&"' ORDER BY Id DESC"
+						    objRs4.open strQuery1,ConnObj
+						    if not objRs4.eof = false then	'no values in customer_accounts
+						        dim R
+	                            dim account_typeid
+	                            account_typeid=1  'one for those user who will register through our site 	
+
+					            ConnObj.Execute "INSERT INTO Customer_Accounts (first_name, last_name,account_type_id, email,password)VALUES('"&rsQues2("first_name")&"', '"&rsQues2("last_name")&"','"&account_typeid&"','"&payer_email&"','"&pass&"')"
+                                                                						
+					            Set objRs2 = Server.CreateObject("ADODB.Recordset")
+					            strQuery1 = "SELECT TOP 1 Id,email,account_type_id FROM Customer_Accounts WHERE email='"&payer_email&"' ORDER BY Id DESC"
+
+					            objRs2.Open strQuery1,ConnObj	 
+					            dim cid
+					            if objRs2.eof = false then
+					                cid=objRs2("Id")				 'get the newly inserted id  
+					                session("current_user_id")=cid
+					                session("account_type_id")=objRs2("account_type_id")
+					                session("loggedinEmail")=payer_email
+						            'response.write("cid :"& cid)
+						        end if
+
+						        objRs2.Close
+						        Set objRs3 = Server.CreateObject("ADODB.Recordset")
+						        dim strEmailID
+						        strEmailID = "SELECT ID, payer_email FROM PaypalDb WHERE payer_email = '"&payer_email&"' ORDER BY id desc"
+						        objRs3.open strEmailID,ConnObj           'get all paypal value using email
+						        if objRs3.eof = false then
+                                    Do While NOT objRs3.Eof	
+						                    ConnObj.Execute "UPDATE PaypalDB SET  customer_id = '"&cid&"' WHERE ID ='"&objRs3("ID")&"'"
+                                          objRs3.MoveNext
+                                    Loop
+					            end if	
+                                
+
+						    end if
+                                
+                                 '/*** If user has no customer_Id                         
+                                Set objRscheck = Server.CreateObject("ADODB.Recordset")
+                                Set objCust = Server.CreateObject("ADODB.Recordset")
+                                 
+                                strEmailID = "SELECT paypal_address_id, date_entered,rollno,ID, item_number, item_name, date_valid, kno_passed, first_name, last_name,customer_id FROM PaypalDB WHERE PaypalDB.pass='"&pass&"' and PaypalDB.payer_email='"&payer_email&"' order by ID Desc"
+                               
+                                objRscheck.open strEmailID,ConnObj
+
+                                IF IsNull(objRscheck("customer_id")) Then
+                                                             
+                                    strEmailID ="SELECT TOP 1 Id,email,account_type_id FROM Customer_Accounts WHERE email='"&payer_email&"' ORDER BY Id DESC"
+                                    objCust.open strEmailID,ConnObj
+                                    If Not objCust.Eof Then
+                                        session("current_user_id") = objCust("Id")
+                                    End If
+                                    'response.write "UPDATE PaypalDB SET  customer_id = '"&session("current_user_id")&"' WHERE ID ='"&objRscheck("ID")&"'"
+                                    ConnObj.Execute "UPDATE PaypalDB SET  customer_id = '"&session("current_user_id")&"' WHERE ID ='"&objRscheck("ID")&"'"
+                                'response.write "hi"
+                                    Set objRs2 = Server.CreateObject("ADODB.Recordset")
+					                strQuery1 = "SELECT Id,email,account_type_id FROM Customer_Accounts WHERE Id='"&session("current_user_id")&"'"
+					                objRs2.Open strQuery1,ConnObj
+					                session("account_type_id")=objRs2("account_type_id")
+					                set objRs2=nothing
+					                session("loggedinEmail")=payer_email
+                                   
+                                End If
 						else		                   
 					  session("current_user_id")=rsQues2("customer_id")   
 					  Set objRs2 = Server.CreateObject("ADODB.Recordset")
@@ -425,9 +480,11 @@ function Form_Validator(theform)
 										'code for checking and redirection
 										  Set objRs1 = Server.CreateObject("ADODB.Recordset")
 						dim query1
-						query1 = "SELECT Top 1 payer_email FROM PaypalDb WHERE customer_id = '"&session("current_user_id")&"' and date_valid >='"&Date&"' ORDER BY id desc"
-						objRs1.open query1,ConnObj						
-						if objRs1.eof = false then						
+                                 mydate = month(date())&"-"&day(date())&"-"&year(date())
+						query1 = "SELECT Top 1 payer_email FROM PaypalDb WHERE customer_id = '"&session("current_user_id")&"' and date_valid >='"&mydate&"' ORDER BY id desc"
+						'response.write query1
+                                objRs1.open query1,ConnObj						
+						if Not objRs1.eof  then						
 								
 						Response.Redirect("/Mycourses.asp")
 						
@@ -471,7 +528,8 @@ function Form_Validator(theform)
 						<div> &nbsp; <a href="http://www.ITILstudy.com/index.asp">Go to Home Page</a></div><br /><br />
 						  <%else 
 						   Set objRs1 = Server.CreateObject("ADODB.Recordset")
-						  query1 = "SELECT Top 1 payer_email FROM PaypalDb WHERE customer_id = '"&session("current_user_id")&"' and date_valid >='"&Date&"' ORDER BY id desc"
+                              mydate = month(date())&"-"&day(date())&"-"&year(date())
+						  query1 = "SELECT Top 1 payer_email FROM PaypalDb WHERE customer_id = '"&session("current_user_id")&"' and date_valid >='"&mydate&"' ORDER BY id desc"
 						objRs1.open query1,ConnObj						
 						if objRs1.eof = false then						
 								
@@ -510,7 +568,8 @@ function Form_Validator(theform)
 						session("loggedinEmail")=objRs("email")
 						Set objRs1 = Server.CreateObject("ADODB.Recordset")
 						'dim strEmailID
-						strEmailID = "SELECT ID, payer_email FROM PaypalDb WHERE customer_id = '"&objRs("Id")&"' and date_valid >='"&Date&"' ORDER BY id desc"
+                        mydate = month(date())&"-"&day(date())&"-"&year(date())
+						strEmailID = "SELECT ID, payer_email FROM PaypalDb WHERE customer_id = '"&objRs("Id")&"' and date_valid >='"&mydate&"' ORDER BY id desc"
 						objRs1.open strEmailID,ConnObj
 						if objRs1.eof = false then                       
 					Response.Redirect("/Mycourses.asp")
@@ -521,7 +580,7 @@ function Form_Validator(theform)
 						%>
 						<div> <span class="Error">The password is incorrect - please enter password again.</span>
 						  <table border="0" cellpadding="4" cellspacing="0">
-						    <form method="POST" action="/verifyLogin1.asp" name="form2" onSubmit="return Form_Validator(this)">
+						    <form method="POST" action="/verifyLogin1.asp" name="form2" onSubmit="return Form_Validator1(this)">
 						      <tr valign="top" bgcolor="#FFFFFF">
 						        <td colspan="2" align="left" valign="middle" height="30"><span class="SubHeader">Provide Email ID 
 								and password to access different services in ITILstudy.com.</span> </td>
@@ -568,7 +627,8 @@ function Form_Validator(theform)
 						session("loggedinEmail")=objRs("email")
 						Set objRs1 = Server.CreateObject("ADODB.Recordset")
 						'dim strEmailID
-						strEmailID = "SELECT ID, payer_email FROM PaypalDb WHERE customer_id = '"&objRs("Id")&"' and date_valid >='"&Date&"' ORDER BY id desc"
+                            mydate = month(date())&"-"&day(date())&"-"&year(date())
+						strEmailID = "SELECT ID, payer_email FROM PaypalDb WHERE customer_id = '"&objRs("Id")&"' and date_valid >='"&mydate&"' ORDER BY id desc"
 						objRs1.open strEmailID,ConnObj
 						if objRs1.eof = false then                       
 					Response.Redirect("/Mycourses.asp")
@@ -579,7 +639,7 @@ function Form_Validator(theform)
 						%>
 						<div><span class="Error">The email ID is incorrect - please enter again.</span>
 						  <table border="0" cellpadding="4" cellspacing="0">
-						    <form method="POST" action="/verifyLogin1.asp" name="form2" onSubmit="return Form_Validator(this)">
+						    <form method="POST" action="/verifyLogin1.asp" name="form2" onSubmit="return Form_Validator1(this)">
 						      <tr >
 						        <td colspan="2" align="left" valign="middle" height="30"><span class="SubHeader">Provide Email ID 
 								and password to access different services in ITILstudy.com.</span> </td>
