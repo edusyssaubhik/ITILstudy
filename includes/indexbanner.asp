@@ -1,4 +1,6 @@
 <div class="banner-main">
+	
+  <span style="padding: 0px; text-align: left; position: absolute; color: rgb(255, 255, 255); margin-left: 20px; margin-top: 240px; z-index: 200; display: block;">Better than Competitors. <a href="/ITIL-Training/better-than-competitors.asp" style="color:#0CF;" >More</a></span>
   <div id="banner-navigation">
     <div class="banner-navi-button banner-selected" onmouseover="toggleAuto(1, 'm')" onmouseout="toggleAuto(1, 'o')" id="b1">Best Quality</div>
     <div class="banner-navi-button" onmouseover="toggleAuto(2, 'm')" onmouseout="toggleAuto(2, 'o')" id="b2">Leading Provider</div>
@@ -23,7 +25,7 @@
 			  <li>Specialized in ITIL trainings - <a href="http://www.itilstudy.com/ITIL-Training/better-than-competitors.asp" >Find out here</a></li>
               <li>Great feedback from successful students - <a href="http://www.itilstudy.com/feedback_class.asp" >Testimonials</a></li>             
           </ul>
-                 <span style="color:#FFF; text-align:left; margin-left:10px; padding-left:0px; margin-top:-20px;">Better than Competitors. <a href="/ITIL-Training/better-than-competitors.asp" >More</a></span>
+                <!-- <span style="color:#FFF; text-align:left; margin-left:10px; padding-left:0px; margin-top:-20px;">Better than Competitors. <a href="/ITIL-Training/better-than-competitors.asp" >More</a></span>-->
         </div>
   </div>
       
@@ -45,7 +47,7 @@
                 	<li>Funded by Sequoia Capital, PE firm that invested in Google, Apple, Cisco, etc. - <a href="http://www.itilstudy.com/investors.asp" >Read more</a></li>
                 </ul>     
           </ul>
-                 <span style="color:#FFF; text-align:left; margin-left:10px; padding-left:0px; margin-top:-10px;">Better than Competitors. <a href="/ITIL-Training/better-than-competitors.asp" >More</a></span>
+                 <!--<span style="color:#FFF; text-align:left; margin-left:10px; padding-left:0px; margin-top:-10px;">Better than Competitors. <a href="/ITIL-Training/better-than-competitors.asp" >More</a></span>-->
         </div>
         <div style="margin-top:240px; margin-right:20px; text-align:right; color:#FFF; font-size:10px;">Washington DC class April 2011</div> 	
   </div>
@@ -64,7 +66,7 @@
                     <li>Application of concepts through real life experience - <a href="http://www.itilstudy.com/realLifeExp.asp">More</a>
                   <li>Customized corporate  trainings - <a href="http://www.itilstudy.com/Corporate/Corporate-Overview.asp" >More</a></li>             
               </ul>
-              <span style="color:#FFF; text-align:left; margin-left:10px; padding-left:0px; margin-top:60px;">Better than Competitors. <a href="/ITIL-Training/better-than-competitors.asp" >More</a></span>
+              <!--<span style="color:#FFF; text-align:left; margin-left:10px; padding-left:0px; margin-top:60px;">Better than Competitors. <a href="/ITIL-Training/better-than-competitors.asp" >More</a></span>-->
     </div>
       <div style="margin-top:240px; margin-right:20px; text-align:right; color:#FFF; font-size:10px;">Manchester UK class April 2012</div> 	
   </div>
@@ -113,7 +115,7 @@
                       <li>Additional corporate  discounts also available - <a href="http://www.itilstudy.com/contactus.asp" >Contact us</a></li>
                     </ul>             
               </ul>
-                     <span style="color:#FFF; text-align:left; margin-left:10px; padding-left:0px; margin-top:60px;">Better than Competitors. <a href="/ITIL-Training/better-than-competitors.asp" >More</a></span>
+                    <!-- <span style="color:#FFF; text-align:left; margin-left:10px; padding-left:0px; margin-top:60px;">Better than Competitors. <a href="/ITIL-Training/better-than-competitors.asp" >More</a></span>-->
     </div>
      <div style="margin-top:240px; margin-right:20px; text-align:right; color:#FFF; font-size:10px;">Boston class October 2012</div> 	 
   </div>
