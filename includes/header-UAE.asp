@@ -3,6 +3,7 @@
        
         <a href="/ITIL-Training/better-than-competitors.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">Better than Competitors </a>
 		<a href="/ITIL-Training/Success-Rate.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">99.2% Pass Rate </a>
+       	<a href="/realLifeExp.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">Classroom - Real Life Scenario</a> 
 	
       <a href="/ITIL-Training/moneyBack.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()"> 100% Moneyback Guarantee</a>
      	   <a href="/2-Day-ITIL-Training.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">Accelerated Learning Techniques <span style="display:inline-block;">(2-Day Training)</span> </a>
