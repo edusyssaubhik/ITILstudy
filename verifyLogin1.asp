@@ -186,6 +186,7 @@ function Form_Validator1(Theform) {
 					                session("loggedinEmail")=payer_email
                                    
                                 End If
+                                 '/*** If user has no customer_Id  Ends 
 						else		                   
 					  session("current_user_id")=rsQues2("customer_id")   
 					  Set objRs2 = Server.CreateObject("ADODB.Recordset")
@@ -481,7 +482,7 @@ function Form_Validator1(Theform) {
 										  Set objRs1 = Server.CreateObject("ADODB.Recordset")
 						dim query1
                                  mydate = month(date())&"-"&day(date())&"-"&year(date())
-						query1 = "SELECT Top 1 payer_email FROM PaypalDb WHERE customer_id = '"&session("current_user_id")&"' and date_valid >='"&mydate&"' ORDER BY id desc"
+						query1 = "SELECT Top 1 payer_email FROM PaypalDb WHERE customer_id = '"&session("current_user_id")&"' and convert(date,date_valid) >='"&mydate&"' ORDER BY id desc"
 						'response.write query1
                                 objRs1.open query1,ConnObj						
 						if Not objRs1.eof  then						
@@ -529,7 +530,7 @@ function Form_Validator1(Theform) {
 						  <%else 
 						   Set objRs1 = Server.CreateObject("ADODB.Recordset")
                               mydate = month(date())&"-"&day(date())&"-"&year(date())
-						  query1 = "SELECT Top 1 payer_email FROM PaypalDb WHERE customer_id = '"&session("current_user_id")&"' and date_valid >='"&mydate&"' ORDER BY id desc"
+						  query1 = "SELECT Top 1 payer_email FROM PaypalDb WHERE customer_id = '"&session("current_user_id")&"' and convert(date,date_valid) >='"&mydate&"' ORDER BY id desc"
 						objRs1.open query1,ConnObj						
 						if objRs1.eof = false then						
 								
@@ -569,7 +570,7 @@ function Form_Validator1(Theform) {
 						Set objRs1 = Server.CreateObject("ADODB.Recordset")
 						'dim strEmailID
                         mydate = month(date())&"-"&day(date())&"-"&year(date())
-						strEmailID = "SELECT ID, payer_email FROM PaypalDb WHERE customer_id = '"&objRs("Id")&"' and date_valid >='"&mydate&"' ORDER BY id desc"
+						strEmailID = "SELECT ID, payer_email FROM PaypalDb WHERE customer_id = '"&objRs("Id")&"' and convert(date,date_valid) >='"&mydate&"' ORDER BY id desc"
 						objRs1.open strEmailID,ConnObj
 						if objRs1.eof = false then                       
 					Response.Redirect("/Mycourses.asp")
@@ -628,7 +629,7 @@ function Form_Validator1(Theform) {
 						Set objRs1 = Server.CreateObject("ADODB.Recordset")
 						'dim strEmailID
                             mydate = month(date())&"-"&day(date())&"-"&year(date())
-						strEmailID = "SELECT ID, payer_email FROM PaypalDb WHERE customer_id = '"&objRs("Id")&"' and date_valid >='"&mydate&"' ORDER BY id desc"
+						strEmailID = "SELECT ID, payer_email FROM PaypalDb WHERE customer_id = '"&objRs("Id")&"' and convert(date,date_valid) >='"&mydate&"' ORDER BY id desc"
 						objRs1.open strEmailID,ConnObj
 						if objRs1.eof = false then                       
 					Response.Redirect("/Mycourses.asp")
