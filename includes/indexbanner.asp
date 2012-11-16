@@ -9,19 +9,21 @@
     <div class="slide" style="background-image:url(/images/banners/2.jpg)" id="i1" onmouseover="toggleAuto(0, 's')" onmouseout="toggleAuto(1, 'o')">
 <div id="banner-body">
             <ul id="banner-list">
-              <li>Pass ITIL Exam on last day of the classroom - <a href="http://www.itilstudy.com/classroomTraining.asp" target="_blank">More</a></li>
-              <li>Best Pass Rate (99.2%) - <a href="http://www.itilstudy.com/ITIL-Training/Success-Rate.asp" target="_blank">Read more</a></li>
+              <li>Pass ITIL Exam on last day of the classroom - <a href="http://www.itilstudy.com/classroomTraining.asp" >More</a></li>
+              <li>Best Pass Rate (99.2%) - <a href="http://www.itilstudy.com/ITIL-Training/Success-Rate.asp" >Read more</a></li>
               	<ul>
                 	<li>Better than the industry rate. </li>
+                      <%If Session("CountryOrigin") <> "India" Then %>
                     <li>Backed by our 100% Moneyback Guarantee</li>
+                      <%End If %>
                 </ul>
-                <li>Application of concepts through real life experience</li>
-              <li>94% Customer satisfaction rating  by D&B - <a href="http://www.itilstudy.com/DunandBradstreet-Report.pdf" target="_blank">More</a></li>
-              <li>25+ experienced  faculty - <a href="http://www.itilstudy.com/ITIL-Training/instructors.asp" target="_blank">More</a></li>
-			  <li>Specialized in ITIL trainings - <a href="http://www.itilstudy.com/ITIL-Training/better-than-competitors.asp" target="_blank">Find out here</a></li>
-              <li>Great feedback from successful students - <a href="http://www.itilstudy.com/feedback_class.asp" target="_blank">Testimonials</a></li>             
+                 <li>Application of concepts through real life experience - <a href="http://www.itilstudy.com/realLifeExp.asp">More</a>
+              <li>94% Customer satisfaction rating  by D&B - <a href="http://www.itilstudy.com/DunandBradstreet-Report.pdf" >More</a></li>
+              <li>25+ experienced  faculty - <a href="http://www.itilstudy.com/ITIL-Training/instructors.asp" >More</a></li>
+			  <li>Specialized in ITIL trainings - <a href="http://www.itilstudy.com/ITIL-Training/better-than-competitors.asp" >Find out here</a></li>
+              <li>Great feedback from successful students - <a href="http://www.itilstudy.com/feedback_class.asp" >Testimonials</a></li>             
           </ul>
-                 <span style="color:#FFF; text-align:left; margin-left:10px; padding-left:0px; margin-top:-20px;">Better than Competitors. <a href="/ITIL-Training/better-than-competitors.asp" target="_blank">More</a></span>
+                 <span style="color:#FFF; text-align:left; margin-left:10px; padding-left:0px; margin-top:-20px;">Better than Competitors. <a href="/ITIL-Training/better-than-competitors.asp" >More</a></span>
         </div>
   </div>
       
@@ -32,18 +34,18 @@
               	<ul>
                 	<li>150+ countries </li>
                 	<li>2000+ companies </li>
-                	<li>25,000+ students <a href="http://www.itilstudy.com/feedback_class.asp" target="_blank">Read testimonials</a></li>
+                	<li>25,000+ students <a href="http://www.itilstudy.com/feedback_class.asp" >Read testimonials</a></li>
                 </ul>
-              <li>35+ exclusive Global Faculty for ITIL - <a href="http://www.itilstudy.com/ITIL-Training/instructors.asp" target="_blank">Know more</a></li>
+              <li>35+ exclusive Global Faculty for ITIL - <a href="http://www.itilstudy.com/ITIL-Training/instructors.asp" >Know more</a></li>
               <% If Session("CountryOrigin") <> "Netherlands" And 	Session("CountryOrigin") <> "Germany" Then %> 
               <li>Part of VMEdu Inc.</li>
               <% End If %>         
            	  <ul>
-                	<li>Leading global training company with offices in 6 countries.<% If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" Then %> Conducting classes in 35+ cities.<% End If %> <% If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" Then %><a href="http://www.itilstudy.com/ITIL-Courses.asp"> More </a><%Else%><a href="http://www.itilstudy.com/GlobalOffice.asp" target="_blank"> More </a><% End If %></li>
-                	<li>Funded by Sequoia Capital, PE firm that invested in Google, Apple, Cisco, etc. - <a href="http://www.itilstudy.com/investors.asp" target="_blank">Read more</a></li>
+                	<li>Leading global training company with offices in 6 countries.<% If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" Then %> Conducting classes in 35+ cities.<% End If %> <% If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" Then %><a href="http://www.itilstudy.com/ITIL-Courses.asp"> More </a><%Else%><a href="http://www.itilstudy.com/GlobalOffice.asp" > More </a><% End If %></li>
+                	<li>Funded by Sequoia Capital, PE firm that invested in Google, Apple, Cisco, etc. - <a href="http://www.itilstudy.com/investors.asp" >Read more</a></li>
                 </ul>     
           </ul>
-                 <span style="color:#FFF; text-align:left; margin-left:10px; padding-left:0px; margin-top:-10px;">Better than Competitors. <a href="/ITIL-Training/better-than-competitors.asp" target="_blank">More</a></span>
+                 <span style="color:#FFF; text-align:left; margin-left:10px; padding-left:0px; margin-top:-10px;">Better than Competitors. <a href="/ITIL-Training/better-than-competitors.asp" >More</a></span>
         </div>
         <div style="margin-top:240px; margin-right:20px; text-align:right; color:#FFF; font-size:10px;">Washington DC class April 2011</div> 	
   </div>
@@ -59,9 +61,10 @@
                         <li>Blended/Hybrid </li>
                       
                     </ul>
-                  <li>Customized corporate  trainings - <a href="http://www.itilstudy.com/Corporate/Corporate-Overview.asp" target="_blank">More</a></li>             
+                    <li>Application of concepts through real life experience - <a href="http://www.itilstudy.com/realLifeExp.asp">More</a>
+                  <li>Customized corporate  trainings - <a href="http://www.itilstudy.com/Corporate/Corporate-Overview.asp" >More</a></li>             
               </ul>
-              <span style="color:#FFF; text-align:left; margin-left:10px; padding-left:0px; margin-top:60px;">Better than Competitors. <a href="/ITIL-Training/better-than-competitors.asp" target="_blank">More</a></span>
+              <span style="color:#FFF; text-align:left; margin-left:10px; padding-left:0px; margin-top:60px;">Better than Competitors. <a href="/ITIL-Training/better-than-competitors.asp" >More</a></span>
     </div>
       <div style="margin-top:240px; margin-right:20px; text-align:right; color:#FFF; font-size:10px;">Manchester UK class April 2012</div> 	
   </div>
@@ -93,24 +96,24 @@
                 <ul id="banner-list">
                   <li>We offer best Value  for Money for all our courses </li>
                     <ul>
-                      <li>Free online simulated  practice test - <a href="http://www.itilstudy.com/freeresources/freeSimulatedTest.asp" target="_blank">More</a></li>
-                      <li>Online courses  starting from <% = OnlineCourseStart  %> - <a href="http://www.itilstudy.com/ITIL-Online-Courses.asp" target="_blank"> More</a></li>
+                      <li>Free online simulated  practice test - <a href="http://www.itilstudy.com/freeresources/freeSimulatedTest.asp" >More</a></li>
+                      <li>Online courses  starting from <% = OnlineCourseStart  %> - <a href="http://www.itilstudy.com/ITIL-Online-Courses.asp" > More</a></li>
 
                        <% If Session("CountryOrigin") = "Netherlands" Then%> 
-                       <li>2 day ITIL Classes starting at &euro; 850 - <a href="http://www.itilstudy.com/ITIL-Courses.asp" target="_blank">More</a></li>
+                       <li>2 day ITIL Classes starting at &euro; 850 - <a href="http://www.itilstudy.com/ITIL-Courses.asp" >More</a></li>
                        
                        <% ElseIf Session("CountryOrigin") = "Germany" Then %> 
-                       <li>2 day ITIL Classes starting at &euro; 890 - <a href="http://www.itilstudy.com/ITIL-Courses.asp" target="_blank">More</a></li>
+                       <li>2 day ITIL Classes starting at &euro; 890 - <a href="http://www.itilstudy.com/ITIL-Courses.asp" >More</a></li>
                        
                         <%Else %>
-                        <li>2 or 3 Day ITIL Classes starting at <%=BestPrice %> - <a href="http://www.itilstudy.com/ITIL-Courses.asp" target="_blank">More</a></li>
+                        <li>2 or 3 Day ITIL Classes starting at <%=BestPrice %> - <a href="http://www.itilstudy.com/ITIL-Courses.asp" >More</a></li>
                         
                         <%End If %>
                      
-                      <li>Additional corporate  discounts also available - <a href="http://www.itilstudy.com/contactus.asp" target="_blank">Contact us</a></li>
+                      <li>Additional corporate  discounts also available - <a href="http://www.itilstudy.com/contactus.asp" >Contact us</a></li>
                     </ul>             
               </ul>
-                     <span style="color:#FFF; text-align:left; margin-left:10px; padding-left:0px; margin-top:60px;">Better than Competitors. <a href="/ITIL-Training/better-than-competitors.asp" target="_blank">More</a></span>
+                     <span style="color:#FFF; text-align:left; margin-left:10px; padding-left:0px; margin-top:60px;">Better than Competitors. <a href="/ITIL-Training/better-than-competitors.asp" >More</a></span>
     </div>
      <div style="margin-top:240px; margin-right:20px; text-align:right; color:#FFF; font-size:10px;">Boston class October 2012</div> 	 
   </div>
@@ -119,21 +122,21 @@
     <div id="banner-free-header">Free Resources</div>
     <div id="banner-free-body">
     	<ul id="banner-free-list">
-          <li>Free  simulated ITIL practice test. <a href="http://www.itilstudy.com/freeresources/freeSimulatedTest.asp" target="_blank">Take test</a></li>
-          <li>Free chapter tests - <a href="http://www.itilstudy.com/freeresources/freeOnlineTest.asp" target="_blank">Take test </a></li>
-          <li>Free guides & podcast - <a href="http://www.itilstudy.com/freeresources/freeGuidePodcast.asp" target="_blank">Download</a></li>
-          <li>ITIL Crossword.  <a href="http://www.itilstudy.com/crossword/index.html" target="_blank">Play now</a></li>
-		  <li>Free case studies and white papers. <a href="http://www.itilstudy.com/freeresources/caseStudies&whitePapers.asp" target="_blank">Download</a></li>
+          <li>Free  simulated ITIL practice test. <a href="http://www.itilstudy.com/freeresources/freeSimulatedTest.asp" >Take test</a></li>
+          <li>Free chapter tests - <a href="http://www.itilstudy.com/freeresources/freeOnlineTest.asp" >Take test </a></li>
+          <li>Free guides & podcast - <a href="http://www.itilstudy.com/freeresources/freeGuidePodcast.asp" >Download</a></li>
+          <li>ITIL Crossword.  <a href="http://www.itilstudy.com/crossword/index.html" >Play now</a></li>
+		  <li>Free case studies and white papers. <a href="http://www.itilstudy.com/freeresources/caseStudies&whitePapers.asp" >Download</a></li>
 
       </ul>
     </div>
       <div id="PM-Enrolmentbutton-Container">
         <div class="PM-Enrolmentbutton-Button-Background">
-          <div class="PM-Enrolmentbutton"> <a href="http://www.itilstudy.com/ITIL-Courses.asp" target="_blank" class="PM-Enroll-text"><b>Enroll For</b><br />
+          <div class="PM-Enrolmentbutton"> <a href="http://www.itilstudy.com/ITIL-Courses.asp"  class="PM-Enroll-text"><b>Enroll For</b><br />
             <span class="EM-Classroom"><b>Classroom</b></span></a> </div>
         </div>
         <div class="PM-Enrolmentbutton-Button-Background">
-          <div class="PM-Enrolmentbutton"> <a href="http://www.itilstudy.com/ITIL-Online-Courses.asp " target="_blank" class="PM-Enroll-text"><b>Enroll For</b><br />
+          <div class="PM-Enrolmentbutton"> <a href="http://www.itilstudy.com/ITIL-Online-Courses.asp "  class="PM-Enroll-text"><b>Enroll For</b><br />
             <span class="EM-Classroom"><b>Online</b></span></a> </div>
         </div>
       </div>
