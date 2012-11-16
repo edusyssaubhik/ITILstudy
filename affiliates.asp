@@ -86,15 +86,22 @@
               <div class="innerFAQContainer">
               <br />
               <br />
-              <p><a href="http://www.PMstudy.com" target="_blank">PMstudy.com</a> is the world-leader in Project Management (PMP, CAPM) education and is a global education provider registered with PMI<sup>&reg;</sup>, Pennsylvania, USA. We provide both Online and classroom training programs for PMP/CAPM certification courses.<br>
+              <p><a href="http://www.PMstudy.com" target="_blank">PMstudy.com</a> is a leading provider in Project Management (PMP<sup>&reg;</sup>, CAPM<sup>&reg;</sup>, PgMP<sup>&reg;</sup>) training. The PMstudy brand belongs to VMEdu, Inc. which is a PMI<sup>&reg;</sup> approved global registered education provider. We provide both online and classroom  prep training programs for PMP/CAPM certification courses.</p><br>
                 <br>
                 <b>Classroom Project Management Education</b>
               <UL>
-              <LI> Biggest PMP Training Provider in US/Canada: We teach more than 30 Project Management classes each month in US/Canada which makes us the biggest provider in US/Canada <a href="http://www.pmstudy.com/index.asp" target="_blank">More</a>.</LI>
-              <LI> Best Faculty: PMstudy hires the best faculty for our classes: all our faculty have more than 15 years of experience, are from different industries, and are excellent teachers <a href="http://www.pmstudy.com/instructors.asp" target="_blank">More</a>.</LI>
-              <LI>100% Moneyback Guarantee: With a great course methodology and excellent faculty, PMstudy offers the best 100% Moneyback Guarantee in its classroom programs. </LI>
-              <li>Best Success Rates: 98.7% overall success rate in our training programs with great feedback from our successful students <a href="http://www.pmstudy.com/feedback_class.asp" target="_blank">More</a>.</li>
-              <li>Classes in other countries: PMstudy also teaches classes in UK, Singapore, HongKong, Middle East and India. We will very soon be teaching classes in Australia, New Zealand and other countries in Europe. </li>
+              <LI> A Leading PMP Exam Prep Training Provider in US/Canada: We teach more than 60 Project Management classes each month across US/Canada. <a href="http://www.pmstudy.com/index.asp" target="_blank">More</a></LI>
+               <LI> Best Faculty: PMstudy hires the best faculty for our classes: all our faculty have more than 15 years of experience, are from different industries, and are excellent teachers. <a href="http://www.pmstudy.com/instructors.asp">More</a></LI>
+                <LI>100% Moneyback Guarantee: With a great course methodology and excellent faculty, PMstudy offers 100% Moneyback Guarantee to its classroom students. </LI>
+                <li>98.7% Success Rates: PMstudy has a success rate of 98.7% with <a href="http://www.pmstudy.com/feedback_class.asp">great feedback</a> from our successful students <a href="http://www.pmstudy.com/PMP-Success-Rate.asp">More</a> </li>
+                 <li>Classes in other countries: PMstudy also teaches classes in UK, Germany, Australia  New Zealand, Singapore, Hong Kong, Middle East and India. We will very soon be teaching classes in Netherlands and other countries in Europe.</li>
+                  </UL><br>
+                <b>Online Project Management Education</b>
+                  <BR>
+                  <ul>
+                  <li>Leading Online training provider for PMP/ CAPM certification <a href="http://www.pmstudy.com/PMP-Classes/online-Project-Managament-Training.asp">More</a>.</li>
+                  <li>Customers in more than 160 countries and 3500+ companies <a href="http://www.pmstudy.com/pmp-exam-success.asp">More</a>.</li>
+                  </ul>
               </div>
               </div>
               <div class="outerFAQContainerBottom">&nbsp;</div>
