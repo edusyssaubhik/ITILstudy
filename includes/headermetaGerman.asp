@@ -182,7 +182,7 @@ End If
     
     <tr>
 	
- <td id="imageHover"><div style="position:relative" id="imageHover"><img src="/images/buttons/logo_top.jpg" alt="ITILstudy" border="0"  usemap="#Map" id="imageHover"/><div class="contactInTopLogo"><span id="emailUs"><a href="/german/einenRückrufanfordern.asp"><img src="/images/buttons/callback.jpg" style="height:40px;"/> <span style="vertical-align:top">Einen Rückruf anfordern</span></a></span><span id="info"><a href="/German/erfolgsquote.asp"> 98% Erfolgsquote mit Geld-zurück-Garantie </a></span></div>
+ <td id="imageHover"><div style="position:relative" id="imageHover"><img src="/images/buttons/logo_top.jpg" alt="ITILstudy" border="0"  usemap="#Map" id="imageHover"/><div class="contactInTopLogo"><span id="emailUs"><a href="/german/einenRückrufanfordern.asp"><img src="/images/buttons/callback.jpg" style="height:40px;"/> <span style="vertical-align:top">Einen Rückruf anfordern</span></a></span><span id="info"><a href="/German/erfolgsquote.asp"> 99.2% Erfolgsquote mit Geld-zurück-Garantie </a></span></div>
   <map name="Map" id="Map">
   <area shape="rect" coords="5,13,230,96" href="/indexde.asp" />
   <area shape="rect" coords="563,10,724,95" href="http://www.csme.us/CSMEATOList/tabid/83/Default.aspx" target="_blank" />

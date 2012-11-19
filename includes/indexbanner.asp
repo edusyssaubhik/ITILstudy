@@ -13,7 +13,9 @@
               <li>Best Pass Rate (99.2%) - <a href="http://www.itilstudy.com/ITIL-Training/Success-Rate.asp" target="_blank">Read more</a></li>
               	<ul>
                 	<li>Better than the industry rate. </li>
+                      <%If Session("CountryOrigin") <> "India" AND Session("CountryOrigin") <> "Singapore" Then %>
                     <li>Backed by our 100% Moneyback Guarantee</li>
+                      <%End If %>
                 </ul>
                 <li>Application of concepts through real life experience</li>
               <li>94% Customer satisfaction rating  by D&B - <a href="http://www.itilstudy.com/DunandBradstreet-Report.pdf" target="_blank">More</a></li>
@@ -30,7 +32,7 @@
             <ul id="banner-list">
               <li>Leading  ATO with students from:</li>
               	<ul>
-                	<li>150+ countries </li>
+                	<li>160+ countries </li>
                 	<li>2000+ companies </li>
                 	<li>25,000+ students <a href="http://www.itilstudy.com/feedback_class.asp" target="_blank">Read testimonials</a></li>
                 </ul>
@@ -102,6 +104,8 @@
                        <% ElseIf Session("CountryOrigin") = "Germany" Then %> 
                        <li>2 day ITIL Classes starting at &euro; 890 - <a href="http://www.itilstudy.com/ITIL-Courses.asp" target="_blank">More</a></li>
                        
+                        <%ElseIf  Session("CountryOrigin") = "India" Then %>
+                        <li>2 or 3 Day ITIL Foundation Classes starting at <%=BestPrice %> - <a href="http://www.itilstudy.com/ITIL-Courses.asp" target="_blank">More</a></li>
                         <%Else %>
                         <li>2 or 3 Day ITIL Classes starting at <%=BestPrice %> - <a href="http://www.itilstudy.com/ITIL-Courses.asp" target="_blank">More</a></li>
                         
