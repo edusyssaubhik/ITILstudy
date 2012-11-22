@@ -1981,7 +1981,12 @@ Select Case State
     </tr>
      <tr>
       <td id="imageHover"><object width="200" height="150"><iframe width="200" height="150" src="http://www.youtube.com/embed/G7sizMIi9K4?wmode=transparent" frameborder="0" allowfullscreen></iframe><br /><br /></td>
-    </tr>    
+    </tr>   
+      <tr><td>              <table>
+                        <tr><td rowspan="2"><a href="/freeresources/freeSimulatedTest.asp"><img src="/images/symbol/symbol_free.jpg"></a></td><td><a href="/freeresources/freeSimulatedTest.asp"><img src="/images/symbol/symbol_free_text.jpg"></a><br />ITIL<sup>&reg;</sup> Exam <br />Practice Test</td></tr>
+                        <tr><td></td></tr>
+
+                    </table></td></tr> 
 	<tr>
     <td>
     <div id="contact-box" align="center">
@@ -1992,10 +1997,15 @@ Select Case State
         </tr>
     
     <% else %>
-    <% If Session("CountryOrigin") <> "India" AND Session("CountryOrigin") <> "UAE" AND Session("CountryOrigin") <> "Other" AND Session("CountryOrigin") <> "Australia" AND Session("CountryOrigin") <> "United Kingdom" Then %>
+    <% If  Session("CountryOrigin") <> "UAE" AND Session("CountryOrigin") <> "Other" AND Session("CountryOrigin") <> "Australia" AND Session("CountryOrigin") <> "United Kingdom" Then %>
      <tr>
       <td id="imageHover"><iframe width="200" height="150" src="http://www.youtube.com/embed/G7sizMIi9K4?wmode=transparent" frameborder="0" allowfullscreen></iframe><br /><br /></td>
     </tr>
+       <tr><td>              <table>
+                        <tr><td rowspan="2"><a href="/freeresources/freeSimulatedTest.asp"><img src="/images/symbol/symbol_free.jpg"></a></td><td><a href="/freeresources/freeSimulatedTest.asp"><img src="/images/symbol/symbol_free_text.jpg"></a><br />ITIL<sup>&reg;</sup> Exam <br />Practice Test</td></tr>
+                        <tr><td></td></tr>
+
+                    </table></td></tr>
     <% End If %>
     <% If Session("CountryOrigin") <> "United Kingdom" AND Session("CountryOrigin") <> "UAE" AND Session("CountryOrigin") <> "Australia"  Then %>
     <tr>
@@ -2009,9 +2019,11 @@ Select Case State
       <td id="imageHover"><object width="200" height="150"><iframe width="200" height="150" src="http://www.youtube.com/embed/G7sizMIi9K4?wmode=transparent" frameborder="0" allowfullscreen></iframe><br /><br /></td>
    
     </tr>  
-    
-      
-	
+       <tr><td>              <table>
+                        <tr><td rowspan="2"><a href="/freeresources/freeSimulatedTest.asp"><img src="/images/symbol/symbol_free.jpg"></a></td><td><a href="/freeresources/freeSimulatedTest.asp"><img src="/images/symbol/symbol_free_text.jpg"></a><br />ITIL<sup>&reg;</sup> Exam <br />Practice Test</td></tr>
+                        <tr><td></td></tr>
+
+                    </table></td></tr>
     <tr>
     
     <td>

@@ -18,10 +18,11 @@
 	
                 <h1 class="PageTitle">100% GELD-ZURÜCK-GARANTIE</h1>
                 <p>Weshalb  ist die ITILstudys 100% Geldzurückgarantie “die attraktivste” in der Branche? Vergleichen Sie unsere Geldzurückgarantie und urteilen Sie selbst.</p>
-                <p>Wir garantieren, dass Sie die ITIL Foundation Prüfung nach Teilnahme des ITILstudy Präsenztrainings erfolgreich bestehen und übernehmen die Kosten für eine Wiederholung. Sollten Sie die Prüfung erneut nicht bestehen, erstatten wir Ihnen die komplette Kursgebühr - gemäß unserer Garantieregelung.</p>
+                <p>Wir garantieren, dass Sie die ITIL Foundation Prüfung nach Teilnahme des ITILstudy  Präsenztrainings erfolgreich bestehen und übernehmen die Kosten für eine Wiederholung. Sollten Sie die Prüfung erneut nicht bestehen, erstatten wir Ihnen die komplette Kursgebühr - gemäß unserer Garantieregelung.</p>
                      
                 <p class="Header">Richtlinie</p>
                  <p>Die ITIL Foundation Prüfung muss am letzten Tag des Präsenztrainings abgelegt werden. Unsere Geldzurückgarantie  besagt, dass Sie die Prüfung innerhalb von 3 Monaten wiederholen könnenn, wenn Sie diese beim ersten Versuch nicht bestanden haben. Sollten Sie die Prüfung auch beim zweiten Versuch nicht bestehen, erstatten wir Ihnen die komplette Kursgebühr zurück.
+ 
 </p>
 
              
@@ -29,7 +30,7 @@
                 
                 <p class="Header">Allgemeine Geschäftsbedingungen</p>
                 <ul>
-                <li>Die Geldzurückgarantie gilt nur für Teilnehmer, die alle Kursmodule und Kursaufgaben abgeschlossen haben sowie  eine 100% Teilnahme nachweisen können.</li>
+                <li>Die Geldzurückgarantie gilt nur für Teilnehmer, die alle Kursmodule und Kursaufgaben abgeschlossen haben sowie eine 100% Teilnahme nachweisen können.</li>
                 <li>Dieer Teilnehmer sollte die Wiederholung der Prüfung innerhalb von drei Monaten nach dem ersten Versuch ablegen. ITILstudy benötigt die Information zur Prüfungswiederholung zwei Wochen vor Beginn des geplanten Kurses.  </li>
               <li>ITILstudy erstattet die Gebühr nur an die Teilnehmer, die die Kursgebühr komplett bezahlt haben.</li>
                 <li>Nach Erhalt aller erforderlichen Dokumente, dauert die Rückerstattung seitens ITILstudy bis zu 30 Tage.  </li>
@@ -38,7 +39,7 @@
                
                 </ul>
                 
-                 <p class="Header">Die 100% Geldzurückgarantie gilt nicht, wenn der/die Teilnehmer/in:</p>
+                 <p class="Header">Die 100% Geldzurückgarantie gilt nicht, wenn der Teilnehmer:</p>
                  <ul>
 <li>während des 2-tägigen Trainings zu spät kommt oder vorzeitig geht.</li>
 <li>den Anweisungen des Trainers nicht folgt und die erforderlichen Übungen und Hausaufgaben versäumt (sowohl während als auch nach dem Unterricht).</li>

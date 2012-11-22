@@ -78,27 +78,27 @@ End If
 						   
                            
 						   
-						   <li>2 Tage ITIL Training inklusive ITIL Foundation Prüfung und 100% Geld-zurück-Garantie <a href="/german/Geld-zurück-Garantie.asp">Mehr</a></li>
-                           <li>2 Tage Training mit "Accelerated Learning" Techniken (beschleunigtes Lernen). <a href="/german/2-Tage-ITIL-Training.asp">Mehr</a></li>
-                           <li>Zugelassen von den 2 führenden ITIL Prüfungsinstitutionen - APMG und CSME. <a href="/german/aboutCSME-APMG.asp">Mehr</a></li>
-                           <li>Mehrere gut zu erreichende Seminarorte für ITIL Trainings stehen  zur Auswahl. <a href="/german/ITIL-Kurs.asp">Mehr</a></li>
-                           <li>Umfassende ITIL Kurse mit global bewährten Trainingsmethoden. <a href="/german/umfassend.asp">Mehr</a></li>
-                           <li>Beste Trainer für ITIL Zertifizierungskurse. <a href="/german/Trainer.asp">Mehr</a></li>
-
+						   <li>2 Tage ITIL Training inklusive ITIL Foundation Prüfung und 100% Geldzurückgarantie <a href="/german/Geld-zurück-Garantie.asp">Mehr</a></li>
+                           <li>2 Tage Training mit "Accelerated Learning" Techniken (Form des beschleunigten Lernens). <a href="/german/2-Tage-ITIL-Training.asp">Mehr</a></li>
+                           <li>Zugelassen von den zwei führenden ITIL Prüfungsinstitutionen - APMG und CSME. <a href="/german/aboutCSME-APMG.asp">Mehr</a></li>
+                           <li>Mehrere gut zu erreichende Seminarorte für Ihr ITIL Training stehen  zur Auswahl. <a href="/german/ITIL-Kurs.asp">Mehr</a></li>
+                           <li>Umfassende ITIL Kurse mit bewährten Trainingsmethoden. <a href="/german/umfassend.asp">Mehr</a></li>
+                           <li>Hervorragende Trainer für ITIL Zertifizierungskurse. <a href="/german/Trainer.asp">Mehr</a></li>
+                           <li>Kostenfreie Risk Management -Zertifizierung und 20 PMI PDUs im Wert von $ 300 <a href=""></a></li>
                           <!--  <li>Kostenfreie Six Sigma Green Belt Zertifizierung und 25 PMI PDUs im Wert von $ 250.<br /> oder<br />Human Resource Development Zertifizierung und 20 PMI PDUs im Wert von  $ 250. <a href="/german/kostenfreie-online-Zertifizierung.asp">Mehr</a>
 							</li>-->
 							
                           
-                           <li>18 kostenfreie PMI PDUs mit unseren ITIL Kursen. <a href="/german/PMI_PDU.asp">Mehr</a></li>
+                           <li>18 von PMI anerkannte PDUs mit unseren ITIL Kursen. <a href="/german/PMI_PDU.asp">Mehr</a></li>
                           </ol>    
                           
-                          Vorteile Online Kurse
+                          Vorteile der Online kurse
                            
 						  <ol type="1">
-                          <li>Beste Preise und effektive Kurse. </li>
+                          <li>Attraktive Preise und effektive Kurse. </li>
                           <li>Umfassende Tests pro Kapitel. </li>
-                          <li>Detaillierter Lern-Handbücher. </li>
-                          <li>Kostenfreier ITIL Foundation Simulationstest.</li>
+                          <li>Detaillierte Handbücher. </li>
+                          <li>Kostenloser ITIL Foundation Simulated Test.</li>
                          
 						</ol>
 						  
@@ -115,7 +115,7 @@ End If
 			  <p id="imageHover"><a href="/german/ITIL-Kurs.asp"> <img src="/images/German/Basic.png" alt="courses" height="44px" border="0" ></a>
 			  <br /> 
                
-                 <a href="/german/ITIL-Kurs.asp">Seminare ab € 890</a><br /> (Preise inklusive Prüfungsgebühr sowie 100% Geld-zurück-Garantie)
+                 <a href="/german/ITIL-Kurs.asp">Seminare ab € 890</a><br /> (Preise inklusive Prüfungsgebühr sowie 100% Geldzurückgarantie)
 			    
               
                
@@ -123,7 +123,7 @@ End If
 			  
 			   <span class="SubHeader">
           
-          Wählen Sie aus folgenden Städten aus:
+          Wählen Sie eine der folgenden Städten:
 		  </span> <BR />
           <BR />
               <%
@@ -171,12 +171,12 @@ End If
               </span>
        
               <BR>
-              <span class="SubHeader"><a href="/german/ITIL-Kurs.asp">ITILstudy Kurse werden in mehr als 9 Städten </a>.</span><br /><br />
+              <span class="SubHeader"><a href="/german/ITIL-Kurs.asp"> ITILstudy Kurse werden in mehr als 10 Städten in Deutschland angeboten</a>.</span><br /><br />
               
          
          Bestehen Sie die ITIL Foundation Zertifizierungsprüfung schon am 2. Tag des Präsenztrainings. <a href="/german/Kursvorteile.asp">Mehr</a><br /><br />
           
-          100% Geld-zurück-Garantie – die Beste der Branche
+          100% Geldzurückgarantie – die Beste der Branche
 			  
               </p> 
 			
@@ -192,8 +192,8 @@ End If
               <!--ITIL Online Course -->
               	
                   <p id="imageHover"><a href="/ITIL-Online-Courses.asp"><img src="/images/German/edu.png"  height="44px" border="0"></a></span>
-                    <br />(Preise inklusive MwSt,)<br /><br />
-                      <a href="/ITIL-Online-Courses.asp">Foundation für 30 Tage - $ 300 </a><br />
+                    <br />(Preise inklusive MwSt)<br /><br />
+                      <a href="/ITIL-Online-Courses.asp">ITIL Foundation für 30 Tage - $ 300 </a><br />
 					
  					<br /></p>
 					
@@ -211,7 +211,7 @@ End If
 <tr>					
 					<td id="imageHover"><img border="0" src="/images/buttons/New.jpg"/></td>
                   <td><br />
-                  Basiert auf dem 2011 Syllabus zugelassen von APMG  <br/>
+                  Basierend auf dem 2011 Lehrplan, zugelassen durch APMG <br/>
                     <br/></td></tr></table>
 
                   <!-- <td width="20%" id="imageHover"><a href="/ITIL-Online-Courses.asp"><img src="/images/buttons/Blended.jpg" width="168px " height="44px" border="0"></a>
@@ -226,7 +226,7 @@ End If
 			<table width="100%" border="0" cellspacing="0" cellpadding="2">
     
 <tr><td valign="top"><a href="http://www.projstudy.com" target="_blank"><img src="/images/buttons/PROJ.jpg" border="0" align="left" /></a></td>
-<td width="80%" valign="top" ><a href="http://www.projstudy.com" target="_blank">PROJstudy.com</a><br />Ein erstklassiger Trainingsanbieter für PRINCE2.</td></tr>
+<td width="80%" valign="top" ><a href="http://www.projstudy.com" target="_blank">PROJstudy.com</a><br />Ein führender Trainingsanbieter für PRINCE2.</td></tr>
 <tr><td>&nbsp;</td></tr>
 
 	<tr>

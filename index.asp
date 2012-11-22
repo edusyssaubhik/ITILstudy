@@ -257,7 +257,7 @@ End If
                 
 		</table>
 				 </td></tr>
-                 <% If Session("CountryOrigin") <> "India" AND Session("CountryOrigin") <> "UAE" AND Session("CountryOrigin") <> "Other" Then %>
+                 <% If Session("CountryOrigin") <> "UAE" AND Session("CountryOrigin") <> "Other" Then %>
 				 <tr>
                  <td>
 					<iframe width="200" height="150" src="http://www.youtube.com/embed/G7sizMIi9K4?wmode=transparent" frameborder="0" allowfullscreen></iframe>

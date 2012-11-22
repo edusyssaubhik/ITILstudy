@@ -22,7 +22,7 @@
 				
                 <p><span class="SubHeader">APMG Accredited Training Organization (ATO): </span> ITILstudy, eine Brand von Edusys, gehört zu der ausgesuchten Gruppe der von der APM Group UK akkreditierten ATOs. ITILstudy ist spezialisiert auf die Durchführung von qualitativ hochwertigen Präsenztrainings, die Teilnehmer auf die ITIL Foundation- Zertifizierung vorbereiten.</p>
               
-                 <p>Angeliedert an PMstudy.com - PMstudy ist ein führender Project Management Institute (PMI<sup>&reg;</sup>) Approved Global Registered Education Provider (anerkannter global registrierter Schulungsanbieter), spezialisiert für die Durchführung qualitativ hochwertiger Schulungen, der Teilnehmer auf die Prüfung zum Project Management Professional (PMP<sup>&reg;</sup>) und Certified Associate in Project Management (CAPM<sup>&reg;</sup>) vorbereitet.</p>
+                 <p>Angegliedert an PMstudy.com - PMstudy ist ein führender Project Management Institute (PMI<sup>&reg;</sup>) Approved Global Registered Education Provider (anerkannter global registrierter Schulungsanbieter), spezialisiert für die Durchführung qualitativ hochwertiger Schulungen, der Teilnehmer auf die Prüfung zum Project Management Professional (PMP<sup>&reg;</sup>) und Certified Associate in Project Management (CAPM<sup>&reg;</sup>) vorbereitet.</p>
              
                 <p>Die von ITILstudy angebotenen PDUs erhalten die Teilnehmer nach Beendigung des ITILstudy Präsenztrainings. Am letzten Trainingstag können die Teilnehmer ihr PDU- Zertifikat herunterloaden.</p>
              

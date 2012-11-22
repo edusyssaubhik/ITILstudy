@@ -70,6 +70,9 @@ function Form_Validator1(Theform) {
 					<!-- Content Start From Here-->
 		  				  <%' assign posted variables to local variables
 
+                                Function replacestr(str)
+                                    replacestr = Replace(str,"'","''")
+                                End Function
 						payer_email = Request.Form("payer_email")
 						pass = Request.Form("pass")
 						if Trim(payer_email) = "" Then
@@ -105,7 +108,7 @@ function Form_Validator1(Theform) {
 						Set rsQues = Server.CreateObject("ADODB.Recordset")
 						rsQues.ActiveConnection = ConnObj
 						rsQues.Open "SELECT payer_email from PaypalDB WHERE payer_email='"&payer_email&"' order by ID Desc"
-
+                        
 							If Not rsQues.BOF Then
 								Set rsQues = Nothing
 								Set rsQues1 = Server.CreateObject("ADODB.Recordset")
@@ -116,6 +119,7 @@ function Form_Validator1(Theform) {
 										Set rsQues2 = Server.CreateObject("ADODB.Recordset")
 										rsQues2.ActiveConnection = ConnObj
 										rsQues2.Open "SELECT paypal_address_id, date_entered,rollno,ID, item_number, item_name, date_valid, kno_passed, first_name, last_name,customer_id FROM PaypalDB WHERE PaypalDB.pass='"&pass&"' and PaypalDB.payer_email='"&payer_email&"' order by ID Desc"
+                                
 										'response.Write "SELECT paypal_address_id, date_entered,rollno,ID, item_number, item_name, date_valid, kno_passed, first_name, last_name,customer_id FROM PaypalDB WHERE PaypalDB.pass='"&pass&"' and PaypalDB.payer_email='"&payer_email&"' order by ID Desc"
 										If Not rsQues2.BOF Then
 										
@@ -124,14 +128,15 @@ function Form_Validator1(Theform) {
 					      'response.write("inside"& rsQues2("customer_id"))
 						    Set objRs4 = Server.CreateObject("ADODB.Recordset")		
 						    strQuery1 = "SELECT TOP 1 Id,email,account_type_id FROM Customer_Accounts WHERE email='"&payer_email&"' ORDER BY Id DESC"
+                               ' response.write strQuery1
 						    objRs4.open strQuery1,ConnObj
 						    if not objRs4.eof = false then	'no values in customer_accounts
 						        dim R
 	                            dim account_typeid
 	                            account_typeid=1  'one for those user who will register through our site 	
-
-					            ConnObj.Execute "INSERT INTO Customer_Accounts (first_name, last_name,account_type_id, email,password)VALUES('"&rsQues2("first_name")&"', '"&rsQues2("last_name")&"','"&account_typeid&"','"&payer_email&"','"&pass&"')"
-                                                                						
+                                'replacestr () function will replace ' with ''
+ 					            ConnObj.Execute "INSERT INTO Customer_Accounts (first_name, last_name,account_type_id, email,password)VALUES('"&replacestr(rsQues2("first_name"))&"', '"&replacestr(rsQues2("last_name"))&"','"&account_typeid&"','"&payer_email&"','"&pass&"')"
+                                                              						
 					            Set objRs2 = Server.CreateObject("ADODB.Recordset")
 					            strQuery1 = "SELECT TOP 1 Id,email,account_type_id FROM Customer_Accounts WHERE email='"&payer_email&"' ORDER BY Id DESC"
 
@@ -196,6 +201,7 @@ function Form_Validator1(Theform) {
 					  set objRs2=nothing
 					  session("loggedinEmail")=payer_email
 				end if
+                                
 										'end of code by chandan
 										item_number=rsQues2("item_number")
 										item_name=rsQues2("item_name")

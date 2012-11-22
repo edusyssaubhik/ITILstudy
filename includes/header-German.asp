@@ -2,11 +2,12 @@
         <% session.Timeout = 1000 %>
     
         <a href="/german/besser-als-die-Konkurrenz.asp" onmouseover="MM_swapImage('a','','/images/German/Why_us_Green.png',1)" onmouseout="MM_swapImgRestore()">Besser als die konkurrenz </a>
-        <a href="/german/erfolgsquote.asp" onmouseover="MM_swapImage('a','','/images/German/Why_us_Green.png',1)" onmouseout="MM_swapImgRestore()">98 % ERFOLGSQUOTE</a>
-			<a href="/german/Geld-zurück-Garantie.asp" onmouseover="MM_swapImage('a','','/images/back/Why_us_Green.png',1)" onmouseout="MM_swapImgRestore()">100% Geld-zurück-garantie</a>		
+        <a href="/german/erfolgsquote.asp" onmouseover="MM_swapImage('a','','/images/German/Why_us_Green.png',1)" onmouseout="MM_swapImgRestore()">99.2% ERFOLGSQUOTE</a>
+			<a href="/german/Geld-zurück-Garantie.asp" onmouseover="MM_swapImage('a','','/images/German/Why_us_Green.png',1)" onmouseout="MM_swapImgRestore()">100% Geld-zurück-garantie</a>		
       <a href="/german/2-Tage-ITIL-Training.asp" onmouseover="MM_swapImage('a','','/images/German/Why_us_Green.png',1)" onmouseout="MM_swapImgRestore()">2-Tage-training mit techniken des "beschleunigten lernens"</a>
 	  	   <a href="/german/Kursvorteile.asp" onmouseover="MM_swapImage('a','','/images/German/Why_us_Green.png',1)" onmouseout="MM_swapImgRestore()">Kurse Vorteile</span> </a>
         <a href="/german/Trainer.asp" onmouseover="MM_swapImage('a','','/images/German/Why_us_Green.png',1)" onmouseout="MM_swapImgRestore()">Beste Trainer</a>
+     <a href="/german/free-onlinecertification.asp" onmouseover="MM_swapImage('a','','/images/German/Why_us_Green.png',1)" onmouseout="MM_swapImgRestore()">Kostenloser Risk Management Zertifizierungskurs</a>
  <!--<a href="/german/kostenfreie-online-Zertifizierung.asp" onmouseover="MM_swapImage('a','','/images/German/Why_us_Green.png',1)" onmouseout="MM_swapImgRestore()">Kostenfreie Six Sigma Green Belt oder Human Resource Development Zertifizierung</a>-->
 		 <a href="/german/Präsenztraining-FAQ.asp" onmouseover="MM_swapImage('a','','/images/German/Why_us_Green.png',1)" onmouseout="MM_swapImgRestore()">FAQs</a>		 
 		  
@@ -32,10 +33,10 @@
 	  <a href="/german/kostenfreier-Online-Test.asp" onMouseOver="MM_swapImage('c','','/images/German/Free_resources_Green.png',1)" onMouseOut="MM_swapImgRestore()">Kostenfreie 15 Testfragen</a>
 	   <a href="/german/kostenfreier-Simulationstest.asp" onMouseOver="MM_swapImage('c','','/images/German/Free_resources_Green.png',1)" onMouseOut="MM_swapImgRestore()">Kostenfreier Simulationstest </a>
        <a href="/german/ÜberITIL.asp" onmouseover="MM_swapImage('c','','/images/German/Free_resources_Green.png',1)" onmouseout="MM_swapImgRestore()">über ITIL</a>
-           <a href="/crossword/index.html" onmouseover="MM_swapImage('c','','/images/back/link_03_free_resources_grey.jpg',1)" onmouseout="MM_swapImgRestore()">ITIL Crossword </a>
-           <a href="/freeresources/ITILNews.asp" onmouseover="MM_swapImage('c','','/images/back/link_03_free_resources_grey.jpg',1)" onmouseout="MM_swapImgRestore()">ITIL News </a>
-         <a href="/freeresources/knwldgeCenter.asp" onmouseover="MM_swapImage('c','','/images/back/link_03_free_resources_grey.jpg',1)" onmouseout="MM_swapImgRestore()">Knowledge Centre </a>
-         <a href="/freeresources/caseStudies&whitePapers.asp" onmouseover="MM_swapImage('c','','/images/back/link_03_free_resources_grey.jpg',1)" onmouseout="MM_swapImgRestore()">Case studies and white papers</a>
+           <a href="/crossword/index.html" onmouseover="MM_swapImage('c','','/images/German/Free_resources_Green.png',1)" onmouseout="MM_swapImgRestore()">ITIL Crossword </a>
+           <a href="/freeresources/ITILNews.asp" onmouseover="MM_swapImage('c','','/images/German/Free_resources_Green.png',1)" onmouseout="MM_swapImgRestore()">ITIL News </a>
+         <a href="/freeresources/knwldgeCenter.asp" onmouseover="MM_swapImage('c','','/images/German/Free_resources_Green.png',1)" onmouseout="MM_swapImgRestore()">Knowledge Centre </a>
+         <a href="/freeresources/caseStudies&whitePapers.asp" onmouseover="MM_swapImage('c','','/images/German/Free_resources_Green.png',1)" onmouseout="MM_swapImgRestore()">Case studies and white papers</a>
  </div>        
         
   
@@ -44,7 +45,7 @@
     
         <a href="/german/Präsenztraining.asp" onmouseover="MM_swapImage('d','','/images/German/Methodology_Green.png',1)" onmouseout="MM_swapImgRestore()">Foundation Präsenztrainings</a>
 
-<a href="/german/ÜberonlineFoundation.asp" onmouseover="MM_swapImage('d','','/images/German/Methodology_Green.png',1)" onmouseout="MM_swapImgRestore()">Foundation online-Schulungen</a>
+<a href="/german/Online-Schulungen.asp" onmouseover="MM_swapImage('d','','/images/German/Methodology_Green.png',1)" onmouseout="MM_swapImgRestore()">Foundation online-Schulungen</a>
 
 </div>        
 

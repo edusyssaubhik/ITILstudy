@@ -20,15 +20,15 @@
 			<div style="margin-top:-15px; width:97%;">
               <!-- Content Start From Here-->
              
-      <p class="PopupCopy">Die ITIL Foundation-Zertifizierung ist der erste Schritt auf dem Weg zum ITIL Experten. Um eine Strategie füreine erfolgreiche Prüfung zu entwickeln, ist es hilfreich und wichtig, die Struktur der ITIL Foundation Prüfung zu verstehen.</p>
+      <p class="PopupCopy">Die ITIL Foundation-Zertifizierung ist der erste Schritt auf dem Weg zum ITIL Experten. Um eine Strategie für eine erfolgreiche Prüfung zu entwickeln, ist es hilfreich und wichtig, die Struktur der ITIL Foundation-Prüfung zu verstehen.</p>
       
-      <p class="PopupCopy">Der ITILstudy ITIL Foundation Simulationstest hat einen Countdown Zähler sowie Buttons, mit denen man “Nächste Frage”, “Letzte Frage” und “Alle Fragen anzeigen” anklicken kann. Bei dieser Prüfung ist es ausserdem möglich, Fragen anzumerken, um sie sich zu einem späteren Zeitpunkt anzuschauen.</p>
+      <p class="PopupCopy">Der ITILstudy ITIL Foundation Simulationstest hat einen Countdown-Zähler sowie Buttons, mit denen man “Nächste Frage”, “Letzte Frage” und “Alle Fragen anzeigen” anklicken kann. Bei dieser Prüfung ist es ausserdem möglich, Fragen anzumerken, um sie sich zu einem späteren Zeitpunkt anzuschauen.</p>
       
-      <p class="PopupCopy">Die ITILstudy Simulationsprüfung ist dem ITIL Foundation Prüfungsformat sehr ähnlich und bietet nahezu die gleichen Features – so dass Sie in nur 15 Minuten das ITIL Foundation Prüfungsformat verstehen werden.</p>
+      <p class="PopupCopy">Die ITILstudy Simulationsprüfung ist dem ITIL Foundation-Prüfungsformat sehr ähnlich und bietet nahezu die gleichen Features – so dass Sie in nur 15 Minuten das ITIL Foundation-Prüfungsformat verstehen werden.</p>
       
-      <p class="PopupCopy">Sie werden auch verstehen, weshalb ITILstudy als der Favorit unter den ITIL Foundation Prüfungsteilnehmern gilt. Ihre Antworten werden ausgewertet, so dass Sie eine Übersicht Ihrer starken und schwachen Bereiche erhalten sowie der Zeit, die Sie für die einzelnen Fragen benötigt haben. </p>
+      <p class="PopupCopy">Sie werden auch verstehen, weshalb ITILstudy als der Favorit unter den ITIL Foundation-Prüfungsteilnehmern gilt.  Ihre Antworten werden ausgewertet, so dass Sie eine Übersicht Ihrer starken und schwachen Bereiche erhalten sowie der Zeit, die Sie für die einzelnen Fragen benötigt haben.</p>
       
-      <p class="PopupCopy"><a href="/german/ITIL-Kurs.asp" target="_blank">Klicken Sie hier,</a> um die 15 kostenfreien Fragen zu bearbeiten, die Ihnen helfen werden, das ITIL Foundation Prüfungsformat zu verstehen. </p>
+      <p class="PopupCopy"><a href="/german/ITIL-Kurs.asp" target="_blank">Klicken Sie hier</a>, um die 15 kostenfreien Fragen zu bearbeiten, die Ihnen helfen werden, das ITIL Foundation Prüfungsformat zu verstehen</p>
 	  
 
              <!-- Content End From Here-->

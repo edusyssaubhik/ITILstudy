@@ -48,6 +48,8 @@ End If
 
 rqToDate = Request("ToDate")
 
+rqCountries = Trim(Request("Countries"))
+
 If trim(rqToDate) <> "" Then
 Session("rqToDate") = rqToDate
 End If 
@@ -131,7 +133,17 @@ function validate_form(thisform)
  
   
 </script>
-
+<%
+    Dim rsCountry , QCountry
+    Set rsCountry = Server.CreateObject("ADODB.Recordset")
+    QCountry = "select distinct(country) from ITIL_city order by country asc"
+    rsCountry.Open QCountry,ConnObj
+    if Not rsCountry.EOF Then
+        arrayCountries = rsCountry.GetRows
+        arrayCountriesCount = UBound(arrayCountries,2)
+    End If
+    rsCountry.close
+     %>
 <div align="left" style="padding:10px;">
   <p><b>Online Reports</b>
   </p>
@@ -149,13 +161,25 @@ function validate_form(thisform)
         <td width="20%"><input type="text" name="ToDate" value="<% = Session("rqToDate") %>">
           <br>(EX:  YYYY-MM-DD)</td>
       </tr>
+        <tr>
+        <td width="20%"><b>Country:</b></td>
+        <td width="20%"><select name="Countries" id="Countries">
+        <option value="All">All</option>
+        <%For i = 0 To ArrayCountriesCount %>
+        <option <% If ArrayCountries(0,i) = Trim(rqCountries) THEN %> selected="selected" <% End if %> value="<%=ArrayCountries(0,i) %>"><%=ArrayCountries(0,i) %></option>
+        
+        <%Next %>
+        </select>
+        </td>
+      </tr>
+
        <tr>
         <td width="20%"><b>Course Type:</b></td>
         <td width="20%"><select name="Classtype" id="Classtype">
-        <option value="">----Select----</option>
+        <option <% If rqClasstype = "All" THEN %> selected="selected" <% End if %> value="All">All</option>
         <option <% If rqClasstype = "Free" THEN %> selected="selected" <% End if %> value="Free">Free</option>
         <option <% If rqClasstype = "Paid" THEN %> selected="selected" <% End if %> value="Paid">Paid</option>
-        <option <% If rqClasstype = "All" THEN %> selected="selected" <% End if %> value="All">All</option>
+        
         </select>
         </td>
       </tr>
@@ -177,9 +201,16 @@ function validate_form(thisform)
 <div style="margin-left:20px; padding-top:50px;">
 
 <table  border="0" class="table1" width="100%" cellpadding="0" cellspacing="0">
+<%  ClassTypeName =""
+    If rqClasstype ="Free" Then
+        ClassTypeName = "Free"
+    ElseIf rqClasstype ="Paid" Then
+        ClassTypeName = "Paid"
+    End If
+     %>
 
-
-<tr><td width="60%"><b>Enrollment Details - <%= rqClasstype %></b>&nbsp;&nbsp;<span style="font-size:14px; color:#333;">( From <b><% = Session("rqFromDate") %></b> to <b><% = Session("rqToDate") %> </b>)</span><br /><br />
+<tr><td width="60%"><b><%=ClassTypeName  %> Enrollment Details - </b>&nbsp;&nbsp;<span style="font-size:14px; color:#333;">( From <b><% = Session("rqFromDate") %></b> to <b><% = Session("rqToDate") %> </b>)</span><br />
+<b>Country : <%=rqCountries %></b><br /><br />
 <table  border="1" class="table1" width="100%" cellpadding="3" cellspacing="0">
 <tr>
 <th>Sl.</th>
@@ -195,18 +226,21 @@ function validate_form(thisform)
 
 <%
 ' Queriy for selecting days in between given values'
-
+Countryname = ""
+If rqCountries<>"All" Then
+    Countryname= " AND address_country = '"&rqCountries&"'"
+End If
 If rqClasstype = "Free" Then
  
-strQuery2="select * FROM PaypalDB WHERE date_entered BETWEEN '"&Session("rqFromDate")&"' AND '"&Session("rqToDate")&"' AND (item_number = '0051' OR item_number = '112')"
+strQuery2="select * FROM PaypalDB WHERE date_entered BETWEEN '"&Session("rqFromDate")&"' AND '"&Session("rqToDate")&"' AND (item_number = '0051' OR item_number = '112')   "&Countryname
 
 ElseIf rqClasstype = "Paid" Then
 
-strQuery2="select * FROM PaypalDB WHERE date_entered BETWEEN '"&Session("rqFromDate")&"' AND '"&Session("rqToDate")&"' AND (item_number <> '0051' AND item_number <> '112')"
+strQuery2="select * FROM PaypalDB WHERE date_entered BETWEEN '"&Session("rqFromDate")&"' AND '"&Session("rqToDate")&"' AND (item_number <> '0051' AND item_number <> '112') "&Countryname
 
 ElseIf rqClasstype = "All" Then
 
-strQuery2="select * FROM PaypalDB WHERE date_entered BETWEEN '"&Session("rqFromDate")&"' AND '"&Session("rqToDate")&"'"
+strQuery2="select * FROM PaypalDB WHERE date_entered BETWEEN '"&Session("rqFromDate")&"' AND '"&Session("rqToDate")&"' "&Countryname
 
 End If
 
@@ -271,19 +305,22 @@ objRs3.close
 
 %>
   
-<%For rowcounter1 = 0 TO EnrollmentsNum3 %>
-<tr>
-<td><% =  rowcounter1 + 1 %></td>
-<td><% =  arrAllRecords3(39,rowcounter1) %></td>
-<td><% =  arrAllRecords3(8,rowcounter1)&"&nbsp;"& arrAllRecords3(9,rowcounter1) %></td>
-<td><% =  arrAllRecords3(7,rowcounter1) %></td>
-<td><% =  arrAllRecords3(2,rowcounter1) %></td>
-<td><% =  arrAllRecords3(1,rowcounter1) %></td>
-</tr>
+<%
+If ISARRAY(arrAllRecords3) Then    
+    
+    For rowcounter1 = 0 TO EnrollmentsNum3 %>
+    <tr>
+    <td><% =  rowcounter1 + 1 %></td>
+    <td><% =  arrAllRecords3(39,rowcounter1) %></td>
+    <td><% =  arrAllRecords3(8,rowcounter1)&"&nbsp;"& arrAllRecords3(9,rowcounter1) %></td>
+    <td><% =  arrAllRecords3(7,rowcounter1) %></td>
+    <td><% =  arrAllRecords3(2,rowcounter1) %></td>
+    <td><% =  arrAllRecords3(1,rowcounter1) %></td>
+    </tr>
 
 <%
-
     Next
+End If
 %>
 </table>
 </td></tr>

@@ -16,6 +16,7 @@
               	<ul>
                 	<li>Better than the industry rate. </li>
 
+
                       <%If Session("CountryOrigin") <> "India" AND Session("CountryOrigin") <> "Singapore" Then %>
 
                     <li>Backed by our 100% Moneyback Guarantee</li>
@@ -23,7 +24,11 @@
                 </ul>
                  <li>Application of concepts through real life experience - <a href="http://www.itilstudy.com/realLifeExp.asp">More</a>
               <li>94% Customer satisfaction rating  by D&B - <a href="http://www.itilstudy.com/DunandBradstreet-Report.pdf" >More</a></li>
+                <%If Session("CountryOrigin") <> "US" Then %>
               <li>25+ experienced  faculty - <a href="http://www.itilstudy.com/ITIL-Training/instructors.asp" >More</a></li>
+                <%Else %>
+                <li>25+ experienced dedicated faculty. More than any other competitor - <a href="http://www.itilstudy.com/ITIL-Training/instructors.asp" >More</a></li>
+                <%End If %>
 			  <li>Specialized in ITIL trainings - <a href="http://www.itilstudy.com/ITIL-Training/better-than-competitors.asp" >Find out here</a></li>
               <li>Great feedback from successful students - <a href="http://www.itilstudy.com/feedback_class.asp" >Testimonials</a></li>             
           </ul>
@@ -36,7 +41,7 @@
             <ul id="banner-list">
               <li>Leading  ATO with students from:</li>
               	<ul>
-                	<li>160+ countries </li>
+                	<li>150+ countries </li>
                 	<li>2000+ companies </li>
                 	<li>25,000+ students <a href="http://www.itilstudy.com/feedback_class.asp" >Read testimonials</a></li>
                 </ul>
@@ -76,7 +81,8 @@
     <%
         BestPrice  = "$1049" 
         If Session("CountryOrigin") ="US" OR Session("CountryOrigin") = "Canada" Then
-            BestPrice  = "$ 1149"
+            BestPrice  = "$ 1049"
+            intermediatePrice = "$ 2050 "
         ElseIf Session("CountryOrigin") ="India" Then
             BestPrice  = "Rs.10750"
         ElseIf Session("CountryOrigin") ="Australia" Then
@@ -108,9 +114,11 @@
                        
                        <% ElseIf Session("CountryOrigin") = "Germany" Then %> 
                        <li>2 day ITIL Classes starting at &euro; 890 - <a href="http://www.itilstudy.com/ITIL-Courses.asp" >More</a></li>
-                       
-                        <%ElseIf  Session("CountryOrigin") = "India" Then %>
-                        <li>2 or 3 Day ITIL Foundation Classes starting at <%=BestPrice %> - <a href="http://www.itilstudy.com/ITIL-Courses.asp" target="_blank">More</a></li>
+         
+                        <%ElseIf Session("CountryOrigin") = "US" Then %>
+                        <li>2 or 3 day ITIL Classes starting at <%=BestPrice %> - <a href="http://www.itilstudy.com/ITIL-Courses.asp" >More</a></li>
+                        <li>3 day ITIL Intermediate classes starting at <% =intermediatePrice  %> </li>
+
                         <%Else %>
                         <li>2 or 3 Day ITIL Classes starting at <%=BestPrice %> - <a href="http://www.itilstudy.com/ITIL-Courses.asp" >More</a></li>
                         

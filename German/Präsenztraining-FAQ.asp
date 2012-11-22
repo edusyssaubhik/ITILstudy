@@ -167,7 +167,7 @@ Service Strategy, Service Design, Service Transition, Service Operation und Cont
                               <li>Es befähigt die IT eines Unternehmens, die interne Leistung und die Service-Bereitstellung zu messen und zu verbessern.</li>
                               <li>Es verbessert die Kommunikation und den Informationsfluss zwischen der IT und den Fachabteilungen des Unternehmens. Die Rollen und Verantwortlichkeiten für das IT Service Management werden identifiziert.</li>
                               <li>Es befähigt die IT, sich bei neuen Geschäftsmöglichkeiten und  Herausforderungen besser anzupassen.</li>
-                              <li>Es verbessert die Beziehung zwischen der IT und demr Geschäftsführung und –somit erzeugt Vertrauen..</li>
+                              <li>Es verbessert die Beziehung zwischen der IT und der Geschäftsführung und – es somit erzeugt Vertrauen.</li>
                             </ul>
                            
                           </div>
@@ -288,7 +288,7 @@ Service Strategy, Service Design, Service Transition, Service Operation und Cont
                       <div class="faqItemContent">
                         <div class="outerFAQContainer">
                           <div class="innerFAQContainer">
-                            <p>Die maximale Teilnehmeranzahl beträgt 15 Personen.</p>
+                            <p>Die maximale Teilnehmerzahl beträgt 15 Personen.</p>
                           </div>
                         </div>
                         <div class="outerFAQContainerBottom">&nbsp;</div>
@@ -374,7 +374,7 @@ Service Strategy, Service Design, Service Transition, Service Operation und Cont
                       <div class="faqItemContent">
                         <div class="outerFAQContainer">
                           <div class="innerFAQContainer">
-                            <p>Der ITIL Foundation Kurs von ITILstudy wurde an das aktualisierte Lehrangebotn „ITIL 2011 Edition“ angepasst. Auch unsere Trainer haben Ihren Wissensstand gemäß desm neuen Lehrangebot  aktualisiert.</p>
+                            <p>Der ITIL Foundation Kurs von ITILstudy wurde an das aktualisierte Lehrangebot „ITIL 2011 Edition“ angepasst. Auch unsere Trainer haben Ihren Wissensstand gemäß dem neuen Lehrangebot  aktualisiert.</p>
                             
                           </div>
                         </div>
@@ -452,7 +452,7 @@ Service Strategy, Service Design, Service Transition, Service Operation und Cont
                       <div class="faqItemContent">
                         <div class="outerFAQContainer">
                           <div class="innerFAQContainer">
-						  <p>Weitere Informationen über den ITIL Foundation- Lehrplan finden Sie <a href="http://itilstudy.com/classroomTraining.asp">hier</a>.</p>
+						  <p>Weitere Informationen über den ITIL Foundation- Lehrplan finden Sie <a href="/german/Präsenztraining.asp">hier</a>.</p>
                           
                           </div>
                         </div>
@@ -522,7 +522,7 @@ Service Strategy, Service Design, Service Transition, Service Operation und Cont
                       <div class="faqItemContent">
                         <div class="outerFAQContainer">
                           <div class="innerFAQContainer">
-                            <p>Wenn Sie die ITIL Foundation- Prüfung bei ITILstudy abgelegt haben, leiten wir das Zertifikat an Sie weiter, sobald wir es von APMG erhalten haben. Dies dauert in der Regel ca. 3 Wochen. Bitte beachten Sie, dass das Zertifikat immer an die zugelassene Trainingsorganisation (ATO) geschickt wird, bei der die Prüfung abgelegt wurde. Sollten Sie Ihr Zertifikat nicht innerhalb von 3 Wochen erhalten haben, kontaktieren Sie uns bitte: <a href="mailto:marketing@ITILstudy.com" target="_blank">marketing@ITILstudy.com</a></p>
+                            <p>Wenn Sie die ITIL Foundation- Prüfung bei ITILstudy abgelegt haben, leiten wir das Zertifikat an Sie weiter, sobald wir es von CSME erhalten haben. Dies dauert in der Regel ca. 3 Wochen. Bitte beachten Sie, dass das Zertifikat immer an die zugelassene Trainingsorganisation (ATO) geschickt wird, bei der die Prüfung abgelegt wurde. Sollten Sie Ihr Zertifikat nicht innerhalb von 3 Wochen erhalten haben, kontaktieren Sie uns bitte: <a href="mailto:marketing@ITILstudy.com" target="_blank">marketing@ITILstudy.com</a></p>
                           </div>
                         </div>
                         <div class="outerFAQContainerBottom">&nbsp;</div>
@@ -650,7 +650,7 @@ Service Strategy, Service Design, Service Transition, Service Operation und Cont
                         <div class="outerFAQContainer">
                           <div class="innerFAQContainer">
 								
-                            <p>Die Kursgebühr beinhaltet das komplette Lernmaterial, die Trainergebühr sowie Erfrischungen während der Trainingspausen ain den Seminartagen.</p>
+                            <p>Die Kursgebühr beinhaltet das komplette Lernmaterial, die Trainergebühr sowie Erfrischungen während der Trainingspausen an den Seminartagen.</p>
                           </div>
                         </div>
                         <div class="outerFAQContainerBottom">&nbsp;</div>

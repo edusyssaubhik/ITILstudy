@@ -57,11 +57,11 @@ Set objRs = Server.CreateObject("ADODB.Recordset")
               <ul type="1">
               
               <li>
-                <span class="SubHeader">Hervorragende Trainer: </span>
-                ITILstudy hat erfahrene und professionelle Trainer, die eine APMG-Zulassung nachweisen können. Sie verfügen über umfassende Branchenerfahrung bzw. Erfahrungen im IT Service Management und haben ein umfangreiches ‚„Train-the-trainer’-“ Programm absolviert, das sowohl die spezifische ITILstudy Trainingsmethode umfasst als auch den auf Unterricht mit Erwachsenen ausgerichtet ist, um  den Teilnehmern ein ansprechendes Training zu bieten. <a href="/german/Trainer.asp">Mehr</a>
+                <span class="SubHeader">Hervorragende Trainer:  </span>
+                 ITILstudy hat erfahrene und professionelle Trainer, die eine APMG-Zulassung nachweisen können. Sie verfügen über umfassende Branchenerfahrung bzw. Erfahrungen im IT Service Management und haben ein umfangreiches ‚“Train-the-trainer“-Programm absolviert, das sowohl die spezifische ITILstudy Trainingsmethode umfasst als auch den auf Unterricht mit Erwachsenen ausgerichtet ist, um  den Teilnehmern ein ansprechendes Training zu bieten. <a href="/german/Trainer.asp">Mehr</a>
                 </li>
-                   <li>  <span class="SubHeader">Wissenschaftlich fundierte effiziente und ergebnisorientiere Lehrmethode: </span>
-             Die ITILstudy Präsenztrainings wurden von durch die ITIL Foundation zertifizierten Experten entwickelt und, getestet und von APMG genehmigt. Um die Lernerfahrung zu verbessern und die Aufnahmefähigkeit  zu fördern, nutzen unsere Kurse die drei primären Lernstilen, d. h. eine Kombination aus visuellem (Präsentationen), auditivem (verbale Anweisungen, Interaktionen usw.) und kinästhetischem (do-it-yourself) Lernstil. Verschiedene interaktive Methoden wie z.B.  erfahrungsbezogenes Lernen, Kleingruppen, praktische Übungen, Trainee-Runde, Wiederholungen, regelmäßige Bewertung und Fallbeispiele werden ausgiebig verwendet. </li>
+                   <li>  <span class="SubHeader"> Wissenschaftlich fundierte effiziente und ergebnisorientiere Lehrmethode:</span>
+             Die ITILstudy Präsenztrainings wurden von durch die ITIL Foundation zertifizierten Experten entwickelt und getestet und von APMG genehmigt. Um die Lernerfahrung zu verbessern und die Aufnahmefähigkeit zu fördern, nutzen unsere Kurse die drei primären Lernstile, d. h. eine Kombination aus visuellem (Präsentationen), auditivem (verbale Anweisungen, Interaktionen usw.) und kinästhetischem (do-it-yourself) Lernstil. Verschiedene interaktive Methoden wie z.B.  erfahrungsbezogenes Lernen, Kleingruppen, praktische Übungen, Wiederholungen, regelmäßige Bewertung und Fallbeispiele werden ausgiebig verwendet. </li>
                  
               
               <li>
@@ -76,7 +76,7 @@ Set objRs = Server.CreateObject("ADODB.Recordset")
                  </li>
               <li>
               
-                <span class="SubHeader">€ 100 Frühbucher-Ermäßigung: </span> Sie erhalten € xxx Frühbucher-Ermäßigung, wenn Sie den Kurs 12 Tage vor Beginn des Kurses buchen. Abzüglich der Ermäßigung beträgt die Kursgebühr € 890 (zzgl. MwSt.). <a href="/german/ITIL-Kurs.asp">Mehr </a>
+                <span class="SubHeader">€ 100 Frühbucher-Ermäßigung: </span> Sie erhalten € 890 Frühbucher-Ermäßigung, wenn Sie den Kurs 12 Tage vor Beginn des Kurses buchen. Abzüglich der Ermäßigung beträgt die Kursgebühr € 890 (zzgl. MwSt.). <a href="/german/ITIL-Kurs.asp">Mehr </a>
    
                 </li>
                 
@@ -84,9 +84,9 @@ Set objRs = Server.CreateObject("ADODB.Recordset")
                 <span class="SubHeader">Zugang zu ITILstudy Vorbereitungsmaterial:</span>
              Die Teilnehmer erhalten Zugang zu unserem Kurs-Vorbereitungsmaterial, gleich nach Erhalt der Bezahlung.</li>
              
-              <li> <span class="SubHeader">Kostenlose Six Sigma Green Belt- oder Human Resource Development- Zertifizierung</span>
+              <li> <span class="SubHeader">Kostenlose Risk Management -Zertifizierung:</span>
 	 
-Kostenlose Six Sigma Green Belt- oder Human Resource Development- Zertifizierung: Die Teilnehmer von ITILstudy Kursen erhalten kostenlosen Zugang zum Onlinekurs Six Sigma Green Belt (im Wert von $ 250), angeboten von <a href="http://www.6sigmastudy.com" target="_blank">http://www.6sigmastudy.com</a> oder zum  Onlinekurs Human Resource Development (im Wert von $ 250), angeboten von <a href="http://www.hrdstudy.com" target="_blank">http://www.hrdstudy.com</a>. 
+Die Teilnehmer von ITILstudy Kursen erhalten kostenlosen Zugang zum Onlinekurs Risk Management (im Wert von $ 300), angeboten von <a href="http://www.RMstudy.com">www.RMstudy.com</a>. 
    </li>
                
                  <li> <span class="SubHeader">Ausgezeichnete Lernumgebung: </span>

@@ -1,4 +1,5 @@
 <!--#include virtual="/includes/displayFormat.asp"-->
+
 <%
 	'---------------------------------------------------------------'
 	'Written By : Praveen'
@@ -55,7 +56,7 @@
 	'Constructing Page and keeping in  string.
 	'==================================================Page==================================================================== 
 	
-	strEnding  = "<tr id=""courses"" style=""display:block;""><td colspan=""8""><table border=""0"" cellspacing=""0"" cellpadding=""0""><tr> <td class=""TableRowOdd"" width=""100px""><span class=""HeaderLarge"">Location</span></td><td class=""TableRowOdd"" width=""100px""><span class=""HeaderLarge"">Dates</span></td><td class=""TableRowOdd"" width=""150px""><span class=""HeaderLarge"">Timing</span></td><td class=""TableRowOdd"" width=""140px""><span class=""HeaderLarge"">Price</span></td><td class=""TableRowOdd"" width=""100px"">&nbsp;</td></tr>"
+	strEnding  = "<tr id=""courses"" style=""display:block;""><td colspan=""8""><table border=""0"" cellspacing=""0"" cellpadding=""0""><tr> <td class=""TableRowOdd"" width=""100px""><span class=""HeaderLarge"">Ort</span></td><td class=""TableRowOdd"" width=""100px""><span class=""HeaderLarge"">Datum</span></td><td class=""TableRowOdd"" width=""150px""><span class=""HeaderLarge"">Kurssprache</span></td><td class=""TableRowOdd"" width=""140px""><span class=""HeaderLarge"">Preis</span></td><td class=""TableRowOdd"" width=""100px"">&nbsp;</td></tr>"
 	
 	'Table retriving from database.
 	'initialising icount.  
@@ -82,13 +83,14 @@
 					 
 	End If
 	
-	
+	response.write strQuery2
 	If generate <> "" Then
 	Rs.Open strQuery2,Conn
 	Else
 	Rs.Open strQuery2,ConnObj
 	End If
-	
+
+
 	If Not Rs.EOF Then
 	arrAllCourses = Rs.getrows
 	Session("arrAllCourses") = arrAllCourses
@@ -129,7 +131,8 @@
 	If arrAllCourses(17,rowCounter) = "Corporate" Then
 	strEnding= strEnding &""& Trim(arrAllCourses(1,rowCounter)) &""
 	Else
-	strEnding= strEnding &"<a href=""Schauplatz.asp?courseID="& arrAllCourses(0,rowCounter) &""" onClick=""return popitup('Schauplatz.asp?courseID="& arrAllCourses(0,rowCounter) &"')"">"& Trim(arrAllCourses(1,rowCounter)) &""
+    myCity = Split(arrAllCourses(1,rowCounter),"(")
+	strEnding= strEnding &"<a href=""Schauplatz.asp?courseID="& arrAllCourses(0,rowCounter) &""" onClick=""return popitup('Schauplatz.asp?courseID="& arrAllCourses(0,rowCounter) &"')"">"& Trim(myCity) &""
 	End If 
 	
 	Else
@@ -149,7 +152,7 @@
 	If arrAllCourses(18,rowCounter) = "Canada" Then
 	strEnding= strEnding &"(Canada)"
 	End If 
-	
+	response.write arrAllCourses(18,rowCounter)
 	'Date'
 	
 	strEnding= strEnding &"<br></td><td class="& bgColor &"> "& DAY(arrAllCourses(2,rowCounter)) & " " & MonthName(Month(arrAllCourses(2,rowCounter)),3) & " "  & YEAR(arrAllCourses(2,rowCounter))&" to <br /> "& DAY(arrAllCourses(3,rowCounter)) & " " & MonthName(Month(arrAllCourses(3,rowCounter)),3) & " "  & YEAR(arrAllCourses(3,rowCounter))&"</td><td class="& bgColor &" width=""23%"">"& arrAllCourses(4,rowCounter) &":"& arrAllCourses(5,rowCounter) &"&nbsp;"& arrAllCourses(6,rowCounter) &" - "& arrAllCourses(7,rowCounter) &":"& arrAllCourses(8,rowCounter) &"&nbsp;"& arrAllCourses(9,rowCounter) &"</td>"
@@ -227,7 +230,7 @@ Else
 	
 	If arrAllCourses(16,rowCounter) <> "Full" Then
 	
-	strEnding= strEnding &"<td class="& bgColor &"><div align=""center""><form action=""/German/registrierenKlasse.asp"" method=""post""><input type=""hidden"" name=""SelCourseID"" value="& arrAllCourses(0,rowCounter) &" /><input type=""submit"" name=""TypeCourse"" value=""Book"" class=""ButtonSmall""/></form></div></td>"
+	strEnding= strEnding &"<td class="& bgColor &"><div align=""center""><form action=""/German/registrierenKlasse.asp"" method=""post""><input type=""hidden"" name=""SelCourseID"" value="& arrAllCourses(0,rowCounter) &" /><input type=""submit"" name=""TypeCourse"" value=""Buchen"" class=""ButtonSmall""/></form></div></td>"
 	
 	Else
 	strEnding= strEnding &"<td class="& bgColor &"><div align=""center""><img src=""/images/back/full.gif"" /></div></td>"
@@ -282,9 +285,9 @@ Else
 	'Creating a text file using file systm object.
 	
 	
-	Set tsObject = fsoObject.CreateTextFile("E:\vhosts\ITILstudy.com\httpdocs\dateslocation\ITILstudy-GermanLang-Classes-ITILstudy-Training-"&Session("CountryOrigin")&".txt")
+	'Set tsObject = fsoObject.CreateTextFile("E:\vhosts\ITILstudy.com\httpdocs\dateslocation\ITILstudy-GermanLang-Classes-ITILstudy-Training-"&Session("CountryOrigin")&".txt")
 	
-	'Set tsObject = fsoObject.CreateTextFile("C:\inetpub\wwwroot\dateslocation\ITILstudy-Classes-ITILstudy-Training-"&Session("CountryOrigin")&".txt")
+	Set tsObject = fsoObject.CreateTextFile("C:\GITHUB\ITILstudy\dateslocation\ITILstudy-Classes-ITILstudy-Training-"&Session("CountryOrigin")&".txt")
 	
 	
 	'Witing the string containing question format into an asp file using file system object.'

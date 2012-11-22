@@ -1,4 +1,4 @@
-<%@LANGUAGE="VBSCRIPT" CODEPAGE="65001"%>
+﻿<%@LANGUAGE="VBSCRIPT" CODEPAGE="65001"%>
 <!--#include virtual="/includes/connection.asp"-->
 
 
@@ -23,10 +23,11 @@ newWindow = window.open('emailus.asp', 'myWindow', 'toolbar=0,location=0,directo
     <td class="general-body"><ol type="1">
           <OL>
           
-            <LI><span class="SubHeader">Geld-zurück-Garantie:</span> Gewährleistet, dass Sie die ITIL Foundation Prüfung bestehen oder wir Ihnen die Gebühr rückerstatten.
+            <LI><span class="SubHeader"> Geldzurückgarantie:</span> Gewährleistet, dass Sie die ITIL Foundation-Prüfung bestehen oder wir Ihnen die Gebühr zurückerstatten.
             <a href="/german/Geld-zurück-Garantie.asp">Mehr</a></LI>
            
-            <LI> <span class="SubHeader">Payment towards enrolment: </span> Volle Bezahlung der Anmeldegebühr ist fällig am Ende der Registrierung. Bezahlung kann erfolgen durch:<br /><br />Kreditkarte. Zur Zeit akzeptieren wir Kreditkarten Bezahlungen, die über Google Checkout stattfinden.<br/><br/>Oder<br/><br/>
+            <LI> <span class="SubHeader">Bezahlung vor Kursanmeldung: </span> Volle Bezahlung der Anmeldegebühr ist fällig am Ende der Registrierung. Bezahlung kann erfolgen durch Kreditkarte. Zur Zeit akzeptieren wir Kreditkarten-Zahlungen, die über Paypal durchgeführt werden.
+ <br/><br/>Oder<br/><br/>
 
 Banküberweisung :<br/><br/>
 
@@ -40,7 +41,7 @@ Routing Number: 052001633 (paper & electronic) / 026009593 (wires) <br/>
          
         <li><span class="SubHeader">Stornierungsregelung (falls der Kurs von ITILstudy storniert wird):</span><br /><br />
 
-Wir können Kurse aufgrund geringer Anmeldungen, Krankheit des Trainers oder force-majeure Situationen (wie Überschwemmungen, Erdbeben, politische Instabilität usw.) stornieren. In diesem Fall werden wir uns bemühen, den stornierten Kurs neu zu terminieren. Sie können die von Ihnen bereits bezahlte Kursgebühr selbstverständlich auf einen zukünftigen Kurs übertragen. Sollte der Kurs seitens ITILstudy storniert werden, haben Sie auch die Möglichkeit, den vollen Betrag rückerstattet zu bekommen.
+Wir können Kurse aufgrund zu geringer Anmeldungen, Krankheit des Trainers oder von Situation durch höhere Gewalt (wie Überschwemmungen, Erdbeben, politische Instabilität usw.) stornieren. In diesem Fall werden wir uns bemühen, einen alternativen Kurstermin anzubieten. Sie können die von Ihnen bereits bezahlte Kursgebühr ohne weiteres auf einen zukünftigen Kurs übertragen. Sollte der Kurs seitens ITILstudy storniert werden, haben Sie auch die Möglichkeit, den vollen Betrag zurückerstattet zu bekommen.
  </li>
 
 
@@ -50,38 +51,39 @@ Wir können Kurse aufgrund geringer Anmeldungen, Krankheit des Trainers oder for
 
           <ul type="square">
             <br />
-            <li>Stornierung mehr als 12 Tage vor Kursbeginn: Stornierungsgebühr beträgt 20% der Kursgebühr. (Dies ist die minimalste Stornierungsgebühr, die wir berechnen).
+            <li>Stornierung mehr als 12 Tage vor Kursbeginn: Stornierungsgebühr beträgt 20% der Kursgebühr. 
            </li>
-            <li>Stornierung 5 - 12 Tage vor Kursbeginn: Stornierungsgebühr beträgt 40% der Kursgebühr..
+            <li> Stornierung 5 - 12 Tage vor Kursbeginn: Stornierungsgebühr beträgt 40% der Kursgebühr.
              </li>
             <li>Stornierung innerhalb von 5 Tagen vor Kursbeginn: keine Rückerstattung möglich.</li>
 			
           </ul>
-        Bitte beachten Sie, dass wir eine Stornierungsgebühr berechnen, um unsere fixen Kosten abzudecken, wie Hotelbuchungen, Trainerraten usw. Alle Rückerstattungen an die Teilnehmer werden innerhalb von 30 Tage nach Erhalt der Stornierungsanfrage vollzogen. </li>
+        Bitte beachten Sie, dass wir eine Stornierungsgebühr berechnen, um unsere entstandenen Kosten abzudecken wie Hotelbuchungen, Trainerkosten usw. Alle Rückerstattungen an die Teilnehmer werden innerhalb von 30 Tage nach Erhalt der Stornierungsanfrage vollzogen. </li>
         
         
-        <li><span class="SubHeader">Kursumbuchung: </span>Sollte sich ein Teilnehmer nach bereits getätigter Anmeldung für eine Umbuchung entscheiden, berechnen wir folgende Kursumbuchungsgebühr (vorausgesetzt der zukünftige Kurs hat Verfügbarkeit):
+        <li><span class="SubHeader">Kursumbuchung:</span>Sollte sich der Teilnehmer nach bereits erfolgter Anmeldung für eine Umbuchung entscheiden, berechnen wir folgende Kursumbuchungsgebühr (vorausgesetzt der neue Kurs ist verfügbar):
 
 
           <ul type="square">
             <br>
-            <li>Umbuchung mehr als 12 Tage vor Kursbeginn: Zusätzliche Umbuchungsgebühr von 15% der Kursgebühr. (Dies ist die minimalste Umbuchungsgebühr, die wir berechnen, sollte ein Teilnehmer umbuchen.)</li>
+            <li> Umbuchung mehr als 12 Tage vor Kursbeginn: Zusätzliche Umbuchungsgebühr von 15% der Kursgebühr. </li>
+              <li>Umbuchung 5 - 12 Tage vor Kursbeginn: Zusätzliche Umbuchungsgebühr von 30% der Kursgebühr..</li>
 
-            <li>Umbuchung 5 - 12 Tage vor Kursbeginn: Zusätzliche Umbuchungsgebühr von 30% der Kursgebühr wird berechnet.</li>
-			<li>Umbuchung innerhalb von 5 Tagen vor Kursbeginn: Zusätzliche Umbuchungsgebühr von 40% der Kursgebühr wir berechnet.</li>
+            <li> Umbuchung innerhalb von 5 Tagen vor Kursbeginn: Zusätzliche Umbuchungsgebühr von 40% der Kursgebühr.</li>
+			
           </ul>
-      Bitte beachten Sie, dass die zusätzlichen Umbuchungsgebühren innerhalb von 7 Tagen nach Erhalt der Kursumbuchungsanfrage an VMEdu, Inc. bezahlt werden müssen.
+      Bitte beachten Sie, dass die zusätzlichen Umbuchungsgebühren innerhalb von 7 Tagen nach Erhalt der Kursumbuchungsanfrage an VMEdu, Inc. gezahlt werden müssen.
          </li>
          
          
-        <li><span class="SubHeader">Proprietäre Verwendung von ITILstudy der Studienmaterial:</span> Wir bieten Sie Studie Führer und anderem Material, die proprietäre Eigenschaft des ITILstudy sind. Daher kann kein Teil von Kursmaterialien, in einem Datenempfangssystem gespeichert oder übertragen werden, in irgendeiner Form oder mit irgendwelchen Mitteln, elektronische, mechanische, Fotokopieren, aufzeichnen oder anderweitig oder in jede Sprache übersetzt ohne unsere vorherige schriftliche Genehmigung reproduziert werden. Eine solche Aktivität stellt eine Verletzung der copyright-Gesetze und des CSME Code of Ethics und wird CSME gemeldet werden.</li>
+        <li><span class="SubHeader">Proprietäre Verwendung von ITILstudy Studie Material:</span> Wir bieten Ihnen Studie Führer und anderes Material, das Eigentum von ITILstudy sind. Daher darf kein Teil aller Kursmaterialien vervielfältigt, in einem Archivsystem gespeichert oder übertragen in irgendeiner Form oder mit irgendwelchen Mitteln, elektronisch, mechanisch, als Fotokopie, Aufzeichnung oder auf andere Weise oder in andere Sprachen übersetzt, ohne unsere vorherige schriftliche Zustimmung. Eine solche Aktivität stellt eine Verletzung des Urheberrechts und der APMG Ethik-Kodex und wird APMG gemeldet werden.</li>
 		
-		<li>Die Kursgebühr des Präsenztrainings deckt alles Kosten hinsichtlich der ITIL® Foundation Prüfung, der  ITILstudy Schulungsunterlagen, des Trainings sowie des Mittagessens und der Getränke in den Pausen währen der 2 Trainingstage.</li>
+		<li>Die Kursgebühr des Präsenztrainings deckt alle Kosten für die ITIL<sup>&reg;</sup> Foundation-Prüfung, die  ITILstudy Schulungsunterlagen und das Trainings ab sowie di Verpflegung (Mittagessen und Getränke in den Pausen) während der 2 Trainingstage.</li>
 	
 	
 		
-		<li>Die Kursgebühr beinhaltet nicht die Kosten der Teilnehmer hinsichtlich der Anreise  und Übernachtung.</li>
-		<li>Die Information über Ihre Kursanmeldung kann an Mitarbeiter aus Ihrem Unternehmen weitergegeben werden, sollten diese nach Referenzen über unseren Kurs anfragen.</li>
+		<li>Die Kursgebühr beinhaltet nicht die Kosten der Teilnehmer für Anreise und Übernachtung.</li>
+		<li>Information über Ihre Kursanmeldung können Sie an Kollegen/Mitarbeiter in Ihrem Unternehmen weitergeben, sofern diese an Referenzen über unseren Kurs interessiert sind.</li>
       
       </ol></td>
   </tr>

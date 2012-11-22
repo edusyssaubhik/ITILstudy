@@ -10,13 +10,14 @@
           <tr>
             <td width="2%" class="Header">&nbsp;</td>
             <td width="25%" class="PageTitle">&nbsp;</td>
-            <td width="73%" class="breadcrumb">&nbsp; </td>
+            <td width="73%" class="breadcrumb">Home &raquo; METHODOLOGIE &raquo; Überonline Foundation </td>
           </tr>
           <tr>
             <!--#include virtual="/includes/innerLeftMenu-German.asp"-->
 <td width="73%" rowspan="4" background="/images/back/left_line.jpg" class="general-body"><div style="margin-top:-12px; width:97%;">
                 <!-- Content Start From Here-->
-                <p class="Header">ITIL<sup>&reg;</sup> Foundation Kurs</p>
+           
+    <p class="Header">ITIL<sup>&reg;</sup> Foundation Kurs</p>
                 
                 <p>ITIL ist der global am weitesten verbreitete Ansatz für IT Service Management. ITIL bietet eine zusammenhängende Sammlung von Best Practices aus dem internationalen öffentlichen und privaten Sektor.<br><br>IT Service Management (ITSM) zeichnet sich durch seinen Best Practice Ansatz aus. Da ITSM sowohl von der Technologie als auch von der Fülle der organisatorischen Umgebungen getrieben wird, befindet es sich im Zustand ständiger Weiterentwicklung. Best Practice, basierend auf kompetenter Beratung und Input von ITIL-Anwendern, ist sowohl aktuell als auch praktisch, und kombiniert die neusten Ansichten mit  gesundem Menschenverstand.</p>
                 <p class="Header">Kursbeschreibung</p>

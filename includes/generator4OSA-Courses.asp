@@ -265,10 +265,10 @@ Else
 	'Set tsObject = fsoObject.CreateTextFile("E:\vhosts\ITILstudy.com\httpdocs\dateslocation\ITILstudy-Classes-ITILstudy-Training-OSA-"&Session("CountryOrigin")&".txt")
 	
 	Set tsoObject = fsoObject.CreateTextFile("C:\GitHub\ITILstudy\dateslocation\ITILstudy-Classes-ITILstudy-Training-OSA-"&Session("CountryOrigin")&".txt")
-
+   
 	
 	'Witing the string containing question format into an asp file using file system object.'
-	tsObject.Write strEnding
+	tsoObject.Write strEnding
 
 	strEnding  =  ""
 	
