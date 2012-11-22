@@ -69,7 +69,7 @@
                   </tr>
 
                <tr><td colspan="2"><hr style="border:1px solid #CCCCCC;"></td></tr>
-                  <tr><td colspan="2"><a name="Ulrich Diller"></a><span class="Header">Ulrich Diller (PRINCE2, ITIL)</span></td></tr>
+                  <tr><td colspan="2"><a name="Ulrich Diller"></a><span class="Header">Ulrich Driller (PRINCE2, ITIL)</span></td></tr>
                   <tr>
                     <td><p align="justify">Based on theory (Diploma in Mathematics and  postgraduate studies in Economics plus certified classes in PRINCE2, ITIL and others) I practiced throughout my vita successfully from Systems Engineer via Sales Support Engineer, Product Manager, Account Executive, Sales Manager until currently Consultant for Process-, Service- and Project-Management. I supported companies in the  IT, banking, insurance and logistic industries.<br /><br />Besides fun and enthusiasm for my jobs, I enjoy recreation with motor biking, (mountain-hiking, and sports like soccer, tennis, bike, gym and skiing).</p></td>
                     <td><p><img src="/images/faculty/Ulrich Diller.jpg" width="125px" height="145px" border="0"></p></td>

@@ -9,7 +9,7 @@
 %>
 
 <script language="JavaScript" type="text/javascript" src="/js/tableH.js"></script>
-<script language="JavaScript" type="text/javascript" src="/js/courses-German.js"></script>
+<script language="JavaScript" type="text/javascript" src="/js/courses.js"></script>
 <script type="text/javascript" src="/js/cities_combo.js"></script>
 <script language="javascript" type="text/javascript">
 <!--
@@ -305,7 +305,8 @@ else if (ns6||ie4) ld.display="none";
                        <table border="0" cellpadding="0" cellspacing="0" width="100%" align="center">
                        <tr><td> <br>
                         
-				   <span class="general-bodyBold"> Bitte beachten Sie: </span><font color="red"><b>die Preise verstehen sich inklusive Prüfungsgebühr, der 100% Geldzurückgarantie und einem kostenlosen Risk Management (im Wert von $ 300).</b></font>
+				   <span class="general-bodyBold"> Bitte beachten Sie: </span><font color="red"><b>die Preise verstehen sich inklusive Prüfungsgebühr, der 100% Geldzurückgarantie und einem kostenlosen Risk Management (im Wert von $ 300).</b></font><br /><br />
+                           <b>Class Timings :</b> 08:00 AM to 06:00 PM
                    </td>
                    <td> <br><div align="right"><span id="loader" style="bottom: 0px; right: 500px; top: 610px; left: 570px; width:25%; height: 100px; margin:auto;  background-repeat:repeat; background-image: url(/images/buttons/loading-bg.png); display:block; position:absolute; vertical-align:middle; text-align:center; font-family:Verdana, Geneva, sans-serif; color:#ffffff"><img src="/images/buttons/loading.gif" Width="40" align="middle" height="30" style="padding-top:30px;" /><br><br><font color="#FFFFFF">Loading...</font></span><a href="/German/Geschäftsbedingungen.asp" target="_blank">Geschäftsbedingungen</a></div></td></tr></table>
 				   
@@ -323,8 +324,8 @@ else if (ns6||ie4) ld.display="none";
 					  
 					  'Function For Displaying Question Format'
 					 
-					Set tsoObject = fsoObject.OpenTextFile("C:\GitHUB\ITILStudy\dateslocation\ITILstudy-Classes-ITILstudy-Training-"&Session("CountryOrigin")&".txt")
-					'Set tsoObject = fsoObject.OpenTextFile("E:\vhosts\ITILstudy.com\httpdocs\dateslocation\ITILstudy-GermanLang-Classes-ITILstudy-Training-"&Session("CountryOrigin")&".txt")
+					'Set tsoObject = fsoObject.OpenTextFile("C:\GitHUB\ITILStudy\dateslocation\ITILstudy-Classes-ITILstudy-Training-"&Session("CountryOrigin")&".txt")
+					Set tsoObject = fsoObject.OpenTextFile("E:\vhosts\ITILstudy.com\httpdocs\dateslocation\ITILstudy-GermanLang-Classes-ITILstudy-Training-"&Session("CountryOrigin")&".txt")
  
 					  StrMain = tsoObject.ReadAll
 					  

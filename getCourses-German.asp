@@ -2,6 +2,7 @@
 <!--#include virtual="/includes/connection.asp"-->
 <!--#include virtual="/includes/displayFormat.asp"-->
 <%
+
 'Declare the local variable'
 Dim objRs, strCourses
 Dim strCity, strDate, strStartDate,strEndDate 
@@ -14,27 +15,7 @@ Set objRs=Server.CreateObject("ADODB.Recordset")
 'Retriving the values from dates_location.asp page through AJAX'
 strCity = Request.QueryString("city")
 strDate = Request.QueryString("date")
-strCountry = Request.QueryString("country")
 
-If Request.QueryString("country") <> "" Then
-
-	strCountry = Request.QueryString("country")
-
-ElseIf Request.QueryString("country") = "" Then
-
-If (Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada") Then
-	
-	Session("Country1") = Session("Country1")
-	
-Else
-	
-	Session("Country1") = Session("CountryOrigin")
-	
-End If
-
-	Session("Country1") = Session("Country1") 
-
-End If
 
 'Price Format Display Functions'
 Currency_Format_Front = CurrencyFormat_Front(Session("CountryOrigin"))
@@ -49,11 +30,16 @@ If strCity <> "" Then
 	If strCity <> "All" Then
 	strCourses = strCourses & "course.city='"&strCity&"' And  city.city = '"&strCity&"' And course.country = '"& Session("Country1") &"' And city.country = '"& Session("Country1") &"' And "
 	ElseIf strCity = "All" Then
-	strCourses = strCourses & "course.city = city.city And course.country = '"& Session("CountryOrigin") &"' And "
+	strCourses = strCourses & "course.city = city.city And course.country = '"& Session("Country1") &"' AND "
 	End If
+	
+	
 	strCourses = strCourses & "course.startdate BETWEEN '"&Now() - 1&"' AND DATEADD(day,180,'"&Now()&"') AND course.status <> 'Cancelled' ORDER BY course.startdate"
 
 End If
+
+
+
 
 'If user select dates that will come here'
 If strDate <> "" Then
@@ -82,11 +68,6 @@ If strDate <> "" Then
 
 End If
 
-If strCountry <> "" Then
-
-	strCourses="SELECT course.courseid,course.city,course.startdate,course.enddate, course.starthour,course.startminute,course.startsession,course.endhour,course.endminute,course.endsession,course.pricewithouttax,course.tax,course.pricewithtax,course.applicabledays,course.afterEBdiscountwithouttax,course.afterEBdiscountwithtax,course.status,course.coursetype,city.state_code, course.country FROM ITIL_course course, ITIL_city city WHERE course.city = city.city And course.startdate BETWEEN '"&Now() - 1&"' AND DATEADD(day,180,'"&Now()&"') And course.country = '"&strCountry&"' And city.country = '"&strCountry&"' AND course.status <> 'Cancelled' ORDER BY course.startdate"
-
-End If
 
 objRs.open strCourses,ConnObj
 
@@ -101,7 +82,7 @@ Else
 End If
 
 'Creating a table displaying the values in the dates_location.asp page'
-				  
+
 Response.Write("<table width=""100%"" border=""0"" cellspacing=""0"" cellpadding=""0"" align=""center""><tr><td class=""TableRowOdd"" width=""100px""><span class=""HeaderLarge"">Ort</span></td><td class=""TableRowOdd"" width=""100px""><span class=""HeaderLarge"">Datum</span></td><td class=""TableRowOdd"" width=""150px""><span class=""HeaderLarge"">Kurssprache</span></td><td class=""TableRowOdd"" width=""140px""><span class=""HeaderLarge"">Preis</span></td><td class=""TableRowOdd"" width=""100px"">&nbsp;</td></tr>")
 
 	iCount = 0
@@ -124,17 +105,10 @@ Response.Write("<table width=""100%"" border=""0"" cellspacing=""0"" cellpadding
 			If arrAllCourses(17,rowCounter) = "Corporate" Then
 			str = "<tr onMouseOver=""javascript:highlightTableRowVersionA(this, '#FFFFCC');""><td class="&bgColor &">" & Trim(arrAllCourses(1,rowCounter))
 			Else
-             myCity = Split(arrAllCourses(1,rowCounter),"(")
-			str = "<tr onMouseOver=""javascript:highlightTableRowVersionA(this, '#FFFFCC');""><td class="&bgColor &"><a href=venue.asp?courseID="&arrAllCourses(0,rowCounter) &" onClick=""return popitup('venue.asp?courseID="&arrAllCourses(0,rowCounter) &"')"">" & myCity(0)'Trim(arrAllCourses(1,rowCounter))
+            myCity = Split(arrAllCourses(1,rowCounter),"(")
+			str = "<tr onMouseOver=""javascript:highlightTableRowVersionA(this, '#FFFFCC');""><td class="&bgColor &"><a href=venue.asp?courseID="&arrAllCourses(0,rowCounter) &" onClick=""return popitup('venue.asp?courseID="&arrAllCourses(0,rowCounter) &"')"">" & Trim(myCity(0)) ' Trim(arrAllCourses(1,rowCounter))
 			End If 
-		 If Session("CountryOrigin") <> "United Kingdom" Then 
-			If arrAllCourses(18,rowCounter) <> "" Then
-			str = str & ", "& arrAllCourses(18,rowCounter) 
-			End If
-			'If arrAllCourses(18,rowCounter) = "TX" Then
-'			str = str & "<sup><font color=""red""><b>**</b></font></sup>"
-'			End If
-			End If
+
 			If arrAllCourses(17,rowCounter) = "Corporate" Then
 			str = str & "<br>"
 			Else
@@ -144,11 +118,13 @@ Response.Write("<table width=""100%"" border=""0"" cellspacing=""0"" cellpadding
 			str = str & "</td><td class="&bgColor &">" & DAY(arrAllCourses(2,rowCounter)) & " " & MonthName(Month(arrAllCourses(2,rowCounter)),3) & " "  & YEAR(arrAllCourses(2,rowCounter)) & " to  <br /> "& DAY(arrAllCourses(3,rowCounter)) & " " & MonthName(Month(arrAllCourses(3,rowCounter)),3) & " "  & YEAR(arrAllCourses(3,rowCounter))
 			str = str & "</td>"
 			'End If
-             myLanguage = Split(arrAllCourses(1,rowCounter),"(")
-            mylanguage(1) = Replace(mylanguage(1),")","")
+			    myLanguage = Split(arrAllCourses(1,rowCounter),"(")
+                mylanguage(1) = Replace(mylanguage(1),")","")
+
             str = str & "<td class="& bgColor &">"&mylanguage(1) &"</td>"
-            'timing removed and made as common
+            'timing removed
 			'str = str & "<td class="& bgColor &">"&arrAllCourses(4,rowCounter) &" : "& arrAllCourses(5,rowCounter) &""& arrAllCourses(6,rowCounter) &" - "& arrAllCourses(7,rowCounter) &" : "&arrAllCourses(8,rowCounter)&""& arrAllCourses(9,rowCounter) &"</td>"
+
 			
 			If arrAllCourses(17,rowCounter) = "Corporate" Then
 		    str = str & "<td class="& bgColor &"><font color=""#FE2E2E""><b>Corporate class</b></font></td>"
@@ -161,19 +137,7 @@ Response.Write("<table width=""100%"" border=""0"" cellspacing=""0"" cellpadding
 
 			        str = str & ""& Currency_Format_Front &""& FormatNumber(arrAllCourses(14,rowCounter))&" "&Currency_Format_Back 
 					
-					If Session("CountryOrigin") = "United Kingdom" Then 
-					
-					str = str & " +  VAT <br>(Total "&Currency_Format_Front &""& FormatNumber(arrAllCourses(15,rowCounter))&" "&Currency_Format_Back&")<sup><font color=""red""><b>*</b></font></sup>"
-					
-					ElseIf Session("CountryOrigin") = "Australia" Then 
-					
-					str = str & " +  GST <br>(Total "&Currency_Format_Front &""& FormatNumber(arrAllCourses(15,rowCounter))&" "&Currency_Format_Back&")<sup><font color=""red""><b>*</b></font></sup>"
-					
-					ElseIf Session("CountryOrigin") = "India" Then
-					
-					str = str & "<br> + "& arrAllCourses(11,rowCounter)&"% tax <br />(Total Rs. "&FormatNumber(arrAllCourses(15,rowCounter)) &")"  
-					
-					ElseIf Session("CountryOrigin") = "Germany" Then
+                    If Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "Netherlands" Then
 			
 					str= str &" + VAT <br />(Total "&Currency_Format_Front &" "& FormatNumber(arrAllCourses(15,rowCounter)) &" "& Currency_Format_Back &")<sup><font color=""red""><b>*</b></font></sup>" 
 					
@@ -193,39 +157,45 @@ Response.Write("<table width=""100%"" border=""0"" cellspacing=""0"" cellpadding
 				
 				 str = str & ""& Currency_Format_Front &""& FormatNumber(arrAllCourses(10,rowCounter))&""&Currency_Format_Back	
 				
-			     If Session("CountryOrigin") = "United Kingdom" Then 
+				If  Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "Netherlands" Then
 			
-			    str = str &" +  VAT <br>(Total "&Currency_Format_Front &""& FormatNumber(arrAllCourses(12,rowCounter))&" "&Currency_Format_Back&")"
-				
-			    ElseIf Session("CountryOrigin") = "Australia" Then 
-			
-			    str = str & " +  GST <br>(Total "&Currency_Format_Front &""& FormatNumber(arrAllCourses(12,rowCounter))&" "&Currency_Format_Back&")<sup><font color=""red""><b>*</b></font></sup>"
-				
-				ElseIf  Session("CountryOrigin") = "Germany" Then
-			
-				str= str &" + VAT <br />(Total "& Currency_Format_Front &" "& FormatNumber(arrAllCourses(12,rowCounter)) &" "& Currency_Format_Back &")"
-			
-			    ElseIf Session("CountryOrigin") = "India" Then
-			    
-			    str = str & "<br> + "&arrAllCourses(11,rowCounter)&"% tax <br />(Total Rs. "&FormatNumber(arrAllCourses(12,rowCounter))&")"
-			  
+				str= str &" + VAT <br />(Total "& Currency_Format_Front &" "& FormatNumber(arrAllCourses(12,rowCounter)) &" "& Currency_Format_Back &")"		  
                 End if
 			   
                str = str & "</td>"
 				
             End If 
 			
+			
+	
 			'Enrol Button'
 			If arrAllCourses(16,rowCounter) <> "Full" Then
+			If arrAllCourses(17,rowCounter) = "WBT" Then 
 			
-			str = str & "<td class="& bgColor &"><div align=""center""><form action=""/German/registrierenKlasse.asp"" method=""post""><input type=""hidden"" name=""SelCourseID"" value="&arrAllCourses(0,rowCounter)&" /><input type=""submit"" name=""TypeCourse"" value=""Buchen"" class=""ButtonSmall""/></form></div></td>"
+			 If arrAllCourses(0,rowCounter) = "615" Then 
+			str = str & "<td class="& bgColor &"><div align=""center""><form action=""/enrollClass.asp"" method=""post""><input type=""hidden"" name=""SelCourseID"" value="&arrAllCourses(0,rowCounter)&" /><input type=""submit"" name=""TypeCourse"" value=""Live"" class=""ButtonSmall""/></form></div></td>"
+
+			   Else 
+			str = str & "<td class="& bgColor &"><table colspan=""2""><tr><td><form action=""/enrollClass.asp"" method=""post""><input type=""hidden"" name=""SelCourseID"" value="&arrAllCourses(0,rowCounter)&" /><input type=""hidden"" name=""coursetype"" value="&strCourse&"/><input type=""submit"" name=""TypeCourse"" value=""Live"" class=""ButtonSmall""/></form><form action=""/enrollClass.asp"" method=""post""><input type=""hidden"" name=""SelCourseID"" value="&arrAllCourses(0,rowCounter)&" />"
+
+			str= str &	"<input type=""submit"" name=""TypeCourse"" value=""Enroll"" class=""ButtonSmall""/></form></td></tr></table></td>"
 			
+			End If
+			ElseIf arrAllCourses(17,rowCounter) = "Live" Then 
+		str = str & "<td class="& bgColor &"><div align=""center""><form action=""/enrollClass.asp"" method=""post""><input type=""hidden"" name=""SelCourseID"" value="&arrAllCourses(0,rowCounter)&" /><input type=""hidden"" name=""coursetype"" value="&strCourse&" /><input type=""submit"" name=""TypeCourse"" value=""Live"" class=""ButtonSmall""/></form></div></td>"
 			Else
-			str = str & "<td class="& bgColor &"><div align=""center""><img src=""/images/back/full.gif"" /></div></td>"
+			str = str & "<td class="& bgColor &"><div align=""center""><form action=""/enrollClass.asp"" method=""post""><input type=""hidden"" name=""SelCourseID"" value="&arrAllCourses(0,rowCounter)&" /><input type=""hidden"" name=""coursetype"" value="&strCourse&" />"
+
+			str= str &	"<input type=""submit"" name=""TypeCourse"" value=""Book"" class=""ButtonSmall""/></form></div></td>"
+
+			End If 
+			Else
+			str = str & "<td class="& bgColor &"><img src=""images/back/full.gif"" /></td>"
             End If
 			str = str & "</tr>"
 		   
-		   End If
+		
+		    End If
 		   
 			Response.Write(str)
 	iCount = iCount +1 

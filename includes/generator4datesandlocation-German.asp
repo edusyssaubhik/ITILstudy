@@ -83,7 +83,7 @@
 					 
 	End If
 	
-	response.write strQuery2
+	'response.write strQuery2
 	If generate <> "" Then
 	Rs.Open strQuery2,Conn
 	Else
@@ -132,7 +132,7 @@
 	strEnding= strEnding &""& Trim(arrAllCourses(1,rowCounter)) &""
 	Else
     myCity = Split(arrAllCourses(1,rowCounter),"(")
-	strEnding= strEnding &"<a href=""Schauplatz.asp?courseID="& arrAllCourses(0,rowCounter) &""" onClick=""return popitup('Schauplatz.asp?courseID="& arrAllCourses(0,rowCounter) &"')"">"& Trim(myCity) &""
+	strEnding= strEnding &"<a href=""Schauplatz.asp?courseID="& arrAllCourses(0,rowCounter) &""" onClick=""return popitup('Schauplatz.asp?courseID="& arrAllCourses(0,rowCounter) &"')"">"& Trim(myCity(0)) &""
 	End If 
 	
 	Else
@@ -152,10 +152,17 @@
 	If arrAllCourses(18,rowCounter) = "Canada" Then
 	strEnding= strEnding &"(Canada)"
 	End If 
-	response.write arrAllCourses(18,rowCounter)
+	'response.write arrAllCourses(18,rowCounter)
 	'Date'
 	
-	strEnding= strEnding &"<br></td><td class="& bgColor &"> "& DAY(arrAllCourses(2,rowCounter)) & " " & MonthName(Month(arrAllCourses(2,rowCounter)),3) & " "  & YEAR(arrAllCourses(2,rowCounter))&" to <br /> "& DAY(arrAllCourses(3,rowCounter)) & " " & MonthName(Month(arrAllCourses(3,rowCounter)),3) & " "  & YEAR(arrAllCourses(3,rowCounter))&"</td><td class="& bgColor &" width=""23%"">"& arrAllCourses(4,rowCounter) &":"& arrAllCourses(5,rowCounter) &"&nbsp;"& arrAllCourses(6,rowCounter) &" - "& arrAllCourses(7,rowCounter) &":"& arrAllCourses(8,rowCounter) &"&nbsp;"& arrAllCourses(9,rowCounter) &"</td>"
+	strEnding= strEnding &"<br></td><td class="& bgColor &"> "& DAY(arrAllCourses(2,rowCounter)) & " " & MonthName(Month(arrAllCourses(2,rowCounter)),3) & " "  & YEAR(arrAllCourses(2,rowCounter))&" to <br /> "& DAY(arrAllCourses(3,rowCounter)) & " " & MonthName(Month(arrAllCourses(3,rowCounter)),3) & " "  & YEAR(arrAllCourses(3,rowCounter))&"</td>"
+    
+    myLanguage = Split(arrAllCourses(1,rowCounter),"(")
+    mylanguage(1) = Replace(mylanguage(1),")","")
+
+    strEnding= strEnding & "<td class="& bgColor &"> "& mylanguage(1) &"</td>"
+    'Timing Removed
+    '<td class="& bgColor &" width=""23%"">"& arrAllCourses(4,rowCounter) &":"& arrAllCourses(5,rowCounter) &"&nbsp;"& arrAllCourses(6,rowCounter) &" - "& arrAllCourses(7,rowCounter) &":"& arrAllCourses(8,rowCounter) &"&nbsp;"& arrAllCourses(9,rowCounter) &"</td>"
 	
 	If arrAllCourses(17,rowCounter) = "Corporate" Then
 strEnding= strEnding &"<td class="& bgColor &"><font color=""#FE2E2E""><b>Corporate class</b></font></td><td class="& bgColor &"><div align=""center""><font size=""3"" color=""#FE2E2E""><b>---</b></font></div></td>"
@@ -285,9 +292,9 @@ Else
 	'Creating a text file using file systm object.
 	
 	
-	'Set tsObject = fsoObject.CreateTextFile("E:\vhosts\ITILstudy.com\httpdocs\dateslocation\ITILstudy-GermanLang-Classes-ITILstudy-Training-"&Session("CountryOrigin")&".txt")
+	Set tsObject = fsoObject.CreateTextFile("E:\vhosts\ITILstudy.com\httpdocs\dateslocation\ITILstudy-GermanLang-Classes-ITILstudy-Training-"&Session("CountryOrigin")&".txt")
 	
-	Set tsObject = fsoObject.CreateTextFile("C:\GITHUB\ITILstudy\dateslocation\ITILstudy-Classes-ITILstudy-Training-"&Session("CountryOrigin")&".txt")
+	'Set tsObject = fsoObject.CreateTextFile("C:\GITHUB\ITILstudy\dateslocation\ITILstudy-Classes-ITILstudy-Training-"&Session("CountryOrigin")&".txt")
 	
 	
 	'Witing the string containing question format into an asp file using file system object.'

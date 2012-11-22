@@ -28,7 +28,6 @@ End If
 <% 
 
  'Price Format Display Functions'
-	
  Currency_Format_Front = CurrencyFormat_Front(Session("CountryOrigin"))
 
  Currency_Format_Back = CurrencyFormat_Back(Session("CountryOrigin"))
