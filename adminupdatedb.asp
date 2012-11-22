@@ -483,7 +483,7 @@ County: <SELECT NAME="country">
 <BR><BR>
 
 
-<form name="one" action="./customerdetails.asp" method="post" target="_blank"  onSubmit="return validate_form(this)">
+<form name="one" action="./customerdetails_admin.asp" method="post" target="_blank"  onSubmit="return validate_form(this)">
 <BR><HR><BR><B>Add New Course:<BR><BR></B>
 First Name:<input type="text" size="20" name="first_name"><BR><BR>
 Last Name:<input type="text" size="20" name="last_name"><BR><BR>
@@ -557,7 +557,7 @@ Session("message") = "" %>
 <tr><td><font face="Arial" size="3" color="#CC0000"><% Response.Write("<hr>"&strMessage)%>
 </font></td></tr></table>
 
-<form name="one" action="./customerdetails.asp" method="post" target="_blank" onSubmit="return validate_form2(this)">
+<form name="one" action="./customerdetails_admin.asp" method="post" target="_blank" onSubmit="return validate_form2(this)">
 <BR><HR><BR><B>Add New Prep Course:<BR><BR></B>
 First Name:<input type="text" size="20" name="first_name"><BR><BR>
 Last Name:<input type="text" size="20" name="last_name"><BR><BR>

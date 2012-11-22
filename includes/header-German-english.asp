@@ -2,7 +2,8 @@
         <% session.Timeout = 1000 %>
     
         <a href="/ITIL-Training/better-than-competitors.asp" onMouseOver="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onMouseOut="MM_swapImgRestore()">Better than Competitors </a>
-			<a href="/ITIL-Training/Success-Rate.asp" onMouseOver="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onMouseOut="MM_swapImgRestore()">99.2% Pass Rate </a>		
+			<a href="/ITIL-Training/Success-Rate.asp" onMouseOver="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onMouseOut="MM_swapImgRestore()">99.2% Pass Rate </a>	
+              	<a href="/realLifeExp.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">Classroom - Real Life Scenario</a> 	
       <a href="/ITIL-Training/moneyBack.asp" onMouseOver="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onMouseOut="MM_swapImgRestore()">100% Moneyback Guarantee</a>
 	  	   <a href="/2-Day-ITIL-Training.asp" onMouseOver="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onMouseOut="MM_swapImgRestore()">Accelerated Learning Techniques <span style="display:inline-block;">(2-Day Training)</span> </a>
         <a href="/ITIL-Training/courseBenefits.asp" onMouseOver="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onMouseOut="MM_swapImgRestore()">Course Benefits</a>

@@ -328,6 +328,7 @@ return false;
 		<option  <% If objRs("country") = "Global" Then %> selected="selected" <% End If %> value="Global">Global</option>
         <option  <% If objRs("country") = "Germany" Then %> selected="selected" <% End If %> value="Germany">Germany</option>
         <option  <% If objRs("country") = "India" Then %> selected="selected" <% End If %> value="India">India</option>
+        <option  <% If objRs("country") = "Netherlands" Then %> selected="selected" <% End If %> value="Netherlands">Netherlands</option>
          <option  <% If objRs("country") = "Singapore" Then %> selected="selected" <% End If %> value="Singapore">Singapore</option>
         <option  <% If objRs("country") = "UAE" Then %> selected="selected" <% End If %> value="UAE">UAE</option>
        <option <% If objRs("country") = "US" Then %> selected="selected" <% End If %> value="US">US</option>
@@ -451,6 +452,7 @@ return false;
 		<option value="Global">Global</option>
         <option value="Germany">Germany</option>
         <option  value="India">India</option>
+        <option  value="Netherlands">Netherlands</option>
         <option  value="Singapore">Singapore</option>
         <option  value="UAE">UAE</option>       
         <option  value="United Kingdom">United Kingdom</option>
