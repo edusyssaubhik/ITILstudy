@@ -17,7 +17,7 @@
    <% If Session("CountryOrigin") = "Other" OR  Session("CountryOrigin") = "United Kingdom"  Then %>
 |  <a href="/ITIL-Training/courseBenefits-Online.asp">Online Course Benefits </a> 
 <%End If%>
- <%  If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "India" OR Session("CountryOrigin") = "UAE" OR Session("CountryOrigin") = "Singapore"  OR Session("CountryOrigin") = "United Kingdom" Then %>
+ <%  If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "India" OR Session("CountryOrigin") = "UAE" OR Session("CountryOrigin") = "Singapore"  OR Session("CountryOrigin") = "United Kingdom" OR Session("CountryOrigin") = "Australia" Then %>
 |  <a href="/ITIL-Training/courseBenefits.asp">ITIL Classroom Course Benefits </a> |  <a href="/ITIL-Training/better-than-competitors.asp">Better Than Competitors </a>
   |  <a href="/ITIL-Training/comprehensive.asp">Most Comprehensive and Effective </a>
     <%  If Session("CountryOrigin") = "United Kingdom"  Then %>
@@ -33,7 +33,7 @@
     | <a href="/ITIL-Online-Courses.asp">ITIL Online Courses</a>
 	
 	  | <a href="/methodology/Online-Training.asp">Foundation Online Training </a> 
-	 | <a href="/affiliates.asp">Affiliate</a> | <a href="#">Login</a> | <a href="/contactus.asp">Contact</a> | <a href="/contactus.asp#feedback">Feedback</a> | <a href="/sitemap.asp">Sitemap</a></font></p></div>
+	 | <a href="/affiliates.asp">Affiliate</a> | <% If Session("FirstName") = "" Then %><a href="/memberlogin.asp">Login</a><%Else%><a href="/logoff.asp">Logout</a><%end If%> | <a href="/contactus.asp">Contact</a> | <a href="/contactus.asp#feedback">Feedback</a> | <a href="/sitemap.asp">Sitemap</a></font></p></div>
     
     
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>

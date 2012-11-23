@@ -409,7 +409,7 @@ End If
                 <% ElseIf Session("CountryOrigin") = "India"  Then %> 
                   Courses starting at Rs. 10750<br /> (Prices are inclusive of exam fees)
                  <% ElseIf (Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada")  Then %> 
-                 <a href="/ITIL-Courses.asp">Courses starting at $ 1049 with attractive group discounts</a><br /> (Prices are inclusive of exam fees and 100% Money Back Guarantee)
+                 ITIL Training starting at $ 1049 with attractive group discounts<br /> (Prices are inclusive of exam fees and 100% Money Back Guarantee)
                   <% ElseIf Session("CountryOrigin") = "Germany"  Then %> 
                  <a href="/ITIL-Courses.asp">Courses starting at € 890 with attractive group discounts</a><br /> (Prices are inclusive of exam fees and 100% Money Back Guarantee)
                   <% ElseIf  Session("CountryOrigin") = "Netherlands" Then %> 
@@ -479,7 +479,7 @@ End If
           
            <%If (Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada") Then%>
         
-         <br /> <a href="/ITIL-Courses.asp"> View classes in Atlanta, Chicago, Charlotte, Los Angeles, Miami, New Jersey, New York, Orlando, Phoenix, San Francisco, Seattle, Toronto, Washington DC, and other cities.</a></span>
+         <br />  View classes in <a href="http://www.itilstudy.com/ITILstudy-Classes-ITILstudy-Training-Atlanta-US.asp">Atlanta</a>, <a href="http://www.itilstudy.com/ITILstudy-Classes-ITILstudy-Training-Chicago-US.asp">Chicago</a>, <a href="http://www.itilstudy.com/ITILstudy-Training-Charlotte-US.asp">Charlotte</a>, <a href="http://www.itilstudy.com/ITILstudy-Classes-ITILstudy-Training-Los-Angeles-US.asp">Los Angeles</a>, <a href="http://www.itilstudy.com/ITILstudy-Training-Miami-US.asp">Miami</a>, <a href="http://www.itilstudy.com/ITILstudy-Classes-ITILstudy-Training-New-York-US.asp">New York</a>, <a href="http://www.itilstudy.com/ITILstudy-Training-Orlando-US.asp">Orlando</a>, <a href="http://www.itilstudy.com/ITILstudy-Training-Phoenix-US.asp">Phoenix</a>, <a href="http://www.itilstudy.com/ITILstudy-Classes-ITILstudy-Training-San-Francisco-US.asp">San Francisco</a>, <a href="http://www.itilstudy.com/ITILstudy-Training-Seattle-US.asp">Seattle</a>, <a href="http://www.itilstudy.com/ITILstudy-Training-Toronto-Canada.asp">Toronto</a>, <a href="http://www.itilstudy.com/ITILstudy-Classes-ITILstudy-Training-Washington-D.C.-(Fairfax)-US.asp">Washington DC</a>, and <a href="http://www.itilstudy.com/ITIL-Courses.asp">other cities</a>.</span>
          
           <%End If%>
           

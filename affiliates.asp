@@ -118,7 +118,7 @@
                   <div class="faqItemContent">
                     <div class="outerFAQContainer">
                       <div class="innerFAQContainer">
-                        <p><a href="http://www.6sigmastudy.com" target="_blank">6sigmastudy.com</a> is the most preferred and PMI Approved Registered Education Provider for the <span class="SubHeader">Lean Six Sigma Black Belt</span> , <span class="SubHeader">Black Belt</span> and <span class="SubHeader">Green Belt</span> Certification courses. The quality of the study material, the training methodology, and the course delivery model prove 6sigmastudy.com as refreshingly different from the other training providers.<br>
+                        <p><a href="http://www.6sigmastudy.com" target="_blank">6sigmastudy</a> is a leading  training provider for <span class="SubHeader">Lean Six Sigma Black Belt</span>, <span class="SubHeader">Black Belt</span> and <span class="SubHeader">Green Belt</span> Certification courses. The quality of the study material, the training methodology, and the course delivery model prove 6sigmastudy.com as refreshingly different from the other training providers.<br>
                           <br>
                           We also provide PMI Approved PDUs <span class="SubHeader">(55 PDUs for Black Belt and 25 PDUs for Green Belt Certification)</span> on successful completion of 6sigmastudy.com courses. These are valid PDUs for Continuing Education requirements of PMP certificants to maintain their PMP Certification credential. <br>
                           <br>
@@ -137,7 +137,7 @@
                   <div class="faqItemContent">
                     <div class="outerFAQContainer">
                       <div class="innerFAQContainer">
-                        <P align="left"><a href="http://www.hrdstudy.com" target="_blank">HRDstudy.com</a> is a PMI Approved Registered Education Provider and the program <span class="SubHeader">(PMI R.E.P. Program Number: 2053-PMHRD)</span> has been registered with PMI. The program <span class="SubHeader">(HRCI Approved Program Number: ORG-PROGRAM-34225)</span>, has also been approved for 20 (General ) recertification credit hours toward PHR, SPHR and GPHR recertification through the HR Certification Institute.<br>
+                        <P align="left"><a href="http://www.hrdstudy.com" target="_blank">HRDstudy</a> offers online courses on Human Resource Development, and is recommended for practicing project managers and the program <span class="SubHeader">(PMI R.E.P. Program Number: 2053-PMHRD)</span> has been registered with PMI. The program <span class="SubHeader">(HRCI Approved Program Number: ORG-PROGRAM-34225)</span>, has also been approved for 20 (General ) recertification credit hours toward PHR, SPHR and GPHR recertification through the HR Certification Institute.<br>
                           <br>
                           At the end of the course, candidates will be awarded with 20 recertification credits (from PMI/HRCI) and Human Resource Development Certificate.<br>
                           <br>
@@ -164,7 +164,7 @@
                   <div class="faqItemContent">
                     <div class="outerFAQContainer">
                       <div class="innerFAQContainer">
-                        <p><a href="http://www.rmstudy.com" target="_blank"> RMstudy.com</a> is the most preferred and PMI<sup>&reg;</sup> Approved Registered Education Provider for Risk Management Training. RMstudy offers both online and classroom risk management courses. The high quality and comprehensive study material, training methodology, and the flexible course delivery model have made the courses very effective.<br />
+                        <p><a href="http://www.rmstudy.com" target="_blank"> RMstudy</a> is a leading  training provider for Risk Management Training. RMstudy offers both online and classroom risk management courses. The high quality and comprehensive study material, training methodology, and the flexible course delivery model have made the courses very effective.<br />
                           <br />
                           We also provide 20 PMI Approved PDUs on successful completion of Risk Management course which are valid for Continuing Education requirements of PMP certificants to maintain their PMP credential.<br />
                           <br />
@@ -187,7 +187,7 @@
                   <div class="faqItemContent">
                     <div class="outerFAQContainer">
                       <div class="innerFAQContainer">
-                        <P align="left">PROGstudy offers the "Most Economical" and "Most Effective" course for Program Management Training. We are associated with PMstudy.com and are a PMI Approved Registered Education Provider.<BR>
+                        <P align="left">PROGstudy offers a cost effective certification prep course with immediate ROI for aspiring and experienced Program Managers. <BR>
                           <BR>
                           We provide 25 PDUs valid for Continuing Education Requirements of PMPs, to maintain the PMP Certification Status We also provide Program Management Certification after completion of the course.<br>
                           <br>
