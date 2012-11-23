@@ -31,6 +31,10 @@
  | <a href="/ITIL-Training/classroom-FAQ.asp"> ITIL FAQs</a>
 
     | <a href="/ITIL-Online-Courses.asp">ITIL Online Courses</a>
+    <%If Session("CountryOrigin") = "US" Then%>
+    | <a href="/index.asp">ITIL Training</a>
+    | <a href="/index.asp">ITIL Certification</a>
+    <%End If%>
 	
 	  | <a href="/methodology/Online-Training.asp">Foundation Online Training </a> 
 	 | <a href="/affiliates.asp">Affiliate</a> | <% If Session("FirstName") = "" Then %><a href="/memberlogin.asp">Login</a><%Else%><a href="/logoff.asp">Logout</a><%end If%> | <a href="/contactus.asp">Contact</a> | <a href="/contactus.asp#feedback">Feedback</a> | <a href="/sitemap.asp">Sitemap</a></font></p></div>

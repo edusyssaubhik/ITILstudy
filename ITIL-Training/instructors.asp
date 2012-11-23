@@ -58,7 +58,7 @@
                   </tr>
 
                    <tr><td colspan="2"><hr style="border:1px solid #CCCCCC;"></td></tr>
-                  <tr><td colspan="2"><a name="Nico Groenenberg"></a><span class="Header">Nico Groenenberg <br />(MA, ITIL EXPERT, CPMA)</span></td></tr>
+                  <tr><td colspan="2"><a name="Nico Groenenberg"></a><span class="Header">Nico Groenenberg <br />(MA, ITIL EXPERT, PRINCE2 EXPERT, CPMA)</span></td></tr>
                   <tr>
                     <td><p align="justify">Nico worked for 15 years in ICT Management for several large companies and institutions in the Netherlands as process manager, change manager, consultant, sales manager and project manager. Although he has a keen eye for process improvement, he regards people (and intrinsic motivation) as main factor in organizational change and success. He likes to summarize this vision with one simple line: “I don’t work with computers, I work with people who work with computers”. The last years he has focused on different forms of active learning such as serious games, roleplay, interactive workshops, blended learning and organizational storytelling.</p></td>
                     <td><p><img src="/images/faculty/Nico Groenenberg.png" width="125px" height="145px" border="0"></p></td>

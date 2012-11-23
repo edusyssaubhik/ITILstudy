@@ -255,7 +255,7 @@ Benefits of 2-Day Traditional Classroom Program:
 <li>Employees certified in 2 days!</li>
 <li>Complimentary Risk Management Online Course worth $300 for <b>FREE!</b></li></ul>
 
-To sign-up for a scheduled corporate class and/or to take advantage of corporate discounts for your company, please submit enrolment details and our corporate account representative will contact you – <a href="/Corporate/Corporate-Overview.asp">ENROLL NOW!</a> Some companies have an open payment account already established for direct billing.
+To sign-up for a scheduled corporate class and/or to take advantage of corporate discounts for your company, please submit enrolment details and our corporate account representative will contact you – <a href="/enrollclass.asp">ENROLL NOW!</a> Some companies have an open payment account already established for direct billing.
 </p>
 
 

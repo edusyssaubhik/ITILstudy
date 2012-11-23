@@ -19,7 +19,7 @@
             <div >
           <p >
 
-ITILstudy's immaculately designed programme uses Accelerated Learning Techniques to ensure that a 2-day program is enough for you to pass the ITIL exam - guaranteed. While other competitors may have a 3-day training program, our highly structured comprehensive programme ensures that students pass the exam at the end of the 2nd day. The absolute confidence we have in our effective study methodology allows us to offer a unique 100% Moneyback Guarantee for our courses.
+ITILstudy's immaculately designed programme uses Accelerated Learning Techniques to ensure that a 2-day program is enough for you to pass the ITIL exam - guaranteed. While other competitors may have a 3-day training program, our highly structured comprehensive programme ensures that students pass the exam at the end of the 2nd day.<%If Session("CountryOrigin") <>"India" Then %> The absolute confidence we have in our effective study methodology allows us to offer a unique 100% Moneyback Guarantee for our courses.<%End If %>
 </p>
               <% If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada"  Then %>
 

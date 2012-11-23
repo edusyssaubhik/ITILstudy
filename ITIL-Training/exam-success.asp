@@ -24,7 +24,7 @@
                  <p>We are the most successful and most popular IT services/Project Management training provider globally. We have trained more than 25,000 successful IT/project managers for various courses including ITIL<sup>&reg;</sup>, PRINCE2<sup>&reg;</sup>, PMP, CAPM, etc. 
 
  </p>
- <p>We have a presence globally in over 160 countries with delegates from over 2000 companies. Please find below the list of the Companies: </p>
+ <p>We have a presence globally in over 150+ countries with delegates from over 2000 companies. Please find below the list of the Companies: </p>
 
                
               </div>

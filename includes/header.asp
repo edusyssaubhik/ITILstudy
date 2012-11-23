@@ -1,4 +1,4 @@
-<!--url redirection-->
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -417,12 +417,13 @@ cssdropdown.startchrome("chromemenu")
   </table>
 </div>
 <div style="float: right; height: 111px; width: 30px; position: fixed; top: 30px; right: 0px;">
-<img src="/images/buttons/Social-Media-Icons.png" width="30" height="111" usemap="#SMMap" border="0" />
-<map name="SMMap" id="SMMap">
-<area shape="rect" coords="5,6,25,26" href="http://www.facebook.com/itilstudy" alt="Facebook" title="Facebook" target="_blank"/>
-<area shape="rect" coords="5,32,25,52" href="http://twitter.com/ITILstudy_" alt="Twitter" title="Twitter" target="_blank"/>
-<area shape="rect" coords="5,59,25,79" href="http://www.youtube.com/itilstudychannel" alt="Youtube Channel" title="Youtube Channel" target="_blank"/>
-<area shape="rect" coords="5,85,25,105" href="http://www.linkedin.com/pub/itilstudy-a-leading-itil-certification-provider/55/974/547" alt="LinkedIn" title="LinkedIn" target="_blank"/>
+<img src="/images/buttons/Social-Media-Icons.png" width="30" height="156" usemap="#SMMap" border="0" />
+<map name="SMMap" id="Map1">
+    <area shape="rect" coords="6,7,26,27" href="http://www.facebook.com/itilstudy" alt="Facebook" title="Facebook" target="_blank"/>
+    <area shape="rect" coords="6,37,26,57" href="http://www.twitter.com/ITILstudy_" alt="Twitter" title="Twitter" target="_blank"/>
+    <area shape="rect" coords="6,68,26,88" href="http://www.linkedin.com/pub/itilstudy-a-leading-itil-certification-provider/55/974/547" alt="LinkedIn" title="LinkedIn" target="_blank" />
+    <area shape="rect" coords="6,98,26,118" href="http://www.youtube.com/itilstudychannel" alt="Youtube Channel" title="Youtube Channel" target="_blank"/>
+    <area shape="rect" coords="6,127,26,148" href="http://www.ITILstudy.com/blog/" alt="ITIlstudy Blog" title="ITIlstudy Blog" target="_blank" />
 </map>
 </div>
 <!-- Header End -->

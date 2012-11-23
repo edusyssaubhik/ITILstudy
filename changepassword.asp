@@ -325,7 +325,7 @@ Else
                 </table>
                 <br>
                 <div>
-                  <p class="general-body"> For additional clarifications or issues, please <a href="/contactus.asp">Contact ITILstudy.com</a> </p>
+                  <p class="general-body"> For additional clarifications or issues, please Contact<a href="/contactus.asp"> ITILstudy.com</a> </p>
                 </div>
                 <!-- Content End From Here-->
                 <!--#include virtual="/includes/connectionClose.asp"-->

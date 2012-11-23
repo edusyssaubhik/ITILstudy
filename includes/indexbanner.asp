@@ -1,6 +1,6 @@
 <div class="banner-main">
 	
-  <span style="padding: 0px; text-align: left; position: absolute; color: rgb(255, 255, 255); margin-left: 20px; margin-top: 240px; z-index: 200; display: block;">Better than Competitors. <a href="/ITIL-Training/better-than-competitors.asp" style="color:#0CF;" >More</a></span>
+  <span style="padding: 0px; text-align: left; position: absolute; color: rgb(255, 255, 255); margin-left: 20px; margin-top: 240px; z-index: 99; display: block;">Better than Competitors. <a href="/ITIL-Training/better-than-competitors.asp" style="color:#0CF;" >More</a></span>
   <div id="banner-navigation">
     <div class="banner-navi-button banner-selected" onmouseover="toggleAuto(1, 'm')" onmouseout="toggleAuto(1, 'o')" id="b1">Best Quality</div>
     <div class="banner-navi-button" onmouseover="toggleAuto(2, 'm')" onmouseout="toggleAuto(2, 'o')" id="b2">Leading Provider</div>
@@ -29,9 +29,12 @@
                 <%Else %>
                 <li>25+ experienced dedicated faculty. More than any other competitor - <a href="http://www.itilstudy.com/ITIL-Training/instructors.asp" >More</a></li>
                 <%End If %>
-			  <li>Specialized in ITIL trainings - <a href="http://www.itilstudy.com/ITIL-Training/better-than-competitors.asp" >Find out here</a></li>
-              <li>Great feedback from successful students - <a href="http://www.itilstudy.com/feedback_class.asp" >Testimonials</a></li>             
+			  <li>Specialized in ITIL trainings - <a href="/specialized_ITILTraining.asp" >Find out here</a></li>
+                <%If Session("CountryOrigin") <> "UAE" AND Session("CountryOrigin") <> "Singapore" AND Session("CountryOrigin") <> "Saudi Arabia" Then%>
+              <li>Great feedback from successful students - <a href="http://www.itilstudy.com/feedback_class.asp" >Testimonials</a></li>     
+                <%End If %>        
           </ul>
+
                 <!-- <span style="color:#FFF; text-align:left; margin-left:10px; padding-left:0px; margin-top:-20px;">Better than Competitors. <a href="/ITIL-Training/better-than-competitors.asp" >More</a></span>-->
         </div>
   </div>
@@ -43,7 +46,9 @@
               	<ul>
                 	<li>150+ countries </li>
                 	<li>2000+ companies </li>
+                       <%If Session("CountryOrigin") <> "UAE" AND Session("CountryOrigin") <> "Singapore" AND Session("CountryOrigin") <> "Saudi Arabia" Then%>
                 	<li>25,000+ students <a href="http://www.itilstudy.com/feedback_class.asp" >Read testimonials</a></li>
+                      <%End If %>
                 </ul>
               <li>35+ exclusive Global Faculty for ITIL - <a href="http://www.itilstudy.com/ITIL-Training/instructors.asp" >Know more</a></li>
               <% If Session("CountryOrigin") <> "Netherlands" And 	Session("CountryOrigin") <> "Germany" Then %> 
