@@ -1,15 +1,15 @@
 <%
-' If InStr(Request.ServerVariables("SERVER_NAME"),"www") = 0 Then
+ If InStr(Request.ServerVariables("SERVER_NAME"),"www") = 0 Then
 
-	' Response.Status="301 Moved Permanently"
+	 Response.Status="301 Moved Permanently"
 	
-	' If Request.ServerVariables("URL") = "/index.asp" Then
-	' Response.AddHeader "Location","http://www." & Request.ServerVariables("HTTP_HOST")
-	' Else
-	' Response.AddHeader "Location","http://www." & Request.ServerVariables("HTTP_HOST") & Request.ServerVariables("URL")
-    ' End If
-	' Response.End
-' End if
+	 If Request.ServerVariables("URL") = "/index.asp" Then
+	 Response.AddHeader "Location","http://www." & Request.ServerVariables("HTTP_HOST")
+	 Else
+	 Response.AddHeader "Location","http://www." & Request.ServerVariables("HTTP_HOST") & Request.ServerVariables("URL")
+     End If
+	 Response.End
+ End if
 %>
 
 <link rel="shortcut icon" href="/images/buttons/favicon.ico">
@@ -489,9 +489,9 @@ End If
                   
                    <% If Session("CountryOrigin") <> "US" AND Session("CountryOrigin") <> "Canada" Then %>
 <% If Session("FirstName") = "" Then %>
-                <li id="Li1"><a href="/memberlogin.asp" rel="dropmenu6"><img src="/images/back/link_06_login_grey.jpg" name="f" onmouseover="MM_swapImage('f','','/images/back/link_06_login_green.jpg',1)" onmouseout="MM_swapImgRestore()" border="0" ></a></li>
+                <li id="Li1"><a href="/memberlogin.asp" rel="dropmenu6"><img src="/images/back/link_06_login_grey.jpg" name="f" onMouseOver="MM_swapImage('f','','/images/back/link_06_login_green.jpg',1)" onMouseOut="MM_swapImgRestore()" border="0" ></a></li>
             <% Else %>
-            <li id="Li2"><a href="/logoff.asp" rel="dropmenu6"><img src="/images/back/link_06_logout_grey.jpg" name="f" onmouseover="MM_swapImage('f','','/images/back/link_06_logout_green.jpg',1)" onmouseout="MM_swapImgRestore()" border="0" ></a></li>
+            <li id="Li2"><a href="/logoff.asp" rel="dropmenu6"><img src="/images/back/link_06_logout_grey.jpg" name="f" onMouseOver="MM_swapImage('f','','/images/back/link_06_logout_green.jpg',1)" onMouseOut="MM_swapImgRestore()" border="0" ></a></li>
             <% End If %>               <% End If %>  
 			   
                 </ul>
@@ -549,12 +549,13 @@ cssdropdown.startchrome("chromemenu")
   </table>
 </div>
 <div style="float: right; height: 111px; width: 30px; position: fixed; top: 30px; right: 0px;">
-<img src="/images/buttons/Social-Media-Icons.png" width="30" height="111" usemap="#SMMap" border="0" />
-<map name="SMMap" id="SMMap">
-<area shape="rect" coords="5,6,25,26" href="http://www.facebook.com/itilstudy" alt="Facebook" title="Facebook" target="_blank"/>
-<area shape="rect" coords="5,32,25,52" href="http://twitter.com/ITILstudy_" alt="Twitter" title="Twitter" target="_blank"/>
-<area shape="rect" coords="5,59,25,79" href="http://www.youtube.com/itilstudychannel" alt="Youtube Channel" title="Youtube Channel" target="_blank"/>
-<area shape="rect" coords="5,85,25,105" href="http://www.linkedin.com/pub/itilstudy-a-leading-itil-certification-provider/55/974/547" alt="LinkedIn" title="LinkedIn" target="_blank"/>
+<img src="/images/buttons/Social-Media-Icons.png" width="30" height="156" usemap="#SMMap" border="0" />
+<map name="SMMap" id="Map1">
+    <area shape="rect" coords="6,7,26,27" href="http://www.facebook.com/itilstudy" alt="Facebook" title="Facebook" target="_blank"/>
+    <area shape="rect" coords="6,37,26,57" href="http://www.twitter.com/ITILstudy_" alt="Twitter" title="Twitter" target="_blank"/>
+    <area shape="rect" coords="6,68,26,88" href="http://www.linkedin.com/pub/itilstudy-a-leading-itil-certification-provider/55/974/547" alt="LinkedIn" title="LinkedIn" target="_blank" />
+    <area shape="rect" coords="6,98,26,118" href="http://www.youtube.com/itilstudychannel" alt="Youtube Channel" title="Youtube Channel" target="_blank"/>
+    <area shape="rect" coords="6,127,26,148" href="http://www.ITILstudy.com/blog/" alt="ITIlstudy Blog" title="ITIlstudy Blog" target="_blank" />
 </map>
 </div>
 <div id="CoursesPanel">
