@@ -91,7 +91,7 @@
                 <b>Classroom Project Management Education</b>
               <UL>
               <LI> A Leading PMP Exam Prep Training Provider in US/Canada: We teach more than 60 Project Management classes each month across US/Canada. <a href="http://www.pmstudy.com/index.asp" target="_blank">More</a></LI>
-               <LI> Best Faculty: PMstudy hires the best faculty for our classes: all our faculty have more than 15 years of experience, are from different industries, and are excellent teachers. <a href="http://www.pmstudy.com/instructors.asp">More</a></LI>
+               <LI> Experienced Faculty: PMstudy hires experienced faculty for our classes. All our faculty have more than 15 years of experience, are from different industries, and are excellent teachers. <a href="http://www.pmstudy.com/instructors.asp">More</a></LI>
                 <LI>100% Moneyback Guarantee: With a great course methodology and excellent faculty, PMstudy offers 100% Moneyback Guarantee to its classroom students. </LI>
                 <li>98.7% Success Rates: PMstudy has a success rate of 98.7% with <a href="http://www.pmstudy.com/feedback_class.asp">great feedback</a> from our successful students <a href="http://www.pmstudy.com/PMP-Success-Rate.asp">More</a> </li>
                  <li>Classes in other countries: PMstudy also teaches classes in UK, Germany, Australia  New Zealand, Singapore, Hong Kong, Middle East and India. We will very soon be teaching classes in Netherlands and other countries in Europe.</li>
@@ -99,7 +99,7 @@
                 <b>Online Project Management Education</b>
                   <BR>
                   <ul>
-                  <li>Leading Online training provider for PMP/ CAPM certification <a href="http://www.pmstudy.com/PMP-Classes/online-Project-Managament-Training.asp">More</a>.</li>
+                  <li>A Leading Online training provider for PMP/ CAPM certification <a href="http://www.pmstudy.com/PMP-Classes/online-Project-Managament-Training.asp">More</a>.</li>
                   <li>Customers in more than 160 countries and 3500+ companies <a href="http://www.pmstudy.com/pmp-exam-success.asp">More</a>.</li>
                   </ul>
               </div>
