@@ -144,7 +144,9 @@
           <li>Free  simulated ITIL practice test. <a href="http://www.itilstudy.com/freeresources/freeSimulatedTest.asp" >Take test</a></li>
           <li>Free chapter tests - <a href="http://www.itilstudy.com/freeresources/freeOnlineTest.asp" >Take test </a></li>
           <li>Free guides & podcast - <a href="http://www.itilstudy.com/freeresources/freeGuidePodcast.asp" >Download</a></li>
+            <%If Session("CountryOrigin") <> "India" then %>
           <li>ITIL Crossword.  <a href="http://www.itilstudy.com/crossword/index.html" >Play now</a></li>
+            <%End If %>
 		  <li>Free case studies and white papers. <a href="http://www.itilstudy.com/freeresources/caseStudies&whitePapers.asp" >Download</a></li>
 
       </ul>

@@ -153,7 +153,9 @@ If addCourse = "Add Course" Then
  Session("message") = "You Have Successfully Added Course"
  %>
  <!--#include virtual="/includes/generator4datesandlocation.asp"-->  
-  <!--#include virtual="/includes/generator4datesandlocation-German.asp"-->  
+<%If Session("Country") = "Germany" Then %>
+  <!--#include virtual="/includes/generator4datesandlocation-German.asp"--> 
+<%End If %> 
     <!--#include virtual="/includes/generator4CSI-Courses.asp"-->
     <!--#include virtual="/includes/generator4OSA-Courses.asp"-->
     <!--#include virtual="/includes/generator4ST-Courses.asp"-->
@@ -229,8 +231,10 @@ If editCourse = "Edit Course" Then
 
  Session("message") = "You Have Successfully Edited Course"
   %>
- <!--#include virtual="/includes/generator4datesandlocation.asp"-->  
+ <!--#include virtual="/includes/generator4datesandlocation.asp"--> 
+<%If Session("Country") = "Germany" Then %> 
   <!--#include virtual="/includes/generator4datesandlocation-German.asp"-->  
+<%End If %>
  <!--#include virtual="/includes/generator4CSI-Courses.asp"-->
     <!--#include virtual="/includes/generator4OSA-Courses.asp"--> 
  <%
@@ -251,7 +255,9 @@ If rqDeleteId <> "" Then
 Session("message") = "You Have Successfully Deleted The Course"
  %>
  <!--#include virtual="/includes/generator4datesandlocation.asp"-->
+<%If Session("Country") = "Germany" Then %>
   <!--#include virtual="/includes/generator4datesandlocation-German.asp"-->  
+<%End if %>
    <!--#include virtual="/includes/generator4CSI-Courses.asp"-->
     <!--#include virtual="/includes/generator4OSA-Courses.asp"-->
  <%
