@@ -1,15 +1,15 @@
 <%
-'If InStr(Request.ServerVariables("SERVER_NAME"),"www") = 0 Then
+If InStr(Request.ServerVariables("SERVER_NAME"),"www") = 0 Then
 
-	'Response.Status="301 Moved Permanently"
+	Response.Status="301 Moved Permanently"
 	
-	'If Request.ServerVariables("URL") = "/indexde.asp" Then
-	'Response.AddHeader "Location","http://www." & Request.ServerVariables("HTTP_HOST")
-	'Else
-	'Response.AddHeader "Location","http://www." & Request.ServerVariables("HTTP_HOST") & Request.ServerVariables("URL")
-    'End If
-	'Response.End
-'End if
+	If Request.ServerVariables("URL") = "/indexde.asp" Then
+	Response.AddHeader "Location","http://www." & Request.ServerVariables("HTTP_HOST")
+	Else
+	Response.AddHeader "Location","http://www." & Request.ServerVariables("HTTP_HOST") & Request.ServerVariables("URL")
+    End If
+	Response.End
+End if
 %>
 
 
@@ -17,9 +17,70 @@
 <link rel="stylesheet" type="text/css" href="/css/chromestyle.css">
 <link rel="stylesheet" type="text/css" href="/css/style.css">
 <script type="text/javascript" src="/js/chrome.js"></script>
-<style type="text/css"></style>
+<style type="text/css">
+
+    /* Enroll button*/
+#PM-Enrolmentbutton-Container
+{
+	width:212px;
+	height:47px;
+	float:left;
+	margin-top:253px;
+}
+
+.PM-Enrolmentbutton-Button-Background
+{  
+    width:104px;
+	height:45px;
+	float:left;
+	border:#003366 1px solid;
+	background:url(/Images/banners/Enrol-Button-Bg.png);
+	background-repeat:repeat-x;
+}
+.PM-Enrolmentbutton-Button-Background:hover
+{  
+    background:url(/Images/banners/Enrol-Button-Bg-Hover.png);
+	background-repeat:repeat-x;
+}
+	
+.PM-Enrolmentbutton
+{
+	
+	padding-left:6px;
+	padding-top:0px;
+	background:url(/Images/banners/En_ButtonArrow.png) no-repeat;
+	background-position:95% 75%;
+}
+.EM-Classroom
+{
+	color:#01518a;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+	text-shadow: 0px 1px 1px #fff;
+	text-decoration:none;
+}
+a.PM-Enroll-text
+{
+   font-family:Arial, Helvetica, sans-serif;
+   font-size:12px;
+   color:#000000;
+   text-decoration:none;
+   display:block;
+   text-align:left;
+   
+}
+
+.PM-Enrolmentbutton a:hover 
+{
+	background:none;
+color:#000000;
+	}
 
 
+
+</style>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 <script type="text/JavaScript">
 <!--
 function MM_preloadImages() { //v3.0

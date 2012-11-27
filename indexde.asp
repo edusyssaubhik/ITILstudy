@@ -1,17 +1,4 @@
-
-<script type="text/JavaScript">
-
-
-function getCountry1() {
-
-    document.forms["myform1"].submit();
-
-}
-
-
-//-->
-</script>
-<!-- Body Starts -->
+<!--#include virtual="/metatags/index_metatag.html"-->
 <%
 If Request.Form("countryName") <> "" Then
 	Session("CountryOrigin") = Request.Form("countryName")
@@ -20,11 +7,21 @@ Else
 End If 
 
 %>
-<!--#include virtual="/metatags/index_metatag.html"-->
+<link rel="stylesheet" type="text/css" href="/css/styleBanner.css">
 <!--#include virtual="/includes/headermetaGerman.asp"-->
-<!--#include virtual="/includes/indexbannerGerman.html"-->
+<!--#include virtual="/includes/indexbannerGerman.asp"-->
 <!--#include virtual="/includes/connection.asp"-->
 <!--#include virtual="/includes/displayFormat.asp"-->
+<script type="text/javascript">
+    isjQueryLoaded = 0
+    $(document).ready(function () {
+        $('#i1').fadeIn(300)
+        isjQueryLoaded = 1;
+    });
+    function changeSlide(a, b) {
+
+    }
+</script>
 <% 
 
  'Price Format Display Functions'

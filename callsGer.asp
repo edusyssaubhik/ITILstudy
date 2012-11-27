@@ -188,12 +188,16 @@ function Form_Validator(theform)
 	   <optgroup label="Germany">
 	  <%
 	  'Retrive the states'
-		strGermanyState = "SELECT Distinct (state )As States FROM ITIL_city WHERE country = 'Germany' ORDER BY state"
+          Function ReplaceStr(str)
+            ReplaceStr = Replace(str,"ü","&uacute;")
+
+          End Function
+		strGermanyState = "SELECT Distinct (state )As States FROM ITIL_city WHERE country = 'Germany' And City <> 'Hamburg (German)' ORDER BY state"
 
 		objRs.Open strGermanyState,ConnObj
 	   
 	    Do Until objRs.EOF %>
-	   <option value="<% = objRs("states") %>"><% = objRs("states") %>, <% '= objRs("statecode") %></option>
+	   <option value="<% = ReplaceStr(objRs("states")) %>"><% = ReplaceStr(objRs("states")) %>, <% '= objRs("statecode") %></option>
 	   <% objRs.Movenext
 	      Loop
 		  objRs.Close %>

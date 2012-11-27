@@ -206,7 +206,7 @@ End If
 </map>
         </div></td>
         
-        <% ElseIf Session("CountryOrigin") = "UAE" OR Session("CountryOrigin") = "Singapore" OR Session("CountryOrigin") = "Australia"  Then  %> <td id="imageHover"><div style="position:relative" id="imageHover"><img src="/images/buttons/logo_top.jpg" alt="ITILstudy" border="0" usemap="#Map" id="imageHover"/>
+        <% ElseIf Session("CountryOrigin") = "UAE" OR Session("CountryOrigin") = "Singapore"   Then  %> <td id="imageHover"><div style="position:relative" id="imageHover"><img src="/images/buttons/logo_top.jpg" alt="ITILstudy" border="0" usemap="#Map" id="imageHover"/>
 	 <div class="contactInTopLogo"> <span id="info" ><a href="/ITIL-Training/Success-Rate.asp">99.2% Pass Rate with 100% Moneyback Guarantee</a></span> </div>
            <map name="Map" id="Map">
   <area shape="rect" coords="5,13,230,96" href="/index.asp" />
@@ -226,7 +226,16 @@ End If
 </map>
   </div>
       </td>      
-      
+        <%ElseIf Session("CountryOrigin") = "Australia" then %>
+        <td id="imageHover"><div style="position:relative" id="imageHover"><img src="/images/buttons/logo_top.jpg" alt="ITILstudy" border="0" usemap="#Map" id="imageHover"/>
+	   <div class="contactInTopLogo"> <span id="callUsAt">Call: <span style="color:#0673b9">+61 2 88964376 </span> <span id="emailUs">Email: <a href="mailto:marketing@ITILstudy.com" style="color:#0673b9">marketing@ITILstudy.com</a></span></span> <span id="info">99.2% Pass Rate with 100% Moneyback Guarantee</span> </div>
+       <map name="Map" id="Map">
+  <area shape="rect" coords="5,13,230,96" href="/index.asp" />
+  <area shape="rect" coords="563,10,724,95" href="http://www.csme.us/training-organizations.php" target="_blank" />
+  <area shape="rect" coords="742,11,900,94"href="http://www.apmg-international.com/AccreditedOrganisations/EdusysServices-UK.asp" target="_blank" />
+</map>
+          </div>
+        </td> 
       <% Else %>
        <td id="imageHover"><div style="position:relative" id="imageHover"><img src="/images/buttons/logo_top.jpg" alt="ITILstudy" border="0" usemap="#Map" id="imageHover"/>
 	     <map name="Map" id="Map">
