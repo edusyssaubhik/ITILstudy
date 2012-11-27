@@ -1,4 +1,4 @@
-
+<!--#include virtual="/includes/URLRedirection.asp"-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -49,15 +49,15 @@ function getCountry() {
 }
 -->
 </script>
-<script language="JavaScript" type="text/javascript" src="/js/jquery-1.7.2.js"></script> 
+<script language="JavaScript" type="text/javascript" src="/js/jquery-1.7.2.js"></script>
   <%If not trim(session("current_user_id")) = "" then %>
  <script type="text/javascript">
-			  $(function(){			 		  
+			  $(function(){
 			  $('#dropmenu2').append('<a href="/Mycourses.asp" onmouseover="MM_swapImage("b","","/images/back/link_02_courses_enroll_green.jpg",1)" onmouseout="MM_swapImgRestore()">My Courses</a>')
 			  })
 			  </script>
 			  <%end if %>
-<% 
+<%
 dim Isfblogin
 Isfblogin=true 'make it false if facebook login not required in yr site
 %>
@@ -74,7 +74,7 @@ If Request.Form("countryName") <> "" Then
 	Session("CountryOrigin") = Request.Form("countryName")
 Else
 	Session("CountryOrigin") = Session("CountryOrigin")
-End If 	
+End If
 
 If(Session("CountryOrigin")<>"") Then
 
@@ -121,49 +121,49 @@ If(Session("CountryOrigin")<>"") Then
 If InStr(sipAddress,"IN") Then
 	Session("CountryOrigin")="India"
 	End If
-	
+
 If InStr(sipAddress,";US,") Then
 		Session("CountryOrigin") = "US"
 	End If
-	
+
 If InStr(sipAddress,";CA,") Then
 		Session("CountryOrigin") = "Canada"
 	End If
-	
+
 If InStr(sipAddress,";SG,") Then
 		Session("CountryOrigin") = "Singapore"
 	End If
-	
+
 If (InStr(sipAddress,";AU,")) Then
 		Session("CountryOrigin") = "Australia"
 	End If
-	
+
 If InStr(sipAddress,";AE,") Then
 		Session("CountryOrigin") = "UAE"
 	End If
-	
+
 If InStr(sipAddress,";SA,") Then
 		Session("CountryOrigin") = "Saudi Arabia"
-	End If	
-	
+	End If
+
 
 If (InStr(sipAddress,";GB,") OR InStr(sipAddress,";UK,")) Then
 		Session("CountryOrigin") = "United Kingdom"
 		'Response.Redirect("http://www.projstudy.com")
 	End If
-	
+
 If InStr(sipAddress,";DE,") Then
 		Session("CountryOrigin") = "Germany"
 		'Response.Redirect("/indexde.asp")
-	End If	
-	
+	End If
+
 If InStr(sipAddress,";NL,") Then
 		Session("CountryOrigin") = "Netherlands"
-	End If	
-	
+	End If
+
 If Session("CountryOrigin")="" Then
 		Session("CountryOrigin")="Other"
-	End If	
+	End If
 
 Set objHtp = Nothing
 Set ConnObj1 = Nothing
@@ -203,9 +203,9 @@ End If
              <% End If %>
 
               <!--When aligned to right , need to put last coming content to first-->
-               
+
               <span class="floatRight">
-              <span class="style1"><a href="/index.asp">Home</a> | <a href="/contactus.asp">Contact</a>  | <a href="/sitemap.asp">Sitemap</a> 
+              <span class="style1"><a href="/index.asp">Home</a> | <a href="/contactus.asp">Contact</a>  | <a href="/sitemap.asp">Sitemap</a>
               <%If(Session("FirstName")<>"") Then%>
               | <a href="/Mycourses.asp">My Account</a>
               <%Else%>
@@ -214,19 +214,19 @@ End If
               </span>
                    <% If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" Then %>
 <% If Session("FirstName") <> "" Then %>
-                | 
+                |
                   <a href="/logoff.asp">Sign Out</a>
                   <%End If
                       End If %>
-                </span>           
-             
+                </span>
+
 				 <!--Code for search option -->
             <span class="floatRight">
 			<form action="/searchresults1.asp" id="cse-search-box" target="_blank">
         <div style=" margin-top:0px">
 
     <input type="hidden" name="cx" value="016011900712214369325:uxcy_lv2cqa" />
-    
+
      <input type="hidden" name="cof" value="FORID:9" />
     <input type="hidden" name="ie" value="UTF-8" />
 <input type="text" name="q" id="mainSearch_AllPages" id="mainSearch_AllPages" style="color: rgb(161, 161, 161);width:200px;" size="80"  class="TeXtField" value="Search ITILstudy" onfocus='myObj = document.getElementById("mainSearch_AllPages");if(this.value=="Search ITILstudy") myObj.value="";myObj.style.color = "#A1A1A1";' onblur='myObj = document.getElementById("mainSearch_AllPages");if(myObj.value == "") myObj.value="Search ITILstudy";myObj.style.color = "#a1a1a1";if(myObj.value!="Search ITILstudy") myObj.style.color="#A1A1A1";' size="50" />
@@ -235,8 +235,8 @@ End If
   </div>
 </form>
                 </span>
-             
-     
+
+
 			   <form name="myform" method="post">
               <span class="floatRight"> <% If Session("CountryOrigin") <> "Other" Then %>
                       <img src="/images/countries/<% = Trim(Session("CountryOrigin")) %>.gif" height="11px" />
@@ -256,13 +256,13 @@ End If
                 </select>
               </span>
             </form>
-			
+
                <% If Session("CountryOrigin") = "Germany" Then %>
-            
+
             <span class="floatRight">
 				<span class="lang-Eng">
                 <a href="/indexde.asp">Deutsche</a> |</span>
-                                
+
             </span>
              <% End If %>
 
@@ -274,60 +274,114 @@ End If
       </td>
     </tr>
     <tr>
-	
+
 	 <% If Session("CountryOrigin") = "India" Then %>
-      <td id="imageHover"><div style="position:relative" id="imageHover"><img src="/images/buttons/logo_top.jpg" alt="ITILstudy" border="0" usemap="#MapLogo" id="imageHover"/>
-	   <div class="contactInTopLogo"> <span id="callUsAt">Call: <span style="color:#0673b9">080 41557547 / 9008748005 </span></span> <span id="emailUs">Email: <a href="mailto:marketing@ITILstudy.com" style="color:#0673b9">marketing@ITILstudy.com</a></span> <span id="info">ITILstudy is a brand of Edusys Services Private Limited</span> </div>
-          <map name="MapLogo" id="MapLogo">
-    <% If Session("CountryOrigin") = "United Kingdom" Then %>
-    <area shape="rect" coords="707,2,915,101" href="http://www.apmg-international.com/AccreditedOrganisations/EdusysServices-UK.asp" target="_blank" />
-    <% Else %>
-	<area shape="rect" coords="707,2,915,101" href="http://www.apmg-international.com/AccreditedOrganisations/EdusysServices.asp" target="_blank" />
-    <% End If %>  </map></div>
+      <td id="imageHover"><div style="position:relative" id="imageHover"><img src="/images/buttons/logo_top.jpg" alt="ITILstudy" border="0" usemap="#Map" id="imageHover"/>
+	   <div class="contactInTopLogo"> <span id="callUsAt">Call: <span style="color:#0673b9">080 41557547 / 9008748005 </span> <span id="emailUs">Email: <a href="mailto:marketing@ITILstudy.com" style="color:#0673b9">marketing@ITILstudy.com</a></span></span> <!--<span id="info">ITILstudy is a brand of Edusys Services Private Limited</span> --> </div>
+       <map name="Map" id="Map">
+  <area shape="rect" coords="5,13,230,96" href="/index.asp" />
+  <area shape="rect" coords="563,10,724,95" href="http://www.csme.us/training-organizations.php" target="_blank" />
+  <area shape="rect" coords="742,11,900,94"href="http://www.apmg-international.com/AccreditedOrganisations/EdusysServices-UK.asp" target="_blank" />
+</map>
+          </div>
         </td>
-		<% ElseIf Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" Then  %>
+
+	<% ElseIf Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" Then  %>
+
  <td id="imageHover"><div style="position:relative" id="imageHover"><img src="/images/buttons/logo_top.jpg" alt="ITILstudy" border="0" usemap="#Map" id="imageHover"/>
-	  
    <map name="Map" id="Map">
   <area shape="rect" coords="5,13,230,96" href="/index.asp" />
   <area shape="rect" coords="563,10,724,95" href="http://www.csme.us/training-organizations.php" target="_blank" />
   <area shape="rect" coords="742,11,900,94"href="http://www.apmg-international.com/AccreditedOrganisations/EdusysServices-UK.asp" target="_blank" />
 </map>
         </div></td>
-        <% ElseIf Session("CountryOrigin") = "UAE" OR Session("CountryOrigin") = "Singapore" OR Session("CountryOrigin") = "Australia"  Then  %>
+
+        <% ElseIf Session("CountryOrigin") = "UAE" Then%>
  <td id="imageHover"><div style="position:relative" id="imageHover"><img src="/images/buttons/logo_top.jpg" alt="ITILstudy" border="0" usemap="#Map" id="imageHover"/>
-	   <div class="contactInTopLogo"> <span id="info" ><a href="/ITIL-Training/Success-Rate.asp">99.2% Pass Rate with 100% Moneyback Guarantee</a></span> </div>
+	   <div class="contactInTopLogo"> <span id="emailUs">Email: <a href="mailto:marketing@ITILstudy.com" style="color:#0673b9">marketing@ITILstudy.com</a></span></span><span id="info" ><a href="/ITIL-Training/Success-Rate.asp">99.2% Pass Rate with 100% Moneyback Guarantee</a></span> </div>
    <map name="Map" id="Map">
   <area shape="rect" coords="5,13,230,96" href="/index.asp" />
   <area shape="rect" coords="563,10,724,95" href="http://www.csme.us/training-organizations.php" target="_blank" />
   <area shape="rect" coords="742,11,900,94"href="http://www.apmg-international.com/AccreditedOrganisations/EdusysServices-UK.asp" target="_blank" />
 </map>
         </div></td>
-        
-		
-        <% ElseIf Session("CountryOrigin") = "United Kingdom" Then %>
+
+        <%elseIf Session("CountryOrigin") = "Singapore" Then  %>
+
  <td id="imageHover"><div style="position:relative" id="imageHover"><img src="/images/buttons/logo_top.jpg" alt="ITILstudy" border="0" usemap="#Map" id="imageHover"/>
-	  <!-- <div class="contactInTopLogo"><span id="callUsAt">Call: <span style="color:#0673b9">0800 0337 097</span></span> <span id="emailUs">Email: <a href="mailto:marketing@ITILstudy.com" style="color:#0673b9">marketing@ITILstudy.com</a></span> <span id="info"><a href="/ITIL-Training/Success-Rate.asp">99.2% Pass Rate with 100% Moneyback Guarantee</a></span> </div>-->
+	   <div class="contactInTopLogo"> <span id="emailUs">Email: <a href="mailto:marketing@ITILstudy.com" style="color:#0673b9">marketing@ITILstudy.com</a></span></span><span id="info" ><a href="/ITIL-Training/Success-Rate.asp">99.2% Pass Rate with 100% Moneyback Guarantee</a></span> </div>
+   <map name="Map" id="Map">
+  <area shape="rect" coords="5,13,230,96" href="/index.asp" />
+  <area shape="rect" coords="563,10,724,95" href="http://www.csme.us/training-organizations.php" target="_blank" />
+  <area shape="rect" coords="742,11,900,94"href="http://www.apmg-international.com/AccreditedOrganisations/EdusysServices-UK.asp" target="_blank" />
+</map>
+        </div></td>
+
+	        <%elseIf Session("CountryOrigin") = "Saudi Arabia"  Then  %>
+
+	 <td id="imageHover"><div style="position:relative" id="imageHover"><img src="/images/buttons/logo_top.jpg" alt="ITILstudy" border="0" usemap="#Map" id="imageHover"/>
+		   <div class="contactInTopLogo"> <span id="emailUs">Email: <a href="mailto:marketing@ITILstudy.com" style="color:#0673b9">marketing@ITILstudy.com</a></span></span><span id="info"><a href="/ITIL-Training/Success-Rate.asp">99.2% Pass Rate with 100% Moneyback Guarantee</a></span>  </div>
+	   <map name="Map" id="Map">
+	  <area shape="rect" coords="5,13,230,96" href="/index.asp" />
+	  <area shape="rect" coords="563,10,724,95" href="http://www.csme.us/training-organizations.php" target="_blank" />
+	  <area shape="rect" coords="742,11,900,94"href="http://www.apmg-international.com/AccreditedOrganisations/EdusysServices-UK.asp" target="_blank" />
+	</map>
+        </div></td>
+<%ElseIf Session("CountryOrigin") = "Netherlands" Then  %>
+ <td id="imageHover"><div style="position:relative" id="imageHover"><img src="/images/buttons/logo_top.jpg" alt="ITILstudy" border="0" usemap="#Map" id="imageHover"/>
+	   <div class="contactInTopLogo"> <span id="emailUs">Email: <a href="mailto:marketing@ITILstudy.com" style="color:#0673b9">marketing@ITILstudy.com</a></span></span><span id="info" ><a href="/ITIL-Training/Success-Rate.asp">99.2% Pass Rate with 100% Moneyback Guarantee</a></span> </div>
+   <map name="Map" id="Map">
+  <area shape="rect" coords="5,13,230,96" href="/index.asp" />
+  <area shape="rect" coords="563,10,724,95" href="http://www.csme.us/training-organizations.php" target="_blank" />
+  <area shape="rect" coords="742,11,900,94"href="http://www.apmg-international.com/AccreditedOrganisations/EdusysServices-UK.asp" target="_blank" />
+</map>
+        </div></td>
+
+       <% ElseIf Session("CountryOrigin") = "United Kingdom" Then %>
+ <td id="imageHover"><div style="position:relative" id="imageHover"><img src="/images/buttons/logo_top.jpg" alt="ITILstudy" border="0" usemap="#Map" id="imageHover"/>
+	   <div class="contactInTopLogo"><span id="callUsAt">Call: <span style="color:#0673b9">0800 0337 097</span></span> <span id="emailUs">Email: <a href="mailto:marketing@ITILstudy.com" style="color:#0673b9">marketing@ITILstudy.com</a></span><span id="info"><a href="/ITIL-Training/Success-Rate.asp">99.2% Pass Rate with 100% Moneyback Guarantee</a></span>   </div>
            <map name="Map" id="Map">
   <area shape="rect" coords="5,13,230,96" href="/index.asp" />
   <area shape="rect" coords="563,10,724,95" href="http://www.csme.us/training-organizations.php" target="_blank" />
   <area shape="rect" coords="742,11,900,94"href="http://www.apmg-international.com/AccreditedOrganisations/EdusysServices-UK.asp" target="_blank" />
 </map>
   </div>
-      </td>   
-        
+      </td>
+      <%ElseIf Session("CountryOrigin") = "Australia" then %>
+        <td id="imageHover"><div style="position:relative" id="imageHover"><img src="/images/buttons/logo_top.jpg" alt="ITILstudy" border="0" usemap="#Map" id="imageHover"/>
+	   <div class="contactInTopLogo"> <span id="callUsAt">Call: <span style="color:#0673b9">+61 2 88964376 </span> <span id="emailUs">Email: <a href="mailto:marketing@ITILstudy.com" style="color:#0673b9">marketing@ITILstudy.com</a></span></span> <span id="info"><a href="/ITIL-Training/Success-Rate.asp">99.2% Pass Rate with 100% Moneyback Guarantee</a></span> </div>
+       <map name="Map" id="Map">
+  <area shape="rect" coords="5,13,230,96" href="/index.asp" />
+  <area shape="rect" coords="563,10,724,95" href="http://www.csme.us/training-organizations.php" target="_blank" />
+  <area shape="rect" coords="742,11,900,94"href="http://www.apmg-international.com/AccreditedOrganisations/EdusysServices-UK.asp" target="_blank" />
+</map>
+          </div>
+        </td>
+
+              <%ElseIf Session("CountryOrigin") = "Germany" then %>
+		        <td id="imageHover"><div style="position:relative" id="imageHover"><img src="/images/buttons/logo_top.jpg" alt="ITILstudy" border="0" usemap="#Map" id="imageHover"/>
+			   <div class="contactInTopLogo"> <span id="callUsAt">Call: <span style="color:#0673b9">+49 069 344643</span> <span id="emailUs">Email: <a href="mailto:marketing@ITILstudy.com" style="color:#0673b9">marketing@ITILstudy.com</a></span></span><span id="info"><a href="/ITIL-Training/Success-Rate.asp">99.2% Pass Rate with 100% Moneyback Guarantee</a></span>  </div>
+		       <map name="Map" id="Map">
+		  <area shape="rect" coords="5,13,230,96" href="/index.asp" />
+		  <area shape="rect" coords="563,10,724,95" href="http://www.csme.us/training-organizations.php" target="_blank" />
+		  <area shape="rect" coords="742,11,900,94"href="http://www.apmg-international.com/AccreditedOrganisations/EdusysServices-UK.asp" target="_blank" />
+		</map>
+		          </div>
+		        </td>
+
       <% Else %>
-       <td id="imageHover"><div style="position:relative" id="imageHover"><img src="/images/buttons/logo_top.jpg" alt="ITILstudy" border="0" usemap="#MapLogo" id="imageHover"/>
-	  
-          <map name="MapLogo" id="MapLogo">
-    <area shape="rect" coords="12,0,236,67" href="/index.asp" />
-  </map>
+       <td id="imageHover"><div style="position:relative" id="imageHover"><img src="/images/buttons/logo_top.jpg" alt="ITILstudy" border="0" usemap="#Map" id="imageHover"/>
+	     <map name="Map" id="Map">
+  <area shape="rect" coords="5,13,230,96" href="/index.asp" />
+  <area shape="rect" coords="563,10,724,95" href="http://www.csme.us/training-organizations.php" target="_blank" />
+  <area shape="rect" coords="742,11,900,94"href="http://www.apmg-international.com/AccreditedOrganisations/EdusysServices-UK.asp" target="_blank" />
+</map>
   </div>
       </td>
       <% End If %>
     </tr>
   </table>
-	
+
   <table width="930px" align="center" border="0" cellpadding="0" cellspacing="0">
     <tr>
       <td><table width="930px" border="0" cellpadding="0" cellspacing="0">
@@ -340,21 +394,21 @@ End If
 				  <% Else %>
 				  <li><a href="#" rel="dropmenu2"> <img src="/images/back/link_02_courses_enroll_grey.jpg" alt="ITILstudy" name="b" id="b" onMouseOver="MM_swapImage('b','','/images/back/link_02_courses_enroll_green.jpg',1)" onMouseOut="MM_swapImgRestore()" border="0"  /></a></li>
 				  <% End If %>
-                  
+
                    <% If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" Then %>
                   <li><a href="#" rel="dropmenu7"> <img src="/images/back/link_07_corporate_grey.jpg" alt="ITILstudy" name="g" id="g" onMouseOver="MM_swapImage('g','','/images/back/link_07_corporate_green.jpg',1)" onMouseOut="MM_swapImgRestore()" border="0"  /></a></li>
                   <% End If %>
-				  
+
 				   <li id="imageHover"><a href="#" rel="dropmenu5"><img src="/images/back/link_03_free_resources_grey.jpg" name="c" id="c" onmouseover="MM_swapImage('c','','/images/back/link_03_free_resources_green.jpg',1)" onmouseout="MM_swapImgRestore()" border="0"></a></li>
-                  
+
                   <li><a href="#" rel="dropmenu3"><img src="/images/back/link_04_methodology_grey.jpg" alt="ITILstudy" name="d" id="d" onMouseOver="MM_swapImage('d','','/images/back/link_04_methodology_green.jpg',1)" onMouseOut="MM_swapImgRestore()"  border="0" ></a></li>
-                  
+
                    <% If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" Then %>
                   <li><a href="#" rel="dropmenu4"><img src="/images/back/US_about_us_grey.jpg" alt="ITILstudy" name="e" id="e" onMouseOver="MM_swapImage('e','','/images/back/US_about_us_green.jpg',1)" onMouseOut="MM_swapImgRestore()"  border="0" ></a></li>
                   <% Else %>
                   <li><a href="#" rel="dropmenu4"><img src="/images/back/link_05_about_us_grey.jpg" alt="ITILstudy" name="e" id="e" onMouseOver="MM_swapImage('e','','/images/back/link_05_about_us_green.jpg',1)" onMouseOut="MM_swapImgRestore()"  border="0" ></a></li>
                   <% End If %>
-                  
+
                    <% If Session("CountryOrigin") <> "US" AND Session("CountryOrigin") <> "Canada" Then %>
 
 			 <% If Session("FirstName") = "" Then %>
@@ -364,47 +418,47 @@ End If
             <% End If %>
 
             <% End If %>
-			
+
                 </ul>
               </div>
-              
+
             <!--1st drop down menu -->
-			
+
 			<% If Session("CountryOrigin") = "United Kingdom" Then %>
 			<!--#include virtual="/includes/header-UK.asp"-->
-			
+
                 <% ElseIf Session("CountryOrigin") = "Germany" Then %>
 			<!--#include virtual="/includes/header-German-english.asp"-->
-            
+
 			<% ElseIf Session("CountryOrigin") = "India" Then %>
 			<!--#include virtual="/includes/header-India.asp"-->
-			
+
 			 <% ElseIf Session("CountryOrigin") = "US" Then %>
 			<!--#include virtual="/includes/header-US.asp"-->
-			
+
 			<% ElseIf Session("CountryOrigin") = "Canada" Then %>
 			<!--#include virtual="/includes/header-Canada.asp"-->
-			
+
 			<% ElseIf Session("CountryOrigin") = "UAE" Then %>
 			<!--#include virtual="/includes/header-UAE.asp"-->
-			
+
 			<% ElseIf Session("CountryOrigin") = "Singapore" Then %>
 			<!--#include virtual="/includes/header-Singapore.asp"-->
-		
+
 			<% ElseIf Session("CountryOrigin") = "Australia" Then %>
 			<!--#include virtual="/includes/header-Australia.asp"-->
-			
+
             <% ElseIf Session("CountryOrigin") = "Saudi Arabia" Then %>
 			<!--#include virtual="/includes/header-saudiArabia.asp"-->
-            
+
             <% ElseIf Session("CountryOrigin") = "Netherlands" Then %>
 			<!--#include virtual="/includes/header-Netherlands.asp"-->
-            
+
 			<% ElseIf Session("CountryOrigin") = "Other" Then %>
 			<!--#include virtual="/includes/header-Other.asp"-->
-			  
+
 			 <% End If %>
-			
+
       <script type="text/javascript">
 
 cssdropdown.startchrome("chromemenu")

@@ -163,11 +163,11 @@ ITIL<sup>&reg;</sup> Foundation is the entry-level qualification, which offers c
 	<p class="Header">Why do leading global organizations choose ITILstudy?</p>
 	<table  border="0">
 	<tr><td >
-	<p>Most efficient and economical means to become ITIL Foundation certified:</p>
+	<p>Very efficient and economical means to become ITIL Foundation certified:</p>
 	<ul>
 	<li><span class="general-bodyBold">Outstanding measurable success: </span>Our ITIL Exam Prep Classroom course has a proven track record of 99.2% pass rate </li>
-	<li><span class="general-bodyBold">Best faculty:</span> We owe our high success rate (99%) and consistently great student feedback to the quality of our instructors. For instructor bios, <a href="/itil-training/instructors.asp">click  here</a></li>
-<li><span class="general-bodyBold">100% Moneyback Guarantee: </span>: ITILstudy assures you that not a single dollar of your training investment is wasted. We ensure that our students pass the ITIL Foundation exam or we the complete exam fees back. <a href="/itil-training/moneyBack.asp">More</a> </li>
+	<li><span class="general-bodyBold">Experienced faculty:</span> We owe our high pass rate (99.2%) and consistently great student feedback to the quality of our instructors. For instructor bios, <a href="/itil-training/instructors.asp">click  here</a></li>
+<li><span class="general-bodyBold">100% Moneyback Guarantee: </span> ITILstudy assures you that not a single dollar of your training investment is wasted. We ensure that our students pass the ITIL Foundation exam or we the complete exam fees back. <a href="/itil-training/moneyBack.asp">More</a> </li>
 	
 	     <li><span class="general-bodyBold">Flexible delivery options:</span> ITILstudy understands different organizations have different needs and constraints, therefore, it provides corporates with flexible delivery options:
 <ul type="circle">
@@ -223,7 +223,7 @@ ITIL<sup>&reg;</sup> Foundation is the entry-level qualification, which offers c
 <p>This training course is accessible from anywhere in the world at any time. It is suitable for teams separated by time zones and location. With the course content available online, students can study at their own pace and then schedule the certification exam at a convenient, local exam site.
 Benefits of Online Self-Study Program:
 <ul><li>Anywhere Anytime: Accessible from anywhere in the world at any time. Suitable for teams separated by time zones and location</li>
-<li>18 PMI PDUs certificate to help to cater to the needs of continuing education units for PMP certified professionals.</li></ul></p>
+<li>18 PMI<sup>&reg;</sup> approved PDUs certificate to help to cater to the needs of continuing education units for PMP<sup>&reg;</sup> certified professionals.</li></ul></p>
 
 <p><br> <span class="Header">OPTION B: Virtual Classroom</span></p><hr>
 <p>This training course brings together the participants from any location virtually. Students benefit from 1.5 days of instructor-led training via LIVE online virtual classroom environment.  Only required resource is a computer with internet connectivity. All study materials and other teaching aids will be mailed to students in advance by ITILstudy.
@@ -234,7 +234,7 @@ Benefits of Virtual Classroom Program:
 <li><b>Organization specific and Industry relevant</b> examples and insights shared by experienced faculty</li>
 <li>Employees certified in 2 days!</li>
 <li>18 PMI PDUs certificate to help to cater to the needs of continuing education units for PMP certified professionals.</li>
-<li>Complimentary Risk Management Online Course worth $300 for <b>FREE!</b></li></ul></p>
+<li>Complimentary Risk Management Online Course worth $300 <b>!</b></li></ul></p>
 
 
 <p><br> <span class="Header">OPTION C: 2-Day Traditional Classroom</span></p><hr>
@@ -244,7 +244,7 @@ Benefits of 2-Day Traditional Classroom Program:
 <li><b>Industry relevant </b> examples and insights shared by experienced faculty</li>
 <li>Employees certified in 2 days!</li>
 <li>18 PMI PDUs certificate to help to cater to the needs of continuing education units for PMP certified professionals.</li>
-<li>Complimentary Risk Management Online Course worth $300 for <b>FREE!</b></li></ul></p>
+<li>Complimentary Risk Management Online Course worth $300 <b>!</b></li></ul></p>
 
 <p><br> <span class="Header">OPTION D: 3-Day Classroom + Tailored Case Study</span></p><hr>
 <p>This training course is the same as the 2-Day Traditional Classroom course with an additional day of instruction. On the third day, the faculty will help assess your organization’s capability to implement ITIL and in identifying improvement areas. This option allows for industry and/or company specific case studies or examples to be used as part of the program.<br>
@@ -253,9 +253,9 @@ Benefits of 2-Day Traditional Classroom Program:
 <li><b>Industry relevant </b> examples and insights shared by experienced faculty</li>
 <li>Tailor made case studies specific to the industry sector which enables the students to understand the concepts and processes of ITIL Foundation in vivid detail</li>
 <li>Employees certified in 2 days!</li>
-<li>Complimentary Risk Management Online Course worth $300 for <b>FREE!</b></li></ul>
+<li>Complimentary Risk Management Online Course worth $300 <b>!</b></li></ul>
 
-To sign-up for a scheduled corporate class and/or to take advantage of corporate discounts for your company, please submit enrolment details and our corporate account representative will contact you – <a href="/enrollclass.asp">ENROLL NOW!</a> Some companies have an open payment account already established for direct billing.
+To sign-up for a scheduled corporate class and/or to take advantage of corporate discounts for your company, please submit enrolment details and our corporate account representative will contact you. Some companies have an open payment account already established for direct billing.
 </p>
 
 

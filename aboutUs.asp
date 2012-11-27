@@ -17,16 +17,16 @@
             <td width="73%" rowspan="4" background="/images/back/left_line.jpg" class="general-body"><br />
 			<div style="margin-top:-15px; width:97%;">
                 <!-- Content Start From Here-->
-                <h1 class="PageTitle">ABOUT ITILstudy – LEADING ITIL<sup>&reg;</sup> PREP TRAINING PROVIDER</h1>
+                <h1 class="PageTitle">ABOUT ITILstudy – A LEADING ITIL<sup>&reg;</sup> PREP TRAINING PROVIDER</h1>
 			
  			<ul>
-                <li>Edusys Services Private Limited is amongst the select group of <a href="http://www.apmg-international.com/AccreditedOrganisations/EdusysServices-UK.asp" target="_blank">Accredited Training Organizations (ATO)</a> accredited by APM Group,UK and <a href="http://www.csme.us/training-organizations.php" target="_blank">Certification Subject Matter Experts (CSME)</a> . ITILstudy, a leading brand of Edusys Services Private Limited, is a leading training provider which specializes in conducting quality classroom training and programs to prepare students for ITIL<Sup>&reg;</sup> Foundation certification.</li>
+                <li>Edusys Services Private Limited is amongst the select group of <a href="http://www.apmg-international.com/AccreditedOrganisations/EdusysServices-UK.asp" target="_blank">Accredited Training Organizations (ATO)</a> accredited by APM Group,UK and <a href="http://www.csme.us/training-organizations.php" target="_blank">Certification Subject Matter Experts (CSME)</a> . ITILstudy, a leading brand of Edusys Services Private Limited, UK (VMEdu, Inc., US) is a leading training provider which specializes in conducting quality classroom training and programs to prepare students for ITIL<Sup>&reg;</sup> Foundation certification.</li>
 
-<li>We are the most successful and popular service management and project management training provider globally. We have trained more than 25,000 successful professionals spanning across 160 + countries and 3500 companies for various professional courses including ITIL, PRINCE2<sup>®</sup>, PMP<sup>®</sup>, CAPM<sup>®</sup>, etc. </li>
+<li>We are a leading and popular service management and project management training provider globally. We have trained more than 100,000 successful professionals spanning across 160 + countries and 3500 companies for various professional courses including ITIL, PRINCE2<sup>®</sup>, PMP<sup>®</sup>, CAPM<sup>®</sup>, etc. </li>
 
 <li>ITILstudy's trainers are accredited by APMG and CSME. They are highly qualified, knowledgeable, experienced trainers who are experts in their subjects. They are uniquely positioned to provide the students with insights into industry experience. They are motivated to transfer knowledge through pre and post-training support. They continually undergo 'Train the Trainer' refresher courses to keep themselves updated.</li>
 
-<li>ITILstudy has an excellent reputation for prompt and efficient service. It provides quality products and services at the most cost-effective prices. We deliver training solutions to corporate, both in the public as well as private sectors. We possess institutional capability to not only offer customized courses to our clients, but also to train their students in their own premises, if they so desire.</li>
+<li>ITILstudy has an excellent reputation for prompt and efficient service. It provides quality products and services at very cost-effective prices. We deliver training solutions to corporate, both in the public as well as private sectors. We possess institutional capability to not only offer customized courses to our clients, but also to train their students in their own premises, if they so desire.</li>
 		
 			
 				

@@ -22,7 +22,7 @@
                 <li>ITILstudy Guides are available for the <a href="http://www.itilstudy.com/course-syllabus.asp"/>overall syllabus for ITIL Foundation syllabus</a>. These are available to students who <a href="http://www.itilstudy.com/ITIL-Online-Courses.asp"/>enrol in relevant ITILstudy course</a>.</li>
                 <li>The guides in ITILstudy familiarize students about the concepts they should know about the specific Lifecycle phases.</li>
                 </ul>
-                <span class="SubHeader">Sample guide available in ITILstudy about "Introduction to ITIL Foundation" and will give you an idea of Guides in other chapters provided by ITILstudy.</span>
+                <span class="SubHeader">Sample guides available in ITILstudy, for example - "Introduction to ITIL Foundation" chapter provides you an idea of our study materials.</span>
                 <ul>
                   <li><A href="http://www.APMGstudy.com/ITILdocs/Foundation/guides/1.Introduction.pdf" target="_blank">Download Presentation - Study Guide</a> </li>
                   <li><b>Optional</b> : <span class="SubHeader">Podcasts (audio/visual presentations) :</span> ITILstudy Podcasts are included with all our guides, and allow students to listen to our audio/visual presentations. These podcasts can be copied to your iPhone / iPod / iPAD / Android phone / tab and you can listen to Podcasts when driving to work, traveling or resting. <br><br>

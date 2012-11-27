@@ -36,7 +36,7 @@
             <td width="80%" rowspan="4" background="/images/back/left_line.jpg" class="general-body"><div style="margin-top:-12px; width:95%;"> <br />
                 <div>
                  <table width="100%" align="center" border="0" id="chapter">
-                    <tr> <span>Please <a href="http://www.itilstudy.com/OSAOnlinecourse-syllabus.asp">click here</a> for the list of chapters covered in ITIL Intermediate OSA course.</span><br /><br /><span class="Header">OSA Intermediate Online Training Covers the following topics:</span><br><br>
+                    <tr> <span class="Header">OSA Intermediate Online Training Covers the following topics:</span><br><br>
                       <td width="50%"><span class="ChapterList">1. Introduction</span>
                         <ul>
                          <li>The value to the business of OSA activities</li>

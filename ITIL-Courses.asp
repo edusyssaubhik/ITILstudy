@@ -95,7 +95,7 @@ else if (ns6||ie4) ld.display="none";
 		  <li>Everything required for ITIL Foundation exam would be provided, you don't need to bring anything else to the class</li>
           <li>Complementary RMstudy Certification worth $ 300. <a href="http://itilstudy.com/ITIL-Training/free-onlinecertification.asp" target="_blank">More</a></li>
 			<li>Valuable tips to pass the ITIL Foundation exam</li>
-			<li> Free 18 PMI approved PDUs with our courses</li></ol></td></tr>
+			<li> Free 18 PMI<sup>&reg;</sup> approved PDUs with our courses</li></ol></td></tr>
 			<tr><td>&nbsp;</td></tr>
 			</table>
                
@@ -181,7 +181,7 @@ else if (ns6||ie4) ld.display="none";
  <li>Refreshments during classroom sessions</li>
  <li>Everything required for ITIL Foundation exam would be provided, you don't need to bring anything else to the class</li>
  <li>Valuable tips to pass the  ITIL Foundation exam</li>
- <li>Free 18 PMI approved PDUs with our courses <a href="http://itilstudy.com/ITIL-Training/PMI_PDU.asp">More</a></li>
+ <li>Free 18 PMI<sup>&reg;</sup> approved PDUs with our courses <a href="http://itilstudy.com/ITIL-Training/PMI_PDU.asp">More</a></li>
                 </ol>
                
                <%End If%>
@@ -474,7 +474,7 @@ else if (ns6||ie4) ld.display="none";
                 <div><span class="Required">*</span> : Price after early bird discount (if you <% If Session("CountryOrigin") = "United Kingdom" Then %>enrol<% Else %>enroll <% End If %> and pay more than <% If Month(Date) = 11 Then %>3<% Else %><% = CourseApplicableDays %><% End If %> days before the course start date, and if seats are available)</div>
 				<br>
 				<% If Session("CountryOrigin") <> "Singapore" and Session("CountryOrigin") <> "Other"  Then %>
-				<div><span class="Required">**</span> : As per the most recent data available with us for January 2012</div>
+				<div><span class="Required">**</span> : As per the most recent data available with us till August 2012</div>
 				<br>
 				<% End If %>
 				<% If Session("CountryOrigin") = "US" Then %>

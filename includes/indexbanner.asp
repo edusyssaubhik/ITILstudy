@@ -2,8 +2,8 @@
 	
   <span style="padding: 0px; text-align: left; position: absolute; color: rgb(255, 255, 255); margin-left: 20px; margin-top: 240px; z-index: 99; display: block;">Better than Competitors. <a href="/ITIL-Training/better-than-competitors.asp" style="color:#0CF;" >More</a></span>
   <div id="banner-navigation">
-    <div class="banner-navi-button banner-selected" onmouseover="toggleAuto(1, 'm')" onmouseout="toggleAuto(1, 'o')" id="b1">Best Quality</div>
-    <div class="banner-navi-button" onmouseover="toggleAuto(2, 'm')" onmouseout="toggleAuto(2, 'o')" id="b2">Leading Provider</div>
+    <div class="banner-navi-button banner-selected" onmouseover="toggleAuto(1, 'm')" onmouseout="toggleAuto(1, 'o')" id="b1">Proven Quality</div>
+    <div class="banner-navi-button" onmouseover="toggleAuto(2, 'm')" onmouseout="toggleAuto(2, 'o')" id="b2">A Leading Provider</div>
     <div class="banner-navi-button" onmouseover="toggleAuto(3, 'm')" onmouseout="toggleAuto(3, 'o')" id="b3">Best Delivery Model</div>
     <div class="banner-navi-button" onmouseover="toggleAuto(4, 'm')" onmouseout="toggleAuto(4, 'o')" id="b4">Best Price</div>
   </div>
@@ -25,12 +25,12 @@
                  <li>Application of concepts through real life experience - <a href="http://www.itilstudy.com/realLifeExp.asp">More</a>
               <li>94% Customer satisfaction rating  by D&B - <a href="http://www.itilstudy.com/DunandBradstreet-Report.pdf" >More</a></li>
                 <%If Session("CountryOrigin") <> "US" Then %>
-              <li>25+ experienced  faculty - <a href="http://www.itilstudy.com/ITIL-Training/instructors.asp" >More</a></li>
+              <li>35+ experienced faculty - <a href="http://www.itilstudy.com/ITIL-Training/instructors.asp" >More</a></li>
                 <%Else %>
-                <li>25+ experienced dedicated faculty. More than any other competitor - <a href="http://www.itilstudy.com/ITIL-Training/instructors.asp" >More</a></li>
+                <li>35+ experienced dedicated faculty. More than any other competitor - <a href="http://www.itilstudy.com/ITIL-Training/instructors.asp" >More</a></li>
                 <%End If %>
 			  <li>Specialized in ITIL trainings - <a href="/specialized_ITILTraining.asp" >Find out here</a></li>
-                <%If Session("CountryOrigin") <> "UAE" AND Session("CountryOrigin") <> "Singapore" AND Session("CountryOrigin") <> "Saudi Arabia" Then%>
+                <%If Session("CountryOrigin") <> "UAE" AND Session("CountryOrigin") <> "Singapore" AND Session("CountryOrigin") <> "Saudi Arabia" AND Session("CountryOrigin") <> "Other" Then%>
               <li>Great feedback from successful students - <a href="http://www.itilstudy.com/feedback_class.asp" >Testimonials</a></li>     
                 <%End If %>        
           </ul>
@@ -39,14 +39,14 @@
         </div>
   </div>
       
-   <div class="slide" style="background-image:url(/images/banners/1.jpg)" id="i2"  onmouseover="toggleAuto(0, 's')" onmouseout="toggleAuto(1, 'o')">
+   <div class="slide" style="background-image:url(/images/banners/1.jpg)" id="i2"  onmouseover="toggleAuto(0, 's')" onmouseout="toggleAuto(1, 'o')">	
      <div id="banner-body">
             <ul id="banner-list">
-              <li>Leading  ATO with students from:</li>
+              <li>A Leading  ATO with students from:</li>
               	<ul>
                 	<li>150+ countries </li>
                 	<li>2000+ companies </li>
-                       <%If Session("CountryOrigin") <> "UAE" AND Session("CountryOrigin") <> "Singapore" AND Session("CountryOrigin") <> "Saudi Arabia" Then%>
+                       <%If Session("CountryOrigin") <> "UAE" AND Session("CountryOrigin") <> "Singapore" AND Session("CountryOrigin") <> "Saudi Arabia" AND Session("CountryOrigin") <> "Other" Then%>
                 	<li>25,000+ students <a href="http://www.itilstudy.com/feedback_class.asp" >Read testimonials</a></li>
                       <%End If %>
                 </ul>
@@ -55,7 +55,7 @@
               <li>Part of VMEdu Inc.</li>
               <% End If %>         
            	  <ul>
-                	<li>Leading global training company with offices in 6 countries.<% If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" Then %> Conducting classes in 35+ cities.<% End If %> <% If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" Then %><a href="http://www.itilstudy.com/ITIL-Courses.asp"> More </a><%Else%><a href="http://www.itilstudy.com/GlobalOffice.asp" > More </a><% End If %></li>
+                	<li>A Leading global training company with offices in 6 countries.<% If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" Then %> Conducting classes in 35+ cities.<% End If %> <% If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" Then %><a href="http://www.itilstudy.com/ITIL-Courses.asp"> More </a><%Else%><a href="http://www.itilstudy.com/GlobalOffice.asp" > More </a><% End If %></li>
                 	<li>Funded by Sequoia Capital, PE firm that invested in Google, Apple, Cisco, etc. - <a href="http://www.itilstudy.com/investors.asp" >Read more</a></li>
                 </ul>     
           </ul>
@@ -115,7 +115,7 @@
                       <li>Online courses  starting from <% = OnlineCourseStart  %> - <a href="http://www.itilstudy.com/ITIL-Online-Courses.asp" > More</a></li>
 
                        <% If Session("CountryOrigin") = "Netherlands" Then%> 
-                       <li>2 day ITIL Classes starting at &euro; 850 - <a href="http://www.itilstudy.com/ITIL-Courses.asp" >More</a></li>
+                       <li>2 day ITIL Classes starting at &euro; 950 - <a href="http://www.itilstudy.com/ITIL-Courses.asp" >More</a></li>
                        
                        <% ElseIf Session("CountryOrigin") = "Germany" Then %> 
                        <li>2 day ITIL Classes starting at &euro; 890 - <a href="http://www.itilstudy.com/ITIL-Courses.asp" >More</a></li>

@@ -56,7 +56,7 @@
                 
                 
                 </pre>
-                <p><font size="1px">Note: The success rate is as per the most recent data available with us for  May 2012 - June 2012 including exam retake.</font></p>
+                <p><font size="1px">Note: The success rate is as per the most recent data available with us for  March 2012 - August 2012 including exam retake.</font></p>
                 <% 'End If %>
                 
 

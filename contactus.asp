@@ -182,7 +182,7 @@ function closeimgContainer(){
                     <span class="Header"> a) Phone and Fax Contact </span><br>
                     <br />
                     Online Course: No phone queries; please email <a href="mailto:adminsupport@ITILstudy.com" target="_blank">adminsupport@ITILstudy.com</a><br />
-                    (Please note that if you paid for any online course, it will take up to 4 hours for your account to be activated and your log-in details will be sent to your email address. We do not ship out any study material for online courses.)<br />
+                    (Please note that if you have paid for any online course, it will take up to 4 hours for your account to be activated and your log-in details will be sent to your email address. We do not ship out any study material for online courses.)<br />
                     <br />
                      <%If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" Then  %>US/Canada  <%ElseIf Session("CountryOrigin") ="Germany" Then  %>Germany<%ElseIf Session("CountryOrigin") ="Netherlands" Then  %>Netherlands<%End If %> ITIL<sup>&reg;</sup> Foundation Classroom Course Queries:  
                      

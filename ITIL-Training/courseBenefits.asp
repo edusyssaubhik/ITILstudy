@@ -44,7 +44,7 @@ Set objRs = Server.CreateObject("ADODB.Recordset")
           </tr>
           <tr>
             <!--#include virtual="/includes/innerLeftMenu.asp"-->
-            <td width="73%" rowspan="4" background="/images/back/left_line.jpg" class="general-body"><div style="margin-top:-12px; width:97%;">
+            <td width="73%" rowspan="4" background="/images/back/left_line.jpg" class="general-body"><div style="margin-top:-12px; width:97%;"><br />
               <!-- Content Start From Here-->
 			   <% If Session("CountryOrigin") <> "India" Then %>
                		<%If Session("CountryOrigin") = "United Kingdom" Then%>
@@ -63,8 +63,8 @@ Set objRs = Server.CreateObject("ADODB.Recordset")
               <ul type="1">
               
               <li>
-                <span class="SubHeader"> Best faculty:</span>
-                ITILstudy has experienced and professional trainers who are APMG Accredited and are the best in the industry. Each has extensive industry / IT service management experience. Through a comprehensive and extensive “Train-the-trainer” program, all our faculty are trained in ITILstudy classroom training techniques and adult learning processes aimed at delivering an exceptional training experience. <a href="/ITIL-Training/instructors.asp">More</a>
+                <span class="SubHeader"> Experienced faculty:</span>
+                ITILstudy has experienced and professional trainers who are APMG Accredited. Each has extensive industry / IT service management experience. Through a comprehensive and extensive “Train-the-trainer” program, all our faculty are trained in ITILstudy classroom training techniques and adult learning processes aimed at delivering an exceptional training experience. <a href="/ITIL-Training/instructors.asp">More</a>
                 </li>
                    <li>  <span class="SubHeader">Scientifically designed effective and result-oriented instruction method:</span>
               ITILstudy classroom course has been developed, assessed, and evaluated by several ITIL<Sup>&reg;</sup> Foundation certified experts, and approved by APMG. To improve the learning experience and to enhance retention, our course draws instructional elements from the three primary learning styles, that is, visual (presentations, aids, etc.), auditory (verbal instructions, interactions, etc.) and kinaesthetic (do-it-yourself). Several interactive methods such as experiential learning, small groups, hands-on practice, repetition, trainee panels, periodic evaluation and case studies are extensively used. </li>
@@ -87,7 +87,7 @@ Set objRs = Server.CreateObject("ADODB.Recordset")
                 <%End If%>
                 
               <li>
-                <span class="SubHeader"> Best value for money:</span>
+                <span class="SubHeader"> Value for money:</span>
                 <%If Session("CountryOrigin") = "United Kingdom" Then%>
                 	Fee for ITILstudy’s ITIL Foundation 3-days classroom training can be as low as £ 950 (plus 20% VAT) per student. <a href="/ITIL-Courses.asp">More </a>
                 <%Else%>
@@ -131,7 +131,7 @@ Set objRs = Server.CreateObject("ADODB.Recordset")
                </li>
               
              <li>
-                <span class="SubHeader"> PMI Approved PDUs:</span>
+                <span class="SubHeader"> PMI<sup>&reg;</sup> Approved PDUs:</span>
                 <%If Session("CountryOrigin") = "United Kingdom" Then%>
                  ITILstudy provides 18 PDUs with ITIL Foundation classroom training courses. These are valid PDUs for continuing education requirements in maintaining PMI Certification Status.<a href="http://itilstudy.com/ITIL-Training/PMI_PDU.asp"> More </a> 
                 <%Else%>
