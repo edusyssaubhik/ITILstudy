@@ -169,7 +169,11 @@ function closeimgContainer(){
                   <td colspan="2" class="general-body"><br />
                     <h1 class="PageTitle">Contact Details:<br />
                       <br />
-                      PLEASE NOTE: ITILstudy is a brand of Edusys Services Pvt. Limited, UK
+                    <%If session("CountryOrigin") = "Germany" Then %>
+                      PLEASE NOTE: ITILstudy is a brand of EEdusys Services GmbH
+                    <%Else %>
+                        PLEASE NOTE: ITILstudy is a brand of Edusys Services Pvt. Limited, UK
+                        <%End If %>
                       <%If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" Then  %>
                       (VMEdu, Inc., US)
                       <% End if%>

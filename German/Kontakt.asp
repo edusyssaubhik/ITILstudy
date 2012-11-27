@@ -169,7 +169,7 @@ function closeimgContainer(){
                   <td colspan="2" class="general-body"><br />
                     <h1 class="PageTitle">KONTAKT:<br />
                       <br />
-                     BITTE BEACHTEN SIE: ITILSTUDY IST EINE MARKE DER EDUSYS SERVICES PVT. LIMITED, UK</h1>
+                     BITTE BEACHTEN SIE: ITILSTUDY IST EINE MARKE DER Edusys Services GmbH</h1>
                     <span class="Header"> a) Telefon und Fax </span><br />
                     <br />
                     Onlinekurse: Keine telefonischen Anfragen möglich. Bitte senden Sie eine E-Mail an: <a href="mailto:adminsupport@itilstudy.com" target="_blank">adminsupport@itilstudy.com</a>

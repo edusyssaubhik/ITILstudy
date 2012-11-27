@@ -43,17 +43,14 @@ Anfragen zu ITIL Foundation- Präsenztrainings in Deutschland: (+49) 069 344643<b
     <table border="0">
                     <tr>
                   
-                    <td>VMEdu, Inc. Suite 1400<br />
-Zwei Renaissance Square<br />
-40 N. Central Ave.,<br />
-Phoenix, AZ 85004 VMEdu, Inc.<br />
-4539 Metropolitan CT.<br />
-Frederick, MD 21704
+                    <td>Edusys Services GmbH<br />
+Kurt-Blaum-Platz 8<br />
+63450 Hanau / Frankfurt-Main
 
                    </td>
                     </tr>
                     </table>
-	<br><br />
+	<br>
     <span class="Header">b) Email </span><br>
    
 Anfragen zu ITIL Foundation Präsenztrainings in Deutschland richten Sie an: marketing@itilstudy.com 
