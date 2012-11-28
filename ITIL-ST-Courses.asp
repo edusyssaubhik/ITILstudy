@@ -1,13 +1,14 @@
+
+<!--#include virtual="/metatags/dates_location_metatag.html"-->
+<!--#include virtual="/includes/headermeta.asp"-->
 <%
  If Session("CountryOrigin") <> "US" And Session("CountryOrigin") <> "Canada" And Session("CountryOrigin") <> "United Kingdom" Then 
  
  Response.Redirect("/index.asp")
  
- Else
+End If
  
 %>
-<!--#include virtual="/metatags/dates_location_metatag.html"-->
-<!--#include virtual="/includes/headermeta.asp"-->
 <!--#include virtual="/includes/learn-from-the-best-banner.asp"-->
 <!--#include virtual="/includes/connection.asp"-->
 <!--#include virtual="/includes/displayFormat.asp"-->
@@ -120,13 +121,10 @@ else if (ns6||ie4) ld.display="none";
                 <li>High quality, comprehensive classroom study materials in line with the ITIL Intermediate exam is provided</li>
 
 
-
- <li>Refreshments <%If Session("CountryOrigin") = "United Kingdom" Then %>and Lunch <%End iF%>during classroom sessions</li>
-
  <li>Everything required for ITIL Intermediate exam would be provided, you don&#8217;t need to bring anything else to the class</li>
 
  <li>Valuable tips to pass the  ITIL Intermediate exam</li>
-
+<li>Provides Online access to ITIL Intermediate course material offering 12 hours of pre-classroom study.</li>
  <li>Free 27 PMI approved PDUs with our courses <a href="http://itilstudy.com/ITIL-Training/Intermediate_PMIPDU.asp">More</a></li>              
  
                    <% Else %>                
@@ -138,6 +136,7 @@ else if (ns6||ie4) ld.display="none";
                   <li>Refreshments and Lunch during classroom sessions</li>
                   <li>Everything required for ITIL Intermediate exam would be provided, you don’t need to bring anything else to the class.</li>
                   <li>Valuable tips to pass the ITIL Intermediate exam.</li>
+                  <li>Provides Online access to ITIL Intermediate course material offering 12 hours of pre-classroom study.</li>
                   <li>Free 18 PMI approved PDUs with our courses<a href="http://itilstudy.com/ITIL-Training/Intermediate_PMIPDU.asp">More</a></li>
                
                    <% End If %>
@@ -448,4 +447,3 @@ else if (ns6||ie4) ld.display="none";
 document.getElementById('loader').style.display='none';
 </script>
 
-<% End If %>

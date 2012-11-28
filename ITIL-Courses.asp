@@ -94,7 +94,9 @@ else if (ns6||ie4) ld.display="none";
 			<li> Lunch and refreshments during classroom sessions</li>
 		  <li>Everything required for ITIL Foundation exam would be provided, you don't need to bring anything else to the class</li>
           <li>Complementary RMstudy Certification worth $ 300. <a href="http://itilstudy.com/ITIL-Training/free-onlinecertification.asp" target="_blank">More</a></li>
-			<li>Valuable tips to pass the ITIL Foundation exam</li>
+			            <li> Provides Online access to ITIL Foundation course material offering 6 hours of pre-classroom study</li>
+
+                <li>Valuable tips to pass the ITIL Foundation exam</li>
 			<li> Free 18 PMI<sup>&reg;</sup> approved PDUs with our courses</li></ol></td></tr>
 			<tr><td>&nbsp;</td></tr>
 			</table>
@@ -126,7 +128,9 @@ else if (ns6||ie4) ld.display="none";
 			<li>The course fee includes the cost of ITIL Foundation exam</li>
 		  <li>3-day classroom training with real-life role-play exercises. </li>
 			<li>Complimentary RMstudy Certification worth £195 GBP </li>
+                <li> Provides Online access to ITIL Foundation course material offering 6 hours of pre-classroom study</li>
 			<li> High quality, comprehensive classroom study materials in line with the ITIL Foundation exam is provided</li>
+            
             <li>Refreshments and Lunch during classroom sessions</li>
             <li>Everything required for ITIL Foundation exam would be provided, you don't need to bring anything else to the class</li>
             <li>Valuable tips to pass the ITIL Foundation exam</li>
@@ -173,7 +177,13 @@ else if (ns6||ie4) ld.display="none";
  <% If Session("CountryOrigin") <> "US" And Session("CountryOrigin") <> "Canada" Then %>
                  <li>Free online prep course </li>
                 <% End if %>
+                  <%If Session("CountryOrigin") <> "India" Then %>
+                  <li> Provides Online access to ITIL Foundation course material offering 6 hours of pre-classroom study</li>
+                  <%End If %>
                 <li>High quality, comprehensive classroom study materials in line with the ITIL Foundation exam is provided</li>
+                                    <%If Session("CountryOrigin") = "India" Then %>
+                  <li> Provides Online access to ITIL Foundation course material offering 6 hours of pre-classroom study</li>
+                  <%End If %>
                 			   <%If Session("CountryOrigin") <> "India" then %>
 
   <li>Complimentary RMstudy Certification worth $300. <a href="http://itilstudy.com/ITIL-Training/free-onlinecertification.asp">More</a></li>
@@ -516,7 +526,9 @@ var google_conversion_value = 0;
 <img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1026351431/?value=0&amp;label=B2ahCIO21QIQx8Kz6QM&amp;guid=ON&amp;script=0"/>
 </div>
 </noscript>
+<!--================================-->
 
+    <script type="text/javascript"> if (!window.mstag) mstag = {loadTag : function(){},time : (new Date()).getTime()};</script> <script id="mstag_tops" type="text/javascript" src="//flex.atdmt.com/mstag/site/4625211e-e6a9-48d9-b623-3b89707bb8e4/mstag.js"></script> <script type="text/javascript">        mstag.loadTag("analytics", {dedup:"1",domainId:"1861441",type:"1",actionid:"104275"})</script> <noscript> <iframe src="//flex.atdmt.com/mstag/tag/4625211e-e6a9-48d9-b623-3b89707bb8e4/analytics.html?dedup=1&domainId=1861441&type=1&actionid=104275" frameborder="0" scrolling="no" width="1" height="1" style="visibility:hidden;display:none"> </iframe> </noscript>
 <% ElseIf Session("CountryOrigin") = "Australia" Then %>
 <!-- Google Code for ITILstudy AUS - DL (P.M.5) Conversion Page -->
 <script type="text/javascript">

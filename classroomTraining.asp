@@ -32,10 +32,10 @@
             <p > <ol type="1"><li>
             Enroll for ITILstudy’s ITIL Foundation classroom program and make the payment.</li>
               <%If Session("CountryOrigin") <> "Canada" Then %>
-<li>	Get immediate access to ITILstudy’s 100% online pre-preparatory course.</li>
+<li>	Get immediate access to Online ITIL Foundation course materials offering 6 hours of pre-course study.</li>
 <% End If %>
 <li>	Attend the <%if Session("CountryOrigin")= "United Kingdom" Then %>3-day<%Else%>2-day <%End If%> <%if Session("CountryOrigin")= "United Kingdom" Then %>classroom training with real-life role-play exercises.<%ElseIf Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" Then%>classroom training which includes an ITIL Simulation.<%Else%>classroom training.<%End If%> </li>
-<li><%if Session("CountryOrigin")= "United Kingdom" Then %>Prepare for the ITIL Foundation exam for the first 2.5 days and take the exam at the end of the 3rd day. <%Else%>Prepare for the ITIL Foundation exam for the first 1.5 days and take the exam at the end of the 2nd day.<%End If%></li>
+<li><%if Session("CountryOrigin")= "United Kingdom" Then %>Prepare for the ITIL Foundation exam for the first 2.5 days and take the exam at the end of the 3rd day. <%Else%>Prepare for the ITIL Foundation exam for the first 2 days and take the exam at the end of the 2nd day.<%End If%></li>
 <li>Exam result and certificates will be mailed to the successful candidates.</li></ol>
 
 <BR>
