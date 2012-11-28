@@ -28,7 +28,7 @@ Session("LastName")=Request.Form("LastName")
 Session("State")="verified"
 End If
 %>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <style type="text/css">
 <!--
 
@@ -50,37 +50,35 @@ End If
 </style>
 </head>
 <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
-<!-- Save for Web Slices (ITIL - 45.psd) -->
+<!-- Save for Web Slices (ITIL.psd) -->
 <table id="Table_01" width="793" height="613" border="0" cellpadding="0" cellspacing="0" align="center">
 	<tr>
 		<td colspan="5">
-			<img src="images/cert/ITIL_01.jpg" alt="" width="793" height="215"></td>
+			<img src="/images/cert/ITIL_01.png" width="793" height="210" alt=""></td>
 	</tr>
 	<tr>
 		<td rowspan="4">
-			<img src="images/cert/ITIL_02.jpg" alt="" width="159" height="398"></td>
-		<td colspan="3" width="475" height="42" align="center" id="user"><% = Session("FirstName") %>&nbsp;<% = Session("LastName") %></td>
-
+			<img src="/images/cert/ITIL_02.png" width="46" height="403" alt=""></td>
+		<td colspan="3" width="701" height="42"  align="center" valign="top" id="user"><% = Session("FirstName") %>&nbsp;<% = Session("LastName") %></td>
 		<td rowspan="4">
-			<img src="images/cert/ITIL_04.jpg" alt="" width="159" height="398"></td>
+			<img src="/images/cert/ITIL_04.png" width="46" height="403" alt=""></td>
 	</tr>
 	<tr>
 		<td colspan="3">
-			<img src="images/cert/ITIL_05.jpg" alt="" width="475" height="118"></td>
+			<img src="/images/cert/ITIL_05.png" width="701" height="123" alt=""></td>
 	</tr>
 	<tr>
 		<td rowspan="2">
-
-			<img src="images/cert/ITIL_06.jpg" alt="" width="21" height="238"></td>
-		<td width="433" align="center" height="32"><span id="date">Granted : <% = MonthName(Month(rqCert_Date)) & " " & Day(rqCert_Date) &", "&  Year(rqCert_Date) %></span></td>
+			<img src="/images/cert/ITIL_06.png" width="134" height="238" alt=""></td>
+		<td width="433" height="32" align="center"><span id="date">Granted : <% = MonthName(Month(rqCert_Date)) & " " & Day(rqCert_Date) &", "&  Year(rqCert_Date) %></span></td>
 		<td rowspan="2">
-			<img src="images/cert/ITIL_08.jpg" alt="" width="21" height="238"></td>
+			<img src="/images/cert/ITIL_08.png" width="134" height="238" alt=""></td>
 	</tr>
 	<tr>
 		<td>
-
-			<img src="images/cert/ITIL_09.jpg" alt="" width="433" height="206"></td>
+			<img src="/images/cert/ITIL_09.png" width="433" height="206" alt=""></td>
 	</tr>
 </table>
+<!-- End Save for Web Slices -->
 </body>
 </html>
