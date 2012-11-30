@@ -87,7 +87,7 @@ function popitup(url) {
 	padding:10px 5px 10px 5px;
 	line-height:20px;
 	text-align:center;
-
+    background-color:white;
 	
 	
 }

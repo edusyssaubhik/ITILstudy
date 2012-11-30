@@ -24,7 +24,7 @@ End if
 {
 	width:212px;
 	height:47px;
-	float:left;
+	position:absolute;
 	margin-top:253px;
 }
 

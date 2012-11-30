@@ -112,7 +112,7 @@ If rqAction = "Add Payment" Then
 	straddpayment = straddpayment & "'" & rqTax & "',"
 	straddpayment = straddpayment & "'" & rqCurrency & "',"
 	straddpayment = straddpayment & "'" & Session("CRM_Country") & "')"	
-	Response.Write(straddpayment)
+	'Response.Write(straddpayment)
 	ConnObj.Execute straddpayment
 
 	'After inserting the values into the database redirect to finance page'

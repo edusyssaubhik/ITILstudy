@@ -1,4 +1,4 @@
-<%@LANGUAGE="VBSCRIPT" CODEPAGE="1252"%>
+﻿<%@LANGUAGE="VBSCRIPT"%>
 <% 
 If Session("USBUserId")="" Then
 	Response.Redirect("login.asp")
@@ -507,7 +507,7 @@ function validate_form2(thisform)
 			
 			'For Table 1  i.e. finance table'
 			strQuery="select ITIL_finance.finid, ITIL_finance.pay_cat, ITIL_finance.details, ITIL_finance.amount, ITIL_finance.added_date, ITIL_finance.added_by, ITIL_finance.last_mod_date, ITIL_finance.last_mod_by,ITIL_instructor.comp_name,ITIL_instructor.comp_addr,ITIL_finance.status,ITIL_finance.Approved_by,ITIL_finance.Approved_date,ITIL_finance.Tax  From ITIL_finance INNER JOIN ITIL_instructor ON ITIL_finance.faculty=ITIL_instructor.emailid1  WHERE faculty = '"& rqFaculty &"' AND (CONVERT(varchar(2), DATEPART(month, added_date)) = '"& strMonth &"' AND DATEPART(yyyy, added_date) = '"& strYear &"')"
-
+            response.write strQuery
 		    objRs1.open strQuery ,ConnObj 
 			
 			If Not objRs1.EOF Then

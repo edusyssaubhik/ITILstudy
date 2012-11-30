@@ -1,3 +1,4 @@
+<div style="width:930px;background-color: #fff;">
 <div class="banner-main">
 	
   <!--<span style="padding: 0px; text-align: left; position: absolute; color: rgb(255, 255, 255); margin-left: 20px; margin-top: 240px; z-index: 99; display: block;">Better than Competitors. <a href="/ITIL-Training/better-than-competitors.asp" style="color:#0CF;" >More</a></span>-->
@@ -175,5 +176,4 @@
     }*/
 
 </script>
-</body>
-</html>
+</div>

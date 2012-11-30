@@ -36,6 +36,13 @@ Session("CountryOrigin") = countries
 <option id="India">India</option>
 <option id="US">US</option>
 <option id="Canada">Canada</option>
+<option id="Australia">Australia</option>
+<option id="Germany">Germany</option>
+<option id="Netherlands">Netherlands</option>
+    <option id="Saudi Arabia">Saudi Arabia</option>
+    <option id="Singapore">Singapore</option>
+    <option id="UAE">UAE</option>
+    <option id="Other">Other</option>
 </select>
 </td>
 </tr>
@@ -82,16 +89,19 @@ Do until  rsQues.EOF
   City = Trim(rsQues("city"))
    Statecode = Trim(rsQues("state_code"))
 
-   
+    If Session("CountryOrigin") ="Germany" OR Session("CountryOrigin")="Netherlands" Then
+    City = Replace(City,"(","")
+    City = Replace(City,")","")
+   End If
 
 'Constructing Page and keeping in  string.
 '==================================================Page==================================================================== 
 
-strEnding  = "<head><meta http-equiv=""Content-Type"" content=""text/html; charset=iso-8859-1"" /><link rel=""shortcut icon"" href=""/images/buttons/icontitle.jpg""><title>ITIL Training "&City&" | ITIL Certification Training in "&City&" - ITILstudy</title><META content=""ITIL  "&City&", ITIL training  "&City&",  ITIL certification "&City&", ITIL  certiffication training "&City&",ITIL  boot camp "&City&",  ITIL  training in "&City&" ,  ITIL  certification in "&City&" , ITIL classes "&City&"."" name=keywords><META content=""ITIL Training in "&City&" | ITILstudy - The Global Leader for ITIL Certification Training Provides High Quality Courses for ITIL. We have Highest Pass Rates and trusted by 3500+ Companies and 160+ Countries across Globe and we Conduct Corporate ITIL Classes in "&City&"."" name=description></meta><!--#include virtual=""/metatags/dates_location_metetag.html""--><!--#include virtual=""/includes/headermeta.asp""--><!--#include virtual=""/includes/innermethodologybanner.html""--><script language=""javascript"" type=""text/javascript"">function popitup(url) { newwindow=window.open(url,'name','toolbar=0,location=0,directories=0,status,menubar=0,scrollbars=0,minimizable=0,resizable=0,height=300,width=300,top=250,left=400');if (window.focus) {newwindow.focus()}return false;}</script><% countries = """& countries &""" %"& "" &"><br><% City = """& City &""" %"& "" &"><div><table width=""930"" border=""0"" align=""center"" cellpadding=""0"" cellspacing=""0""><tr><td height=""235"" align=""left"" valign=""top"" bgcolor=""#FFFFFF""><table width=""100%"" border=""0"" cellspacing=""0"" cellpadding=""8""><tr><td width=""2%"" class=""Header"">&nbsp;</td><td width=""25%"" class=""PageTitle"">&nbsp;</td><td width=""73%"" class=""breadcrumb""><a href=""/index.asp"" title=""Home"">Home</a> &raquo; COURSES / ENROL &raquo; Classroom Courses In "&City&" </tr><tr><!--#include virtual=""./includes/innerLeftMenu.asp""--><td width=""73%"" rowspan=""4"" background=""/images/back/left_line.jpg"" class=""general-body""><div style=""margin-top:-12px; width:95%;""><span class=""PageTitle"">ITIL<Sup>&reg;</sup> Foundation CLASSES - DATES, LOCATIONS AND PRICES In "&City
+strEnding  = "<html><head><title>ITIL Training "&City&" | ITIL Certification Training in "&City&" - ITILstudy</title><meta http-equiv=""Content-Type"" content=""text/html; charset=iso-8859-1"" /><link rel=""shortcut icon"" href=""/images/buttons/icontitle.jpg""><META content=""ITIL  "&City&", ITIL training "&City&", ITIL certification "&City&", ITIL  certiffication training "&City&", ITIL  boot camp "&City&", ITIL  training in "&City&", ITIL  certification in "&City&", ITIL classes "&City&"."" Name=keywords><META content=""ITIL Training in "&City&" |  ITILstudy - The Global Leader for ITIL Certification Training Provides High Quality ITIL Courses in "&City&". We have Highest Pass Rates and trusted by 3500+ Companies and 160+ Countries across Globe and we Conduct Corporate ITIL Classes in "&City&"."" name=description></meta><!--#include virtual=""/includes/headermeta.asp""--><!--#include virtual=""/includes/innermethodologybanner.html""--><script language=""javascript"" type=""text/javascript"">function popitup(url) { newwindow=window.open(url,'name','toolbar=0,location=0,directories=0,status,menubar=0,scrollbars=0,minimizable=0,resizable=0,height=300,width=300,top=250,left=400');if (window.focus) {newwindow.focus()}return false;}</script><% countries = """& countries &""" %"& "" &"><br><% City = """& City &""" %"& "" &"><div><table width=""930"" border=""0"" align=""center"" cellpadding=""0"" cellspacing=""0""><tr><td height=""235"" align=""left"" valign=""top"" bgcolor=""#FFFFFF""><table width=""100%"" border=""0"" cellspacing=""0"" cellpadding=""8""><tr><td width=""2%"" class=""Header"">&nbsp;</td><td width=""25%"" class=""PageTitle"">&nbsp;</td><td width=""73%"" class=""breadcrumb""><a href=""/index.asp"" title=""Home"">Home</a> &raquo; COURSES / ENROL &raquo; Classroom Courses In "&City&" </tr><tr><!--#include virtual=""./includes/innerLeftMenu.asp""--><td width=""73%"" rowspan=""4"" background=""/images/back/left_line.jpg"" class=""general-body""><div style=""margin-top:-12px; width:95%;""><span class=""PageTitle""><h1 class=""PageTitle"">ITIL training "&City&" - ITIL FOUNDATION CLASSES"
 If Statecode <> "" Then 
 strEnding  = strEnding  &", "& Statecode
 End If
-strEnding  = strEnding  &"</span><br /><br />"
+strEnding  = strEnding  &"</h1></span>"
 strEnding  = strEnding  &"<span class=""Header"">ITILstudy ITIL Foundation classroom program includes:</span>"
 
 strEnding  = strEnding  &"<!--#include virtual=""includes/getCoursetextforSEO.asp""-->"  
@@ -106,14 +116,14 @@ strEnding= strEnding &"</tr><tr><td colspan=""6"" class=""TableRowEven"">&nbsp;<
 If Session("CountryOrigin") = "US" Then
 strEnding= strEnding &"<div><span class=""Required"">**</span> : All Texas residents should be sponsored by an employer, and should provide the employer details while enrolling to ITILstudy course.</div>"
 End If
-strEnding= strEnding &"<p><a href=""/enrollClass.asp"" class=""Header"">Enroll in ITILstudy "& Country &" classroom training </a> </p><div></td></tr></table></div><!--#include virtual=""/includes/footer.html""-->"
+strEnding= strEnding &"<p><a href=""/enrollClass.asp"" class=""Header"">Enroll in ITILstudy "& Country &" classroom training </a> </p><div></td></tr></table></div><div style=""width:930px""><!--#include virtual=""/includes/footer.html""--></div>"
 
 'Initialing filesystem object 	
 Set fsoObject=Server.CreateObject ("Scripting.FileSystemObject")
 
 'Creating a text file using file systm object.
-'Set tsObject = fsoObject.CreateTextFile("c:\inetpub\wwwroot\Cities\"&StrQuoteReplace(City)&"_"&Trim(countries)&".asp")
-Set tsObject = fsoObject.CreateTextFile("E:\vhosts\ITILstudy.com\httpdocs\Cities\ITILstudy-Training-"&StrQuoteReplace(StrQuoteReplace1(City))&"-"&StrQuoteReplace1(Trim(countries))&".asp")
+Set tsObject = fsoObject.CreateTextFile("c:\github\itilstudy\Cities\ITILstudy-Training-"&StrQuoteReplace(StrQuoteReplace1(City))&".asp")
+'Set tsObject = fsoObject.CreateTextFile("E:\vhosts\ITILstudy.com\httpdocs\Cities\ITILstudy-Training-"&StrQuoteReplace(StrQuoteReplace1(City))&".asp")
 
 
 'Witing the string containing question format into an asp file using file system object.
@@ -125,7 +135,7 @@ strEnding  =  ""
 %>
 
 
-<br/><% = SrNo %> : ITILstudy-Training-<% = StrQuoteReplace1(City) %>-<% = StrQuoteReplace1(countries) %>.asp created<BR>
+<br/><% = SrNo %> : ITILstudy-Training-<% = StrQuoteReplace1(City) %>.asp created<BR>
 
 
 <%

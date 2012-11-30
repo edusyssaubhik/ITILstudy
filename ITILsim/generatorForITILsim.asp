@@ -1,4 +1,4 @@
-<%@LANGUAGE="VBSCRIPT" CODEPAGE="65001"%>
+﻿<%@LANGUAGE="VBSCRIPT" CODEPAGE="65001"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -111,7 +111,7 @@ strEnding = strEnding & "<tr><td width="" "">&nbsp;</td><td width="" ""><font fa
 					
 					
 					'Set tsObject = fsoObject.CreateTextFile("E:\vhosts\ITILstudy.com\httpdocs\ITILSim\Sim1\"& a &".asp")
-					Set tsObject = fsoObject.CreateTextFile("C:\ITILstudy\ITILsim\sim1\"& a &".asp")
+					Set tsObject = fsoObject.CreateTextFile("C:\GIThub\ITILstudy\ITILsim\sim1\"& a &".asp")
 					tsObject.Write strEnding
 					tsObject.Write strEnding1
 					tsObject.Write strEnding2
@@ -148,7 +148,7 @@ strJust = strJust & "<tr><td width="" "">&nbsp;</td><td valign=""top"" colspan="
 					
 
 					'Set tsObject = fsoObject.CreateTextFile("E:\vhosts\ITILstudy.com\httpdocs\ITILsim\Sim1\"&a&"ans.asp")
-					Set tsObject = fsoObject.CreateTextFile("C:\ITILstudy\ITILsim\sim1\"&a&"ans.asp")
+					Set tsObject = fsoObject.CreateTextFile("C:\GIThub\ITILstudy\ITILsim\sim1\"&a&"ans.asp")
 					
 					tsObject.Write strJust
 					tsObject.Write strJust1

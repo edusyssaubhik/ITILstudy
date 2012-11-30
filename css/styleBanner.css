@@ -4,6 +4,7 @@
 .banner-main {
 	height: 300px;
 	width: 883px;
+	text-align:left;
 }
 #banner-navigation {
 	position: absolute;
@@ -106,16 +107,16 @@
 }
 .banner-navi-button {
 	font-family: Verdana, Geneva, sans-serif;
-	font-size: 14px;
+	font-size: 12px;
 	color: #666;
 	width: 160px;
-	height: 25px;
+	height: 23px;
 	background-image: url(/images/banners/bg-banner.png);
 	background-repeat: repeat-x;
 	text-align: center;
 	display: inline-block;
 	float: left;
-	padding-top: 5px;
+	padding-top: 7px;
 	border:solid 1px #ccc;
 	background-position: left center;
 }
@@ -128,7 +129,7 @@
 .banner-navi-button:hover, .banner-navi-button.banner-selected {
 	background-image: url(/images/banners/bg-banner.png);
 	cursor: pointer;
-	height: 25px;
+	height: 23px;
 	background-repeat: repeat-x;
 	color: #fff;
 	border: solid 1px #006600;
