@@ -57,7 +57,7 @@
         
           <%ElseIf Session("CountryOrigin") =  "Germany" Then  %>
           
-                    Germany ITIL Foundation Classroom Course Queries: +49 069 344643<br>
+                    Germany ITIL Foundation Classroom Course Queries: +4969 505027 386<br>
                      <font color="red"><B>Call us now: </B> ITILstudy also offers corporate classes.</font><BR><BR>
                         Edusys Services GmbH<br>
 				   Kurt-Blaum-Platz 8<br>

@@ -175,7 +175,7 @@ function closeimgContainer(){
                     Onlinekurse: Keine telefonischen Anfragen möglich. Bitte senden Sie eine E-Mail an: <a href="mailto:adminsupport@itilstudy.com" target="_blank">adminsupport@itilstudy.com</a>
 (Wenn Sie die Gebühr für einen Onlinekurs bezahlt haben, dauert es ca. 4 Stunden bis ihr Account aktiviert ist und wir Ihnen Ihre Log-In- Daten an Ihre E-Mail Adresse schicken.  Das Lernmaterial wird bei Onlinekursen nicht in Papierform zugeschickt.)<br />
                    <br />
-                 Anfragen zu ITIL<sup>&reg;</sup> Foundation- Präsenztrainings in Deutschland: (+49) 069 344643<br /><br />
+                 Anfragen zu ITIL<sup>&reg;</sup> Foundation- Präsenztrainings in Deutschland: +4969 505027 386<br /><br />
                  Rufen Sie uns an:  ITILstudy bietet auch auf Ihren Bedarf angepasste Wochenendkurse und Firmenschulungen an.
                   
                   
