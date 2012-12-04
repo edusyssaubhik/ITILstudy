@@ -2,6 +2,7 @@
         <% session.Timeout = 1000 %>
 
 		  <a href="/ITIL-Training/courseBenefits-Online.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">Online - Course Benefits</a>
+      <a href="/Classroom-Courseware.asp" onMouseOver="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onMouseOut="MM_swapImgRestore()">Classroom Courseware</a>	
       </div>
       
       
@@ -26,7 +27,7 @@
      <div style="top: 26px; left: 203px; clip: rect(0pt, auto, 94.8717px, 0pt); visibility: hidden; margin-left:29px; margin-top:5px;" id="dropmenu3" class="dropmenudiv">
      
 	<a href="/methodology/Online-Training.asp" onmouseover="MM_swapImage('d','','/images/back/link_04_methodology_green.jpg',1)" onmouseout="MM_swapImgRestore()">Foundation Online Training</a>
-		
+		<a href="/Classroom-Courseware.asp" onMouseOver="MM_swapImage('d','','/images/back/link_04_methodology_green.jpg',1)" onMouseOut="MM_swapImgRestore()">Classroom Courseware</a>
      
       </div>
       <!--5th drop down menu -->

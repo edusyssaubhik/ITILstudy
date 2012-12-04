@@ -4,14 +4,14 @@
   <div id="banner-navigation">
     <div class="banner-navi-button banner-selected" onmouseover="toggleAuto(1, 'm')" onmouseout="toggleAuto(1, 'o')" id="b1">Proven Quality</div>
     <div class="banner-navi-button" onmouseover="toggleAuto(2, 'm')" onmouseout="toggleAuto(2, 'o')" id="b2">A Leading Provider</div>
-    <div class="banner-navi-button" onmouseover="toggleAuto(3, 'm')" onmouseout="toggleAuto(3, 'o')" id="b3">Best Delivery Model</div>
-    <div class="banner-navi-button" onmouseover="toggleAuto(4, 'm')" onmouseout="toggleAuto(4, 'o')" id="b4">Best Price</div>
+    <div class="banner-navi-button" onmouseover="toggleAuto(3, 'm')" onmouseout="toggleAuto(3, 'o')" id="b3">Effective Delivery</div>
+    <div class="banner-navi-button" onmouseover="toggleAuto(4, 'm')" onmouseout="toggleAuto(4, 'o')" id="b4">Great Price</div>
   </div>
   <div id="banner-contents">
     <div class="slide" style="background-image:url(/images/banners/2.jpg)" id="i1" onmouseover="toggleAuto(0, 's')" onmouseout="toggleAuto(1, 'o')">
 <div id="banner-body">
             <ul id="banner-list">
-              <li>Pass ITIL Exam on last day of the classroom - <a href="http://www.itilstudy.com/classroomTraining.asp" >More</a></li>
+              <li>Pass ITIL Exam on last day of the training - <a href="http://www.itilstudy.com/classroomTraining.asp" >More</a></li>
               <li>Best Pass Rate (99.2%) - <a href="http://www.itilstudy.com/ITIL-Training/Success-Rate.asp" >Read more</a></li>
               	<ul>
                 	<li>Better than the industry rate. </li>

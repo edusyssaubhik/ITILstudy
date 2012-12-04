@@ -9,7 +9,7 @@
      	   <a href="/2-Day-ITIL-Training.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">Accelerated Learning Techniques <span style="display:inline-block;">(2-Day Training)</span> </a>
         <a href="/ITIL-Training/courseBenefits.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">Course Benefits</a>
 		
-         <a href="/ITIL-Training/instructors.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">Best Faculty</a>
+         <a href="/ITIL-Training/instructors.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">Experienced Faculty</a>
 		 
        <!-- <a href="/ITIL-Training/free-onlinecertification.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">Free 6sigma Green Belt Course /<span style="display:inline-block;"> Free HRD Course</span></a>-->
        
@@ -17,8 +17,8 @@
 		 
 		  <a href="/ITIL-Training/classroom-FAQ.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">FAQs </a>		
 			
-         <a href="/ITIL-Training/comprehensive.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">Most Comprehensive and Effective </a>
-           <a href="/ITIL-Training/exam-success.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">Leading ATO – 2000+ companies</a>
+         <a href="/ITIL-Training/comprehensive.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">Comprehensive and Effective </a>
+           <a href="/ITIL-Training/exam-success.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">A Leading ATO – 2000+ companies</a>
            <a href="/ITIL-Training/PMI_PDU.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">PMI Approved PDUs </a>
 
       </div>

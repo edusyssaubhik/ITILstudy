@@ -4,18 +4,19 @@
         <a href="/ITIL-Training/better-than-competitors.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">Better than Competitors </a>
 			<a href="/ITIL-Training/Success-Rate.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">99.2% Pass Rate </a>	
               	<a href="/realLifeExp.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">Classroom - Real Life Scenario</a> 	
+      <a href="/Classroom-Courseware.asp" onMouseOver="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onMouseOut="MM_swapImgRestore()">Classroom Courseware</a>	
       <a href="/ITIL-Training/moneyBack.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">100% Moneyback Guarantee</a>
 	  	   <a href="/2-Day-ITIL-Training.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">Accelerated Learning Techniques <span style="display:inline-block;">(2-Day Foundation Training)</span> </a>
         <a href="/ITIL-Training/courseBenefits.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">Course Benefits</a>
- <a href="/ITIL-Training/instructors.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">Best Faculty</a>
+ <a href="/ITIL-Training/instructors.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">Experienced Faculty</a>
 		<!-- <a href="/ITIL-Training/free-onlinecertification.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">Free 6sigma Green Belt Course /<span style="display:inline-block;"> Free HRD Course</span></a>		--> 
           <a href="/ITIL-Training/free-onlinecertification.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">Free Risk Management Course </a>
 		  
 		  <a href="/ITIL-Training/classroom-FAQ.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">FAQs </a>
            <a href="/feedback_class.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">ITILstudy Testimonials </a>	
 			
-         <a href="/ITIL-Training/comprehensive.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">Most Comprehensive and Effective </a>
-           <a href="/ITIL-Training/exam-success.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">Leading ATO – 2000+ companies</a>
+         <a href="/ITIL-Training/comprehensive.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">Comprehensive and Effective </a>
+           <a href="/ITIL-Training/exam-success.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">A Leading ATO – 2000+ companies</a>
            <a href="/ITIL-Training/PMI_PDU.asp" onmouseover="MM_swapImage('a','','/images/back/link_01_why_us_green.jpg',1)" onmouseout="MM_swapImgRestore()">PMI Approved PDUs </a>
       
       </div>
@@ -62,7 +63,9 @@
 
 <a href="/methodology/Instructor-Led-Virtual-Training.asp" onmouseover="MM_swapImage('d','','/images/back/link_04_methodology_green.jpg',1)" onmouseout="MM_swapImgRestore()">Foundation - Instructor Led Virtual Training</a>        
 
-		<a href="/methodology/Online-Training.asp" onmouseover="MM_swapImage('d','','/images/back/link_04_methodology_green.jpg',1)" onmouseout="MM_swapImgRestore()">Foundation - Online Training</a> </div>
+		<a href="/methodology/Online-Training.asp" onmouseover="MM_swapImage('d','','/images/back/link_04_methodology_green.jpg',1)" onmouseout="MM_swapImgRestore()">Foundation - Online Training</a> 
+         <a href="/Classroom-Courseware.asp" onMouseOver="MM_swapImage('d','','/images/back/link_04_methodology_green.jpg',1)" onMouseOut="MM_swapImgRestore()">Classroom Courseware</a>
+     </div>
 		
 		
       <!--5th drop down menu -->
