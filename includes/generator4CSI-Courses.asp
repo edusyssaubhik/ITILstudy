@@ -1,4 +1,5 @@
 <!--#include virtual="/includes/displayFormat.asp"-->
+
 <%
 	'---------------------------------------------------------------'
 	'Written By : Praveen'
@@ -32,7 +33,7 @@
 	
 	'Query For Selecting top Record from table to check the generator have to run or not'
 	'making Queries to not work when new course habeen added'
-	
+
 	If generate = "" Then
 	
 		strQuery1 ="select TOP 1 * from generate_course WHERE country = '"& Session("CountryOrigin") &"-CSI' ORDER BY id DESC"
@@ -86,12 +87,14 @@
 	 ElseIf Session("CountryOrigin") = "India" Then
 	 
 	 strQuery2 = "SELECT course.courseid,course.city,course.startdate,course.enddate, course.starthour,course.startminute,course.startsession,course.endhour,course.endminute,course.endsession,course.pricewithouttax,course.tax,course.pricewithtax,course.applicabledays,course.afterEBdiscountwithouttax,course.afterEBdiscountwithtax,course.status,course.coursetype,city.state_code, course.country FROM ITIL_course course, ITIL_city city Where course.city = city.city And course.country = 'India' And city.country = 'India' AND (course.country = city.country) AND course.coursetype = 'CSI' AND course.status <> 'Cancelled' And course.startdate BETWEEN '"&Now() - 1&"' AND DATEADD(day,180,'"&Now()&"')  order by course.startdate, course.city asc"	
-			
+			Else
+
+    strQuery2 = "SELECT course.courseid,course.city,course.startdate,course.enddate, course.starthour,course.startminute,course.startsession,course.endhour,course.endminute,course.endsession,course.pricewithouttax,course.tax,course.pricewithtax,course.applicabledays,course.afterEBdiscountwithouttax,course.afterEBdiscountwithtax,course.status,course.coursetype,city.state_code, course.country FROM ITIL_course course, ITIL_city city Where course.city = city.city And course.country = '"&Session("CountryOrigin")&"' And city.country = '"&Session("CountryOrigin")&"' AND (course.country = city.country) AND course.coursetype = 'CSI' AND course.status <> 'Cancelled' And course.startdate BETWEEN '"&Now() - 1&"' AND DATEADD(day,180,'"&Now()&"')  order by course.startdate, course.city asc"		
 	
 			
 			 
 	End If
-	
+	response.write strQuery2
 	If generate <> "" Then
 	Rs.Open strQuery2,Conn
 	Else
@@ -262,9 +265,9 @@ Else
 	
 	'Set tsObject = fsoObject.CreateTextFile("E:\vhosts\ITILstudy.com\httpdocs\dateslocation\ITILstudy-Classes-ITILstudy-Training-CSI-"&Session("CountryOrigin")&".txt")
 	
-	Set tsObject = fsoObject.CreateTextFile("C:\GitHub\ITILstudy\dateslocation\ITILstudy-Classes-ITILstudy-Training-CSI-"&Session("CountryOrigin")&".txt")
+	Set tsObject = fsoObject.CreateTextFile("C:\GITHUB\ITILstudy\dateslocation\ITILstudy-Classes-ITILstudy-Training-CSI-"&Session("CountryOrigin")&".txt")
 	
-	
+	response.write "ITILstudy-Classes-ITILstudy-Training-CSI-"&Session("CountryOrigin")&".txt"
 	'Witing the string containing question format into an asp file using file system object.'
 	tsObject.Write strEnding
 	

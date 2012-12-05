@@ -2,7 +2,7 @@
 <!--#include virtual="/metatags/dates_location_metatag.html"-->
 <!--#include virtual="/includes/headermeta.asp"-->
 <%
- If Session("CountryOrigin") <> "US" And Session("CountryOrigin") <> "Canada" And Session("CountryOrigin") <> "United Kingdom" And Session("CountryOrigin") <> "India" Then 
+ If Session("CountryOrigin") <> "US" And Session("CountryOrigin") <> "Canada" And Session("CountryOrigin") <> "United Kingdom" And Session("CountryOrigin") <> "India" And Session("CountryOrigin") <> "Australia" And Session("CountryOrigin") <> "Germany" And Session("CountryOrigin") <> "Netherlands" Then 
  Response.Redirect("/index.asp")
 End If
  
@@ -339,7 +339,7 @@ else if (ns6||ie4) ld.display="none";
 					  
 					  'Function For Displaying Question Format'
 					 
-					'Set tsoObject = fsoObject.OpenTextFile("C:\ITILstudy\dateslocation\ITILstudy-Classes-ITILstudy-Training-OSA-"&Session("CountryOrigin")&".txt")
+					'Set tsoObject = fsoObject.OpenTextFile("C:\GITHub\ITILstudy\dateslocation\ITILstudy-Classes-ITILstudy-Training-OSA-"&Session("CountryOrigin")&".txt")
 					Set tsoObject = fsoObject.OpenTextFile("E:\vhosts\ITILstudy.com\httpdocs\dateslocation\ITILstudy-Classes-ITILstudy-Training-OSA-"&Session("CountryOrigin")&".txt")
  
 					  StrMain = tsoObject.ReadAll

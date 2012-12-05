@@ -651,8 +651,6 @@ ITIL Lifecycle Certificate in Continual Service Improvement (3 Days) Courses sta
 	<%Else%>
     
         <span align="right"><a href="/ITIL-Courses.asp">See More Courses in <%=Session("CountryOrigin")%>...</a></span>
-				
-				
           
     <%End If%>
 			  
@@ -660,17 +658,13 @@ ITIL Lifecycle Certificate in Continual Service Improvement (3 Days) Courses sta
 			
 
 			   <% End If %>
-				 
-				 ' line about simulated classes by Aravind 
+                    <!-- line about simulated classes by Aravind -->
 				
-<%if Session("CountryOrigin") ="Netherlands" Then%>
-Application of concepts through real life experience <a href="http://www.itilstudy.com/realLifeExp.asp">know more</a>
-<%End If%>
+                    <%if Session("CountryOrigin") ="Netherlands" Then%>
+                        Application of concepts through real life experience <a href="/realLifeExp.asp">know more</a>
+                    <%End If%>
 
-				 ' End of line about simulated classes by Aravind 
-				
-				 
-				 
+				    <!-- End of line about simulated classes by Aravind -->
 			               </td>
 						   
 						    <%' If Session("CountryOrigin") = "Other" OR Session("CountryOrigin")="United Kingdom" Then %>

@@ -90,7 +90,7 @@ else if (ns6||ie4) ld.display="none";
 			  <table cellpadding="0" cellspacing="0">
               <tr><td><span class="PageTitle"><b>Additional features and benefits</b></span></td></tr>
 			<tr><td> <ol type="1"><li>The course fee includes the cost of ITIL Foundation exam</li>
-			<li>High quality, comprehensive classroom study materials in line with the ITIL Foundation exam is provided</li>
+			<li>High quality, comprehensive classroom study materials in line with the ITIL Foundation exam is provided. <a href="/Classroom-Courseware.asp">More</a></li>
 			<li> Lunch and refreshments during classroom sessions</li>
 		  <li>Everything required for ITIL Foundation exam would be provided, you don't need to bring anything else to the class</li>
           <li>Complementary RMstudy Certification worth $ 300. <a href="http://itilstudy.com/ITIL-Training/free-onlinecertification.asp" target="_blank">More</a></li>
@@ -129,7 +129,7 @@ else if (ns6||ie4) ld.display="none";
 		  <li>3-day classroom training with real-life role-play exercises. </li>
 			<li>Complimentary RMstudy Certification worth £195 GBP </li>
                 <li> Provides Online access to ITIL Foundation course material offering 6 hours of pre-classroom study</li>
-			<li> High quality, comprehensive classroom study materials in line with the ITIL Foundation exam is provided</li>
+			<li> High quality, comprehensive classroom study materials in line with the ITIL Foundation exam is provided. <a href="/Classroom-Courseware.asp">More</a></li>
             
             <li>Refreshments and Lunch during classroom sessions</li>
             <li>Everything required for ITIL Foundation exam would be provided, you don't need to bring anything else to the class</li>
@@ -180,7 +180,11 @@ else if (ns6||ie4) ld.display="none";
                   <%If Session("CountryOrigin") <> "India" Then %>
                   <li> Provides Online access to ITIL Foundation course material offering 6 hours of pre-classroom study</li>
                   <%End If %>
-                <li>High quality, comprehensive classroom study materials in line with the ITIL Foundation exam is provided</li>
+                <li>High quality, comprehensive classroom study materials in line with the ITIL Foundation exam is provided.
+                    <%If Session("CountryOrigin") <> "India" And Session("CountryOrigin") <> "Singapore" And Session("CountryOrigin") <> "UAE" then %>
+                    <a href="/Classroom-Courseware.asp"> More</a>
+                    <%End If %>
+                </li>
                                     <%If Session("CountryOrigin") = "India" Then %>
                   <li> Provides Online access to ITIL Foundation course material offering 6 hours of pre-classroom study</li>
                   <%End If %>

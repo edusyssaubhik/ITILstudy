@@ -113,6 +113,7 @@
 	
 	iCount = 0
 	'Print The Courses Using Array '
+
 	If IsArray(arrAllCourses) Then
 	For rowCounter = firstRow to lastRow
 	
@@ -262,30 +263,29 @@ Else
 	'Creating a text file using file systm object.
 	
 	
-	'Set tsObject = fsoObject.CreateTextFile("E:\vhosts\ITILstudy.com\httpdocs\dateslocation\ITILstudy-Classes-ITILstudy-Training-OSA-"&Session("CountryOrigin")&".txt")
+	Set tsObject = fsoObject.CreateTextFile("E:\vhosts\ITILstudy.com\httpdocs\dateslocation\ITILstudy-Classes-ITILstudy-Training-OSA-"&Session("CountryOrigin")&".txt")
 	
-	Set tsoObject = fsoObject.CreateTextFile("C:\GitHub\ITILstudy\dateslocation\ITILstudy-Classes-ITILstudy-Training-OSA-"&Session("CountryOrigin")&".txt")
-   
-	
-	'Witing the string containing question format into an asp file using file system object.'
-	tsoObject.Write strEnding
+	'Set tsObject = fsoObject.CreateTextFile("C:\GitHub\ITIlstudy\dateslocation\ITILstudy-Classes-ITILstudy-Training-OSA-"&Session("CountryOrigin")&".txt")
 
+	'Witing the string containing question format into an asp file using file system object.'
+	tsObject.Write strEnding
+	
 	strEnding  =  ""
 	
 	'Inserting Updated date and country Values of a generater into database'
-	
+
 	strPay = "INSERT INTO generate_course (date,country) VALUES "
 	strPay = strPay & "('" & datevalue(NOW()) &"',"
 	strPay = strPay & " '" & Session("CountryOrigin")&"-OSA')"
+
 	IF generate <> "" Then
 	conn.Execute strPay
 	Else
 	Connobj.Execute strPay
 	End If
-	
 	End If
 	
-	
+		
 	
 	%>
 

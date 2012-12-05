@@ -98,7 +98,6 @@
 	Else
 	Rs.Open strQuery2,ConnObj
 	End If
-	
 	If Not Rs.EOF Then
 	arrAllCourses = Rs.getrows
 	Session("arrAllCourses") = arrAllCourses
@@ -262,9 +261,9 @@ Else
 	'Creating a text file using file systm object.
 	
 	
-	'Set tsObject = fsoObject.CreateTextFile("E:\vhosts\ITILstudy.com\httpdocs\dateslocation\ITILstudy-Classes-ITILstudy-Training-ST-"&Session("CountryOrigin")&".txt")
+	Set tsObject = fsoObject.CreateTextFile("E:\vhosts\ITILstudy.com\httpdocs\dateslocation\ITILstudy-Classes-ITILstudy-Training-ST-"&Session("CountryOrigin")&".txt")
 	
-	Set tsObject = fsoObject.CreateTextFile("C:\GitHub\ITILstudy\dateslocation\ITILstudy-Classes-ITILstudy-Training-ST-"&Session("CountryOrigin")&".txt")
+	'Set tsObject = fsoObject.CreateTextFile("C:\GitHub\ITIlstudy\dateslocation\ITILstudy-Classes-ITILstudy-Training-ST-"&Session("CountryOrigin")&".txt")
 	
 	
 	'Witing the string containing question format into an asp file using file system object.'

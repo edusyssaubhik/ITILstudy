@@ -24,10 +24,10 @@
                 </ul>
                  <li>Application of concepts through real life experience - <a href="http://www.itilstudy.com/realLifeExp.asp">More</a>
               <li>94% Customer satisfaction rating  by D&B - <a href="http://www.itilstudy.com/DunandBradstreet-Report.pdf" >More</a></li>
-                <%If Session("CountryOrigin") <> "US" Then %>
-              <li>35+ experienced faculty - <a href="http://www.itilstudy.com/ITIL-Training/instructors.asp" >More</a></li>
+                <%If Session("CountryOrigin") <> "India" And Session("CountryOrigin") <> "Singapore" And Session("CountryOrigin") <> "UAE" Then %>
+              <li>Comprehensive High Quality Classroom course - <a href="/Classroom-courseware.asp" >More</a></li>
                 <%Else %>
-                <li>35+ experienced dedicated faculty. More than any other competitor - <a href="http://www.itilstudy.com/ITIL-Training/instructors.asp" >More</a></li>
+                <li>Comprehensive High Quality Classroom course.</li>
                 <%End If %>
 			  <li>Specialized in ITIL trainings - <a href="/specialized_ITILTraining.asp" >Find out here</a></li>
                 <%If Session("CountryOrigin") <> "UAE" AND Session("CountryOrigin") <> "Singapore" AND Session("CountryOrigin") <> "Saudi Arabia" AND Session("CountryOrigin") <> "Other" Then%>
