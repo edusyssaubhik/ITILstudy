@@ -483,8 +483,17 @@ End If
          
           <%End If%>
           
-          
-          <% If Session("CountryOrigin") = "United Kingdom" Or   Session("CountryOrigin") = "US" or Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "India" Then %>
+          <%If Session("CountryOrigin") = "Australia" then %>
+                <br />
+                Select from 6 cities across Australia:<br />
+
+                <span align="right"><a href="/ITIL-Courses.asp">View classes in Sydney, Melbourne, Canberra, Adelaide, Perth, Brisbane and other cities.</a></span>
+        <%ElseIf Session("CountryOrigin") = "Germany"  Or  Session("CountryOrigin") = "Netherlands" Then %>
+                <br />
+                <span align="right"><a href="/ITIL-Courses.asp">See More Courses in <%=Session("CountryOrigin")%>...</a></span>
+                <%End If %>
+
+          <% If Session("CountryOrigin") = "United Kingdom" Or   Session("CountryOrigin") = "US" or Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "India" OR Session("CountryOrigin") = "Australia" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "Netherlands" Then %>
           
            <p id="imageHover"><a href="/ITIL-OSA-Courses.asp"> <img src="/images/buttons/ITIL-Advanced-OSA1.jpg" alt="courses" height="28px" border="0" ></a><br />
                   <span id="subImage">For ITIL<sup>&reg;</sup> Intermediate OSA</span></span>
@@ -502,7 +511,8 @@ End If
                  <% ElseIf Session("CountryOrigin") = "India" Then %>
                  
                ITIL Capability Certificate in Operational Support and Analysis (3 Days) Courses starting from Rs 28,776 (Price inclusive of exam fees)
-                 
+                 <%Else %>
+               Intermediate Training Courses<br/>ITIL Capability Certificate in Operational Support and Analysis (4 Days) <br />(Price inclusive of exam fees)
                  <% End If %>
                 
               <br /><br />
@@ -568,7 +578,8 @@ End If
 <% ElseIf Session("CountryOrigin") = "India" Then %>
                  
 ITIL Lifecycle Certificate in Continual Service Improvement (3 Days) Courses starting from Rs 28,776 (Price inclusive of exam fees) 
-
+               <%Else %>
+               Intermediate Training Courses<br/>ITIL Lifecycle Certificate in Continual Service Improvement (3 Days)<br/>(Price inclusive of exam fees)       
                  
                  <% End If %>
                
@@ -629,9 +640,11 @@ ITIL Lifecycle Certificate in Continual Service Improvement (3 Days) Courses sta
            <% ElseIf Session("CountryOrigin") = "India" Then %>            
            <BR />
 			Select from 9 cities across India:
-           <% ElseIf (Session("CountryOrigin") = "Australia") Then %>                                  
-           <BR />
-           Select from 6 cities across Australia:
+           <% 'ElseIf (Session("CountryOrigin") = "Australia") Then 
+               '<BR />
+           'Select from 6 cities across Australia:
+               %>                                  
+           
 		  
 		  <% End If %></span> 
 
@@ -642,18 +655,81 @@ ITIL Lifecycle Certificate in Continual Service Improvement (3 Days) Courses sta
         
          	 <a href="/ITIL-CSI-Courses.asp"> Click here for more classes </a></span>
             <% elseIf (Session("CountryOrigin") = "Australia") Then %>
-		    <a href="/ITIL-Courses.asp">View classes in Sydney, Melbourne, Canberra, Adelaide, Perth, Brisbane and other cities.</a></span>
+		    <a href="/ITIL-CSI-Courses.asp">Click here for more classes</a></span>
 			<% ElseIf (Session("CountryOrigin") = "United Kingdom" ) Then %>
 		   <a href="/ITIL-CSI-Courses.asp"> Click here for more classes </a></span>
 			<% ElseIf (Session("CountryOrigin") = "India") Then %>
 		   <a href="/ITIL-Courses.asp"> View classes in Bangalore, Mumbai, Delhi, Pune, Hyderabad, Kolkata, Ahmedabad, Coimbatore, Trivandrum and other cities.</a></span>
-		
+		    <% elseIf (Session("CountryOrigin") = "Germany") Then %>
+		    <a href="/ITIL-CSI-Courses.asp">Click here for more classes</a></span>
+               <% elseIf (Session("CountryOrigin") = "Netherlands") Then %>
+		    <a href="/ITIL-CSI-Courses.asp">Click here for more classes</a></span>
 	<%Else%>
     
         <span align="right"><a href="/ITIL-Courses.asp">See More Courses in <%=Session("CountryOrigin")%>...</a></span>
           
     <%End If%>
 			  
+               <%If Session("CountryOrigin") <> "India" And  Session("CountryOrigin") <> "US" And Session("CountryOrigin") <> "Canada"Then%>
+               <br /><br />
+               <a href="/ITIL-ST-Courses.asp"> <img src="/images/buttons/ITIL-Advanced-CSI1.jpg" alt="courses" height="28px" border="0" ></a><br />
+                  <span id="subImage">For ITIL<sup>&reg;</sup> Intermediate ST</span></span><br />
+                    <%If Session("CountryOrigin") = "Australia" then %>
+                        Service Transition (ST) courses starting from 2,640 AUD with attractive group discount <br />(Prices are inclusive of exam fees)
+                    <%ElseIf Session("CountryOrigin") = "Germany" then  %>
+                        Service Transition (ST) courses starting from € 2,321 with attractive group discount <br />(Prices are inclusive of exam fees)
+                    <%Else  %>
+                        Service Transition (ST) courses with attractive group discount <br />(Prices are inclusive of exam fees)
+
+                    <%End If %>
+
+
+               <br /><br />
+                
+                 <%
+
+			Set Rs = Server.CreateObject("ADODB.Recordset")
+			todayDate = now()
+
+                   strQuery = "SELECT Top 4 city,startdate,status,afterEBdiscountwithouttax, afterEBdiscountwithtax,applicabledays,pricewithtax, pricewithouttax FROM ITIL_course WHERE coursetype = 'ST' AND country='"&Session("CountryOrigin")&"' AND status <> 'Cancelled' AND startdate >= '" & todayDate & "' ORDER BY startdate ASC"
+'response.Write(strQuery)
+                     Rs.Open strQuery,ConnObj
+
+					 Do Until Rs.EOF 
+						
+						City      =  Rs("city")
+						StartDate =  Rs("startdate")
+						Status    =  Rs("status")
+						Price     =  Rs("afterEBdiscountwithtax")
+						PriceUK     =  Rs("afterEBdiscountwithouttax")
+						PriceUK1   =  Rs("pricewithouttax")
+						ApplicableDays = Rs("applicabledays")
+						Price1     =  Rs("pricewithtax")
+						
+						CourseDate = Day(StartDate) & " " & MonthName(Month(StartDate), true) & ", " & Year(StartDate)
+'response.Write(CourseDate)
+						If(CDate(StartDate)-Date()>0) Then
+						
+				  %>
+              <a href="/ITIL-ST-Courses.asp">
+              <% = City %>
+              |
+              <% = CourseDate %>
+  
+              </a>&nbsp;&nbsp;&nbsp;
+              <% If Status = "Full" Then %>
+              <font color="red">Full</font>
+              <% End If %>
+              <br>
+              <%
+				     
+					 End If
+					 Rs.Movenext
+					 Loop
+                     Rs.Close
+				  %>
+                <br /><a href="/ITIL-ST-Courses.asp"> Click here for more classes </a></span>
+               <%End If %>
               </p> 
 			
 

@@ -158,9 +158,9 @@
 						  <span><a href="/ChooseEmail.asp">sync with other Enrolled Account</a></span>
 						</td>
 						</tr>
+
 						<tr>
-<td colspan="3">
-</br> Please refer your friend for Online courses. by <a href="/refer-friends.asp" target="_Blank">clicking here</a></br></br></td>
+<td colspan="3"></br> <%If Session("CountryOrigin") <> "India" Then %>Please refer your friend for Online courses. by <a href="/refer-friends.asp" target="_Blank">clicking here</a><%End If %></br></br></td>
 </tr>
 						</tbody>
 		</table>
