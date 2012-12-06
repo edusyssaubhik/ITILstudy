@@ -488,12 +488,15 @@ End If
                 Select from 6 cities across Australia:<br />
 
                 <span align="right"><a href="/ITIL-Courses.asp">View classes in Sydney, Melbourne, Canberra, Adelaide, Perth, Brisbane and other cities.</a></span>
-        <%ElseIf Session("CountryOrigin") = "Germany"  Or  Session("CountryOrigin") = "Netherlands" Then %>
+        <%ElseIf Session("CountryOrigin") = "Germany"  Or  Session("CountryOrigin") = "Netherlands" OR Session("CountryOrigin") = "UAE" Then %>
                 <br />
                 <span align="right"><a href="/ITIL-Courses.asp">See More Courses in <%=Session("CountryOrigin")%>...</a></span>
+                <%ElseIf session("CountryOrigin") = "India" Then %>
+                <br />
+                <span align="right"><a href="/ITIL-Courses.asp"> View classes in Bangalore, Mumbai, Delhi, Pune, Hyderabad, Kolkata, Ahmedabad, Coimbatore, Trivandrum and other cities.</a>
                 <%End If %>
 
-          <% If Session("CountryOrigin") = "United Kingdom" Or   Session("CountryOrigin") = "US" or Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "India" OR Session("CountryOrigin") = "Australia" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "Netherlands" Then %>
+          <% If Session("CountryOrigin") = "United Kingdom" Or   Session("CountryOrigin") = "US" or Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "India" OR Session("CountryOrigin") = "Australia" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "Netherlands" OR Session("CountryOrigin") = "UAE" Then %>
           
            <p id="imageHover"><a href="/ITIL-OSA-Courses.asp"> <img src="/images/buttons/ITIL-Advanced-OSA1.jpg" alt="courses" height="28px" border="0" ></a><br />
                   <span id="subImage">For ITIL<sup>&reg;</sup> Intermediate OSA</span></span>
@@ -659,10 +662,12 @@ ITIL Lifecycle Certificate in Continual Service Improvement (3 Days) Courses sta
 			<% ElseIf (Session("CountryOrigin") = "United Kingdom" ) Then %>
 		   <a href="/ITIL-CSI-Courses.asp"> Click here for more classes </a></span>
 			<% ElseIf (Session("CountryOrigin") = "India") Then %>
-		   <a href="/ITIL-Courses.asp"> View classes in Bangalore, Mumbai, Delhi, Pune, Hyderabad, Kolkata, Ahmedabad, Coimbatore, Trivandrum and other cities.</a></span>
+		   <a href="/ITIL-CSI-Courses.asp"> Click here for more classes</a></span>
 		    <% elseIf (Session("CountryOrigin") = "Germany") Then %>
 		    <a href="/ITIL-CSI-Courses.asp">Click here for more classes</a></span>
                <% elseIf (Session("CountryOrigin") = "Netherlands") Then %>
+		    <a href="/ITIL-CSI-Courses.asp">Click here for more classes</a></span>
+               <% elseIf (Session("CountryOrigin") = "UAE") Then %>
 		    <a href="/ITIL-CSI-Courses.asp">Click here for more classes</a></span>
 	<%Else%>
     
@@ -670,7 +675,7 @@ ITIL Lifecycle Certificate in Continual Service Improvement (3 Days) Courses sta
           
     <%End If%>
 			  
-               <%If Session("CountryOrigin") <> "India" And  Session("CountryOrigin") <> "US" And Session("CountryOrigin") <> "Canada"Then%>
+               <%If Session("CountryOrigin") <> "India" And  Session("CountryOrigin") <> "US" And Session("CountryOrigin") <> "Canada" And Session("CountryOrigin") <>"Saudi Arabia" And Session("CountryOrigin") <> "Singapore" Then%>
                <br /><br />
                <a href="/ITIL-ST-Courses.asp"> <img src="/images/buttons/ITIL-Advanced-CSI1.jpg" alt="courses" height="28px" border="0" ></a><br />
                   <span id="subImage">For ITIL<sup>&reg;</sup> Intermediate ST</span></span><br />
