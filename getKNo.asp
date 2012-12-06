@@ -134,8 +134,26 @@ Response.Write("<tr><td class=""general-body"" width=""45%"">Select number of qu
 						str = str & " disabled=""disabled"""
                          End If 
 					 str = str & "VALUE=""25"">25</option>"
-					 
-					
+					    
+
+                        'Madhava Code starts Here
+                        'If Question is more than 25 Ex: 32 then
+                        q2 = 25
+                        if questionNo > 25 then 'If More than 25 then
+                            q = questionNo - 25 ' How much more say 12(means there are  25+12 ques)
+                            q1 = q / 5 ' we are adding 5 questions 5,10,15 etc ,,,,Calculate howmany 5 ques we can add
+                            q1 = int(q1) 'gives int part
+                            If q1 > 0 then
+                                For i = 1 to q1 'Adding 5 ques 
+                                    str = str & " <option value="& 25 + (i*5)&">"& 25 + (i*5)&"</option>"
+                                    q2 = q2 + 5 
+                                next
+                            End if
+                            q3 = questionNo - q2 'adding remaining ques
+                            str = str & " <option Selected =""Selected"" value="& q2 + q3 &">"&  q2 + q3 &"</option>"
+                        End If		
+                        
+                    'madhava aCode ends here			
 			Response.Write(str)
 	iCount = iCount +1 
 	
