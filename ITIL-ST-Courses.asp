@@ -2,7 +2,7 @@
 <!--#include virtual="/metatags/dates_location_metatag.html"-->
 <!--#include virtual="/includes/headermeta.asp"-->
 <%
- If Session("CountryOrigin") <> "US" And Session("CountryOrigin") <> "Canada" And Session("CountryOrigin") <> "United Kingdom" And Session("CountryOrigin") <> "Australia" And Session("CountryOrigin") <> "Germany" And Session("CountryOrigin") <> "Netherlands" Then 
+ If Session("CountryOrigin") <> "US" And Session("CountryOrigin") <> "Canada" And Session("CountryOrigin") <> "United Kingdom" And Session("CountryOrigin") <> "Australia" And Session("CountryOrigin") <> "Germany" And Session("CountryOrigin") <> "Netherlands" And Session("CountryOrigin") <> "UAE" Then 
  
  Response.Redirect("/index.asp")
  

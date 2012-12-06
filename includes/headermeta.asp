@@ -1,4 +1,16 @@
+<%
+ If InStr(Request.ServerVariables("SERVER_NAME"),"www") = 0 Then
 
+	 Response.Status="301 Moved Permanently"
+
+	 If Request.ServerVariables("URL") = "/index.asp" Then
+	 'Response.AddHeader "Location","http://www." & Request.ServerVariables("HTTP_HOST")
+	 Else
+	 'Response.AddHeader "Location","http://www." & Request.ServerVariables("HTTP_HOST") & Request.ServerVariables("URL")
+     End If
+	 'Response.End
+ End if
+%>
 
 <link rel="shortcut icon" href="/images/buttons/favicon.ico">
 <link rel="stylesheet" type="text/css" href="/css/chromestyle.css">
@@ -341,6 +353,7 @@ End If
 	<% ElseIf Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" Then  %>
 
  <td id="imageHover"><div style="position:relative" id="imageHover"><img src="/images/buttons/logo_top.jpg" alt="ITILstudy" border="0" usemap="#Map" id="imageHover"/>
+  <!-- <div class="contactInTopLogo"> <span id="callUsAt">Call: <span style="color:#0673b9">+1 855 234 8454</span> <span id="emailUs">Email: <a href="mailto:marketing@ITILstudy.com" style="color:#0673b9">marketing@ITILstudy.com</a></span></span></div>-->
    <map name="Map" id="Map">
   <area shape="rect" coords="5,13,230,96" href="/index.asp" />
   <area shape="rect" coords="563,10,724,95" href="http://www.csme.us/training-organizations.php" target="_blank" />
