@@ -493,7 +493,7 @@ End If
                 <span align="right"><a href="/ITIL-Courses.asp">See More Courses in <%=Session("CountryOrigin")%>...</a></span>
                 <%ElseIf session("CountryOrigin") = "India" Then %>
                 <br />
-                <span align="right"><a href="/ITIL-Courses.asp"> View classes in Bangalore, Mumbai, Delhi, Pune, Hyderabad, Kolkata, Ahmedabad, Coimbatore, Trivandrum and other cities.</a>
+                <span align="right"><a href="/ITIL-Courses.asp">See More Courses in <%=Session("CountryOrigin")%>...</a></span>
                 <%End If %>
 
           <% If Session("CountryOrigin") = "United Kingdom" Or   Session("CountryOrigin") = "US" or Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "India" OR Session("CountryOrigin") = "Australia" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "Netherlands" OR Session("CountryOrigin") = "UAE" Then %>
@@ -792,6 +792,9 @@ ITIL Lifecycle Certificate in Continual Service Improvement (3 Days) Courses sta
                     <a href="/ITIL-Online-Courses.asp">ITIL Foundation Course - $ 300 </a><br />
 					<a href="/ITIL-Online-Courses.asp">Intermediate OSA Course - $ 665  </a><br />
                     <a href="/ITIL-Online-Courses.asp">Intermediate CSI Course - $ 665  </a><br />
+                    <%If Session("CountryOrigin")="India" OR Session("CountryOrigin") = "Singapore" Then %>
+                      <a href="/ITIL-Online-Courses.asp">Intermediate ST Course - $ 665  </a><br />
+                      <%End If %>
 					<br /></p>
 					<% End If %>
 
@@ -844,7 +847,7 @@ ITIL Lifecycle Certificate in Continual Service Improvement (3 Days) Courses sta
                                       
                         <td id="Td1">&nbsp;&nbsp;&nbsp;<img border="0" src="/images/buttons/New-UK.jpg"  border="0" /></td>
                                       
-                    <% ElseIf Session("CountryOrigin") <> "Singapore" AND Session("CountryOrigin") <> "Other" AND Session("CountryOrigin") <> "United Kingdom" Then %>
+                    <% ElseIf  Session("CountryOrigin") <> "Other" AND Session("CountryOrigin") <> "United Kingdom" Then %>
                     
                             <td id="Td2">&nbsp;&nbsp;&nbsp;<img border="0" src="/images/buttons/New.jpg"  border="0" /></td>
                                         

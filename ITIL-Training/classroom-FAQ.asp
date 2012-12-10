@@ -411,7 +411,7 @@ ITIL CSI  Classroom Training</a>
                <%End If%>     
                 <div id="faqPanel2_11">
                     <div style="background-color: rgb(107, 121, 165); color: rgb(51, 51, 51); font-weight: normal;" id="faqHeader2_2" class="collapsed">
-                      <h3>How do I generate 18 PMI approved PDU's from my ITIL Foundation Classroom program and submit it to PMI ? </h3>
+                      <h3>How do I generate 18 PMI<sup>&reg;</sup> approved PDU's from my ITIL Foundation Classroom program and submit it to PMI ? </h3>
                     </div>
                     <div style="border-style: solid; border-color: rgb(107, 121, 165); border-width: 0px 1px; margin: 0px; overflow: hidden; display: none; height: 1px;" id="panel2_2" class="answer">
                       <div class="faqItemContent">
@@ -861,7 +861,12 @@ While submitting the PDUs to PMI, please use the following information:<br /><br
                       <div class="faqItemContent">
                         <div class="outerFAQContainer">
                           <div class="innerFAQContainer">
-                            <p>At times, we provide early bird discounts to students. For details of current course fee and available discounts, please <a href="/ITIL-Courses.asp">click here</a>.<br /><br />We also provide a discount of 5% for bulk nominations with more than five participants joining the course at the same time. For details, please email us at <a href="mailto:marketing@ITILstudy.com" target="_blank">marketing@ITILstudy.com</a>.</p>
+                            <p>At times, we provide early bird discounts to students. For details of current course fee and available discounts, please <a href="/ITIL-Courses.asp">click here</a>.<br /><br />
+                                <%If Session("CountryOrigin") = "India" Then %>
+                                We also provide a discount of 5% for two enrolments and the discount may vary depending on the number of students. For details please contact us at <a href="mailto:marketing@ITILstudy.com" target="_blank">marketing@itilstudy.com</a>, 9008748005</p>
+                                <%Else %>
+                                We also provide a discount of 5% for bulk nominations with more than five participants joining the course at the same time. For details, please email us at <a href="mailto:marketing@ITILstudy.com" target="_blank">marketing@ITILstudy.com</a>.</p>
+                              <%End if %>
                           </div>
                         </div>
                         <div class="outerFAQContainerBottom">&nbsp;</div>

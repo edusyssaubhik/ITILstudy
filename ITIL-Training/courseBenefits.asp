@@ -30,6 +30,11 @@ Set objRs = Server.CreateObject("ADODB.Recordset")
   Loop
 
   objRs.Close
+
+    If Session("CountryOrigin") = "Singapore" then
+        rqebdiscount = Replace(rqebdiscount,"$","SGD")
+        rqafterEBDiscountPrice = Replace(rqafterEBDiscountPrice,"$","SGD")
+    End if
 %>
 <!-- Body Starts -->
 

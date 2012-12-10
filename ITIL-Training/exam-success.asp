@@ -12,19 +12,20 @@
           <tr>
             <td width="2%" >&nbsp;</td>
             <td width="25%" >&nbsp;</td>
-            <td width="73%"  class="breadcrumb"><a href="/index.asp" title="Home">Home</a> &raquo; WHY US &raquo; Most Successful & Popular</td>
+            <td width="73%"  class="breadcrumb"><a href="/index.asp" title="Home">Home</a> &raquo; WHY US &raquo; Successful & Popular</td>
           </tr>
          
 		   <tr>
             <!--#include virtual="/includes/innerLeftMenu.asp"-->
             
-			<td width="73%" rowspan="4" background="/images/back/left_line.jpg" class="general-body"><div style="margin-top:-12px; width:95%;">
-			<h1 class="PageTitle">Most successful and popular global IT Services/Project management training provider</h1>
+			<td width="73%" rowspan="4" background="/images/back/left_line.jpg" class="general-body">
+            <div style="margin-top:-12px; width:95%;"><br />
+			<h1 class="PageTitle"> successful and popular global IT Services/Project management training provider</h1>
                 <div>
-                 <p>We are the most successful and most popular IT services/Project Management training provider globally. We have trained more than 25,000 successful IT/project managers for various courses including ITIL<sup>&reg;</sup>, PRINCE2<sup>&reg;</sup>, PMP, CAPM, etc. 
+                 <p>We are a successful and popular IT services/Project Management training provider globally. We have trained more than 25,000 successful IT/project managers for various courses including ITIL<sup>&reg;</sup>, PRINCE2<sup>&reg;</sup>, PMP<sup>&reg;</sup>, CAPM<sup>&reg;</sup>, etc. 
 
  </p>
- <p>We have a presence globally in over 150+ countries with delegates from over 2000 companies. Please find below the list of the Companies: </p>
+ <p>We have a presence globally in over 150+ countries with delegates from over 2000+ companies. Please find below the list of the Companies: </p>
 
                
               </div>

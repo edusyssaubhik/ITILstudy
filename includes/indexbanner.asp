@@ -71,7 +71,9 @@
                     <ul>
                         <li>Classrooms </li>
                         <li>Online only </li>
+                         <%If Session("Countryorigin") <> "India" And Session("CountryOrigin") <> "Singapore" Then %>
                         <li>Faculty-led online  (Live Classes) </li>
+                        <%End If %>
                         <li>Blended/Hybrid </li>
                       
                     </ul>
@@ -123,6 +125,9 @@
                         <%ElseIf Session("CountryOrigin") = "US" Then %>
                         <li>2 or 3 day ITIL Classes starting at <%=BestPrice %> - <a href="http://www.itilstudy.com/ITIL-Courses.asp" >More</a></li>
                         <li>3 day ITIL Intermediate classes starting at <% =intermediatePrice  %> </li>
+
+                        <% ElseIf Session("CountryOrigin") = "Singapore" Then %> 
+                       <li>2 day ITIL Classes starting at <%=BestPrice %> - <a href="http://www.itilstudy.com/ITIL-Courses.asp" >More</a></li>
 
                         <%Else %>
                         <li>2 or 3 Day ITIL Classes starting at <%=BestPrice %> - <a href="http://www.itilstudy.com/ITIL-Courses.asp" >More</a></li>

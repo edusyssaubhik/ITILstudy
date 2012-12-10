@@ -29,6 +29,10 @@ Set objRs = Server.CreateObject("ADODB.Recordset")
   Loop
 
   objRs.Close
+
+  If session("CountryOrigin") = "Singapore" Then
+     rqafterEBDiscountPrice = Replace(rqafterEBDiscountPrice,"$","SGD") 'Replaces $ with SGD
+  End If   
 %>
 
 <!-- Body Starts -->
@@ -109,7 +113,7 @@ else if (ns6||ie4) ld.display="none";
                       <% If Session("CountryOrigin") <> "US" AND Session("CountryOrigin") <> "Canada" Then %>
 					 <% If Session("CountryOrigin") <> "India" Then %>
                      <tr onMouseOver="javascript:highlightTableRowVersionA(this, '#FFFFCC');">
-                       <td>Best Faculty
+                       <td>Experienced Faculty
                        </td>
                        <td><ul>
                             <li> ITILstudy prides itself on the quality of its faculty, who are the best in the industry, have 10+ years of industry experience and have been trained on ITILstudy training techniques and adult learning processes to deliver an exceptional training experience. <a href="/ITIL-Training/instructors.asp" target="_blank">More</a></li>
@@ -165,12 +169,12 @@ else if (ns6||ie4) ld.display="none";
                     <% End If %>
 
                      <tr onMouseOver="javascript:highlightTableRowVersionA(this, '#FFFFCC');">
-                       <td>High Quality course content approved by APMG and CSME and taught by accredited trainers
+                       <td>Quality course content approved by APMG and CSME and taught by accredited trainers
                        </td>
                        <td><ul>
                             <li>ITILstudy is a brand of Edusys Services Pvt. Limited, UK - an APMG and CSME approved Accredited Training Organization (ATO).</li>
                             <li>ITILstudy course and course ware  has been accredited by APMG.</li>
-                            <li>Our faculty are the best in the industry and accredited by APMG and CSME. Each has extensive industry experience and is trained in ITILstudy classroom training techniques and adult learning processes aimed at delivering an exceptional training experience.
+                            <li>All our faculty are ITIL certified and accredited by APMG and CSME. Each has extensive industry experience and is trained in ITILstudy classroom training techniques and adult learning processes aimed at delivering an exceptional training experience.
                             </li>
                        </ul></td>
                        <td><ul>
@@ -257,12 +261,12 @@ else if (ns6||ie4) ld.display="none";
                                 <td>Several convenient locations</td>
                                 <td><ul>
 								 <% If Session("CountryOrigin") = "Singapore" Then %>
-									   <li>ITILstudy conducts several classes in <% = Session("CountryOrigin") %>. Training with the leader assures you of the "BEST QUALITY" training at your convenient locations. <a href="/ITIL-Courses.asp">More</a></li>
+									   <li>ITILstudy conducts several classes in <% = Session("CountryOrigin") %>. Training with the leader assures you of the "PROVEN QUALITY" training at your convenient locations. <a href="/ITIL-Courses.asp">More</a></li>
 									   <% ElseIf Session("CountryOrigin") = "United Kingdom" Then%>
                                        
-                                       <li>ITILstudy conducts several classes at almost all major cities in UK. Training with the leader assures you of the best quality training at a location near you. <a href="/ITIL-Courses.asp">More</a></li>
+                                       <li>ITILstudy conducts several classes at almost all major cities in UK. Training with the leader assures you of the proven quality training at a location near you. <a href="/ITIL-Courses.asp">More</a></li>
                                       <%Else%>
-                                     <li>ITILstudy conducts several classes at almost all major cities in <% = Session("CountryOrigin") %>. Training with the leader assures you of the "BEST QUALITY" training at your convenient locations. <a href="/ITIL-Courses.asp">More</a></li>
+                                     <li>ITILstudy conducts several classes at almost all major cities in <% = Session("CountryOrigin") %>. Training with the leader assures you of the "PROVEN QUALITY" training at your convenient locations. <a href="/ITIL-Courses.asp">More</a></li>
                                      
                                      <% End If %>
                                      </ul></td>
@@ -306,10 +310,10 @@ else if (ns6||ie4) ld.display="none";
                      <%If Session("CountryOrigin")="US" OR Session("CountryOrigin")="Canada" Then %>
                              
 						<tr onMouseOver="javascript:highlightTableRowVersionA(this, '#FFFFCC');">
-                               <td>Free Risk Management course and 20 PMI PDUs
+                               <td>Free Risk Management course and 20 PMI<sup>&reg;</sup> PDUs
                                </td>
                                <td><ul>
-                            <li>ITILstudy's classroom students get free and complimentary access to the Risk Management course provided by www.RMstudy.com (priced at $300). Students also get free 20 PMI PDUs - this satisfies continuing education requirements for the first year for certified PMPs. <a href="http://itilstudy.com/ITIL-Training/free-onlinecertification.asp" target="_blank">More</a></li>
+                            <li>ITILstudy's classroom students get free and complimentary access to the Risk Management course provided by www.RMstudy.com (priced at $300). Students also get free 20 PMI PDUs - this satisfies continuing education requirements for the first year for certified Project Management Professionals (PMP)<sup>&reg;</sup>. <a href="http://itilstudy.com/ITIL-Training/free-onlinecertification.asp" target="_blank">More</a></li>
                            
                        </ul></td>
                        <td></td>
@@ -360,7 +364,7 @@ else if (ns6||ie4) ld.display="none";
                                  
                     </tr>
                     <tr onMouseOver="javascript:highlightTableRowVersionA(this, '#FFFFCC');">
-                       <td>Best Faculty
+                       <td>Experienced Faculty
                        </td>
                        <td><ul>
                             <li>All our instructors are ITIL certified (approved by APMG or CSME) with an average project and service management work experience of 15+ years in areas like Information Technology, Construction, Government, Healthcare, Manufacturing etc. Their practical examples and real life experiences make it easier for students to understand and appreciate complex concepts. <a href="/ITIL-Training/instructors.asp">More</a></li>
@@ -428,7 +432,7 @@ else if (ns6||ie4) ld.display="none";
                     <tr onMouseOver="javascript:highlightTableRowVersionA(this, '#FFFFCC');">
                        <td>Several convenient locations</td>
                        <td><ul>
-                            <li>ITILstudy conducts several classes at almost all major cities in US. Training with the leader assures you of the best quality training at a location near you. <a href="/ITIL-Courses.asp">More</a></li>
+                            <li>ITILstudy conducts several classes at almost all major cities in US. Training with the leader assures you of the proven quality training at a location near you. <a href="/ITIL-Courses.asp">More</a></li>
                        </ul></td>
                        <td><ul>
 					     <li>Have limited locations and classes.</li>
@@ -444,9 +448,9 @@ else if (ns6||ie4) ld.display="none";
                             </ul></td>
                     </tr>
                     <tr onMouseOver="javascript:highlightTableRowVersionA(this, '#FFFFCC');">
-                       <td>High Quality course content accredited by APMG and CSME and taught by accredited trainers</td>
+                       <td> Quality course content accredited by APMG and CSME and taught by accredited trainers</td>
                        <td><ul>
-                            <li>Our faculty is the best in the industry and accredited by APMG and CSME. They have extensive industry experience and are trained in ITILstudy classroom training techniques and adult learning processes aimed at delivering an exceptional training experience.</li>
+                            <li>All our faculty are ITIL certified and accredited by APMG and CSME. They have extensive industry experience and are trained in ITILstudy classroom training techniques and adult learning processes aimed at delivering an exceptional training experience.</li>
                             <li>ITILstudy is a brand of Edusys Services Pvt. Limited, UK (VMEdu, Inc., US)- an APMG and CSME approved Accredited Training Organization (ATO).</li>
                             <li>ITILstudy course and course ware have been accredited by APMG.</li>
                        </ul></td>
@@ -474,10 +478,10 @@ else if (ns6||ie4) ld.display="none";
                     </tr>
                    
 						<tr onMouseOver="javascript:highlightTableRowVersionA(this, '#FFFFCC');">
-                               <td>Free Risk Management course and 20 PMI PDUs
+                               <td>Free Risk Management course and 20 PMI<sup>&reg;</sup> PDUs
                                </td>
                                <td><ul>
-                            <li>ITILstudy's classroom students get free and Complementary access to the Risk Management course provided by www.RMstudy.com (priced at $300). Students also get free 20 PMI PDUs - this satisfies continuing education requirements for the first year for certified PMPs. <a href="http://itilstudy.com/ITIL-Training/free-onlinecertification.asp" target="_blank">More</a></li>
+                            <li>ITILstudy's classroom students get free and Complementary access to the Risk Management course provided by www.RMstudy.com (priced at $300). Students also get free 20 PMI PDUs - this satisfies continuing education requirements for the first year for certified Project Management Professionals (PMP)<sup>&reg;</sup>. <a href="http://itilstudy.com/ITIL-Training/free-onlinecertification.asp" target="_blank">More</a></li>
                            
                        </ul></td>
                        <td></td>
