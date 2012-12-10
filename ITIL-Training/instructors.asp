@@ -10,7 +10,7 @@
           <tr>
             <td width="2%">&nbsp;</td>
             <td width="25%">&nbsp;</td>
-            <td width="73%" class="breadcrumb"><a href="/index.asp" title="Home">Home</a> &raquo; Why Us &raquo; Best Faculty </td>
+            <td width="73%" class="breadcrumb"><a href="/index.asp" title="Home">Home</a> &raquo; Why Us &raquo; Experienced Faculty </td>
           </tr>
           <tr>
             <!--#include virtual="/includes/innerLeftMenu.asp"-->
@@ -20,7 +20,7 @@
                 <h1 class="PageTitle"><br />
                   Why our Faculty are best in the Industry</h1>
                 <% If Session("CountryOrigin") =  "Germany" OR Session("CountryOrigin") = "Netherlands" Then %>
-                <p>The success of any classroom training greatly depends on the proficiency of the instructor. We owe our high success rate of 99.2% and consistently great student feedback to the quality of our instructors. All our instructors are ITIL/PMP certified with an average project management work experience of 15+ years in areas like Information Technology, Construction, Government, Healthcare, Manufacturing etc. Their practical examples and real life personal experiences make it easier for students to understand and appreciate complex concepts.<br />
+                <p>The success of any classroom training greatly depends on the proficiency of the instructor. We owe our high success rate of 99.2% and consistently great student feedback to the quality of our instructors. All our instructors are ITIL<sup>&reg;</sup>/PMP<sup>&reg;</sup> certified with an average project management work experience of 15+ years in areas like Information Technology, Construction, Government, Healthcare, Manufacturing etc. Their practical examples and real life personal experiences make it easier for students to understand and appreciate complex concepts.<br />
                   <br />
                   Before teaching any ITILstudy course, each instructor goes through a rigorous ITILstudy "Train the Trainer" program about adult learning techniques required to make their classes interesting, enjoyable and enriching. An average ITIL study faculty has more than 1500 hours of professional teaching experience in successfully delivering our courses. <br />
                   <br />
@@ -140,7 +140,7 @@
                 <table width="97%" border="0" cellspacing="0" cellpadding="5">
                   <h1 class="PageTitle"><br />
                     Faculty for ITILstudy Prep Courses</h1>
-                  <p>The success of any classroom training greatly depends on the proficiency of the instructor. We owe our high success rate of 99.2% and consistently great student feedback to the quality of our instructors. All our instructors are ITIL/PMP certified with an average project management work experience of 15+ years in areas like Information Technology, Construction, Government, Healthcare, Manufacturing etc. Their practical examples and real life personal experiences make it easier for students to understand and appreciate complex concepts.<br />
+                  <p>The success of any classroom training greatly depends on the proficiency of the instructor. We owe our high success rate of 99.2% and consistently great student feedback to the quality of our instructors. All our instructors are ITIL<sup>&reg;</sup>/PMP<sup>&reg;</sup> certified with an average project management work experience of 15+ years in areas like Information Technology, Construction, Government, Healthcare, Manufacturing etc. Their practical examples and real life personal experiences make it easier for students to understand and appreciate complex concepts.<br />
                     <br />
                     Before teaching any ITILstudy course, each instructor goes through a rigorous ITILstudy "Train the Trainer" program about adult learning techniques required to make their classes interesting, enjoyable and enriching. An average ITIL study faculty has more than 1500 hours of professional teaching experience in successfully delivering our courses. <br />
                     <br />
@@ -185,7 +185,7 @@
                     <td colspan="2"><hr style="border:1px solid #CCCCCC;"></td>
                   </tr>
                   <tr>
-                    <td colspan="2"><span class="Header">Charles Quansah<br />MSIT, PMP, ITIL</span></td>
+                    <td colspan="2"><span class="Header">Charles Quansah<br />MSIT, PMP, ITIL Expert</span></td>
                   </tr>
                   <tr>
                     <td><p align="justify"><i>&quot;Charles is a great instructor. He ensured that all the concepts were understood and that all students were well-prepared for the PMP certification exam.  His teaching methodology was excellent. I would strong recommend PMStudy and Mr.Quansah to my colleagues.&quot;  &#45;  Leslie, Birmingham, AL</i><br/>

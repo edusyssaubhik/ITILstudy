@@ -1,47 +1,55 @@
 <!-- Footer Starts -->
 
-<div valign="top" style="height:16px; width: 930px; padding-left:6px">
-<span class="copyright">
-© 2011 Edusys Services Private Limited,  All Rights Reserved
-</span>
+<div valign="top" style="height:16px; width: 930px; padding-left:6px"> <span class="copyright"> © 2011 Edusys Services Private Limited,  All Rights Reserved </span> </div>
+<!-- Footer Ends -->
+<div align="left" style="width:900px;height:50px; margin-left:14px; text-align:justify" valign="top" >
+  <p><font size="1px"><a href="/index.asp">Home</a> | <a href="/aboutus.asp">About Us</a>
+    <% If Session("CountryOrigin") = "Other" OR  Session("CountryOrigin") = "United Kingdom"  Then %>
+    | <a href="/ITIL-Training/courseBenefits-Online.asp">Online Course Benefits </a>
+    <%End If%>
+    <%  If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "India" OR Session("CountryOrigin") = "UAE" OR Session("CountryOrigin") = "Singapore"  OR Session("CountryOrigin") = "United Kingdom" OR Session("CountryOrigin") = "Australia" Then %>
+    | <a href="/ITIL-Training/courseBenefits.asp">ITIL Classroom Course Benefits </a> | <a href="/ITIL-Training/better-than-competitors.asp">Better Than Competitors </a> | <a href="/ITIL-Training/comprehensive.asp">Comprehensive and Effective </a>
+    <%  If Session("CountryOrigin") = "United Kingdom"  Then %>
+    | <a href="/ITIL-Training/free-onlinecertification.asp">Classroom - Risk Management Certification Course</a>
+    <% End If %>
+    | <a href="/enrollClass.asp">Enrol for Classroom Course</a> | <a href="/ITIL-Courses.asp">ITIL Classroom Course</a> | <a href="/classroomTraining.asp">Foundation Class Methodology </a> | <a href="/ITIL-Foundation-Course.asp">ITIL Foundation Course</a>
+    <% End If %>
+    | <a href="/ITIL-Training/classroom-FAQ.asp"> ITIL FAQs</a> | <a href="/ITIL-Online-Courses.asp">ITIL Online Courses</a>
+    <%If Session("CountryOrigin") = "US" Then%>
+    | <a href="/index.asp">ITIL Training</a> | <a href="/index.asp">ITIL Certification</a>
+    <%End If%>
+    | <a href="/methodology/Online-Training.asp">Foundation Online Training </a> | <a href="/affiliates.asp">Affiliate</a> |
+    <% If Session("FirstName") = "" Then %>
+    <a href="/memberlogin.asp">Login</a>
+    <%Else%>
+    <a href="/logoff.asp">Logout</a>
+    <%end If%>
+    | <a href="/contactus.asp">Contact</a> | <a href="/contactus.asp#feedback">Feedback</a> | <a href="/sitemap.asp">Sitemap</a></font></p>
 </div>
 
 
-<!-- Footer Ends -->
+<!-- Google Code for ITIL - Main -->
+<!-- Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. For instructions on adding this tag and more information on the above requirements, read the setup guide: google.com/ads/remarketingsetup -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1026351431;
+var google_conversion_label = "JeMOCIOWwgMQx8Kz6QM";
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1026351431/?value=0&amp;label=JeMOCIOWwgMQx8Kz6QM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+ 
 
-<div align="left" style="width:900px;height:50px; margin-left:14px; text-align:justify" valign="top" >
 
-     
 
-<p><font size="1px"><a href="/index.asp">Home</a> | <a href="/aboutus.asp">About Us</a>
-   <% If Session("CountryOrigin") = "Other" OR  Session("CountryOrigin") = "United Kingdom"  Then %>
-|  <a href="/ITIL-Training/courseBenefits-Online.asp">Online Course Benefits </a> 
-<%End If%>
- <%  If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "India" OR Session("CountryOrigin") = "UAE" OR Session("CountryOrigin") = "Singapore"  OR Session("CountryOrigin") = "United Kingdom" OR Session("CountryOrigin") = "Australia" Then %>
-|  <a href="/ITIL-Training/courseBenefits.asp">ITIL Classroom Course Benefits </a> |  <a href="/ITIL-Training/better-than-competitors.asp">Better Than Competitors </a>
-  |  <a href="/ITIL-Training/comprehensive.asp">Comprehensive and Effective </a>
-    <%  If Session("CountryOrigin") = "United Kingdom"  Then %>
-  | <a href="/ITIL-Training/free-onlinecertification.asp">Classroom - Risk Management Certification Course</a>
- <% End If %>
-   | <a href="/enrollClass.asp">Enrol for Classroom Course</a>
-   | <a href="/ITIL-Courses.asp">ITIL Classroom Course</a>
-    | <a href="/classroomTraining.asp">Foundation Class Methodology </a> 
-	   | <a href="/ITIL-Foundation-Course.asp">ITIL Foundation Course</a>
-	<% End If %>
- | <a href="/ITIL-Training/classroom-FAQ.asp"> ITIL FAQs</a>
-
-    | <a href="/ITIL-Online-Courses.asp">ITIL Online Courses</a>
-    <%If Session("CountryOrigin") = "US" Then%>
-    | <a href="/index.asp">ITIL Training</a>
-    | <a href="/index.asp">ITIL Certification</a>
-    <%End If%>
-	
-	  | <a href="/methodology/Online-Training.asp">Foundation Online Training </a> 
-	 | <a href="/affiliates.asp">Affiliate</a> | <% If Session("FirstName") = "" Then %><a href="/memberlogin.asp">Login</a><%Else%><a href="/logoff.asp">Logout</a><%end If%> | <a href="/contactus.asp">Contact</a> | <a href="/contactus.asp#feedback">Feedback</a> | <a href="/sitemap.asp">Sitemap</a></font></p></div>
-
-    
-    
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 <%  If Session("CountryOrigin") = "Germany" Then %>
 <script type="text/javascript">
 
@@ -74,44 +82,26 @@ $(window).scroll(function(e){
 });
 
 </script>
-<% End If %>  
-
-
+<% End If %>
 <!--<div align="center"><font size="1px">ITIL<sup>&reg;</sup> is a Registered Trade Mark of the Office of Government Commerce in the United Kingdom and other countries.</font></div>
 -->
-
-
-
-
 <div align="center"><font size="1px">The Swirl logo™ is a trade mark of the Cabinet Office.</font></div>
 <div align="center"><font size="1px">ITIL<sup>&reg;</sup> is a registered trade mark of the Cabinet Office.</font></div>
-
 <div align="center"><font size="1px">IT Infrastructure Library<sup>&reg;</sup> is a registered trade mark of the Cabinet Office.</font></div>
-
-     <div align="center"><font size="1px"><br />PMI, PMP, CAPM, PMBOK, PM Network and the PMI Registered Education Provider logo are registered marks of the Project Management Institute, Inc.</font>	<br /></div>
-
-
+<div align="center"><font size="1px"><br />
+  PMI, PMP, CAPM, PMBOK, PM Network and the PMI Registered Education Provider logo are registered marks of the Project Management Institute, Inc.</font> <br />
+</div>
 <script type="text/javascript" src="/js/highlight.js"></script>
 <script type="text/javascript" src="/js/popup.js"></script>
-
-
-
-<% If Session("CountryOrigin") = "United Kingdom" Then %> 
-
+<% If Session("CountryOrigin") = "United Kingdom" Then %>
 <!--Request call back-->
-
 <div style="position:fixed; height:92px; width:190px; bottom:50px; right:0px; float:right" id="reqcallback-window">
-<div style="position:absolute; margin-right:10px; margin-top:10px; width:10px; height:10px; cursor:pointer; z-index:1000" title="close"  onclick="document.getElementById('reqcallback-window').style.display='none'"><img src="/images/chatUK1/cross.png" style="padding-left:170px;" alt="Close"/></div>
-<a href="/callBack.asp" onclick="makeActive();"><img src="/images/buttons/Request-callback.gif" border="0" usemap="#callback-bottomMap" id="callback-bottom" style="border:none"/>
-</a>
-</div>
-
-
+  <div style="position:absolute; margin-right:10px; margin-top:10px; width:10px; height:10px; cursor:pointer; z-index:1000" title="close"  onclick="document.getElementById('reqcallback-window').style.display='none'"><img src="/images/chatUK1/cross.png" style="padding-left:170px;" alt="Close"/></div>
+  <a href="/callBack.asp" onclick="makeActive();"><img src="/images/buttons/Request-callback.gif" border="0" usemap="#callback-bottomMap" id="callback-bottom" style="border:none"/> </a> </div>
 <!--Chat option-->
-
 <!--<div style="position:fixed; height:133px; width:152px; bottom:10px; left:0px; float:left" id="callback-window">
 <div style="position:absolute; margin-left:179px; margin-top:10px; width:10px; height:10px; cursor:pointer; z-index:1000" title="close"  onclick="document.getElementById('callback-window').style.display='none'"><img src="/images/chatUK1/cross.png" width="10" height="10" alt="Close"/></div>-->
- <!-- BEGIN LivePerson Button Code --> 
+<!-- BEGIN LivePerson Button Code -->
 <!-- <style type="text/css">
 .lpPoweredBy, .lpEmtStarRating { display:none; }
 </style>
@@ -125,8 +115,6 @@ $(window).scroll(function(e){
 <script type="text/javascript" charset="UTF-8" src="https://server.iad.liveperson.net/hc/54663397/?cmd=mTagRepstate&site=54663397&buttonID=1&divID=lpButDivID-1343208625207&bt=1&c=1"></script>-->
 <!-- END LivePerson Button code -->
 <!--</div> -->
-
-
 <!--<div style="position:fixed; height:543px; width:393px; top:100px; display:none" id="chatNow-window" >
 
 <div style="position:absolute; width:543px; height:393px;">
@@ -145,11 +133,9 @@ $(window).scroll(function(e){
 
 
 </div>-->
-
 <!--<map name="chatnow-middleMap" id="chatNow-window">
    <area shape="rect" coords="1,1,97,30" href="#" onclick="chatNowClicked('close')" />
  </map>-->
-
 <script type="text/javascript">
 
 
@@ -226,13 +212,6 @@ function chatNowClicked(elem){
 checkCookie()
 
 </script>
-
-
-
 <% End If %>
-
 </div>
-</body>
-</html>
-
- 
+</body></html>
