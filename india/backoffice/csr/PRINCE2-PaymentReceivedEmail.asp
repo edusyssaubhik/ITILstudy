@@ -47,6 +47,7 @@ Set Rs4 = Server.CreateObject("ADODB.Recordset")
 
 rqEnrollUserId  =  Request.Querystring("enrollUserId")
 
+
 'Currency Format Display Functions'
 
  Currency_Format_Front = CurrencyFormat_Front(Session("Country"))
@@ -77,7 +78,7 @@ Do Until Rs.EOF
   Session("VATInvoice") = Rs("VAT_Invoice")
   Session("PRINCE2price") = Rs("PRINCE2price")
   
-  If (Session("country") = "United Kingdom" OR Session("country") = "India" OR Session("country") = "Australia") Then
+  If (Session("country") = "United Kingdom" OR Session("country") = "Germany" OR Session("country") = "Netherlands" OR Session("country") = "India" OR Session("country") = "Australia") Then
 							
 	If Not IsNull(Rs("VAT")) Then
 	
@@ -165,7 +166,7 @@ rqType = Request.QueryString("type")
 						ElseIf Session("country")="Australia" Then
 						body= body &"<span><img src=""http://www.PMstudy.com/images/banners/email_headerAUS.jpg"" alt=""PMstudy"" /></span>"
 						Else
-						body= body &"<span><img src=""http://www.PMstudy.com/images/banners/PRINCE2_email_header.jpg"" alt=""PMstudy"" /></span>"
+						body= body &"<span><img src=""http://www.PMstudy.com/images/banners/PRINCE2_email_headerUK.jpg"" alt=""PMstudy"" /></span>"
 						End if
 						body= body &"</td></tr>"
 						
@@ -185,9 +186,9 @@ rqType = Request.QueryString("type")
 			   
   body = body & "<tr><td align=""right"" colspan=""2""><font face=""Arial"" size=""2""><b>" & FormatDateTime(Now(),1) & "</b></font>"
   
-  If Session("country") = "United Kingdom" Then
+  If Session("country") = "United Kingdom" OR Session("country") = "Germany" OR Session("country") = "Netherlands" Then
   
-  body = body & "<br><font face=""Arial"" size=""2""><b>Invoice #: PMPrince2" & Session("VATInvoice") &"</b></font>"
+  body = body & "<br><font face=""Arial"" size=""2""><b>Invoice #: PMPPRINCE2" & Session("VATInvoice") &"</b></font>"
   
   End If
   
@@ -207,7 +208,7 @@ rqType = Request.QueryString("type")
 'Without VAT'  
 If Session("VAT") <> "" AND Session("VAT") <> 0  Then 
 
-	If Session("country") = "United Kingdom"  Then 
+	If Session("country") = "United Kingdom" OR Session("country") = "Germany" OR Session("country") = "Netherlands"  Then 
 	
 		body = body &"</td><td align=""center""><font face=""Arial"" size=""2""><b>"
 		body = body & Currency_Format_Front & " " & FormatNumber(Session("Total") ) & " " & Currency_Format_Back
@@ -295,7 +296,7 @@ ElseIf Session("VAT") = 0  Or ISNull(Session("VAT")) Or Session("VAT") = "" Then
 	
 	
 	
-	  ElseIf Session("country") = "United Kingdom" Then
+	  ElseIf Session("country") = "United Kingdom" OR Session("country") = "Germany" OR Session("country") = "Netherlands" Then
 	
 		body = body &"</td><td align=""center""><font face=""Arial"" size=""2""><b>"
 		body = body & Currency_Format_Front & " " & FormatNumber(Session("Total")) & " " & Currency_Format_Back
