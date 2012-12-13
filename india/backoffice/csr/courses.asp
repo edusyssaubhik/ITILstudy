@@ -1057,6 +1057,15 @@ function DeleteAlert(link,site,ltext) {
 return false;
 }
 
+
+
+function ReferralmailAlert(link, site, ltext) {
+    if (confirm("Are you sure you want to Send Referral Mail to this Emailid?")) {
+        return true;
+    }
+    return false;
+}
+
 </script>
 
 <script type="text/javascript">
@@ -1994,9 +2003,11 @@ function update(a){
                         <% End if %>
                         <% If arrAllQueries(18,enrollrowcounter) = 1 Then 
                       Response.Write("Check received email sent") %>
-                        <a href="javascript:void(0)" onClick="window.open('paymentreceivedemail.asp?enrollUserId=<% = arrAllQueries(0,enrollrowcounter) %>')"><BR />Check recd Email</a>
+                        <a href="javascript:void(0)" onClick="window.open('paymentreceivedemail.asp?enrollUserId=<% = arrAllQueries(0,enrollrowcounter) %>')"><BR />Check recd Email</a><br /><br />
+                        <a href="Referral_sendmail.asp?enrollUserId=<% = arrAllQueries(0,enrollrowcounter) %>" target="_blank" onclick="return ReferralmailAlert(this.href);"><BR />Send Referral Email</a>
                         <% Else %>
-                        <a href="javascript:void(0)" onClick="window.open('paymentreceivedemail.asp?enrollUserId=<% = arrAllQueries(0,enrollrowcounter) %>')"><BR />Check recd Email</a>
+                        <a href="javascript:void(0)" onClick="window.open('paymentreceivedemail.asp?enrollUserId=<% = arrAllQueries(0,enrollrowcounter) %>')"><BR />Check recd Email</a><br /><br />
+                        <a href="Referral_sendmail.asp?enrollUserId=<% = arrAllQueries(0,enrollrowcounter) %>" target="_blank" onclick="return ReferralmailAlert(this.href);"><BR />Send Referral Email</a>
                         <% End if %>
                         <% if  (arrAllQueries(11,enrollrowcounter)  = "Yes") And ISNULL(arrAllQueries(19,enrollrowcounter))  then%>
                         <br />
