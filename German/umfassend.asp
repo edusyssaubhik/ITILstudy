@@ -10,7 +10,7 @@
           <tr>
             <td width="2%" >&nbsp;</td>
             <td width="25%" >&nbsp;</td>
-            <td width="73%" class="breadcrumb">Home &raquo; WARUM UNS &raquo; Die meisten umfassend und effektiv </td>
+            <td width="73%" class="breadcrumb">Startseite &raquo; WARUM UNS &raquo; Die meisten umfassend und effektiv </td>
           </tr>
           <tr>
             <!--#include virtual="/includes/innerLeftMenu-German.asp"-->

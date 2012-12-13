@@ -11,7 +11,7 @@
           <tr>
             <td width="2%" >&nbsp;</td>
             <td width="25%" >&nbsp;</td>
-            <td width="73%" class="breadcrumb">Home &raquo; WARUM UNS &raquo; 99.2 % ERFOLGSQUOTE</td>
+            <td width="73%" class="breadcrumb">Startseite &raquo; Warum uns &raquo; Erfolgsquote</td>
           </tr>
           <tr>
             <!--#include virtual="/includes/innerLeftMenu-German.asp"-->
@@ -19,35 +19,33 @@
                 <!-- Content Start From Here-->
                 <h1 class="PageTitle"><br />
                 
-                DIE MEISTEN ERFOLGREICHEN ITIL-KURS MIT 99.2 % ERFOLGSQUOTE</h1>
-                <p>Mit einer hohen Erfolgsrate von 99.2 % beim ersten Versuch ist ITILstudy Klassenzimmer Kurs bevorzugt hochwertige Partner für Delegaten in der ITIL Foundation-Prüfung.</p>
-                <p><span class="SubHeader">Unser Klassenzimmer-Kurs:</span>
-                <ul>
-                <li>Bewertet und beurteilt durch mehrere ITIL <sup>&reg;</sup>-Experten entwickelt,</li>
-                <li>Geliefert wird von ITIL und PMP zertifizierten Fakultät mit über 15 Jahren Service und Projekt-Management-Erfahrung in Branchen</li>
-                <li>Zeichnet Lehr Elemente aus den drei primären Lernstile, d. h. Visual (Präsentationen, Aids, etc.), auditive (verbale Anweisungen, Interaktionen usw.) und kinästhetische (Heimwerken).</li>
-                <li>Verfügt über eine einzigartige und unvergleichliche 100 % Geld-zurück-Garantie</li>
-               <li> Jetzt anmelden oder telefonisch unter 001 855 234 8454, heute zu einem ITIL-Berater zu sprechen.</li>
-                </ul>
+                DIE MEISTEN ERFOLGREICHEN ITIL-KURSE -  MIT 99.2 % ERFOLGSQUOTE</h1>
+                <p>Mit einer hohen Erfolgsrate von 99.2 % beim ersten Versuch wird der ITILstudy Kurs von vielen geschätzt, die sich auf die ITIL Foundation-Prüfung vorbereiten.
+                <br /><br />
+                   Der offizielle CSME Bericht beweist, dass unsere Erfolgsquote über einen längeren Zeitraum deutlich über der durchschnittlichen Erfolgsquote für ITIL Foundation Kurse liegt.<br />
+
+
                 </p>
-             
-<pre>
+                <img src="/images/buttons/ITILpassrate.png" alt="ITILstudy" /><br />
+                <p>Quelle: CSME Bericht über die Erfolgsquote</p><br />
+    <span class="SubHeader">Unser Kurs</span>
+        <ul>
 
+         <li>wurde durch mehrere ITIL<sup>&reg;</sup>-Experten entwickelt und überprüft</li>
+<li>wird durch uns als ein ITIL-zertifiziertes Ausbildungsinstitut (genehmigt durch APMG oder CSME) mit über 15 Jahren Erfahrung im Service und Projekt-Management angeboten</li>
+<li>unterstützt die verschiedenen Lernstile: </li>
+            <ul type="disc">
+<li>visuell durch Präsentationen, </li>
+<li>auditiv durch verbale Anweisungen und Interaktionen</li>
+<li>kinästhetisch durch entsprechende Übungen</li>
+                </ul>
+<li>bietet eine einzigartige und unvergleichliche 100 % Geld-zurück-Garantie</li>
 
+        </ul>
 
+    <p><a href="/german/ITIL-Kurs.asp">Melden Sie sich hier an</a>  oder rufen Sie  heute unter + 49 069 344643 an, um einen ITIL Trainer sprechen. </p>
+    <p>Hinweis: Die Erfolgsquote ist nach den bei uns aktuellsten, verfügbaren Daten für März 2012 - August 2012  ermittelt worden und schließt Wiederholungsprüfungen ein.</p>
 
-
-
-
-
-
-
-
-
-
-
-
-</pre>
                 <!-- Content End From Here-->
               </div></td>
           </tr>
