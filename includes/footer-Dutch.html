@@ -1,0 +1,58 @@
+<!-- Footer Starts -->
+<div valign="top" style="height:16px; width: 940px; padding-left:6px">
+<span class="copyright">
+&copy; 2011 Edusys Services Private Limited, alle rechten voorbehouden
+</span>
+</div>
+
+
+<!-- Footer Ends -->
+
+<div align="center" style="width:900px;height:50px; margin-left:14px; text-align:center" valign="top" >
+
+
+<p><font size="1px"><a href="/indexde.asp">Home </a> | <a href="/Dutch/aboutus.asp">Over ons</a>
+|  <a href="/Dutch/classroom-FAQ-nl.asp">ITIL Veelgestelde vragen</a> 
+
+|  <a href="/Dutch/ITIL-Online-Courses-nl.asp">Online ITIL opleidingen  </a> |  <a href="/Dutch/Online-Training.asp">Foundation online opleiding</a>
+    
+  | <a href="/Dutch/affiliates-nl.asp">Affiliates </a>
+    <% If Session("FirstName") = "" Then %>
+   | <a href="/Dutch/memberlogin-nl.asp">Inloggen</a>
+    <%Else%>
+    | <a href="/logoff.asp">uitloggen</a>
+    <%End If%>
+    | <a href="/Dutch/contactus-nl.asp">Contact </a> 
+	   | <a href="/Dutch//contactus-nl.asp#feedback">Feedback</a>
+	
+ | <a href="/Dutch/sitemap-nl.asp"> Sitemap</a>
+	 </font></p></div>
+<div align="center"><font size="1px">Het Swirl logo is een handelsmerk van het Cabinet Office.</font></div>
+<div align="center"><font size="1px">ITIL<sup>&reg;</sup> is een geregistreerd handelsmerk van het Cabinet Office.</font></div>
+<div align="center"><font size="1px">IT Infrastructure Library<sup>&reg;</sup> is een geregistreerd handelsmerk van het Cabinet Office.</font></div>
+
+       <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+$(window).scroll(function(e){
+  $el = $('#contact-box'); 
+  if ($(this).scrollTop() > 300 ){ 
+  
+    $('#contact-box').css({'position': 'fixed', 'top': '0px'}); 
+  } 
+  else{
+  $('#contact-box').css({'position': 'relative', 'top': 'auto'});
+ }
+ 
+});
+</script>
+     
+     
+     
+
+</div>
+</body>
+</html>
+
+ 

@@ -1,0 +1,1 @@
+<%response.redirect "/ITIL-Online-Courses.asp" %>
