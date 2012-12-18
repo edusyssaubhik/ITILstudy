@@ -306,7 +306,7 @@ End If
       </td>
       <%ElseIf Session("CountryOrigin") = "Australia" then %>
         <td id="imageHover"><div style="position:relative" id="imageHover"><img src="/images/buttons/logo_top.jpg" alt="ITILstudy" border="0" usemap="#Map" id="imageHover"/>
-	   <div class="contactInTopLogo"> <span id="callUsAt">Call: <span style="color:#0673b9">+61 2 88964376 </span> <span id="emailUs">Email: <a href="mailto:marketing@ITILstudy.com" style="color:#0673b9">marketing@ITILstudy.com</a></span></span> <span id="info"><a href="/ITIL-Training/Success-Rate.asp">99.2% Pass Rate with 100% Moneyback Guarantee</a></span> </div>
+	   <div class="contactInTopLogo"> <span id="info"><a href="/ITIL-Training/Success-Rate.asp">99.2% Pass Rate with 100% Moneyback Guarantee</a></span> </div>
        <map name="Map" id="Map">
   <area shape="rect" coords="5,13,230,96" href="/index.asp" />
   <area shape="rect" coords="563,10,724,95" href="http://www.csme.us/training-organizations.php" target="_blank" />

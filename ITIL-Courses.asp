@@ -93,7 +93,7 @@ else if (ns6||ie4) ld.display="none";
 			<li>High quality, comprehensive classroom study materials in line with the ITIL Foundation exam is provided. <a href="/Classroom-Courseware.asp">More</a></li>
 			<li> Lunch and refreshments during classroom sessions</li>
 		  <li>Everything required for ITIL Foundation exam would be provided, you don't need to bring anything else to the class</li>
-          <li>Complementary RMstudy Certification worth $ 300. <a href="http://itilstudy.com/ITIL-Training/free-onlinecertification.asp" target="_blank">More</a></li>
+          <li>Complementary RMstudy Certification worth $ 150. <a href="http://itilstudy.com/ITIL-Training/free-onlinecertification.asp" target="_blank">More</a></li>
 			            <li> Provides Online access to ITIL Foundation course material offering 6 hours of pre-classroom study</li>
 
                 <li>Valuable tips to pass the ITIL Foundation exam</li>
@@ -190,7 +190,7 @@ else if (ns6||ie4) ld.display="none";
                   <%End If %>
                 			   <%If Session("CountryOrigin") <> "India" then %>
 
-  <li>Complimentary RMstudy Certification worth $300. <a href="http://itilstudy.com/ITIL-Training/free-onlinecertification.asp">More</a></li>
+  <li>Complimentary RMstudy Certification worth $150. <a href="http://itilstudy.com/ITIL-Training/free-onlinecertification.asp">More</a></li>
      <% End if %>
  <li>Refreshments during classroom sessions</li>
  <li>Everything required for ITIL Foundation exam would be provided, you don't need to bring anything else to the class</li>

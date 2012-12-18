@@ -112,7 +112,7 @@ else if (ns6||ie4) ld.display="none";
                 <li>Free RM study course worth 195 GBP  </li>
                  <%ElseIf Session("CountryOrigin") <> "India" Then %>
 
-                  <li>Complementary RMstudy Certification worth $300. <a href="http://itilstudy.com/ITIL-Training/free-onlinecertification.asp" target="_blank">More</a></li>
+                  <li>Complementary RMstudy Certification worth $150. <a href="http://itilstudy.com/ITIL-Training/free-onlinecertification.asp" target="_blank">More</a></li>
 
 				<%Else%>
 

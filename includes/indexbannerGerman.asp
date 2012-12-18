@@ -23,7 +23,7 @@
 
               <li>25 + erfahrenen Dozenten - <a href="http://www.itilstudy.com/ITIL-Training/instructors.asp" >Mehr</a></li>
 
-			  <li>Spezialisiert auf ITIL Schulungen</li>
+			  <li>Spezialisiert auf ITIL Schulungen - <a href="/german/spezielles-ITIL-Training.asp" >Mehr</a></li>
               <li>Große Resonanz von erfolgreichen Studenten - <a href="http://www.itilstudy.com/german/Trainer.asp" >Testimonials</a></li>     
           </ul>
 
@@ -45,7 +45,7 @@
      
            	  <ul>
                 	<li>Führende globale Schulungen Unternehmen mit Niederlassungen in 6 Ländern <a href="http://www.itilstudy.com/GlobalOffice.asp" > Mehr</a></li>
-                	<li>Von Sequoia Capital, PE Firma, die in Google, Apple, Cisco, etc. investiert Gefördert -  <a href="http://www.itilstudy.com/investors.asp" ><i>Lesen Sie mehr</i></a></li>
+                	<li>Von Sequoia Capital, PE Firma, die in Google, Apple, Cisco, etc. investiert Gefördert -  <a href="/German/Investoren.asp" ><i>Lesen Sie mehr</i></a></li>
                 </ul>     
           </ul>
                  <!--<span style="color:#FFF; text-align:left; margin-left:10px; padding-left:0px; margin-top:-10px;">Better than Competitors. <a href="/ITIL-Training/better-than-competitors.asp" >More</a></span>-->
@@ -65,7 +65,7 @@
                       
                     </ul>
                     <li>Anwendung von Konzepten durch reale Lebenserfahrung
-                  <li>Kundenindividuelle Corporate Trainings</li>             
+                  <li>Kundenindividuelle Corporate Trainings - <a href="/german/Überblick-und-Vorteile.asp" > Mehr</a></li>             
               </ul>
               <!--<span style="color:#FFF; text-align:left; margin-left:10px; padding-left:0px; margin-top:60px;">Better than Competitors. <a href="/ITIL-Training/better-than-competitors.asp" >More</a></span>-->
     </div>
@@ -81,7 +81,7 @@
                       <li>Online-Kurse ab $ 300 - <a href="http://www.itilstudy.com/ITIL-Online-Courses.asp" > Mehr</a></li>
 
                        <li>2 Tage ITIL Klassen ab &euro; 890 - <a href="http://www.itilstudy.com/german/ITIL-Kurs.asp" >Mehr</a></li>
-                     <
+                    
                       <li>Zusätzliche Corporate Rabatte auch verfügbar - <a href="http://www.itilstudy.com/german/Kontakt.asp" ><i>Kontaktieren Sie uns</i></a></li>
                     </ul>             
               </ul>

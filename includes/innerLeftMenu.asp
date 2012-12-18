@@ -374,6 +374,7 @@ Select Case State
     <tr>
       <td class="subMenu"><a href="/ITIL/pdusindex.asp" id='menulk'>- Evaluation &nbsp; &nbsp;</a></td>
     </tr>
+
   <!--  <tr>
       <td class="subMenu"><a href="#" onMouseOver="showArrow('img12');" onMouseOut="hideArrow('img12')">- Casestudy</a><img src="/images/buttons/hoverArrow.png" width="11"  id="img12" class="img"></td>
     </tr>-->
@@ -1249,7 +1250,9 @@ Select Case State
     <tr>
       <td class="subMenu"><a href="/ServiceOperation/pdusindex.asp"  id='menulk'>- Evaluation &nbsp; &nbsp;</a></td>
     </tr>
- 
+    <tr>
+      <td class="subMenu"><a href="/ServiceOperation/SamplePaper.asp"  id='menulk'>- Sample Paper &nbsp; &nbsp;</a></td>
+    </tr>
     <tr>
       <td class="bottomBorder">&nbsp;</td>
     </tr>
