@@ -473,7 +473,7 @@
                       <input type="hidden" name="upload" value="1"> 
                       <input type="hidden" name="business" value="edusysservices@gmail.com">    
                       <input type="hidden" name="item_name_1" value="ITILstudy <% = Rs("enrolledfor") %> Training  - <% = Session("CountryOrigin") %>">
-                      <input type="hidden" name="currency_code" value="GBP">  
+                      <input type="hidden" name="currency_code" value="EUR">  
     					<input name="item_name" type="hidden" value="<% = CourseDetails %>"/>
 						 <input type="hidden" name="amount_1" value="<% = Total %> "/> 
 						  <input type="hidden" name="cancel_return" value="http://www.ITILstudy.com">
