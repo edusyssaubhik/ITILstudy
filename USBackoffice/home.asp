@@ -705,7 +705,7 @@ If datesent_email <> dateof_fac_mail Then
                             strBody = ""
                             strBody = "<html><body><table width=""100%"" border=""0"" bgcolor=""#CCCCCC"" style=""margin:0px;0px;0px;0px;""><tr><td height=""45px"">&nbsp;</td></tr><tr><td><table width=""80%"" border=""0"" align=""center"" cellpadding=""2"" cellspacing=""12"" bgcolor=""#FFFFFF""><tr><td width=""600px"" bgcolor=""#FFFFFF"" align=""center""><span><img src=""http://www.itilstudy.com/images/banners/Email-Header.jpg"" alt=""ITILstudy"" width=""600px"" height=""103"" /></span></td></tr><tr><td colspan=""10"">Hello,<br><br>&nbsp;&nbsp;&nbsp;Call Report for the date <b>"&formatdatetime(fromdate,1)&"</b><br><br></td></tr><tr><td colspan=""2""><table border=""1"" cellspacing=""0"" cellpadding=""5"" style=""width:100%""><tr><th>Sl NO</th><th>Country</th><th>State</th><th>Caller For</th><th>Caller Name</th><th>Question</th><th>Added Date</th><th>Comments</th><th>Status</th><th>Status2</th></tr>"
 
-                           Query = "SELECT callid,callfor, callername, phoneno, emailid, callerstate, question, addeddate,call_status1, call_status2, Country FROM  ITIL_callsreceived_new WHERE addeddate BETWEEN '"&fromDate&"' AND '"&todate&"' And call_status1 <>'4' order By addeddate asc"
+                           Query = "SELECT callid,callfor, callername, phoneno, emailid, callerstate, question, addeddate,call_status1, call_status2, Country FROM  ITIL_callsreceived_new WHERE addeddate BETWEEN '"&fromDate&"' AND '"&todate&"' And call_status1 <>'4' And question <> '' order By addeddate asc"
                         'response.Write(Query)
                         objRs.Open Query, ConnObj
 
@@ -781,8 +781,9 @@ If datesent_email <> dateof_fac_mail Then
 
                                 Set objCDOMailsend = Server.CreateObject("CDONTS.NewMail")
 		                        objCDOMailsend.From = "marketing@itilstudy.com"
-		                        objCDOMailsend.To = "t_satpathy@yahoo.com"
-                                objCDOMailsend.cc="marketing@itilstudy.com"
+		                        objCDOMailsend.To = "satpathyt@gmail.com"
+                                objCDOMailsend.cc="leadershipedusysteam@googlegroups.com"
+                                objCDOMailsend.BCC="edusysbharath@gmail.com,edusysmadhava@gmail.com"
 		                        objCDOMailsend.Subject = "ITILstudy - Call report on "& Formatdatetime(fromDate,2)
 		                        objCDOMailsend.BodyFormat = 0
 		                        objCDOMailsend.MailFormat = 0
