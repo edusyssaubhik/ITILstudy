@@ -461,9 +461,9 @@ End If
               |
               <% = CourseDate %>
   
-              </a>&nbsp;&nbsp;&nbsp;
+              </a>
               <% If Status = "Full" Then %>
-              <font color="red">Full</font>
+              <font color="red">&nbsp;&nbsp;&nbsp;Full</font>
               <% End If %>
               <br>
               <%
@@ -480,7 +480,7 @@ End If
            <%If (Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada") Then%>
         
          <br />  View classes in <a href="http://www.itilstudy.com/ITIL-Training-Atlanta.asp">Atlanta</a>, <a href="http://www.itilstudy.com/ITIL-Training-Chicago.asp">Chicago</a>, <a href="http://www.itilstudy.com/ITIL-Training-Charlotte.asp">Charlotte</a>, <a href="http://www.itilstudy.com/ITIL-Training-Los-Angeles.asp">Los Angeles</a>, <a href="http://www.itilstudy.com/ITIL-Training-Miami.asp">Miami</a>, <a href="http://www.itilstudy.com/ITIL-Training-New-York.asp">New York</a>, <a href="http://www.itilstudy.com/ITIL-Training-Orlando.asp">Orlando</a>, <a href="http://www.itilstudy.com/ITIL-Training-Phoenix.asp">Phoenix</a>, <a href="http://www.itilstudy.com/ITIL-Training-San-Francisco.asp">San Francisco</a>, <a href="http://www.itilstudy.com/ITIL-Training-Seattle.asp">Seattle</a>, <a href="http://www.itilstudy.com/ITIL-Training-Toronto.asp">Toronto</a>, <a href="http://www.itilstudy.com/ITIL-Training-Washington-D.C.-(Fairfax).asp">Washington DC</a>, and <a href="http://www.itilstudy.com/ITIL-Courses.asp">other cities</a>.</span>
-         
+         <br /><br /><span align="right"><a href="/ITIL-Courses.asp">Click here for more classes </span>
           <%End If%>
           
           <%If Session("CountryOrigin") = "Australia" then %>
@@ -551,9 +551,9 @@ End If
               |
               <% = CourseDate %>
   
-              </a>&nbsp;&nbsp;&nbsp;
+              </a>
               <% If Status = "Full" Then %>
-              <font color="red">Full</font>
+              <font color="red">&nbsp;&nbsp;&nbsp;Full</font>
               <% End If %>
               <br>
               <%
@@ -619,9 +619,9 @@ ITIL Lifecycle Certificate in Continual Service Improvement (3 Days) Courses sta
               |
               <% = CourseDate %>
   
-              </a>&nbsp;&nbsp;&nbsp;
+              </a>
               <% If Status = "Full" Then %>
-              <font color="red">Full</font>
+              <font color="red">&nbsp;&nbsp;&nbsp;Full</font>
               <% End If %>
               <br>
               <%
@@ -721,9 +721,9 @@ ITIL Lifecycle Certificate in Continual Service Improvement (3 Days) Courses sta
               |
               <% = CourseDate %>
   
-              </a>&nbsp;&nbsp;&nbsp;
+              </a>
               <% If Status = "Full" Then %>
-              <font color="red">Full</font>
+              <font color="red">&nbsp;&nbsp;&nbsp;Full</font>
               <% End If %>
               <br>
               <%

@@ -87,7 +87,7 @@
 					 
 	End If
 	
-	
+	'response.write strQuery2
 	If generate <> "" Then
 	Rs.Open strQuery2,Conn
 	Else
@@ -125,20 +125,32 @@
 	Else 
 		  bgColor = "TableRowOdd"
 	End If 
+
+    If arrAllCourses(17,rowCounter) = "Live" Then
+        'bgColor="TableLiveClass"
+    End If
 			
 	'Location - venue
 					
 	strEnding= strEnding &"<tr onMouseOver=""javascript:highlightTableRowVersionA(this, '#FFFFCC');""><td class="& bgColor &">"
 	If arrAllCourses(16,rowCounter) <> "Full" Then
 	
-	If arrAllCourses(17,rowCounter) = "Corporate" Then
-	strEnding= strEnding &""& Trim(arrAllCourses(1,rowCounter)) &""
-	Else
-	strEnding= strEnding &"<a href=""venue.asp?courseID="& arrAllCourses(0,rowCounter) &""" onClick=""return popitup('venue.asp?courseID="& arrAllCourses(0,rowCounter) &"')"">"& Trim(arrAllCourses(1,rowCounter)) &""
-	End If 
+	    If arrAllCourses(17,rowCounter) = "Corporate" Then
+	    strEnding= strEnding &""& Trim(arrAllCourses(1,rowCounter)) &""
+	    Else
+            If Not Trim(arrAllCourses(1,rowCounter)) = "Virtual Classroom" Then
+	            strEnding= strEnding &"<a href=""venue.asp?courseID="& arrAllCourses(0,rowCounter) &""" onClick=""return popitup('venue.asp?courseID="& arrAllCourses(0,rowCounter) &"')"">"& Trim(arrAllCourses(1,rowCounter)) &""
+            ElseIf Trim(arrAllCourses(1,rowCounter)) = "Virtual Classroom" Then
+                strEnding= strEnding &"<a href=""venue.asp?courseID="& arrAllCourses(0,rowCounter) &""" onClick=""return popitup('venue.asp?courseID="& arrAllCourses(0,rowCounter) &"')"">Virtual Live Class"
+            End If
+	    End If 
 	
 	Else
-	strEnding= strEnding &""& Trim(arrAllCourses(1,rowCounter)) &"<br>"
+        If Not Trim(arrAllCourses(1,rowCounter)) = "Virtual Classroom" Then
+	            strEnding= strEnding &""& Trim(arrAllCourses(1,rowCounter)) &"<br>"
+        ElseIf Trim(arrAllCourses(1,rowCounter)) = "Virtual Classroom" Then
+                strEnding= strEnding &"Virtual Live Class<br>"
+        End If
 	End If
 	If Session("CountryOrigin") <> "United Kingdom" Then 
 	If arrAllCourses(18,rowCounter) <> "" Then
@@ -160,7 +172,8 @@
 	strEnding= strEnding &"<br></td><td class="& bgColor &"> "& DAY(arrAllCourses(2,rowCounter)) & " " & MonthName(Month(arrAllCourses(2,rowCounter)),3) & " "  & YEAR(arrAllCourses(2,rowCounter))&" to <br /> "& DAY(arrAllCourses(3,rowCounter)) & " " & MonthName(Month(arrAllCourses(3,rowCounter)),3) & " "  & YEAR(arrAllCourses(3,rowCounter))&"</td>"
 	
 		 If Session("CountryOrigin") <> "US" And Session("CountryOrigin") <> "Canada" Then 
-	strEnding= strEnding &"<td class="& bgColor &" width=""23%"">"& arrAllCourses(4,rowCounter) &":"& arrAllCourses(5,rowCounter) &"&nbsp;"& arrAllCourses(6,rowCounter) &" - "& arrAllCourses(7,rowCounter) &":"& arrAllCourses(8,rowCounter) &"&nbsp;"& arrAllCourses(9,rowCounter) &"</td>"
+	strEnding= strEnding &"<td class="& bgColor &" width=""23%"">"& arrAllCourses(4,rowCounter) &":"& arrAllCourses(5,rowCounter) &"&nbsp;"& arrAllCourses(6,rowCounter) &" - "& arrAllCourses(7,rowCounter) &":"& arrAllCourses(8,rowCounter) &"&nbsp;"& arrAllCourses(9,rowCounter) &""
+   
 	End If
 	If arrAllCourses(17,rowCounter) = "Corporate" Then
 strEnding= strEnding &"<td class="& bgColor &"><font color=""#FE2E2E""><b>Corporate class</b></font></td><td class="& bgColor &"><div align=""center""><font size=""3"" color=""#FE2E2E""><b>---</b></font></div></td>"
@@ -301,9 +314,9 @@ Else
 	'Creating a text file using file systm object.
 	
 	
-	'Set tsObject = fsoObject.CreateTextFile("E:\vhosts\ITILstudy.com\httpdocs\dateslocation\ITILstudy-Classes-ITILstudy-Training-"&Session("CountryOrigin")&".txt")
+	Set tsObject = fsoObject.CreateTextFile("E:\vhosts\ITILstudy.com\httpdocs\dateslocation\ITILstudy-Classes-ITILstudy-Training-"&Session("CountryOrigin")&".txt")
 	
-	Set tsObject = fsoObject.CreateTextFile("C:\GitHub\ITILstudy\dateslocation\ITILstudy-Classes-ITILstudy-Training-"&Session("CountryOrigin")&".txt")
+	'Set tsObject = fsoObject.CreateTextFile("C:\GitHub\ITILstudy\dateslocation\ITILstudy-Classes-ITILstudy-Training-"&Session("CountryOrigin")&".txt")
 	
 	
 	'Witing the string containing question format into an asp file using file system object.'

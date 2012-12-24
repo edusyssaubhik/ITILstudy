@@ -106,7 +106,6 @@ function Form_Validator(theform)
 'Daily report of ITILstudy
 
  'If Session("CRM_Country") = "US" OR Session("CRM_Country") = "Canada" OR Session("CRM_Country") = "India" OR Session("CRM_Country") = "Australia"  OR Session("CRM_Country") = "United Kingdom"  Then
- 
  If Session("CRM_Country") = "US" OR Session("CRM_Country") = "Canada" OR Session("CRM_Country") = "India" OR Session("CRM_Country") = "Australia" Then
 
 'Declare The Local Variables'
@@ -695,105 +694,111 @@ If datesent_email <> dateof_fac_mail Then
 		
 	                        
                             '//Call report start
-     
-                            Set objRs = Server.CreateObject("ADODB.Recordset")
-                            Set objRsComment = Server.CreateObject("ADODB.Recordset")
+                            a1 = todaydate
+                            a2 = todaydate + 1
+                            set RsSent = Server.CreateObject("ADODB.Recordset")
+                            q1 = "Select * from facultymailsent where convert(datetime,datesent) between '"& formatdatetime(a1,2) &"' and '"& formatdatetime(a2,2) &"'"
+                            rssent.open  q1 , ConnObj
+                            If rsSent.EOF Then
+                                            Set objRs = Server.CreateObject("ADODB.Recordset")
+                                            Set objRsComment = Server.CreateObject("ADODB.Recordset")
 
-                            'country = Session("CRM_Country")
-                            fromDate =  formatdatetime(now() - 2 , 2)
-                            todate =formatdatetime(now()-1 ,2)
-                            strBody = ""
-                            strBody = "<html><body><table width=""100%"" border=""0"" bgcolor=""#CCCCCC"" style=""margin:0px;0px;0px;0px;""><tr><td height=""45px"">&nbsp;</td></tr><tr><td><table width=""80%"" border=""0"" align=""center"" cellpadding=""2"" cellspacing=""12"" bgcolor=""#FFFFFF""><tr><td width=""600px"" bgcolor=""#FFFFFF"" align=""center""><span><img src=""http://www.itilstudy.com/images/banners/Email-Header.jpg"" alt=""ITILstudy"" width=""600px"" height=""103"" /></span></td></tr><tr><td colspan=""10"">Hello,<br><br>&nbsp;&nbsp;&nbsp;Call Report for the date <b>"&formatdatetime(fromdate,1)&"</b><br><br></td></tr><tr><td colspan=""2""><table border=""1"" cellspacing=""0"" cellpadding=""5"" style=""width:100%""><tr><th>Sl NO</th><th>Country</th><th>State</th><th>Caller For</th><th>Caller Name</th><th>Question</th><th>Added Date</th><th>Comments</th><th>Status</th><th>Status2</th></tr>"
+                                            'country = Session("CRM_Country")
+                                            fromDate =  formatdatetime(now() - 2 , 2)
+                                            todate =formatdatetime(now()-1 ,2)
+                                            strBody = ""
+                                            strBody = "<html><body><table width=""100%"" border=""0"" bgcolor=""#CCCCCC"" style=""margin:0px;0px;0px;0px;""><tr><td height=""45px"">&nbsp;</td></tr><tr><td><table width=""80%"" border=""0"" align=""center"" cellpadding=""2"" cellspacing=""12"" bgcolor=""#FFFFFF""><tr><td width=""600px"" bgcolor=""#FFFFFF"" align=""center""><span><img src=""http://www.itilstudy.com/images/banners/Email-Header.jpg"" alt=""ITILstudy"" width=""600px"" height=""103"" /></span></td></tr><tr><td colspan=""10"">Hello,<br><br>&nbsp;&nbsp;&nbsp;Call Report for the date <b>"&formatdatetime(fromdate,1)&"</b><br><br></td></tr><tr><td colspan=""2""><table border=""1"" cellspacing=""0"" cellpadding=""5"" style=""width:100%""><tr><th>Sl NO</th><th>Country</th><th>State</th><th>Caller For</th><th>Caller Name</th><th>Question</th><th>Added Date</th><th>Comments</th><th>Status</th><th>Status2</th></tr>"
 
-                           Query = "SELECT callid,callfor, callername, phoneno, emailid, callerstate, question, addeddate,call_status1, call_status2, Country FROM  ITIL_callsreceived_new WHERE addeddate BETWEEN '"&fromDate&"' AND '"&todate&"' And call_status1 <>'4' And question <> '' order By addeddate asc"
-                        'response.Write(Query)
-                        objRs.Open Query, ConnObj
+                                           Query = "SELECT callid,callfor, callername, phoneno, emailid, callerstate, question, addeddate,call_status1, call_status2, Country FROM  ITIL_callsreceived_new WHERE addeddate BETWEEN '"&fromDate&"' AND '"&todate&"' And question <> '' order By addeddate asc"
+                                        'response.Write(Query)
+                                        objRs.Open Query, ConnObj
 
-                        callcounter = 1
+                                        callcounter = 1
 
-                        If Not objRs.EOF Then
+                                        If Not objRs.EOF Then
 
 
-                        Do Until objRs.EOF
+                                        Do Until objRs.EOF
  
-                            CallID  = objRs("callid")
-	                        CallFor = objRs("callfor")
-	                        CallerName = objRs("callername")
-	                        PhoneNo = objRs("phoneno")
-	                        EmailID = objRs("emailid")
-	                        CallerState = objRs("callerstate")
-	                        Question = objRs("question")
-	                        AddedDate = objRs("addeddate")
-	                        callStatus1 = objRs("call_status1")
-	                        callStatus2 = objRs("call_status2")
-                            country = objRs("Country")
-                        If callStatus1 = "1" Then
-		                        RqStatus = "call to be made"
-                        ElseIf callStatus1 = "2" Then
-                                RqStatus = "call to be followed"	
-                        ElseIf callStatus1 = "3" Then
-                                RqStatus = "Closed call"	
-                        ElseIf callStatus1 = "4" Then
-                                RqStatus = "Free Enrollment"	
-                        End If
+                                            CallID  = objRs("callid")
+	                                        CallFor = objRs("callfor")
+	                                        CallerName = objRs("callername")
+	                                        PhoneNo = objRs("phoneno")
+	                                        EmailID = objRs("emailid")
+	                                        CallerState = objRs("callerstate")
+	                                        Question = objRs("question")
+	                                        AddedDate = objRs("addeddate")
+	                                        callStatus1 = objRs("call_status1")
+	                                        callStatus2 = objRs("call_status2")
+                                            country = objRs("Country")
+                                        If callStatus1 = "1" Then
+		                                        RqStatus = "call to be made"
+                                        ElseIf callStatus1 = "2" Then
+                                                RqStatus = "call to be followed"	
+                                        ElseIf callStatus1 = "3" Then
+                                                RqStatus = "Closed call"	
+                                        ElseIf callStatus1 = "4" Then
+                                                RqStatus = "Free Enrollment"	
+                                        End If
 
-                        strBody = strBody &"<tr align=""center""><td valign=""top"">&nbsp;"& callcounter &"</td><td valign=""top"">&nbsp;"&country&"</td><td valign=""top"">&nbsp;"& CallerState &"</td><td valign=""top"">&nbsp;"& CallFor &"</td><td valign=""top"">&nbsp;"& CallerName &"</td><td valign=""top"">&nbsp;"& Question&"</td><td valign=""top"">&nbsp;"& AddedDate&"</td><td valign=""top"" width=""500px"">&nbsp;"
+                                        strBody = strBody &"<tr align=""center""><td valign=""top"">&nbsp;"& callcounter &"</td><td valign=""top"">&nbsp;"&country&"</td><td valign=""top"">&nbsp;"& CallerState &"</td><td valign=""top"">&nbsp;"& CallFor &"</td><td valign=""top"">&nbsp;"& CallerName &"</td><td valign=""top"">&nbsp;"& Question&"</td><td valign=""top"">&nbsp;"& AddedDate&"</td><td valign=""top"" width=""500px"">&nbsp;"
 
 
-                        'Sql Query For Retrive The comments For That EnrolledUser'
-                        strQuery = "SELECT f_comment,comm_addedby,comm_date FROM fac_comments_new WHERE callid = '"&CallID&"'  Order by f_cid desc"
-                        'response.Write(strQuery)
-                        objRsComment.Open strQuery,ConnObj
-                        strBody1 = ""
-                        If Not objRsComment.EOF Then
-                           items = objRsComment.getrows
-                           numrows = Ubound(items,2)
-                           firstrow = 0
-                           lastrow = numrows
-                         End If
+                                        'Sql Query For Retrive The comments For That EnrolledUser'
+                                        strQuery = "SELECT f_comment,comm_addedby,comm_date FROM fac_comments_new WHERE callid = '"&CallID&"'  Order by f_cid desc"
+                                        'response.Write(strQuery)
+                                        objRsComment.Open strQuery,ConnObj
+                                        strBody1 = ""
+                                        If Not objRsComment.EOF Then
+                                           items = objRsComment.getrows
+                                           numrows = Ubound(items,2)
+                                           firstrow = 0
+                                           lastrow = numrows
+                                         End If
  
-                        If IsArray(items) Then
+                                        If IsArray(items) Then
 
-	                        For rowcounter = firstrow to lastrow
-	                        allitems = items(0,rowcounter)
-	                        allitems1 = items(1,rowcounter)
-	                        allitems2 = items(2,rowcounter)
+	                                        For rowcounter = firstrow to lastrow
+	                                        allitems = items(0,rowcounter)
+	                                        allitems1 = items(1,rowcounter)
+	                                        allitems2 = items(2,rowcounter)
 
-	                        strBody = strBody & "<div style=""text-align:left;"">"& allitems & "<br> added by " & allitems1 & "<br>" & allitems2 & "<br><br></div>"
+	                                        strBody = strBody & "<div style=""text-align:left;"">"& allitems & "<br> added by " & allitems1 & "<br>" & allitems2 & "<br><br></div>"
 
 	
-	                        Next
-                        End If  
+	                                        Next
+                                        End If  
 
-                            objRsComment.Close  
-                            strBody = strBody & "</td><td valign=""top"">&nbsp;"&RqStatus&"</td><td valign=""top"">&nbsp;"&callStatus2&"</td></tr>"
+                                            objRsComment.Close  
+                                            strBody = strBody & "</td><td valign=""top"">&nbsp;"&RqStatus&"</td><td valign=""top"">&nbsp;"&callStatus2&"</td></tr>"
 
 
 
-                        callcounter = callcounter + 1
-                        objRs.Movenext
-                        Loop
-                            else
-                               strBody1 =  " <br><br>No details found for the date "& formatdatetime(fromdate,2) 
-                            end If
-                        strBody = strBody &"<tr><td colspan=""10"">"&strBody1&"</td></tr></table></td></tr><tr><td><br><br>Best Regards,<br>ITILstudy Team<br><a href=""http://www.itilstudy.com"">www.ITILstudy.com</a></td></tr></table></body></html>"
-                            'response.write strBody
+                                        callcounter = callcounter + 1
+                                        objRs.Movenext
+                                        Loop
+                                            else
+                                               strBody1 =  " <br><br>No details found for the date "& formatdatetime(fromdate,2) 
+                                            end If
+                                        strBody = strBody &"<tr><td colspan=""10"">"&strBody1&"</td></tr></table></td></tr><tr><td><br><br>Best Regards,<br>ITILstudy Team<br><a href=""http://www.itilstudy.com"">www.ITILstudy.com</a></td></tr></table></body></html>"
+                                            'response.write strBody
 
-                                Set objCDOMailsend = Server.CreateObject("CDONTS.NewMail")
-		                        objCDOMailsend.From = "marketing@itilstudy.com"
-		                        objCDOMailsend.To = "satpathyt@gmail.com"
-                                objCDOMailsend.cc="leadershipedusysteam@googlegroups.com"
-                                objCDOMailsend.BCC="edusysbharath@gmail.com,edusysmadhava@gmail.com"
-		                        objCDOMailsend.Subject = "ITILstudy - Call report on "& Formatdatetime(fromDate,2)
-		                        objCDOMailsend.BodyFormat = 0
-		                        objCDOMailsend.MailFormat = 0
-		                        objCDOMailsend.Body = strBody
-		                        objCDOMailsend.Importance = 2
-		                        objCDOMailsend.Send
-		                        Set objCDOMailsend = Nothing
+                                                Set objCDOMailsend = Server.CreateObject("CDONTS.NewMail")
+		                                        objCDOMailsend.From = "marketing@itilstudy.com"
+		                                        objCDOMailsend.To = "satpathyt@gmail.com"
+                                                objCDOMailsend.cc="leadershipedusysteam@googlegroups.com"
+                                                objCDOMailsend.BCC="edusysbharath@gmail.com,edusysmadhava@gmail.com"
+		                                        objCDOMailsend.Subject = "ITILstudy - Call report on "& Formatdatetime(fromDate,2)
+		                                        objCDOMailsend.BodyFormat = 0
+		                                        objCDOMailsend.MailFormat = 0
+		                                        objCDOMailsend.Body = strBody
+		                                        objCDOMailsend.Importance = 2
+		                                        objCDOMailsend.Send
+		                                        Set objCDOMailsend = Nothing
 
-                                '//Call report ends
-
+                                                '//Call report ends
+                                        End If
+                                        
 			'Inserting date into the facultymailsent table because based on this emails will send daily'
 			ConnObj.Execute "Insert into facultymailsent(datesent, country) values('"&todaydate&"', '"&Session("CRM_Country") &"')"
 		

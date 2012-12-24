@@ -165,12 +165,15 @@ End If
 				bgColor = "TableRowOdd"
 		End If 
 					
-
 			'Location - venue'
 			If arrAllCourses(17,rowCounter) = "Corporate" Then
 			str = "<tr onMouseOver=""javascript:highlightTableRowVersionA(this, '#FFFFCC');""><td class="&bgColor &">" & Trim(arrAllCourses(1,rowCounter))
 			Else
-			str = "<tr onMouseOver=""javascript:highlightTableRowVersionA(this, '#FFFFCC');""><td class="&bgColor &"><a href=venue.asp?courseID="&arrAllCourses(0,rowCounter) &" onClick=""return popitup('venue.asp?courseID="&arrAllCourses(0,rowCounter) &"')"">" & Trim(arrAllCourses(1,rowCounter))
+                If Not Trim(arrAllCourses(1,rowCounter)) = "Virtual Classroom" Then
+			            str = "<tr onMouseOver=""javascript:highlightTableRowVersionA(this, '#FFFFCC');""><td class="&bgColor &"><a href=venue.asp?courseID="&arrAllCourses(0,rowCounter) &" onClick=""return popitup('venue.asp?courseID="&arrAllCourses(0,rowCounter) &"')"">" & Trim(arrAllCourses(1,rowCounter))
+                ElseIf Trim(arrAllCourses(1,rowCounter)) = "Virtual Classroom" Then
+                        str = "<tr onMouseOver=""javascript:highlightTableRowVersionA(this, '#FFFFCC');""><td class="&bgColor &"><a href=venue.asp?courseID="&arrAllCourses(0,rowCounter) &" onClick=""return popitup('venue.asp?courseID="&arrAllCourses(0,rowCounter) &"')"">Virtual Live Class"
+                End If
 			End If 
 		 If Session("CountryOrigin") <> "United Kingdom" Then 
 			If arrAllCourses(18,rowCounter) <> "" Then

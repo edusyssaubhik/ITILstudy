@@ -27,8 +27,8 @@ Response.Redirect("/ITIL-Courses.asp")
 End If
 
 
-strQueryVenue = "SELECT course.city, course.startdate, course.enddate, course.starthour, course.startminute, course.startsession, course.endhour, course.endminute, course.endsession, course.hotelname, course.hotelphonenumber, course.hotelurl,course.hoteladdress, course.coursedates, city.state_code,city.country FROM ITIL_course course, ITIL_city city WHERE course.city = city.city And courseid = '" & rqCourseID & "'"
-
+strQueryVenue = "SELECT course.city, course.startdate, course.enddate, course.starthour, course.startminute, course.startsession, course.endhour, course.endminute, course.endsession, course.hotelname, course.hotelphonenumber, course.hotelurl,course.hoteladdress, course.coursedates, city.state_code,city.country,course.coursetype FROM ITIL_course course, ITIL_city city WHERE course.city = city.city And courseid = '" & rqCourseID & "'"
+    'response.write strQueryVenue
 'rqcity = strQueryVenue(city)
 
 rsVenueDetails.Open strQueryVenue,ConnObj
@@ -121,17 +121,24 @@ If Session("CountryOrigin")="" Then
           <% Do Until rsVenueDetails.EOF  %>
 		  <tr>
           	<td>City: 
-		<% If rsVenueDetails("state_code") <> "" Then %>
-			<% = Trim(rsVenueDetails("city")) %>, <% = rsVenueDetails("state_code") %>
-           <%  else%>
-            <% = Trim(rsVenueDetails("city")) %>
-            <% End If%></td>
+                  <%If Trim(rsVenueDetails("city")) <> "Virtual Classroom" Then %>
+		                    <% If rsVenueDetails("state_code") <> "" Then %>
+			                    <% = Trim(rsVenueDetails("city")) %>, <% = rsVenueDetails("state_code") %>
+                               <%  else%>
+                                <% = Trim(rsVenueDetails("city")) %>
+                                <% End If%>
+                  <%Else %>
+                  Live Online Class
+                  <%end If %>
+          	</td>
           </tr>
 		  <tr>
           	<td>Date: <% If (IsNull(rsVenueDetails("coursedates")) OR rsVenueDetails("coursedates")="")Then %><% = rsVenueDetails("startdate") %> to <% = rsVenueDetails("enddate") %> <% Else %><% = rsVenueDetails("coursedates") %><% End If %></td>
           </tr>
 		  <tr>
-          	<td>Timings: <% = rsVenueDetails("starthour") %>:<% = rsVenueDetails("startminute") %>&nbsp;<% = rsVenueDetails("startsession") %> to <% = rsVenueDetails("endhour") %>:<% = rsVenueDetails("endminute") %>&nbsp;<% = rsVenueDetails("endsession") %></td>
+          	<td>Timings: <% = rsVenueDetails("starthour") %>:<% = rsVenueDetails("startminute") %>&nbsp;<% = rsVenueDetails("startsession") %> to <% = rsVenueDetails("endhour") %>:<% = rsVenueDetails("endminute") %>&nbsp;<% = rsVenueDetails("endsession") %>
+            <%If rsVenueDetails("Coursetype") ="Live" Then %> PST<%End If %>
+          	</td>
           </tr>
 		  <tr>
           	<td><br />Venue:</td>
@@ -171,7 +178,7 @@ If Session("CountryOrigin")="" Then
 	 <td>
 	  <table border="0" width="100%">
 	    <tr>
-          <td align="center" class="btext">Yet to be finalized.</td>
+          <td align="center" class="btext"><%If rsVenueDetails("CourseType") ="Live" Then %>Can be taken from home<%Else %>Yet to be finalized.<%End If %></td>
 		</tr>
 	  </table>
 	 </td>

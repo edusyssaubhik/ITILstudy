@@ -5,10 +5,18 @@
 <!--#include virtual="/includes/displayFormat.asp"-->
 <!--#include virtual="/includes/generator4datesandlocation.asp"-->
 <!--#include virtual="/includes/location.html"-->
+<style type="text/css">
+    td.TableLiveClass {
+       
+    }
+
+</style>
+
 <script language="JavaScript" type="text/javascript" src="/js/tableH.js"></script>
 <script language="JavaScript" type="text/javascript" src="/js/courses.js"></script>
 <script type="text/javascript" src="/js/cities_combo.js"></script>
 <script language="javascript" type="text/javascript">
+
 
 <!--
 
@@ -408,7 +416,7 @@ else if (ns6||ie4) ld.display="none";
 					  
 					  'Function For Displaying Question Format'
 					 
-					'Set tsoObject = fsoObject.OpenTextFile("C:\inetpub\wwwroot\dateslocation\ITILstudy-Classes-ITILstudy-Training-"&Session("CountryOrigin")&".txt")
+					'Set tsoObject = fsoObject.OpenTextFile("C:\GitHub\ITILstudy\dateslocation\ITILstudy-Classes-ITILstudy-Training-"&Session("CountryOrigin")&".txt")
 					Set tsoObject = fsoObject.OpenTextFile("E:\vhosts\ITILstudy.com\httpdocs\dateslocation\ITILstudy-Classes-ITILstudy-Training-"&Session("CountryOrigin")&".txt")
  
 					  StrMain = tsoObject.ReadAll

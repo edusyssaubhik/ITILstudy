@@ -20,9 +20,9 @@ rqRow  = Request.QueryString("row")
 
 'If Session("CountryOrigin") = "India" OR Session("CountryOrigin") ="United Kingdom" Then 
 If Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "Netherlands" Then
-strQuery = "SELECT * FROM classroom_feedback where country = 'United Kingdom'  order by dateofpassing DESC"
+strQuery = "SELECT * FROM classroom_feedback where country = 'United Kingdom'  order by dateofpassing DESC, feedbacktype DESC"
 Else
-strQuery = "SELECT * FROM classroom_feedback where country = '"&Session("CountryOrigin")&"'  order by dateofpassing DESC"
+strQuery = "SELECT * FROM classroom_feedback where country = '"&Session("CountryOrigin")&"'  order by dateofpassing DESC, feedbacktype DESC"
 End If
 'Else
 '
