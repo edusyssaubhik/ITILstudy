@@ -181,7 +181,7 @@ End If
 				bgColor = "TableRowOdd"
 		End If 
 				    If arrAllCourses(17,rowCounter) = "Live" Then
-                          bgColor="TableLiveClass"
+                          'bgColor="TableLiveClass"
                     End If	
 			'Location - venue'
 			If arrAllCourses(17,rowCounter) = "Corporate" Then
@@ -190,12 +190,12 @@ End If
                 If Not Trim(arrAllCourses(1,rowCounter)) = "Virtual Classroom" Then
 			            str = "<tr onMouseOver=""javascript:highlightTableRowVersionA(this, '#FFFFCC');""><td class="&bgColor &"><a href=venue.asp?courseID="&arrAllCourses(0,rowCounter) &" onClick=""return popitup('venue.asp?courseID="&arrAllCourses(0,rowCounter) &"')"">" & Trim(arrAllCourses(1,rowCounter))
                 ElseIf Trim(arrAllCourses(1,rowCounter)) = "Virtual Classroom" Then
-                        str = "<tr onMouseOver=""javascript:highlightTableRowVersionA(this, '#FFFFCC');""><td class="&bgColor &"><a href=venue.asp?courseID="&arrAllCourses(0,rowCounter) &" onClick=""return popitup('venue.asp?courseID="&arrAllCourses(0,rowCounter) &"')"">Virtual Live Class"
+                        str = "<tr onMouseOver=""javascript:highlightTableRowVersionA(this, '#FFFFCC');""><td class="&bgColor &"><span Class=""LiveClass"" alt=""Virtual Live Class"">Live</span>&nbsp;<a href=venue.asp?courseID="&arrAllCourses(0,rowCounter) &" onClick=""return popitup('venue.asp?courseID="&arrAllCourses(0,rowCounter) &"')"">Virtual Live Class"
                 End If
 			End If 
 		 If Session("CountryOrigin") <> "United Kingdom" Then 
 			If arrAllCourses(18,rowCounter) <> "" Then
-			str = str & ", "& arrAllCourses(18,rowCounter) 
+			str = str & ", "& trim(arrAllCourses(18,rowCounter)) 
 			End If
 			'If arrAllCourses(18,rowCounter) = "TX" Then
 '			str = str & "<sup><font color=""red""><b>**</b></font></sup>"
@@ -207,13 +207,13 @@ End If
 			str = str & "</a><br>"
 			End If
 			'Date and Timing
-			str = str & "</td><td class="&bgColor &">" & DAY(arrAllCourses(2,rowCounter)) & " " & MonthName(Month(arrAllCourses(2,rowCounter)),3) & " "  & YEAR(arrAllCourses(2,rowCounter)) & " to  <br /> "& DAY(arrAllCourses(3,rowCounter)) & " " & MonthName(Month(arrAllCourses(3,rowCounter)),3) & " "  & YEAR(arrAllCourses(3,rowCounter))
+			str = str & "</td><td class="&bgColor &">" & trim(DAY(arrAllCourses(2,rowCounter))) & " " & Trim(MonthName(Month(arrAllCourses(2,rowCounter)),3)) & " "  & trim(YEAR(arrAllCourses(2,rowCounter))) & " to  <br /> "& trim(DAY(arrAllCourses(3,rowCounter))) & " " & trim(MonthName(Month(arrAllCourses(3,rowCounter)),3)) & " "  & trim(YEAR(arrAllCourses(3,rowCounter)))
 			str = str & "</td>"
 			'End If
 			
 			If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" Then 			
 			Else	  
-			str = str & "<td class="& bgColor &">"&arrAllCourses(4,rowCounter) &" : "& arrAllCourses(5,rowCounter) &""& arrAllCourses(6,rowCounter) &" - "& arrAllCourses(7,rowCounter) &" : "&arrAllCourses(8,rowCounter)&""& arrAllCourses(9,rowCounter) &"</td>"
+			str = str & "<td class="& bgColor &">"&trim(arrAllCourses(4,rowCounter)) &" : "& arrAllCourses(5,rowCounter) &""& arrAllCourses(6,rowCounter) &" - "& arrAllCourses(7,rowCounter) &" : "&arrAllCourses(8,rowCounter)&""& arrAllCourses(9,rowCounter) &"</td>"
 			End If
 			
 			If arrAllCourses(17,rowCounter) = "Corporate" Then

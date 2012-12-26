@@ -127,7 +127,7 @@
 	End If 
 
     If arrAllCourses(17,rowCounter) = "Live" Then
-        bgColor="TableLiveClass"
+        'bgColor="TableLiveClass"
     End If
 			
 	'Location - venue
@@ -141,7 +141,7 @@
             If Not Trim(arrAllCourses(1,rowCounter)) = "Virtual Classroom" Then
 	            strEnding= strEnding &"<a href=""venue.asp?courseID="& arrAllCourses(0,rowCounter) &""" onClick=""return popitup('venue.asp?courseID="& arrAllCourses(0,rowCounter) &"')"">"& Trim(arrAllCourses(1,rowCounter)) &""
             ElseIf Trim(arrAllCourses(1,rowCounter)) = "Virtual Classroom" Then
-                strEnding= strEnding &"<a href=""venue.asp?courseID="& arrAllCourses(0,rowCounter) &""" onClick=""return popitup('venue.asp?courseID="& arrAllCourses(0,rowCounter) &"')"">Virtual Live Class"
+                strEnding= strEnding &"<span Class=""LiveClass"" alt=""Virtual Live Class"">Live</span>&nbsp;<a href=""venue.asp?courseID="& arrAllCourses(0,rowCounter) &""" onClick=""return popitup('venue.asp?courseID="& arrAllCourses(0,rowCounter) &"')"">Virtual Live Class"
             End If
 	    End If 
 	
@@ -149,7 +149,7 @@
         If Not Trim(arrAllCourses(1,rowCounter)) = "Virtual Classroom" Then
 	            strEnding= strEnding &""& Trim(arrAllCourses(1,rowCounter)) &"<br>"
         ElseIf Trim(arrAllCourses(1,rowCounter)) = "Virtual Classroom" Then
-                strEnding= strEnding &"Virtual Live Class<br>"
+                strEnding= strEnding &"<span Class=""LiveClass"" alt=""Virtual Live Class"">Live</span>&nbsp;Virtual Live Class<br>"
         End If
 	End If
 	If Session("CountryOrigin") <> "United Kingdom" Then 
@@ -314,9 +314,9 @@ Else
 	'Creating a text file using file systm object.
 	
 	
-	'Set tsObject = fsoObject.CreateTextFile("E:\vhosts\ITILstudy.com\httpdocs\dateslocation\ITILstudy-Classes-ITILstudy-Training-"&Session("CountryOrigin")&".txt")
+	Set tsObject = fsoObject.CreateTextFile("E:\vhosts\ITILstudy.com\httpdocs\dateslocation\ITILstudy-Classes-ITILstudy-Training-"&Session("CountryOrigin")&".txt")
 	
-	Set tsObject = fsoObject.CreateTextFile("C:\GitHub\ITILstudy\dateslocation\ITILstudy-Classes-ITILstudy-Training-"&Session("CountryOrigin")&".txt")
+	'Set tsObject = fsoObject.CreateTextFile("C:\GitHub\ITILstudy\dateslocation\ITILstudy-Classes-ITILstudy-Training-"&Session("CountryOrigin")&".txt")
 	
 	
 	'Witing the string containing question format into an asp file using file system object.'

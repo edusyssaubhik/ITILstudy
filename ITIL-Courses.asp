@@ -7,8 +7,25 @@
 <!--#include virtual="/includes/location.html"-->
 <style type="text/css">
     td.TableLiveClass {
-       
+        /*border-top:1px solid #c3dcc0;
+        
+        background:#e1fede;
+        color: #000000;
+        font-family: Arial,Helvetica,sans-serif;
+        font-size: 12px;
+        height: 23px;
+        padding: 5px;
+        vertical-align: middle;*/
     }
+    span.LiveClass {
+        border:1px solid #000000;
+        background-color:#0026ff;
+        color:#ffffff;
+        font-size:9px;
+        width:20px;
+        height:9px;
+    }
+
 
 </style>
 
@@ -416,8 +433,8 @@ else if (ns6||ie4) ld.display="none";
 					  
 					  'Function For Displaying Question Format'
 					 
-					'Set tsoObject = fsoObject.OpenTextFile("C:\GitHub\ITILstudy\dateslocation\ITILstudy-Classes-ITILstudy-Training-"&Session("CountryOrigin")&".txt")
-					Set tsoObject = fsoObject.OpenTextFile("E:\vhosts\ITILstudy.com\httpdocs\dateslocation\ITILstudy-Classes-ITILstudy-Training-"&Session("CountryOrigin")&".txt")
+					Set tsoObject = fsoObject.OpenTextFile("C:\GitHub\ITILstudy\dateslocation\ITILstudy-Classes-ITILstudy-Training-"&Session("CountryOrigin")&".txt")
+					'Set tsoObject = fsoObject.OpenTextFile("E:\vhosts\ITILstudy.com\httpdocs\dateslocation\ITILstudy-Classes-ITILstudy-Training-"&Session("CountryOrigin")&".txt")
  
 					  StrMain = tsoObject.ReadAll
 					  

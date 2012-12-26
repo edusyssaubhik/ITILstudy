@@ -749,13 +749,17 @@ If datesent_email <> dateof_fac_mail Then
                                         'response.Write(strQuery)
                                         objRsComment.Open strQuery,ConnObj
                                         strBody1 = ""
+                                        items = ""
                                         If Not objRsComment.EOF Then
                                            items = objRsComment.getrows
                                            numrows = Ubound(items,2)
                                            firstrow = 0
                                            lastrow = numrows
                                          End If
- 
+                                            
+                                        allitems = ""
+	                                    allitems1 = ""
+	                                    allitems2 = ""
                                         If IsArray(items) Then
 
 	                                        For rowcounter = firstrow to lastrow
