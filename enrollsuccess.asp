@@ -225,6 +225,7 @@ If rqCourseId <> "" Then
 
  Do Until objRs.EOF
    Session("CountryOrigin") = Trim(objRs("Country"))
+   
  objRs.Movenext
  Loop		
  objRs.Close	
@@ -254,7 +255,14 @@ Do Until objRs.EOF
 	StartDate      =  objRs("startdate")
 	EndDate        =  objRs("enddate")
 	ApplicableDays =  objRs("applicabledays")
-	Country 	   =  objRs("country")
+
+	If Session("CountryOrigin") = "US" Or Session("CountryOrigin") = "Canada" Then
+         If  Session("Virtualclass") <> "" then
+            Country = Session("Virtualclass")
+        End If
+    Else
+	    Country 	   =  objRs("country")
+    End If
 	HotelName      =  objRs("hotelname")
 	HotelPhNo      =  objRs("hotelphonenumber")
 	HotelURL       =  objRs("hotelurl")
@@ -1363,6 +1371,30 @@ We have reserved a place for you in this course. However, your participation wil
 <!--=============================-->
 
 <script type="text/javascript"> if (!window.mstag) mstag = { loadTag: function () { }, time: (new Date()).getTime() };</script> <script id="mstag_tops" type="text/javascript" src="//flex.atdmt.com/mstag/site/4625211e-e6a9-48d9-b623-3b89707bb8e4/mstag.js"></script> <script type="text/javascript">    mstag.loadTag("analytics", { dedup: "1", domainId: "1861441", type: "1", actionid: "104277" })</script> <noscript> <iframe src="//flex.atdmt.com/mstag/tag/4625211e-e6a9-48d9-b623-3b89707bb8e4/analytics.html?dedup=1&domainId=1861441&type=1&actionid=104277" frameborder="0" scrolling="no" width="1" height="1" style="visibility:hidden;display:none"> </iframe> </noscript>
+<!--======================================-->
+
+<!--Added By Madhava 20/12/2012 -->
+<!-- Google Code for ITILstudy US-ES Conversion Page -->
+
+<script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 947765691;
+    var google_conversion_language = "en";
+    var google_conversion_format = "3";
+    var google_conversion_color = "ffffff";
+    var google_conversion_label = "t25gCP36twkQu4P3wwM";
+
+    var google_conversion_value = 0;
+    /* ]]> */
+</script>
+<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/947765691/?value=0&amp;label=t25gCP36twkQu4P3wwM&amp;guid=ON&amp;script=0"/>
+
+</div>
+</noscript>	
 
 <% ElseIf Session("CountryOrigin") = "Australia" Then %>
    <!-- Google Code for ITILstudy AUS - ES (P.M.5) Conversion Page -->
@@ -1513,6 +1545,6 @@ var google_conversion_value = 0;
 </div>
 </noscript>
 <% End If %>
-	
+
 <!-- Body Ends -->
 <!--#include virtual="/includes/footer.html"-->

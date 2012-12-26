@@ -187,7 +187,7 @@ If Session("CountryOrigin")="" Then
       <td><br />
         <table border="0" width="100%">
           <tr>
-            <td><b>Please Note : </b> Venue details may change. If changed, you would be notified through an email.</td>
+            <td><b><%If rsVenueDetails("CourseType") <> "Live" Then %>Please Note : </b> Venue details may change. If changed, you would be notified through an email.<%end If %></td>
           </tr>
         </table></td>
     </tr>
