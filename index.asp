@@ -755,9 +755,10 @@ ITIL Lifecycle Certificate in Continual Service Improvement (3 Days) Courses sta
               <!--ITIL Online Course -->
               	<% If (Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin")="United Kingdom") Then %>
                 <p id="imageHover"><a href="/ITIL-Training/ITIL-Led-Live-Online-Course.asp"><img src="/images/buttons/WBT1.jpg" height="29px" border="0"></a><br />
-                  <span id="subImage">For ITIL<sup>&reg;</sup> Live Online Courses</span></span>
+                    
+                  <span id="subImage">For ITIL<sup>&reg;</sup> Virtual Live Class</span></span>
 			    <br /> <br />
-                 <a href="/ITIL-Training/ITIL-Led-Live-Online-Course.asp">Instructor-led Virtual Classes</a><br />
+                 <a href="/ITIL-Training/ITIL-Led-Live-Online-Course.asp">Instructor-led Virtual Live Class</a><br />
                  Courses starting at <% If Session("CountryOrigin")="United Kingdom" Then %> £ 900 (Prices are inclusive of exam fees and 100% Moneyback Guarantee)<% Else %>$ 1049
                 (Prices are inclusive of exam fees and 100% Money Back Guarantee)<% End If %>
                <br /><br /></p>

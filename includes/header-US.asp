@@ -25,10 +25,12 @@
       <!--2nd drop down menu -->
       <div style="top: 26px; left: 203px; clip: rect(0pt, auto, 94.8717px, 0pt); visibility: hidden; margin-left:28px; margin-top:5px;" id="dropmenu2" class="dropmenudiv">
  
-       <a href="/ITIL-Courses.asp" onmouseover="MM_swapImage('b','','/images/back/link_02_courses_enroll_green.jpg',1)" onmouseout="MM_swapImgRestore()">ITIL Foundation Courses </a>   <a href="/ITIL-OSA-Courses.asp" onmouseover="MM_swapImage('b','','/images/back/link_02_courses_enroll_green.jpg',1)" onmouseout="MM_swapImgRestore()">ITIL OSA Courses </a>
+       <a href="/ITIL-Courses.asp" onmouseover="MM_swapImage('b','','/images/back/link_02_courses_enroll_green.jpg',1)" onmouseout="MM_swapImgRestore()">ITIL Foundation Courses </a>           <a href="/ITIL-Training/ITIL-Led-Live-Online-Course.asp" onmouseover="MM_swapImage('b','','/images/back/link_02_courses_enroll_green.jpg',1)" onmouseout="MM_swapImgRestore()">Foundation – Instructor-led Virtual Live Class</a>  
+          
+          <a href="/ITIL-OSA-Courses.asp" onmouseover="MM_swapImage('b','','/images/back/link_02_courses_enroll_green.jpg',1)" onmouseout="MM_swapImgRestore()">ITIL OSA Courses </a>
           <a href="/ITIL-CSI-Courses.asp" onmouseover="MM_swapImage('b','','/images/back/link_02_courses_enroll_green.jpg',1)" onmouseout="MM_swapImgRestore()">ITIL CSI Courses </a>
            <a href="/ITIL-ST-Courses.asp" onmouseover="MM_swapImage('b','','/images/back/link_02_courses_enroll_green.jpg',1)" onmouseout="MM_swapImgRestore()">ITIL ST Courses </a>
-        <a href="/ITIL-Training/ITIL-Led-Live-Online-Course.asp" onmouseover="MM_swapImage('b','','/images/back/link_02_courses_enroll_green.jpg',1)" onmouseout="MM_swapImgRestore()">ITIL Instructor Led Virtual Classes</a>        
+      
      <a href="/ITIL-Online-Courses.asp" onmouseover="MM_swapImage('b','','/images/back/link_02_courses_enroll_green.jpg',1)" onmouseout="MM_swapImgRestore()">ITIL Online Courses</a>
       
         </div>
@@ -59,11 +61,12 @@
     
         <a href="/classroomTraining.asp" onmouseover="MM_swapImage('d','','/images/back/link_04_methodology_green.jpg',1)" onmouseout="MM_swapImgRestore()">Foundation - Classroom Training</a>
         
-        <a href="/methodology/ITIL-Intermediate-ClassroomTraining-Methodology.asp" onmouseover="MM_swapImage('d','','/images/back/link_04_methodology_green.jpg',1)" onmouseout="MM_swapImgRestore()">Intermediate - Classroom Training</a>
 
-<a href="/methodology/Instructor-Led-Virtual-Training.asp" onmouseover="MM_swapImage('d','','/images/back/link_04_methodology_green.jpg',1)" onmouseout="MM_swapImgRestore()">Foundation - Instructor Led Virtual Training</a>        
+
+<a href="/methodology/Instructor-Led-Virtual-Training.asp" onmouseover="MM_swapImage('d','','/images/back/link_04_methodology_green.jpg',1)" onmouseout="MM_swapImgRestore()">Foundation – Instructor-led Virtual Live Class</a>        
 
 		<a href="/methodology/Online-Training.asp" onmouseover="MM_swapImage('d','','/images/back/link_04_methodology_green.jpg',1)" onmouseout="MM_swapImgRestore()">Foundation - Online Training</a> 
+                 <a href="/methodology/ITIL-Intermediate-ClassroomTraining-Methodology.asp" onmouseover="MM_swapImage('d','','/images/back/link_04_methodology_green.jpg',1)" onmouseout="MM_swapImgRestore()">Intermediate - Classroom Training</a>
          <a href="/Classroom-Courseware.asp" onMouseOver="MM_swapImage('d','','/images/back/link_04_methodology_green.jpg',1)" onMouseOut="MM_swapImgRestore()">Classroom Courseware</a>
      </div>
 		

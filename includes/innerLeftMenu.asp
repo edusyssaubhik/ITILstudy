@@ -246,7 +246,6 @@ Select Case State
         Sign Out &nbsp; &nbsp;</a></td>
     </tr>
   </table>
-  
  
      <% Case  "verified8","verified12" %>
    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="leftMenu"  id="primarynav">
@@ -2004,6 +2003,7 @@ Select Case State
      <tr>
       <td id="imageHover"><iframe width="200" height="150" src="http://www.youtube.com/embed/G7sizMIi9K4?wmode=transparent" frameborder="0" allowfullscreen></iframe><br /><br /></td>
     </tr>
+
        <tr><td>              <table>
                         <tr><td rowspan="2"><a href="/freeresources/freeSimulatedTest.asp"><img src="/images/symbol/symbol_free.jpg"></a></td><td><a href="/freeresources/freeSimulatedTest.asp"><img src="/images/symbol/symbol_free_text.jpg"></a><br />ITIL<sup>&reg;</sup> Exam <br />Practice Test</td></tr>
                         <tr><td></td></tr>
@@ -2027,6 +2027,12 @@ Select Case State
                         <tr><td></td></tr>
 
                     </table></td></tr>
+                <%If Session("CountryOrigin") = "United Kingdom"  Then%>
+      <tr><td id="Td1">
+          <a href="/ITIL-Training/ITIL-Led-Live-Online-Course.asp"><img  border="0" src="/images/buttons/WBT1.jpg"></a><br>
+            <span id="subImage">For ITIL<sup>®</sup> Virtual Live Class</span>
+          </td></tr>
+      <%End If %>
     <tr>
     
     <td>
@@ -2206,6 +2212,12 @@ myMenu.init();
 	  <tr>
       <td id="imageHover"><a href="/ITIL-Online-Courses.asp#OSA"><img src="/images/buttons/OSA.png"   border="0" ></a></td>
     </tr>-->
+          <%If Session("CountryOrigin") = "US" OR  Session("CountryOrigin") = "Canada"  Then%>
+      <tr><td id="imageHover">
+          <a href="/ITIL-Training/ITIL-Led-Live-Online-Course.asp"><img  border="0" src="/images/buttons/WBT1.jpg"></a><br>
+            <span id="subImage">For ITIL<sup>®</sup> Virtual Live Class</span>
+          </td></tr>
+      <%End If %>
     <% End If  %>
    
   </table>

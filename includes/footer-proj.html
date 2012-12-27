@@ -14,7 +14,7 @@
 <%End If%>
  <%  If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "India" OR Session("CountryOrigin") = "UAE" OR Session("CountryOrigin") = "Singapore"  OR Session("CountryOrigin") = "United Kingdom" OR Session("CountryOrigin") = "Australia" Then %>
 |  <a href="/ITIL-Training/courseBenefits.asp">ITIL Classroom Course Benefits </a> |  <a href="/ITIL-Training/better-than-competitors.asp">Better Than Competitors </a>
-  |  <a href="/ITIL-Training/comprehensive.asp">Most Comprehensive and Effective </a>
+  |  <a href="/ITIL-Training/comprehensive.asp">Comprehensive and Effective </a>
     <%  If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "UAE" OR Session("CountryOrigin") = "Singapore" OR Session("CountryOrigin") = "United Kingdom" OR Session("CountryOrigin") = "Australia"   Then %>
   | <a href="/ITIL-Training/free-onlinecertification.asp">Classroom - Free 6sigma Green Belt Course/Free HRD</a>
  <% End If %>
@@ -35,6 +35,41 @@
 	   | <a href="/sitemap.asp">Sitemap</a>
 	   </font></p></div>
 
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<%  If Session("CountryOrigin") = "Germany" Then %>
+<script type="text/javascript">
+
+    $(window).scroll(function (e) {
+        $el = $('#contact-box');
+        if ($(this).scrollTop() > 350) {
+
+            $('#contact-box').css({ 'position': 'fixed', 'top': '0px' });
+        }
+        else {
+            $('#contact-box').css({ 'position': 'relative', 'top': 'auto' });
+        }
+
+    });
+
+</script>
+<% ElseIf Session("CountryOrigin") = "United Kingdom" Then %>
+<script type="text/javascript">
+
+
+    $(window).scroll(function (e) {
+        $el = $('#left_navigation');
+        if ($(this).scrollTop() > 700) {
+            $('#left_navigation').css({ 'position': 'fixed', 'top': '0px' });
+        }
+        else {
+            $('#left_navigation').css({ 'position': 'relative', 'top': 'auto' });
+        }
+
+    });
+
+</script>
+<% End If %>
 <!--<div align="center"><font size="1px">ITIL<sup>&reg;</sup> is a Registered Trade Mark of the Office of Government Commerce in the United Kingdom and other countries.</font></div>
 -->
 <div align="center"><font size="1px">The Swirl logo™ is a trade mark of the Cabinet Office.</font></div>
