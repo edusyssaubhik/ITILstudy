@@ -109,18 +109,6 @@ United Kingdom<br />
 						Phoenix, AZ 85004
 
                     </td>
-                     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                      <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                      <td>
-                    VMEdu, Inc. <br>
-                    4539 Metropolitan Ct.<br>
-                    Frederick, MD 21704 <br>
-                    <br />
-                    </td>
-                    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
                     </tr>
                     </table>
                     
