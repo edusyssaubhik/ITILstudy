@@ -73,7 +73,7 @@
 '	 Inserting details of complaint log
 ' ----------------------------------------------------------------------------------
 	    
-   		If rqType = "Submit" Then
+   		If rqType = "Submit" OR rqType = "Senden" Then
    
 		   strQuery = "INSERT INTO support_complaint (subject, customername, complaint, department, complaint_status, createdby, createdon, lastupdatedon, courseType,country)"
 		   strQuery = strQuery & " values "

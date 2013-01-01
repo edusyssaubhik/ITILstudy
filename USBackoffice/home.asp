@@ -790,7 +790,7 @@ If datesent_email <> dateof_fac_mail Then
                                                 Set objCDOMailsend = Server.CreateObject("CDONTS.NewMail")
 		                                        objCDOMailsend.From = "marketing@itilstudy.com"
 		                                        objCDOMailsend.To = "satpathyt@gmail.com"
-                                                objCDOMailsend.cc="leadershipedusysteam@googlegroups.com"
+                                                objCDOMailsend.cc = "leadershipedusysteam@googlegroups.com, ruth.k.pmstudy@gmail.com, tanya.b.pmstudy@gmail.com, keira.k@pmstudy.com, jodie.n@vmedu.com, jenni.b@pmstudy.com, gourab.nanda@vendorfit.com"
                                                 objCDOMailsend.BCC="edusysbharath@gmail.com,edusysmadhava@gmail.com"
 		                                        objCDOMailsend.Subject = "ITILstudy - Call report on "& Formatdatetime(fromDate,2)
 		                                        objCDOMailsend.BodyFormat = 0

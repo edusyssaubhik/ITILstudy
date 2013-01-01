@@ -52,10 +52,9 @@ function Form_Validator(theform)
 						payer_email = Request.Form("payer_email")
 						pass = Request.Form("pass")
                         
-                        If Trim(payer_email) = ""  Then
-                            response.Redirect "/memberlogin.asp"
+                        if payer_email = "" Then
+                                response.Redirect "memberlogin.asp"
                         End If
-
                        'To retrive the end date from enrolled user so that we can take it in left menu
 								Dim objRs, rqVdate
 								Set objRs = Server.CreateObject("ADODB.Recordset")

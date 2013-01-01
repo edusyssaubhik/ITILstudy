@@ -211,7 +211,7 @@ United Kingdom
                 <tr>
                   <td colspan="2">&nbsp;</td>
                 </tr>
-                <form name="complaint" action="insertQuery.asp" method="post" onSubmit="return validate_form(this)">
+                <form name="complaint" action="/insertQuery.asp" method="post" onSubmit="return validate_form(this)">
                   <table border="0" cellspacing="5" cellpadding="0" width="100%" >
                     <tr>
                       <td><span class="general-bodyBold">Vorname:</span></td>
