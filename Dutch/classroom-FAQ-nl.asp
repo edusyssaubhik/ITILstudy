@@ -413,7 +413,7 @@ Tijdens het verzenden van de PDU's naar PMI gebruikt u de volgende informatie:<b
                       <div class="faqItemContent">
                         <div class="outerFAQContainer">
                           <div class="innerFAQContainer">
-                            <p>Er zijn bepaalde voorwaarden/geschiktheidscriteria aanwezig voor het afleggen van het ITIL Foundation examen. Een algemeen begrip van IT is echter wel gewenst.</p>
+                            <p>Er zijn GEEN bepaalde voorwaarden/geschiktheidscriteria aanwezig voor het afleggen van het ITIL Foundation examen. Een algemeen begrip van IT is echter wel gewenst.</p>
                           
                           </div>
                         </div>

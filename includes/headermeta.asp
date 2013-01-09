@@ -4,11 +4,11 @@
 	 Response.Status="301 Moved Permanently"
 
 	 If Request.ServerVariables("URL") = "/index.asp" Then
-	 'Response.AddHeader "Location","http://www." & Request.ServerVariables("HTTP_HOST")
+	 Response.AddHeader "Location","http://www." & Request.ServerVariables("HTTP_HOST")
 	 Else
-	 'Response.AddHeader "Location","http://www." & Request.ServerVariables("HTTP_HOST") & Request.ServerVariables("URL")
+	 Response.AddHeader "Location","http://www." & Request.ServerVariables("HTTP_HOST") & Request.ServerVariables("URL")
      End If
-	 'Response.End
+	 Response.End
  End if
 %>
 
@@ -130,9 +130,7 @@ function getCountry() {
 			  <%end if %>
 <% If(Session("CountryOrigin")="United Kingdom") Then %>
 <!--Script to record the mouse movement of users on website-->
-<script type="text/javascript">
-document.write(unescape("%3Cscript src='" + (("https:" == document.location.protocol) ? "https" : "http") + "://cdn.mouseflow.com/projects/46bfe97f-a3a7-4871-8ea4-4f2204f4f235.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
+
 
 <% End If %>
 <%
@@ -326,6 +324,15 @@ End If
             <span class="floatRight">
 				<span class="lang-Eng">
                 <a href="/indexde.asp">Deutsche</a> |</span>
+
+            </span>
+             <% End If %>
+
+               <% If Session("CountryOrigin") = "Netherlands" Then %>
+
+            <span class="floatRight">
+				<span class="lang-Eng">
+                <a href="/indexduc.asp">Dutch</a> |</span>
 
             </span>
              <% End If %>

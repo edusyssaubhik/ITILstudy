@@ -1,4 +1,4 @@
-<%'<!--#include virtual="/includes/URLRedirection.asp"--> %>
+<!--#include virtual="/includes/URLRedirection.asp"-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -63,9 +63,7 @@ Isfblogin=true 'make it false if facebook login not required in yr site
 %>
 <% If(Session("CountryOrigin")="United Kingdom") Then %>
 <!--Script to record the mouse movement of users on website-->
-<script type="text/javascript">
-document.write(unescape("%3Cscript src='" + (("https:" == document.location.protocol) ? "https" : "http") + "://cdn.mouseflow.com/projects/46bfe97f-a3a7-4871-8ea4-4f2204f4f235.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
+
 
 <% End If %>
 
@@ -265,7 +263,14 @@ End If
 
             </span>
              <% End If %>
+            <% If Session("CountryOrigin") = "Netherlands" Then %>
 
+            <span class="floatRight">
+				<span class="lang-Eng">
+                <a href="/indexduc.asp">Dutch</a> |</span>
+
+            </span>
+             <% End If %>
                <!--End When aligned to right , need to put last coming content to first-->
               </td>
           </tr>

@@ -208,7 +208,7 @@ Op basis van de syllabus uit 2011, goedgekeurd door APMG
 </tr>
 </tbody>
 </table>
-                      <br /> <a href="/ITIL-Training/classroom-FAQ.asp">
+                      <br /> <a href="/Dutch/classroom-FAQ-nl.asp">
 <img height="83px" border="0" src="/images/buttons/Faq.jpg">
 </a>
                   <!-- <td width="20%" id="imageHover"><a href="/ITIL-Online-Courses.asp"><img src="/images/buttons/Blended.jpg" width="168px " height="44px" border="0"></a>

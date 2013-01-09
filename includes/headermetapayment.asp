@@ -20,9 +20,7 @@ End if
 
 <% If(Session("CountryOrigin")="United Kingdom") Then %>
 <!--Script to record the mouse movement of users on website-->
-<script type="text/javascript">
-document.write(unescape("%3Cscript src='" + (("https:" == document.location.protocol) ? "https" : "http") + "://cdn.mouseflow.com/projects/46bfe97f-a3a7-4871-8ea4-4f2204f4f235.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
+
 
 <% End If %>
 

@@ -232,7 +232,7 @@ End If
              <%If(Session("FirstName")<>"") Then%>
               | <a href="/overview.asp">My Account</a>
               <%Else%>
-              | <a href="/memberlogin-nl.asp">Inloggen</a>
+              | <a href="/Dutch/memberlogin-nl.asp">Inloggen</a>
               <%End If%>
               </span></td>
           </tr>

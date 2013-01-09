@@ -10,19 +10,19 @@
           <tr>
             <td width="2%">&nbsp;</td>
             <td width="25%">&nbsp;</td>
-            <td width="73%" class="breadcrumb">Home &raquo; Waarom wij  &raquo; De beste faculteit</td>
+            <td width="73%" class="breadcrumb">Home &raquo; Waarom wij  &raquo; De beste docenten</td>
           </tr>
           <tr>
             <!--#include virtual="/includes/innerLeftMenu-Dutch.asp"-->
             <td width="73%" rowspan="4" background="/images/back/left_line.jpg" class="general-body"><div style="margin-top:-12px; width:97%;">
                 <!-- Content Start From Here-->
-                <br /><span class="Header">WAAROM ONZE FACULTEIT DE BESTE IS IN DE INDUSTRIE</span>
+                <br /><span class="Header">WAAROM ONZE DOCENTEN DE BESTE IS IN DE INDUSTRIE</span>
                 <p>
                     Het succes van een klassikale opleiding is in grote mate afhankelijk van de bekwaamheid van de docent. Wij hebben een zeer hoog slagingspercentage van 99,2% en krijgen voortdurend geweldige feedback van studenten over de kwaliteit van onze docenten. Al onze docenten zijn ITIL/PMP-gecertificeerd, met een gemiddelde werkervaring in projectmanagement van 15+ jaar op gebieden als informatica, bouw, overheid, gezondheidszorg, productie, etc. Hun praktijkvoorbeelden en levensechte ervaringen maken het voor de student gemakkelijker om lastige concepten te begrijpen en te waarderen.<br /><br />
 
-Vooraleer een ITILstudy opleiding te mogen doceren, ondergaat elke docent een nauwgezet "doceer de docent" programma van ITILstudy omtrent de leertechnieken die nodig zijn om de lessen interessant, prettig en verrijkend te maken. Een gemiddelde ITILstudy faculteit heeft meer dan 1500 uur aan professionele doceerervaring in huis om onze opleidingen succesvol te doceren. <br /><br />
+Vooraleer een ITILstudy opleiding te mogen doceren, ondergaat elke docent een nauwgezet "doceer de docent" programma van ITILstudy omtrent de leertechnieken die nodig zijn om de lessen interessant, prettig en verrijkend te maken. Een gemiddelde ITILstudy docenten heeft meer dan 1500 uur aan professionele doceerervaring in huis om onze opleidingen succesvol te doceren. <br /><br />
 
-Als u de profielen van onze faculteit doorneemt, zult u het zeker met ons eens zijn dat geen enkele andere aanbieder van ITIL opleidingen het haalt bij de kwaliteit van onze faculteit.<br /><br />
+Als u de profielen van onze docenten doorneemt, zult u het zeker met ons eens zijn dat geen enkele andere aanbieder van ITIL opleidingen het haalt bij de kwaliteit van onze docenten.<br /><br />
 
                 </p>
                 <ul>

@@ -1,16 +1,4 @@
-<%
-If InStr(Request.ServerVariables("SERVER_NAME"),"www") = 0 Then
 
-	Response.Status="301 Moved Permanently"
-
-	If Request.ServerVariables("URL") = "/index.asp" Then
-	'Response.AddHeader "Location","http://www." & Request.ServerVariables("HTTP_HOST")
-	Else
-	'Response.AddHeader "Location","http://www." & Request.ServerVariables("HTTP_HOST") & Request.ServerVariables("URL")
-    End If
-	'Response.End
-End if
-%>
 
 <link rel="shortcut icon" href="/images/buttons/favicon.ico">
 <link rel="stylesheet" type="text/css" href="/css/chromestyle.css">
@@ -20,9 +8,7 @@ End if
 
 <% If(Session("CountryOrigin")="United Kingdom") Then %>
 <!--Script to record the mouse movement of users on website-->
-<script type="text/javascript">
-document.write(unescape("%3Cscript src='" + (("https:" == document.location.protocol) ? "https" : "http") + "://cdn.mouseflow.com/projects/46bfe97f-a3a7-4871-8ea4-4f2204f4f235.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
+
 
 <% End If %>
 

@@ -12,7 +12,7 @@
  <!--<a href="/Dutch/kostenfreie-online-Zertifizierung.asp" onmouseover="MM_swapImage('a','','/images/Dutch/Why_us_Green.png',1)" onmouseout="MM_swapImgRestore()">Kostenfreie Six Sigma Green Belt oder Human Resource Development Zertifizierung</a>-->
 		 <a href="/Dutch/classroom-FAQ-nl.asp" onmouseover="MM_swapImage('a','','/images/Dutch/Why_us_Green.png',1)" onmouseout="MM_swapImgRestore()">Veelgestelde vragen</a>		 
 		  
-		  <a href="/feedback_class-nl.asp" onmouseover="MM_swapImage('a','','/images/Dutch/Why_us_Green.png',1)" onmouseout="MM_swapImgRestore()">Testimonia ITILstudy</a>
+		  <a href="/feedback_class.asp" onmouseover="MM_swapImage('a','','/images/Dutch/Why_us_Green.png',1)" onmouseout="MM_swapImgRestore()">Testimonia ITILstudy</a>
            <a href="/Dutch/comprehensive-nl.asp" onmouseover="MM_swapImage('a','','/images/Dutch/Why_us_Green.png',1)" onmouseout="MM_swapImgRestore()">Het meest allesomvattend en effectief</a>	
 			
          <a href="/Dutch/exam-success-nl.asp" onmouseover="MM_swapImage('a','','/images/Dutch/Why_us_Green.png',1)" onmouseout="MM_swapImgRestore()">Vermaarde ATO - 2000+ bedrijven</a>
