@@ -63,6 +63,24 @@ rqCourseType = "Classroom"
 Else
 rqCourseType = Request.Form("CourseType")
 End If
+
+'If we directly open enrollclass.asp , empty value is stored in enrolled for column    
+If Trim(rqCourseType) = "" Then
+    Set rsEnrolledfor = Server.CreateObject("ADODB.Recordset")
+    Qu = "Select Coursetype from ITIL_course where courseid = '" & Trim(rqCourseId) &"'"
+    rsEnrolledfor.Open Qu,ConnObj
+    If Not rsEnrolledfor.Eof Then
+        If Trim(rsEnrolledfor("Coursetype")) = "Live" Then
+            rqCourseType = "Live"
+        ElseIf Trim(rsEnrolledfor("Coursetype")) ="WBT" Then
+            rqCourseType = "WBT"
+        Else 
+            rqCourseType = "Classroom"
+        End If
+    End If
+    rsEnrolledfor.close
+End If
+
 today =Now()
 
 'Put Into Session Displaying Purpose'

@@ -114,6 +114,9 @@
 	
 	 Else
              If Session("CountryOrigin") ="US" Or Session("CountryOrigin") ="Canada" Then
+                If Session("Virtualclass") = "" Then
+                    Session("Virtualclass") = "US"
+                End If
                 IF Session("CountryOrigin") ="US" Then
                     strQuery = "SELECT * FROM itil_course WHERE country = '"&Session("Virtualclass")&"' AND courseType <> 'Corporate' AND startdate BETWEEN '"&Now() - 1&"' AND DATEADD(day,180,'"&Now()&"') AND status <> 'Cancelled' order by startdate,city desc"
                 ElSe
