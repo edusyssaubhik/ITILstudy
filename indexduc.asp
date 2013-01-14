@@ -174,16 +174,16 @@ End If
               	
                   <p id="imageHover"><a href="/ITIL-Online-Courses.asp"><img src="/images/buttons/edu.png"  height="44px" border="0"></a></span>
                     <br />(Prijzen zijn inclusief belasting)<br /><br />
-                      <a href="/ITIL-Online-Courses-nl.asp">ITIL Foundation opleiding - $ 300</a><br />
-					<a href="/ITIL-Online-Courses-nl.asp">Intermediate OSA opleiding - $ 665 </a><br />
-                      <a href="/ITIL-Online-Courses-nl.asp">Intermediate CSI opleiding - $ 665 </a><br />
+                      <a href="/Dutch/ITIL-Online-Courses-nl.asp">ITIL Foundation opleiding - $ 300</a><br />
+					<a href="/Dutch/ITIL-Online-Courses-nl.asp">Intermediate OSA opleiding - $ 665 </a><br />
+                      <a href="/Dutch/ITIL-Online-Courses-nl.asp">Intermediate CSI opleiding - $ 665 </a><br />
  					<br /></p>
 					
 					<!--Blend Course -->
 					
 					<p id="imageHover"><a href="/ITIL-Online-Courses.asp"><img src="/images/buttons/Blended.png"  height="44px" border="0"></a></span>
                     <br />(Prijzen zijn inclusief belasting)<br /><br />
-					<a href="/ITIL-Online-Courses-nl.asp">ITIL gemengde opleiding - $ 450 </a>
+					<a href="/Dutch/ITIL-Online-Courses-nl.asp">ITIL gemengde opleiding - $ 450 </a>
 					<br /><br /></p>
 				
 

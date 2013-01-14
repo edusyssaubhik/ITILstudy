@@ -7,7 +7,7 @@
 			<a href="/Dutch/moneyBack-nl.asp" onmouseover="MM_swapImage('a','','/images/Dutch/Why_us_Green.png',1)" onmouseout="MM_swapImgRestore()">100% Niet-goed-geld-terug-garantie</a>		
       <a href="/Dutch/2-Day-ITIL-Training-nl.asp" onmouseover="MM_swapImage('a','','/images/Dutch/Why_us_Green.png',1)" onmouseout="MM_swapImgRestore()">Technieken voor versneld leren (2-daagse opleiding)</a>
 	  	   <a href="/Dutch/courseBenefits-nl.asp" onmouseover="MM_swapImage('a','','/images/Dutch/Why_us_Green.png',1)" onmouseout="MM_swapImgRestore()">Voordelen van de opleiding</span> </a>
-        <a href="/Dutch/instructors-nl.asp" onmouseover="MM_swapImage('a','','/images/Dutch/Why_us_Green.png',1)" onmouseout="MM_swapImgRestore()">Beste faculteit</a>
+        <a href="/Dutch/instructors-nl.asp" onmouseover="MM_swapImage('a','','/images/Dutch/Why_us_Green.png',1)" onmouseout="MM_swapImgRestore()">Beste docenten </a>
      <a href="/Dutch/free-onlinecertification-nl.asp" onmouseover="MM_swapImage('a','','/images/Dutch/Why_us_Green.png',1)" onmouseout="MM_swapImgRestore()">Gratis opleiding Risicomanagement</a>
  <!--<a href="/Dutch/kostenfreie-online-Zertifizierung.asp" onmouseover="MM_swapImage('a','','/images/Dutch/Why_us_Green.png',1)" onmouseout="MM_swapImgRestore()">Kostenfreie Six Sigma Green Belt oder Human Resource Development Zertifizierung</a>-->
 		 <a href="/Dutch/classroom-FAQ-nl.asp" onmouseover="MM_swapImage('a','','/images/Dutch/Why_us_Green.png',1)" onmouseout="MM_swapImgRestore()">Veelgestelde vragen</a>		 

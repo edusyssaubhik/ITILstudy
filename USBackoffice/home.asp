@@ -391,7 +391,7 @@ If datesent_email <> dateof_fac_mail Then
 		  
 			 Livepaymentstatus = objRs2("us_status")
 			 
-			 Select case paymentstatus
+			 Select case Livepaymentstatus
 			 
 				 case "P.O Received"
 				 
@@ -453,7 +453,7 @@ If datesent_email <> dateof_fac_mail Then
 		  
 			 Livepaymentstatus = objRs2("us_status")
 			 
-			 Select case paymentstatus
+			 Select case Livepaymentstatus
 			 
 				 case "P.O Received"
 				 
@@ -628,14 +628,30 @@ If datesent_email <> dateof_fac_mail Then
 		 End If
 		 
 		 'strBody = strBody & "</tr>"
-		 
-       'Making it zero'
-	   PO_Received = 0
-	   PaymentDeclined = 0
-	   UnderProcess = 0
-  
 
+        
      End If
+
+           'Making it zero'
+           PO_Received = 0
+	       PaymentDeclined = 0
+	       UnderProcess = 0
+           TotalEnrollments = 0 
+           Paid = 0 
+           LivePO_Received = 0
+           LiveTotalEnrollments = 0
+           LivePaid = 0
+           LivePaymentDeclined = 0
+           LiveUnderProcess = 0
+           LiveTotalEnrollments = 0
+           LivePaid = 0
+           LivePO_Received = 0
+           LivePaymentDeclined = 0
+           LiveUnderProcess= 0
+            
+           paymentstatus = ""
+           Livepaymentstatus = ""
+
      objRs1.Movenext
      Loop
 	 objRs1.Close

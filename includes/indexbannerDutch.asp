@@ -18,7 +18,7 @@
                 	<li>Beter dan de maatstaf van de industrie. </li>
                     <li>Ondersteund door onze 100% niet-goed-geld-terug-garantie</li>
                 </ul>
-                 <li>Concepten worden toegepast volgens levensechte situaties - <a href="/Dutch/realLifeExp.asp-nl">Meer</a>
+                 <li>Concepten worden toegepast volgens levensechte situaties - <a href="/Dutch/realLifeExp-nl.asp">Meer</a>
               <li>Klanttevredenheidsbeoordeling van 94% door D&B - <a href="http://www.itilstudy.com/DunandBradstreet-Report.pdf" >Meer</a></li>
               
 			  <li>Gespecialiseerd in ITIL opleidingen - <a href="/Dutch/better-than-competitors-nl.asp" >Meer</a></li>
@@ -50,7 +50,7 @@
         
            	    
           </ul>
-                 <span style="color:#FFF; text-align:left; margin-left:10px; padding-left:0px; margin-top:-10px;">Beter dan de concurrent. <a href="/Dutch/better-than-competitors.asp" style="color:#0CF;">Meer</a></span>
+                 <span style="color:#FFF; text-align:left; margin-left:10px; padding-left:0px; margin-top:-10px;">Beter dan de concurrent. <a href="/Dutch/better-than-competitors-nl.asp" style="color:#0CF;">Meer</a></span>
         </div>
         <div style="margin-top:240px; margin-right:20px; text-align:right; color:#FFF; font-size:10px;">Washington DC class April 2011</div> 	
   </div>
@@ -80,7 +80,7 @@
                 <ul id="banner-list">
                   <li>Wij bieden waarde voor uw geld voor al onze opleidingen </li>
                     <ul>
-                      <li>Gratis online gesimuleerde oefentoets - <a href="/Dutch/freeSimulatedTest-nl.asp">Meer</a></li>
+                      <li>Gratis online gesimuleerde oefentoets - <a href="/Dutch/freeSimulatedTest.asp">Meer</a></li>
                       <li>Online opleidingen vanaf $ 300  - <a href="/Dutch/ITIL-Online-Courses-nl.asp" >Meer</a></li>
 
                        
@@ -90,7 +90,7 @@
                       <li>Extra bedrijfskortingen tevens beschikbaar - <a href="/Dutch/contactus-nl.asp" >Neem contact met ons op</a></li>
                     </ul>             
               </ul>
-                    <span style="color:#FFF; text-align:left; margin-left:10px; padding-left:0px; margin-top:80px;">Beter dan de concurrent. <a href="/Dutch/better-than-competitors.asp" style="color:#0CF;">Meer</a></span>
+                    <span style="color:#FFF; text-align:left; margin-left:10px; padding-left:0px; margin-top:80px;">Beter dan de concurrent. <a href="/Dutch/better-than-competitors-nl.asp" style="color:#0CF;">Meer</a></span>
     </div>
      <div style="margin-top:240px; margin-right:20px; text-align:right; color:#FFF; font-size:10px;">Boston class October 2012</div> 	 
   </div>

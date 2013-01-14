@@ -215,7 +215,7 @@ End If
                 <select name="country" id="country" onChange="getCountry();">
                   <option value="">-Select Country-</option>
 				  <option <% If Session("CountryOrigin") = "Australia" Then %> selected="selected" <% End If %> value="Australia">Australia</option>
-                   <option <% If Session("CountryOrigin") = "Dutchy" Then %> selected="selected" <% End If %> value="Dutchy">Dutchy</option>
+                   <option <% If Session("CountryOrigin") = "Germany" Then %> selected="selected" <% End If %> value="Germany">Germany</option>
                   <option <% If Session("CountryOrigin") = "India" Then %> selected="selected" <% End If %> value="India">India</option>
                   <option <% If Session("CountryOrigin") = "Netherlands" Then %> selected="selected" <% End If %> value="Netherlands">Netherlands</option>
 				   <option <% If Session("CountryOrigin") = "Singapore" Then %> selected="selected" <% End If %> value="Singapore">Singapore</option>

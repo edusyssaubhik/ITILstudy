@@ -1,0 +1,1 @@
+<%Response.redirect "/ITIL-Foundation-Course.asp" %>
