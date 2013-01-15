@@ -201,6 +201,9 @@ ElseIf rqAction = "Re-Schedule" Then
   rqResAmount = request.Form("ResAmount")
 	 'If rqResCourseID <> "" Then
 	
+
+
+        
 		'SQL Query For Retrieve The Prices Displaying in The Step Two'
 	
 		 strQuery2 = "SELECT * FROM ITIL_course Where courseid = '" & rqResCourseID & "'"
@@ -214,7 +217,13 @@ ElseIf rqAction = "Re-Schedule" Then
 			EndDate   = Rs("enddate")
 			ApplicableDays = Rs("applicabledays")
 
-			
+			If Trim(Rs("Coursetype")) = "Live" Then
+                ITIL_EnrolledFor = "Live"
+            ElseIf Trim(Rs("Coursetype")) ="WBT" Then
+                ITIL_EnrolledFor = "WBT"
+            Else 
+                ITIL_EnrolledFor = "Classroom"
+            End If
 	
 			If (CDate(StartDate)-(Date()+ApplicableDays+1) >= 0) Then
 				Total = Rs("afterEBdiscountwithtax")
@@ -293,7 +302,7 @@ ElseIf rqAction = "Re-Schedule" Then
  		CourseDetails = City & " : " & FormatDateTime(StartDate,1) & " to " & FormatDateTime(EndDate,1) & " for " & Currency_Format_Front & " " & FormatNumber(RevisedCourseFee) & " " & Currency_Format_Back
  	
 	
-		  strQuery3 = "INSERT INTO ITIL_enrolledusers (firstname,lastname,email,nameofemployeer,phoneno,coursedetails,coursedate,amount,dateofenrollment,paybefore,status,pmbok,checkreceived,checkreceiveddate,checkreceivedby,statusnumber,courseid,discountpercentage,pmbokprice,res_can_mbg_amount,country,courseType,"
+		  strQuery3 = "INSERT INTO ITIL_enrolledusers (firstname,lastname,email,nameofemployeer,phoneno,coursedetails,coursedate,amount,dateofenrollment,paybefore,status,pmbok,checkreceived,checkreceiveddate,checkreceivedby,statusnumber,courseid,discountpercentage,pmbokprice,res_can_mbg_amount,country,EnrolledFor,courseType,"
 		If rqFBdiscount <> "" Then 
 		  strQuery3 =strQuery3 & " FBdiscount,"
 		  End If
@@ -320,7 +329,8 @@ ElseIf rqAction = "Re-Schedule" Then
 		 strQuery3 = strQuery3 & "'" & PMBokPrice & "',"
 		 strQuery3 = strQuery3 & "'" & TotalResAmount & "',"
 		 strQuery3 = strQuery3 & "'" & Session("country") & "',"
-		  strQuery3 = strQuery3 & "'" & rqcourseType & "',"
+         strQuery3 = strQuery3 & "'" & ITIL_EnrolledFor & "',"
+		 strQuery3 = strQuery3 & "'" & rqcourseType & "',"
 		 If rqFBdiscount <> "" Then	
 		  strQuery3 = strQuery3 & "'" & rqFBdiscount & "',"	
 		 End if

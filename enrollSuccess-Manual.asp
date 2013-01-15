@@ -8,7 +8,7 @@
 'If course id is nothing then redirect to enrollClass.asp page'
 rqCourseId =  Request.Form("courseid")
 If rqCourseId = "" Then
-    Response.Redirect("/enrollClass-Manual.asp")
+    Response.Redirect("/enrollClass_Manual.asp")
 End If
 %>
 <!-- Body Starts -->
@@ -55,6 +55,25 @@ Session("Email")            =  rqEmail
 Session("NameOfEmployeer")  =  rqNameOfEmployeer
 Session("PhoneNumber")      =  rqPhoneNumber
 Session("Course")           =  rqCourseDetails
+
+
+'If we directly open enrollclass.asp , empty value is stored in enrolled for column    
+If Trim(EnrolledFor_ITIL) = "" Then
+    Set rsEnrolledfor = Server.CreateObject("ADODB.Recordset")
+    Qu = "Select Coursetype from ITIL_course where courseid = '" & Trim(rqCourseId) &"'"
+    rsEnrolledfor.Open Qu,ConnObj
+    If Not rsEnrolledfor.Eof Then
+        If Trim(rsEnrolledfor("Coursetype")) = "Live" Then
+            EnrolledFor_ITIL = "Live"
+        ElseIf Trim(rsEnrolledfor("Coursetype")) ="WBT" Then
+            EnrolledFor_ITIL = "WBT"
+        Else 
+            EnrolledFor_ITIL = "Classroom"
+        End If
+    End If
+    rsEnrolledfor.close
+End If
+
 
 'Retriving country based on course id if session is expired'
 'If rqCourseId <> "" Then
@@ -156,7 +175,7 @@ If stateCode = "TX" And rqNameOfEmployeer = "" Then
 	 Session("SelectedCourseID") = rqCourseId
 	 Session("message") = "All participants attending our programs in Texas should be sponsored by their employer, and should provide the employer details while enrolling for the PMstudy course.<br><br>"
 
-	Response.Redirect("enrollClass-Manual.asp")
+	Response.Redirect("enrollClass_Manual.asp")
 
 End If
 
@@ -181,7 +200,7 @@ strInsertEnrollDet = "INSERT INTO ITIL_enrolledusers (firstname,lastname,email,n
 If (Session("CountryOrigin") = "United Kingdom" OR Session("CountryOrigin") = "India" OR Session("CountryOrigin") = "Australia") Then 
 strInsertEnrollDet = strInsertEnrollDet & "VAT,"
 End If
-strInsertEnrollDet = strInsertEnrollDet & "country)"
+strInsertEnrollDet = strInsertEnrollDet & "enrolledFor,country)"
 strInsertEnrollDet = strInsertEnrollDet & " Values "
 strInsertEnrollDet = strInsertEnrollDet & "('" & StrQuoteReplace(rqFirstName) & "',"
 strInsertEnrollDet = strInsertEnrollDet & "'" & StrQuoteReplace(rqLastName) & "',"
@@ -210,6 +229,7 @@ strInsertEnrollDet = strInsertEnrollDet & "'Foundation',"
 If (Session("CountryOrigin") = "United Kingdom" OR Session("CountryOrigin") = "India" OR Session("CountryOrigin") = "Australia") Then
 strInsertEnrollDet = strInsertEnrollDet & "'" & VAT & "',"
 End If
+strInsertEnrollDet = strInsertEnrollDet & "'" & EnrolledFor_ITIL & "',"
 strInsertEnrollDet = strInsertEnrollDet & "'" & Country & "')"
 
 ConnObj.Execute strInsertEnrollDet
