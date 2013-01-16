@@ -121,7 +121,7 @@ If Session("CountryOrigin")="" Then
           <% Do Until rsVenueDetails.EOF  %>
 		  <tr>
           	<td>City: 
-                  <%If Trim(rsVenueDetails("city")) <> "Virtual Classroom" Then %>
+                  <%If Trim(rsVenueDetails("CourseType")) <> "Live" Then %>
 		                    <% If rsVenueDetails("state_code") <> "" Then %>
 			                    <% = Trim(rsVenueDetails("city")) %>, <% = rsVenueDetails("state_code") %>
                                <%  else%>

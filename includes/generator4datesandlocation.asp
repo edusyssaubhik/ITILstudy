@@ -138,17 +138,17 @@
 	    If arrAllCourses(17,rowCounter) = "Corporate" Then
 	    strEnding= strEnding &""& Trim(arrAllCourses(1,rowCounter)) &""
 	    Else
-            If Not Trim(arrAllCourses(1,rowCounter)) = "Virtual Classroom" Then
+            If Not Trim(arrAllCourses(17,rowCounter)) = "Live" Then
 	            strEnding= strEnding &"<a href=""venue.asp?courseID="& arrAllCourses(0,rowCounter) &""" onClick=""return popitup('venue.asp?courseID="& arrAllCourses(0,rowCounter) &"')"">"& Trim(arrAllCourses(1,rowCounter)) &""
-            ElseIf Trim(arrAllCourses(1,rowCounter)) = "Virtual Classroom" Then
+            ElseIf Trim(arrAllCourses(17,rowCounter)) = "Live" Then
                 strEnding= strEnding &"<span Class=""LiveClass"" alt=""Virtual Live Class"">Live</span>&nbsp;<a href=""venue.asp?courseID="& arrAllCourses(0,rowCounter) &""" onClick=""return popitup('venue.asp?courseID="& arrAllCourses(0,rowCounter) &"')"">Virtual Live Class"
             End If
 	    End If 
 	
 	Else
-        If Not Trim(arrAllCourses(1,rowCounter)) = "Virtual Classroom" Then
+        If Not Trim(arrAllCourses(17,rowCounter)) = "Live" Then
 	            strEnding= strEnding &""& Trim(arrAllCourses(1,rowCounter)) &"<br>"
-        ElseIf Trim(arrAllCourses(1,rowCounter)) = "Virtual Classroom" Then
+        ElseIf Trim(arrAllCourses(17,rowCounter)) = "Live" Then
                 strEnding= strEnding &"<span Class=""LiveClass"" alt=""Virtual Live Class"">Live</span>&nbsp;Virtual Live Class<br>"
         End If
 	End If

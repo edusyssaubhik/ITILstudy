@@ -58,10 +58,18 @@ rqPriceWithTax 	   =  Trim(Request.Form("pricewithtax"))
 rqPriceWithOutTax  =  Trim(Request.Form("pricewithouttax"))
 rqcheck        = Request.Form("check")
 'response.Write(rqcheck)
-If  Request.Form("CourseType") = "Enroll" OR  Request.Form("CourseType") = "Enrol" Then
-rqCourseType = "Classroom"
+'If  Request.Form("CourseType") = "Enroll" OR  Request.Form("CourseType") = "Enrol" Then
+'rqCourseType = "Classroom"
+'Else
+'rqCourseType = Request.Form("CourseType")
+'End If
+
+If  Request.Form("CourseType") = "Live" Then
+    rqCourseType = "Live"
+ElseIf Request.Form("CourseType") = "WBT" Then
+    rqCourseType = "WBT"
 Else
-rqCourseType = Request.Form("CourseType")
+    rqCourseType = "Classroom"
 End If
 
 'If we directly open enrollclass.asp , empty value is stored in enrolled for column    

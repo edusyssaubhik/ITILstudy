@@ -131,7 +131,7 @@
 							'Course Price'
 
 							'If (Session("CountryOrigin") = "United Kingdom" OR Session("CountryOrigin") = "Germany") Then
-							If (Session("CountryOrigin") = "United Kingdom" OR Session("CountryOrigin") = "India" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "Australia") Then
+							If (Session("CountryOrigin") = "United Kingdom" OR Session("CountryOrigin") = "India" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "Australia" OR Session("CountryOrigin") = "Netherlands") Then
 							
 								If Not IsNull(Rs("VAT")) Then
 								
@@ -176,7 +176,7 @@
                       </span></td>
 					   </tr>
                   <% 'If (Session("CountryOrigin") = "United Kingdom" OR Session("CountryOrigin") = "Germany") Then %>
-                  <% If (Session("CountryOrigin") = "United Kingdom" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "India" OR Session("CountryOrigin") = "Australia") Then %>
+                  <% If (Session("CountryOrigin") = "United Kingdom" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "India" OR Session("CountryOrigin") = "Australia" OR Session("CountryOrigin") = "Netherlands") Then %>
                   <% If VAT <> "" AND VAT <> 0 Then %>
                   <tr>
                     <td class="TableRowEven"><span class="TableCopyName">VAT @
@@ -186,6 +186,8 @@
                       10.3%
                        <% ElseIf (Session("CountryOrigin") = "Germany") Then %>
                       19%
+                        <% ElseIf (Session("CountryOrigin") = "Netherlands") Then %>
+                        19%
                       <% ElseIf (Session("CountryOrigin") = "Australia") Then %>
                       10%
                       <% End If %>
@@ -461,7 +463,7 @@
       
       </tr>  
       
-       <% ElseIf Session("CountryOrigin") = "Germany"  Then %>
+       <% ElseIf Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "Netherlands" Then %>
             <tr>
               <td class="btext"><table border="0" width="100%">
      
