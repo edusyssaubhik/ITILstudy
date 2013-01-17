@@ -28,13 +28,14 @@
 				 Dim RqCourse,Rqname,rqPhoneno,rqLocation,rqQues,rqConvenient_Time
 				 
 				 
-				  rqType  = Request.Form("type")
+				  rqType  = Trim(Request.Form("type"))
 				'  RqCourse = Request.Form("course")
-				  Rqname = Replace(Request.Form("Name"),"'","''")
-				  rqPhoneno = Request.Form("Phoneno")
-				  rqLocation = Request.Form("Location")
-				  rqQues = Replace(Request.Form("Ques"),"'","''")
-				 rqConvenient_Time = Request.Form("Convenient_Time")
+				  Rqname = Replace(trim(Request.Form("Name")),"'","''")
+				  rqPhoneno = trim(Request.Form("Phoneno"))
+                      rqemail = trim(Request.Form("emailId"))
+				  rqLocation = trim(Request.Form("Location"))
+				  rqQues = Replace(trim(Request.Form("Ques")),"'","''")
+				 rqConvenient_Time = trim(Request.Form("Convenient_Time"))
 				  
 ' ----------------------------------------------------------------------------------
 '	 Inserting details of complaint log
@@ -42,9 +43,10 @@
 	    
    		'If rqType = "Submit" Then
    
-		   strQuery = "INSERT INTO callback (Name, PhoneNo, location,Convenient_Time, enteredDate,query,country)"
+		   strQuery = "INSERT INTO callback (Name,emailid, PhoneNo, location,Convenient_Time, enteredDate,query,country)"
 		   strQuery = strQuery & " values "
 		   strQuery = strQuery & "('" & Rqname & "',"
+            strQuery = strQuery & "' " & rqemail & " ',"
 		   strQuery = strQuery & "' " & rqPhoneno & " ',"
 		   strQuery = strQuery & "'" & rqLocation & "',"
 		   strQuery = strQuery & "'" & rqConvenient_Time & "',"

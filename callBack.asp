@@ -4,22 +4,15 @@
 
 
 <script type="text/javascript">
-<!--
-function Form_Validator(theform)
-{
 
+    function validateForm(theform)
+{
   //Check To See If The Current Password Field Is Blank
    
-  if (theform.course.value == '')
-  {
-    alert("Please Selct course");
-    theform.course.focus();
-	return(false);
-  }
 
   //Check To See If The New Password Field Is Blank
     
-  if (theform.Name.value == '')
+        if (theform.Name.value.trim() == "")
   {
     alert("Please enter Name");
     theform.Name.focus();
@@ -27,21 +20,21 @@ function Form_Validator(theform)
   }
 
 
-  if (theform.Name.value == '')
+        if (theform.emailId.value.trim() == "")
   {
-    alert("Please enter Name");
-    theform.Name.focus();
+    alert("Please enter email id");
+    theform.emailId.focus();
 	return(false);
   }
   
-    if (theform.Phoneno.value == '')
+  if (theform.Phoneno.value.trim() == "")
   {
     alert("Please enter Phone number");
     theform.Phoneno.focus();
 	return(false);
   }
   
-    if (theform.Location.value == '')
+  if (theform.Location.value.trim() == "")
   {
     alert("Please enter Location");
     theform.Location.focus();
@@ -49,21 +42,17 @@ function Form_Validator(theform)
   }
   
    
-    if (theform.Convenient_Time.value == '')
+  if (theform.Convenient_Time.value.trim() == "")
   {
     alert("Please enter Convenient time");
     theform.Convenient_Time.focus();
 	return(false);
   }
   
-  
+  return true;
   
 }
 
-
-
-
--->
 </script>
 <!-- Body Starts -->
 
@@ -79,11 +68,16 @@ function Form_Validator(theform)
           <tr>
             <!--#include virtual="/includes/innerLeftMenu.asp"-->
             <td width="73%" rowspan="4" background="/images/back/left_line.jpg" class="general-body"><h5 class="Header">Call back form</h5>
+                <form method="POST" action="/Responsecallback.asp" name="form2" onSubmit="return validateForm(this)">
               <table border="0">
-                <form method="POST" action="/Responsecallback.asp" name="form2" onSubmit="return Form_Validator(this)">
+                
                   <tr>
                     <td ><span class="general-bodyBold">Name</span><span class="Required">*</span></td>
                     <td ><input type="text" name="Name"></td>
+                  </tr>
+                    <tr>
+                    <td><span class="general-bodyBold">Email ID</span><span class="Required">*</span>:</td>
+                    <td ><input type="text" name="emailId"></td>
                   </tr>
                   <tr>
                     <td><span class="general-bodyBold">Phone No.</span><span class="Required">*</span>:</td>
@@ -108,8 +102,9 @@ function Form_Validator(theform)
                     <td><input type="submit"  value="Submit" class="button" style="width:60px;" >
                       <input type="reset" value="Reset"  class="button" style="width:60px;"></td>
                   </tr>
-                </form>
+                
               </table>
+                    </form>
               <br/>
               <br/></td>
           </tr>
