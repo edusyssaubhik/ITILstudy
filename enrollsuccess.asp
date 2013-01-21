@@ -565,8 +565,10 @@ EnrollId = Session("EnrollId")
 		  strBody = strBody & "VAT: @ 20%"
 		  ElseIf Session("CountryOrigin") = "Australia" Then 
 		  strBody = strBody & " GST: @ 10%"
-		  ElseIf Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "Netherlands" Then 
-		  strBody = strBody & " VAT: @ 19%"
+		  ElseIf Session("CountryOrigin") = "Germany" Then
+		  strBody = strBody & " VAT: @ 19%"		  
+		  ElseIf Session("CountryOrigin") = "Netherlands" Then 
+		  strBody = strBody & " VAT: @ 21%"
 		  End If
 		  strBody = strBody & "</b></font></td><td align=""center""><font face=""Arial"" size=""2""><b>"
 		  strBody = strBody & Currency_Format_Front & " " & FormatNumber(VAT) & " " & Currency_Format_Back & "</b></font></td></tr>"		  
@@ -629,10 +631,12 @@ EnrollId = Session("EnrollId")
 		  strBody = strBody & "<span>Alternate Payment Mechanism: </span>If you have problems in making payments through Cheque or Demand Draft, please email us at <a href=""mailto:marketing@ITILstudy.com"" target=""_blank"">marketing@ITILstudy.com</a>; we will suggest alternate payment options to you."
 		  
 		  ElseIf (Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" ) Then
+		  
+		    strBody = strBody & "<ul><li><font face=""Arial"" size=""2""><b>PayPal: </b></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href=""http://www.itilstudy.com/payment.asp?enrollUserID="& Session("EnrollId") &"&Country="& Session("CountryOrigin") &"""><font face=""Arial"" size=""2"" color=""#0359b4""><input type=""image"" src=""http://www.itilstudy.com/images/back/buybutton.gif"" alt=""BuyNow"" /></font></a></li><br/>"
 		  		  
-		  strBody = strBody & "<ul><li><font face=""Arial"" size=""2""><b>Google Checkout: </b></font>&nbsp;&nbsp;<a href=""http://www.itilstudy.com/payment.asp?enrollUserID="& Session("EnrollId") &"&Country="& Session("CountryOrigin") &"""><font face=""Arial"" size=""3"" color=""#0359b4""><input type=""image"" src=""http://www.itilstudy.com/images/back/buybutton.gif"" alt=""BuyNow"" /></font></a></li>"
+		  strBody = strBody & "<li><font face=""Arial"" size=""2""><b>Google Checkout: </b></font>&nbsp;&nbsp;<a href=""http://www.itilstudy.com/payment.asp?enrollUserID="& Session("EnrollId") &"&Country="& Session("CountryOrigin") &"""><font face=""Arial"" size=""3"" color=""#0359b4""><input type=""image"" src=""http://www.itilstudy.com/images/back/buybutton.gif"" alt=""BuyNow"" /></font></a></li><br/>"
 		 
-		  strBody = strBody & "<li><font face=""Arial"" size=""2""><b>PayPal: </b></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href=""http://www.itilstudy.com/payment.asp?enrollUserID="& Session("EnrollId") &"&Country="& Session("CountryOrigin") &"""><font face=""Arial"" size=""2"" color=""#0359b4""><input type=""image"" src=""http://www.itilstudy.com/images/back/buybutton.gif"" alt=""BuyNow"" /></font></a></li>"
+		
 		  
 		    strBody = strBody & "<li><font face=""Arial"" size=""2""><b>Bank Transfer: </b></font><br><b>Bank Name: </b>Bank of America, Frederick, MD, USA<br /><b>Type of Account:</b> Current<br /><b>Account Name:</b> VMedu Inc<br><b>Account Number: </b>4460 0519 5480<br><b>Routing Number:</b> 052001633 (paper & electronic) / 026009593 (wires)<br /></li></ul>"
 			
@@ -893,7 +897,7 @@ End If
                 <% = Currency_Format_Back %>
                 </span></td></tr>
               <tr>
-              <td class="TableRowEven"><span class="TableCopyName"><% If (Session("CountryOrigin") = "United Kingdom") Then %>VAT: @ 20%<% ElseIf (Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "Netherlands") Then %>VAT: @ 19%<% ElseIf (Session("CountryOrigin") = "India") Then %><% =  Tax %>% service tax <% ElseIf Session("CountryOrigin") = "Australia"  Then %>GST: @ 10%<% End If %></span></td><td align="center" class="TableRowEven"><span class="TableCopyName">
+              <td class="TableRowEven"><span class="TableCopyName"><% If (Session("CountryOrigin") = "United Kingdom") Then %>VAT: @ 20% <% ElseIf (Session("CountryOrigin") = "Germany") Then %>VAT: @ 19% <% ElseIf (Session("CountryOrigin") = "Netherlands") Then %>VAT: @ 21%   <% ElseIf (Session("CountryOrigin") = "India") Then %><% =  Tax %>% service tax <% ElseIf Session("CountryOrigin") = "Australia"  Then %>GST: @ 10%<% End If %></span></td><td align="center" class="TableRowEven"><span class="TableCopyName">
                 <% = Currency_Format_Front %>
                 <% = FormatNumber(VAT) %>
                 <% = Currency_Format_Back %>
@@ -1010,24 +1014,9 @@ End If
       <% ElseIf (Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada") Then %>
       <tr>
         <td class="btext"><table border="0" width="100%">
-            <tr>
-              <td width="25%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>1. Google Checkout </B></td>
-              <td><form action="https://checkout.google.com/api/checkout/v2/checkoutForm/Merchant/749730688196705" id="BB_BuyButtonForm" method="post" name="BB_BuyButtonForm">
-                  <input name="item_name_1" type="hidden" value="ITILstudy <% = rqCourseType %> Training"/>
-                  <input name="item_description_1" type="hidden" value="ITILstudy <% = rqCourseType %> Training"/>
-                  <input name="item_quantity_1" type="hidden" value="1"/>
-                  <% If TotalFBdis <> "" Then %>
-                  <input name="item_price_1" type="hidden" value="<% = TotalFBdis %>"/>
-                  <% Else %>
-                   <input name="item_price_1" type="hidden" value="<% = Total %>"/>
-                   <% End If %>
-                  <input name="item_currency_1" type="hidden" value="USD"/>
-                  <input name="_charset_" type="hidden" value="utf-8"/>
-                  <input alt="" src="https://checkout.google.com/buttons/buy.gif?merchant_id=749730688196705&amp;w=117&amp;h=48&amp;style=white&amp;variant=text&amp;loc=en_US" type="image" align="middle"/>
-                </form></td>
-            </tr>
-            <tr>
-              <td width="25%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>2. Paypal </B></td>
+        
+         <tr>
+              <td width="25%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>1. Paypal </B></td>
               <td><form action="https://www.paypal.com/cgi-bin/webscr" method="post">
                   <input type="hidden" name="cmd" value="_xclick">
                   <input type="hidden" name="business" value="vmeduinc1@gmail.com">
@@ -1042,6 +1031,24 @@ End If
                   <input type="image" src="/images/back/buybutton.gif" alt="BuyNow" />
                 </form></td>
             </tr>
+        
+            <tr>
+              <td width="25%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>2. Google Checkout </B></td>
+              <td><form action="https://checkout.google.com/api/checkout/v2/checkoutForm/Merchant/749730688196705" id="BB_BuyButtonForm" method="post" name="BB_BuyButtonForm">
+                  <input name="item_name_1" type="hidden" value="ITILstudy <% = rqCourseType %> Training"/>
+                  <input name="item_description_1" type="hidden" value="ITILstudy <% = rqCourseType %> Training"/>
+                  <input name="item_quantity_1" type="hidden" value="1"/>
+                  <% If TotalFBdis <> "" Then %>
+                  <input name="item_price_1" type="hidden" value="<% = TotalFBdis %>"/>
+                  <% Else %>
+                   <input name="item_price_1" type="hidden" value="<% = Total %>"/>
+                   <% End If %>
+                  <input name="item_currency_1" type="hidden" value="USD"/>
+                  <input name="_charset_" type="hidden" value="utf-8"/>
+                  <input alt="" src="https://checkout.google.com/buttons/buy.gif?merchant_id=749730688196705&amp;w=117&amp;h=48&amp;style=white&amp;variant=text&amp;loc=en_US" type="image" align="middle"/>
+                </form></td>
+            </tr>
+           
          
       <tr>
               <td width="25%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>3. Bank Transfer :</B></td>
