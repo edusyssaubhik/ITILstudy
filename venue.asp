@@ -137,7 +137,7 @@ If Session("CountryOrigin")="" Then
           </tr>
 		  <tr>
           	<td>Timings: <% = rsVenueDetails("starthour") %>:<% = rsVenueDetails("startminute") %>&nbsp;<% = rsVenueDetails("startsession") %> to <% = rsVenueDetails("endhour") %>:<% = rsVenueDetails("endminute") %>&nbsp;<% = rsVenueDetails("endsession") %>
-            <%If rsVenueDetails("Coursetype") ="Live" Then %> PST<%End If %>
+           <!-- <%'If rsVenueDetails("Coursetype") ="Live" Then %> PST<%'End If %>-->
           	</td>
           </tr>
 		  <tr>
