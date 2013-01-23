@@ -185,9 +185,9 @@
                       <% ElseIf (Session("CountryOrigin") = "India") Then %>
                       10.3%
                        <% ElseIf (Session("CountryOrigin") = "Germany") Then %>
-                      19%
+                         19%
                         <% ElseIf (Session("CountryOrigin") = "Netherlands") Then %>
-                        19%
+                        21%
                       <% ElseIf (Session("CountryOrigin") = "Australia") Then %>
                       10%
                       <% End If %>
