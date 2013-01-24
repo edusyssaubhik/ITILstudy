@@ -7,13 +7,15 @@
 <!--#include virtual="/includes/location.html"-->
 
 
-
-
+<% If Session("CountryOrigin") <> "Other" Then 
+Response.Redirect("http://www.itilstudy.com/ITIL-Courses.asp")
+End If
+%>
 
 
 <style type="text/css">
     td.TableLiveClass {
-        border-top:1px solid #c3dcc0;
+        /*border-top:1px solid #c3dcc0;
         
         background:#e1fede;
         color: #000000;
@@ -21,7 +23,7 @@
         font-size: 12px;
         height: 23px;
         padding: 5px;
-        vertical-align: middle;
+        vertical-align: middle;*/
     }
     span.LiveClass {
         border:1px solid #000000;
@@ -360,69 +362,7 @@ else if (ns6||ie4) ld.display="none";
 					<table border="0">
 					<% If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada"  Then %>
                      <tr>
-                      <td valign="top" ><form name="frmselections">
-                          <table  border="0" cellspacing="0" cellpadding="8" align="left">
-                            <tr>					
-					  			<td>
-								  <select name="country1" id="country1" style="width:150px;" class="TeXtFielddropdown" onChange="findCountry(this.value,'Normal');clicked1();">
-									<option value="Normal">-- Select Country --</option>
-									<option value="US">US</option>
-									<option value="Canada">Canada</option>
-									
-								   </select>
-								  </td>
-
-                             	 <td>
-							  		<Select name="location" id="location" style="width:165px" disabled="disabled" class="TeXtFielddropdown"  onChange="findCity1(this.value,'Normal');">
-					   					 <option value="All">-- Select City --</option>
-						 		  	</select>
-    	                          </td>
-        	                     <!-- <td><select name="dates" id="dates" style="width:165px" disabled="disabled" class="TeXtFielddropdown" onChange="findDate(this.value);">
-            	                      <option value="">-- Select Country First --</option>
-                                	</select>
-                              	  </td>-->
-                            	</tr>
-                             </table>
-                        </form></td>
-                    </tr>
-						
-					<% Else %>
-                     <tr>
-                      <td valign="top"><form name="frmselections">
-                          <table  border="0" cellspacing="0" cellpadding="8" align="left">
-                            <tr>
-                              <td><select name="location" id="location" style="width:200px;" class="TeXtFielddropdown" onChange="findCity(this.value,'Normal');">
-                                  <option value="All">------- Select City---- </option>
-                                  <% If IsArray(arrAllDates) Then
-	  					    		 For rowCityCounter = CityfirstRow to CitylastRow %>
-                                  <option value="<% = arrAllCities(0,rowCityCounter) %>">
-                                  <% = arrAllCities(0,rowCityCounter) %><% If Session("CountryOrigin") <> "United Kingdom" Then %><% If arrAllCities(1,rowCityCounter) <> "" Then %>, <% = arrAllCities(1,rowCityCounter) %><% End If %><% End If %>
-                                  </option>
-                                  <% Next
-								     End If %>
-                                  
-                                </select>
-                              </td>
-                              <td><select name="dates" id="dates" class="TeXtFielddropdown" onChange="findDate(this.value);">
-                                  <option value="All">-- Select Date --</option>
-                                  <% If IsArray(arrAllDates) Then
-									 For rowDateCounter = DatefirstRow to DatelastRow
-									 StartDate = arrAllDates(0,rowDateCounter)
-									 EndDate   = arrAllDates(1,rowDateCounter) %>
-                                  <option value="<% = DAY(StartDate) & " " & MonthName(Month(StartDate),3) & " "  & YEAR(StartDate)%> to <% = DAY(EndDate) & " " & MonthName(Month(EndDate),3) & " "  & YEAR(EndDate)%>">
-                                  <% = DAY(StartDate) & " " & MonthName(Month(StartDate),3) & " "  & YEAR(StartDate)%>
-                                  to
-                                  <% = DAY(EndDate) & " " & MonthName(Month(EndDate),3) & " "  & YEAR(EndDate)%>
-                                  </option>
-                                  <% 'End If
-				     				 Next
-						             End If %>
-                                  <option value="All">All</option>
-                                </select>
-                              </td>
-                            </tr>
-                          </table>
-                        </form>
+                      <td valign="top" >
 						 
 						</td>
                     </tr>
@@ -527,7 +467,7 @@ else if (ns6||ie4) ld.display="none";
                 <%End If%>
                 
                
-                <p><a href="enrollClass.asp" class="Header"><% If Session("CountryOrigin") = "United Kingdom" Then %>ENROL<% Else %>ENROLL <% End If %> in ITILstudy
+                <p><a href="ITIL-Led-enrollClass.asp" class="Header"><% If Session("CountryOrigin") = "United Kingdom" Then %>ENROL<% Else %>ENROLL <% End If %> in ITILstudy
                   <% = Session("CountryOrigin") %>
                   classroom training </a> </p>
          

@@ -51,7 +51,7 @@
 	todayDate = FormatDateTime(Now(),2)
 	
 	'Condition for comparing retrived date and now date for running generator
-	If rqdate <> todayDate OR rqdate = "" OR generate <> "" Then
+	'If rqdate <> todayDate OR rqdate = "" OR generate <> "" Then
 	
 	'Constructing Page and keeping in  string.
 	'==================================================Page==================================================================== 
@@ -78,6 +78,12 @@
 	If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" Then
 	
 	strQuery2 = "SELECT course.courseid,course.city,course.startdate,course.enddate, course.starthour,course.startminute,course.startsession,course.endhour,course.endminute,course.endsession,course.pricewithouttax,course.tax,course.pricewithtax,course.applicabledays,course.afterEBdiscountwithouttax,course.afterEBdiscountwithtax,course.status,course.coursetype,city.state_code, course.country FROM ITIL_course course, ITIL_city city Where course.city = city.city And (course.country = 'US' OR course.country = 'Canada') And (city.country = 'US' OR city.country = 'Canada') AND (course.country = city.country) AND course.coursetype <> 'CSI' AND course.coursetype <> 'OSA'  AND course.coursetype <> 'ST' AND course.status <> 'Cancelled' And course.startdate BETWEEN '"&Now() - 1&"' AND DATEADD(day,180,'"&Now()&"')  order by course.startdate, course.city asc"
+	
+	
+	ElseIf Session("CountryOrigin") = "Other" Then
+	
+	strQuery2 = "SELECT course.courseid,course.city,course.startdate,course.enddate, course.starthour,course.startminute,course.startsession,course.endhour,course.endminute,course.endsession,course.pricewithouttax,course.tax,course.pricewithtax,course.applicabledays,course.afterEBdiscountwithouttax,course.afterEBdiscountwithtax,course.status,course.coursetype,city.state_code, course.country FROM ITIL_course course, ITIL_city city Where course.city = city.city And (course.country = 'US' OR course.country = 'Canada' OR course.country = 'United Kingdom') And (city.country = 'US' OR city.country = 'Canada' OR city.country = 'United Kingdom') AND (course.country = city.country) AND course.coursetype ='Live' AND course.status <> 'Cancelled' And course.startdate BETWEEN '"&Now() - 1&"' AND DATEADD(day,180,'"&Now()&"')  order by course.startdate, course.city asc"
+	
 	
 	Else
 	
@@ -171,8 +177,21 @@
 	
 	strEnding= strEnding &"<br></td><td class="& bgColor &"> "& DAY(arrAllCourses(2,rowCounter)) & " " & MonthName(Month(arrAllCourses(2,rowCounter)),3) & " "  & YEAR(arrAllCourses(2,rowCounter))&" to <br /> "& DAY(arrAllCourses(3,rowCounter)) & " " & MonthName(Month(arrAllCourses(3,rowCounter)),3) & " "  & YEAR(arrAllCourses(3,rowCounter))&"</td>"
 	
-		 If Session("CountryOrigin") <> "US" And Session("CountryOrigin") <> "Canada" Then 
+		 If (Session("CountryOrigin") <> "US" And Session("CountryOrigin") <> "Canada") AND Session("CountryOrigin") <> "Other"  Then 
 	strEnding= strEnding &"<td class="& bgColor &" width=""23%"">"& arrAllCourses(4,rowCounter) &":"& arrAllCourses(5,rowCounter) &"&nbsp;"& arrAllCourses(6,rowCounter) &" - "& arrAllCourses(7,rowCounter) &":"& arrAllCourses(8,rowCounter) &"&nbsp;"& arrAllCourses(9,rowCounter) &""
+	
+        ElseIf Session("CountryOrigin") = "Other" Then
+   
+            strEnding= strEnding &"<td class="& bgColor &" width=""23%"">"& arrAllCourses(4,rowCounter) &":"& arrAllCourses(5,rowCounter) &"&nbsp;"& arrAllCourses(6,rowCounter) &" - "& arrAllCourses(7,rowCounter) &":"& arrAllCourses(8,rowCounter) &"&nbsp;"& arrAllCourses(9,rowCounter) & "" 
+   
+ 
+    If arrAllCourses(19,rowCounter) = "US" Then
+    strEnding= strEnding & "&nbsp;CST"
+	
+	Else 
+    strEnding= strEnding & "&nbsp;UK"
+	
+   End If
    
 	End If
 	If arrAllCourses(17,rowCounter) = "Corporate" Then
@@ -282,6 +301,9 @@ Else
 	ElseIf arrAllCourses(17,rowCounter) = "Live" Then 
 		If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" Then	 
 	strEnding= strEnding &"<td class="& bgColor &"><div align=""center""><form action=""/enrollclass.asp"" method=""post""><input type=""hidden"" name=""SelCourseID"" value="& arrAllCourses(0,rowCounter) &" /><input type=""submit"" name=""TypeCourse"" value=""Live"" class=""ButtonSmall""/></form></div>"	
+	ElseIF Session("CountryOrigin") = "Other" Then
+	
+	strEnding= strEnding &"<td class="& bgColor &"><div align=""center""><form action=""/ITIL-Led-enrollclass.asp"" method=""post""><input type=""hidden"" name=""SelCourseID"" value="& arrAllCourses(0,rowCounter) &" /><input type=""submit"" name=""TypeCourse"" value=""Live"" class=""ButtonSmall""/></form></div>"	
 	Else
 	strEnding= strEnding &"<td class="& bgColor &"><div align=""center""><form action=""/enrollclass.asp"" method=""post""><input type=""hidden"" name=""SelCourseID"" value="& arrAllCourses(0,rowCounter) &" /><input type=""submit"" name=""TypeCourse"" value=""Live"" class=""ButtonSmall""/></form></div></td>"
 	End If
@@ -334,7 +356,7 @@ Else
 	Else
 	Connobj.Execute strPay
 	End If
-	End If
+	'End If
 	
 	
 	
