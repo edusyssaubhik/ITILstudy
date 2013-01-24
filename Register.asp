@@ -48,6 +48,14 @@ function Form_reg_Validator(theform)
     theform.repass.focus();
 	return(false);
   }
+  
+  //Check To See If The Current Password Field Is Blank    
+  if (theform.phone.value == "Please Enter Your Phone Number" || theform.phone.value =="" || theform.phone.value.length <2)
+  {
+    alert("Please enter phone number");
+    theform.phone.focus();
+	return(false);
+  }  
   										  
 }
 -->
@@ -119,7 +127,7 @@ session("errormsg")=""
 						          &nbsp;&nbsp;Maximum length: 10 characters</td>
 						      </tr>
               <tr>
-						        <td><span class="general-bodyBold">Contact-no</span>:</td>
+						        <td><span class="general-bodyBold">Contact-no</span><span class="Required">*</span>:</td>
 						        <td>
 								 <input type="text" name="phone" class="TeXtField"></td>
 						      </tr>

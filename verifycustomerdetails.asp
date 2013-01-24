@@ -41,6 +41,12 @@
 						Function StrQuoteReplace(strValue)
    						StrQuoteReplace = Replace(strValue, "'", "''")
 						End Function
+						
+						If Request.Form("item_number") = "0051" OR Request.Form("item_number") = "112" Then
+							If Request.Form("ebay_address_id") = "" Then
+								Response.Redirect("/customerdetails.asp")
+							End If
+						End If
 
 						' assign posted variables to local variables
 						first_name = Request.Form("first_name")
