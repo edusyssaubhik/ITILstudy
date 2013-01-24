@@ -783,6 +783,18 @@ function getQueries() {
 }
 
 </script>
+<script language="javascript" type="text/javascript">
+<!--
+
+function popitup(url) {
+	newwindow=window.open(url,'name','toolbar=0,location=0,directories=0,status,menubar=0,scrollbars=0,minimizable=0,resizable=0,height=300,width=300,top=250,left=400');
+	if (window.focus) {newwindow.focus()}
+	return false;
+}
+
+// -->
+<!--  PMstudy -->
+</script>
 </head>
 <body>
 <div id="wrapper">
@@ -1006,8 +1018,9 @@ function getQueries() {
           <tr>
             <td bgcolor="#A7DBFB" align="center"><b>Name</b></td>
             <td bgcolor="#A7DBFB" align="center" width="50%"><b>Course Details</b></td>
-            <td bgcolor="#A7DBFB" align="center"><b>Phone Number</b></td>
-            <td bgcolor="#A7DBFB" align="center"><b>Email Id</b></td>
+            <td bgcolor="#A7DBFB" align="center"><b>Details</b></td>
+          <!--  <td bgcolor="#A7DBFB" align="center"><b>Phone Number</b></td>
+            <td bgcolor="#A7DBFB" align="center"><b>Email Id</b></td>-->
             <td bgcolor="#A7DBFB" align="center"><b>Name of Employer</b></td>
             <td bgcolor="#A7DBFB" align="center"><b>Date of Enrollment</b></td>
             <td bgcolor="#A7DBFB" align="center"><b>Comments</b></td>
@@ -1028,8 +1041,9 @@ function getQueries() {
               &nbsp;
               <% = arrAllPayNotRec(1,payNotRecRowcounter) %></td>
             <td><% = arrAllPayNotRec(5,payNotRecRowcounter) %></td>
-            <td><% = arrAllPayNotRec(4,payNotRecRowcounter) %></td>
-            <td><% = arrAllPayNotRec(2,payNotRecRowcounter) %></td>
+            <td><a href="/USBackoffice/userClassDetails.asp?EnrollID=<% = enrollId %>" onClick="return popitup('/USBackoffice/userClassDetails.asp?EnrollID=<% = enrollId %>')">Details</a></td>
+           <!-- <td><% '= arrAllPayNotRec(4,payNotRecRowcounter) %></td>
+            <td><%' = arrAllPayNotRec(2,payNotRecRowcounter) %></td>-->
             <td><% = arrAllPayNotRec(3,payNotRecRowcounter) %></td>
             <td><% = arrAllPayNotRec(6,payNotRecRowcounter) %></td>
             <form name="comment" action="addEnrollComments.asp" method="post" onsubmit="return Form_Validator(this)">
