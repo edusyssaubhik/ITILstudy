@@ -1232,8 +1232,8 @@ function popitup(url) {
 			<%' End If %>
             <td bgcolor="#A7DBFB" align="center"><b>City</b></td>
             <td bgcolor="#A7DBFB" align="center"><b>Name</b></td>
-            <td bgcolor="#A7DBFB" align="center"><b>Phone Number</b></td>
-            <td bgcolor="#A7DBFB" align="center"><b>Email Id</b></td>
+           <!-- <td bgcolor="#A7DBFB" align="center"><b>Phone Number</b></td>
+            <td bgcolor="#A7DBFB" align="center"><b>Email Id</b></td>-->
 			<td bgcolor="#A7DBFB" align="center"><b>Type of Call</b></td>			
             <td bgcolor="#A7DBFB" align="center"><b>Question</b></td>
             <td bgcolor="#A7DBFB" align="center"><b>Comments</b></td>
@@ -1260,9 +1260,10 @@ function popitup(url) {
             </td>
             <td><% = arrAllCallDet(2,rowcounter) %></td>
             <td><% = arrAllCallDet(3,rowcounter) %></td>
-            <td><% = arrAllCallDet(4,rowcounter) %></td>
+            <td><a href="/USBackoffice/userCallDetails.asp?callID=<% = CallID %>" onClick="return popitup('/USBackoffice/userCallDetails.asp?callID=<% = CallID %>')">Details</a></td>
+            <!--<td><% '= arrAllCallDet(4,rowcounter) %></td>
 	
-            <td><% = arrAllCallDet(5,rowcounter) %></td>
+            <td><% '= arrAllCallDet(5,rowcounter) %></td>-->
 						<td><% = arrAllCallDet(9,rowcounter) %></td>		
             <td><% = arrAllCallDet(6,rowcounter) %>
               <br />

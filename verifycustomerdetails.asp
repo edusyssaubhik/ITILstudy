@@ -624,13 +624,13 @@ end if
 						' response.Write(strString)
 						 
 						End If
-						Importance of the e-mail (0=Low, 1=Normal, 2=High)
+						'Importance of the e-mail (0=Low, 1=Normal, 2=High)
 						objCDOMail.Importance = 2
-						Send the e-mail
+						'Send the e-mail
 						objCDOMail.Send
-						Close the server object
+						'Close the server object
 						Set objCDOMail = Nothing 
-						
+					End if
 								%>
                 <% End If%>
                 <!-- Content End From Here-->

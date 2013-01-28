@@ -293,7 +293,7 @@ End If
                            <li>Approved by 2 leading ITIL Examination Institutes - APMG and CSME. <a href="/aboutCSME-APMG.asp">More</a></li>
                            <li>Several convenient ITIL Training locations. <a href="/ITIL-Courses.asp">More</a></li>
                            <% If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Other"  Then %>
-                             <li>Complementary Risk Management course and 20 Project Management Institute (PMI)<sup>&reg;</sup> PDUs worth $300. <a href="http://itilstudy.com/ITIL-Training/free-onlinecertification.asp" target="_blank">More</a></li>                                       
+                             <li>Complementary Risk Management course and 20 Project Management Institute (PMI)<sup>&reg;</sup> PDUs worth $150. <a href="http://itilstudy.com/ITIL-Training/free-onlinecertification.asp" target="_blank">More</a></li>                                       
 							 <% End If %>
                            <li>Comprehensive ITIL courses with globally proven training methodology. <a href="/ITIL-Training/comprehensive.asp">More</a></li>
                            <li>Experienced faculty for ITIL Certification courses. <a href="/ITIL-Training/instructors.asp">More</a></li>

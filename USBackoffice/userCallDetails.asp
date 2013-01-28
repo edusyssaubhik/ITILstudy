@@ -23,7 +23,7 @@ Set objRs = Server.CreateObject("ADODB.Recordset")
 rqCallID = Request.QueryString("CallId")
 'response.Write(rqCallID)
 
-strQuery = "SELECT callername, phoneno, emailid FROM scrum_callsreceived WHERE callid ='"& rqCallID &"'"
+strQuery = "SELECT callername, phoneno, emailid FROM ITIL_callsreceived_new WHERE callid ='"& rqCallID &"'"
 
 objRs.Open strQuery, ConnObj
 
