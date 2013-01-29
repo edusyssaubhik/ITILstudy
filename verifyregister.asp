@@ -11,32 +11,45 @@
 						Company = Request.Form("Company")
 						'session("fbuser")=true
 						'session("loggedinEmail")=	strEMail
+						
+						
+						
+						Session("first_name")   =   first_name
+						Session("last_name")    =   last_name
+						Session("payer_email")  =   payer_email
+						Session("phone") 		=   phone
+						
 
 '*********validation for the form start******************'
 
-    If rqFirstName ="" Then
-	Session("ErrorFirstName") = valueRequired(rqFirstName)
+	  If first_name ="" Then
+	Session("ErrorFirstName") = valueRequired(first_name)
 	Else
-    Session("ErrorFirstName") = ForNames(rqFirstName)
+    Session("ErrorFirstName") = ForNames(first_name)
 	End If
 
 
-     If rqLastName ="" Then
-	Session("ErrorLastName") = valueRequired(rqLastName)
+     If last_name ="" Then
+	Session("ErrorLastName") = valueRequired(last_name)
 	Else
-    Session("ErrorLastName") = ForNames(rqLastName)
+    Session("ErrorLastName") = ForNames(last_name)
 	End If
 	
-	If rqEmail ="" Then
-	Session("ErrorEmail") = valueRequired(rqEmail)
+	If payer_email ="" Then
+	Session("ErrorEmail") = valueRequired(payer_email)
 	Else
-	Session("ErrorEmail") = ForEmail(rqEmail)
+	Session("ErrorEmail") = ForEmail(payer_email)
     End If
 	
-	If rqPhoneNumber ="" Then
-	Session("ErrorPhone") = valueRequired(rqPhoneNumber)
+	If phone ="" Then
+	Session("ErrorPhone") = valueRequired(phone)
 	Else
-    Session("ErrorPhone") = ForNumber(rqPhoneNumber)
+    Session("ErrorPhone") = ForNumber(phone)
+	End If
+	
+	
+	If Session("ErrorPhone") <> "" OR Session("ErrorEmail") <> "" OR Session("ErrorLastName") <> "" OR Session("ErrorFirstName") <> "" Then
+    Response.redirect("/Register.asp")     
 	End If
 
 '************* validation ends here *****************'

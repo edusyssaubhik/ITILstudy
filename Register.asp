@@ -3,15 +3,28 @@
 <!--#include virtual="/metatags/memberlogin_metatag.html"-->
 <!--#include virtual="/includes/connection.asp"-->
 <%
-	  ErrorFirstName = Session("ErrorFirstName") 
-	  ErrorLastName  = Session("ErrorLastName")
-	  ErrorEmail     = Session("ErrorEmail")
-	  ErrorPhone     = Session("ErrorPhone") 
+
+       first_name    =  Session("first_name")     
+	   last_name     =  Session("last_name")    
+	   payer_email   =  Session("payer_email")    
+	   phone         =  Session("phone") 	    
+	   
+	   
+      
+	   Session("first_name")   =   ""
+	   Session("last_name")    =   ""
+	   Session("payer_email")  =   ""
+	   Session("phone") 	   =   ""
 	  
-	  Session("ErrorFirstName") = ""
-	  Session("ErrorLastName")  = ""
-	  Session("ErrorEmail")     = ""
-	  Session("ErrorPhone")     = ""	  
+	   ErrorFirstName = Session("ErrorFirstName") 
+	   ErrorLastName  = Session("ErrorLastName")
+	   ErrorEmail     = Session("ErrorEmail")
+	   ErrorPhone     = Session("ErrorPhone") 
+	  
+	   Session("ErrorFirstName") = ""
+	   Session("ErrorLastName")  = ""
+	   Session("ErrorEmail")     = ""
+	   Session("ErrorPhone")     = ""	  
 	  
 %>
 
