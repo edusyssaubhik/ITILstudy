@@ -2,8 +2,19 @@
 <!--#include virtual="/includes/innerloginbanner.html"-->
 <!--#include virtual="/metatags/memberlogin_metatag.html"-->
 <!--#include virtual="/includes/connection.asp"-->
+<%
+	  ErrorFirstName = Session("ErrorFirstName") 
+	  ErrorLastName  = Session("ErrorLastName")
+	  ErrorEmail     = Session("ErrorEmail")
+	  ErrorPhone     = Session("ErrorPhone") 
+	  
+	  Session("ErrorFirstName") = ""
+	  Session("ErrorLastName")  = ""
+	  Session("ErrorEmail")     = ""
+	  Session("ErrorPhone")     = ""	  
+	  
+%>
 
-</script>
 <script type="text/javascript">
 <!--
 function Form_reg_Validator(theform)
@@ -93,22 +104,22 @@ session("errormsg")=""
 						      <tr>
 						        <!--<td colspan="2"><h1 class="PageTitle">Please Register <span style=""> | </span><a href="/fbApp/fb.asp"><img src="/flogin.gif"/> </a> </h1></td>-->
 								 <td colspan="2"><h1 class="PageTitle">Register and get free courses </h1></td>
-								 <td><a href="javascript:void(0);" onclick="openWindow()" title="Login using facebook account" style="display: block;margin-top: -4px;"><img src="/flogin.gif"/> </a> </td>
+								 <td><a href="javascript:void(0);" onclick="openWindow()" title="Login using facebook account" style="display: block;margin-top: -4px;"><img src="/images/flogin.gif"/> </a> </td>
 						      </tr>						     
 							  <tr>
 						        <td><span class="general-bodyBold">firstname:</span><span class="Required">*</span>:</td>
 						        <td>
-								 <input type="text" name="first_name" value="<%=first_name%>" class="TeXtField"></td>
+								 <input type="text" name="first_name" value="<%=first_name%>" class="TeXtField">&nbsp;<span class="Required"><%= ErrorFirstName %></span></td>
 						      </tr>
 							  <tr>
 						        <td><span class="general-bodyBold">Last Name</span><span class="Required">*</span>:</td>
 						        <td>
-								<input type="text" name="last_name" value="<%=last_name%>" class="TeXtField"></td>
+								<input type="text" name="last_name" value="<%=last_name%>" class="TeXtField">&nbsp;<span class="Required"><%= ErrorLastName %></span></td>
 						      </tr>
 						      <tr>
 						        <td><span class="general-bodyBold">Email</span><span class="Required">*</span>:</td>
 						        <td>
-								<input id="mail" style="color: rgb(161, 161, 161);width:200px;" size="50"  class="TeXtField" name="payer_email" value="Enter your email address" onfocus='myObj = document.getElementById("mail");if(this.value=="Enter your email address") myObj.value="";myObj.style.color = "#000000";' onblur='myObj = document.getElementById("mail");if(myObj.value == "") myObj.value="Enter your email address";myObj.style.color = "#a1a1a1";if(myObj.value!="Enter your email address") myObj.style.color="#000000";' size="30" type="text" />
+								<input id="mail" style="color: rgb(161, 161, 161);width:200px;" size="50"  class="TeXtField" name="payer_email" value="Enter your email address" onfocus='myObj = document.getElementById("mail");if(this.value=="Enter your email address") myObj.value="";myObj.style.color = "#000000";' onblur='myObj = document.getElementById("mail");if(myObj.value == "") myObj.value="Enter your email address";myObj.style.color = "#a1a1a1";if(myObj.value!="Enter your email address") myObj.style.color="#000000";' size="30" type="text" />&nbsp;<span class="Required"><%= ErrorEmail %></span>
 								</td>
                                <!-- <td>
                                 <a href="/fbApp/fb.asp"><img src="/flogin.gif"/> </a>
@@ -127,9 +138,9 @@ session("errormsg")=""
 						          &nbsp;&nbsp;Maximum length: 10 characters</td>
 						      </tr>
               <tr>
-						        <td><span class="general-bodyBold">Contact-no</span><span class="Required">*</span>:</td>
+						        <td><span class="general-bodyBold">Phone Number</span><span class="Required">*</span>:</td>
 						        <td>
-								 <input type="text" name="phone" class="TeXtField"></td>
+								 <input type="text" name="phone" class="TeXtField">&nbsp;<span class="Required"><%= ErrorPhone %></span></td>
 						      </tr>
                              <tr>
 						        <td><span class="general-bodyBold">Company</span>:</td>

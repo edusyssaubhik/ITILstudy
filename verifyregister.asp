@@ -1,5 +1,6 @@
 
 <!--#include virtual="/includes/connection.asp"-->
+<!-- #include virtual = "/includes/formvalidation.asp"-->
 <%
                         first_name = Request.Form("first_name")
 						last_name = Request.Form("last_name")
@@ -10,6 +11,35 @@
 						Company = Request.Form("Company")
 						'session("fbuser")=true
 						'session("loggedinEmail")=	strEMail
+
+'*********validation for the form start******************'
+
+    If rqFirstName ="" Then
+	Session("ErrorFirstName") = valueRequired(rqFirstName)
+	Else
+    Session("ErrorFirstName") = ForNames(rqFirstName)
+	End If
+
+
+     If rqLastName ="" Then
+	Session("ErrorLastName") = valueRequired(rqLastName)
+	Else
+    Session("ErrorLastName") = ForNames(rqLastName)
+	End If
+	
+	If rqEmail ="" Then
+	Session("ErrorEmail") = valueRequired(rqEmail)
+	Else
+	Session("ErrorEmail") = ForEmail(rqEmail)
+    End If
+	
+	If rqPhoneNumber ="" Then
+	Session("ErrorPhone") = valueRequired(rqPhoneNumber)
+	Else
+    Session("ErrorPhone") = ForNumber(rqPhoneNumber)
+	End If
+
+'************* validation ends here *****************'
 						
 						Set objRs = Server.CreateObject("ADODB.Recordset")		
 						strQuery = "SELECT TOP 1 Id,email,account_type_id FROM Customer_Accounts WHERE email='"&payer_email&"' ORDER BY Id DESC"
