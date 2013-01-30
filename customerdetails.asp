@@ -4,6 +4,49 @@
 <!--#include virtual="/includes/libfuncs.asp"-->
 <script language="JavaScript" type="text/javascript" src="/js/jquery-1.7.2.js"></script>
 
+
+<%
+
+	  '*****************validation starts*****************
+	   firstName      = Session("FirstName") 
+	   lastName       = Session("LastName") 
+       Email          = Session("Email") 	
+	   phoneno        = Session("PhoneNumber") 	
+	    
+	     	    	   
+	   Session("FirstName")         = ""	
+	   Session("LastName")          = ""
+	   Session("Email")             = ""
+	   Session("PhoneNumber")       = ""
+	  
+	  
+	   ErrorFirstName = Session("ErrorFirstName") 
+	   ErrorLastName  = Session("ErrorLastName")
+	   ErrorEmail     = Session("ErrorEmail")
+	   ErrorPhone     = Session("ErrorPhone") 
+      
+      
+
+	   Session("ErrorFirstName") = ""
+	   Session("ErrorLastName")  = ""
+	   Session("ErrorEmail")     = ""
+	   Session("ErrorPhone")     = ""
+	   
+	  
+	  '***********************Ends Validation***************************'
+
+
+
+
+
+
+%>
+
+
+
+
+
+
   <script type="text/javascript">
 					<!--
 					//Validating The Email
@@ -927,7 +970,9 @@
 						%>
 						
                   <input type="text" name="first_name" value="<%=first_name%>" class="TeXtField">&nbsp;&nbsp;
+                  <br /><span class="Required"><%=ErrorFirstName %></span>
                   <input type="text" name="last_name" value="<%=last_name%>" class="TeXtField">
+                  <br /><span class="Required"><%= ErrorLastName %></span>
                   <input type="hidden" name="date_Val" value="<%=date_val%>" class="TeXtField">
 				  <input type="hidden" name="coursedate" value="<%=coursedate%>" class="TeXtField">				  
                   <input type="hidden" name="email" value="<%=payer_email%>" class="TeXtField">
@@ -956,7 +1001,7 @@
               <tr>
                 <td class="general-bodyBold">Email(User ID)<span class="Required">*</span>: </td>
                 <td>
-				<input type="text" name="payer_email" value="<%=payer_email%>" size="50" class="TeXtField">
+				<input type="text" name="payer_email" value="<%=payer_email%>" size="50" class="TeXtField"><br /><span class="Required"><%= ErrorEmail %></span>
                  <input type="hidden" name="pass" value="<%=pass%>" size="250">
                 </td>
                 <br>
@@ -966,7 +1011,7 @@
           
               <tr>
                 <td class="general-bodyBold">Name of Employer/Business<span class="Required">*</span>: </td>
-                <td ><input type="text" name="custom" size="50" value="<%=phone%>" class="TeXtField"></td>
+                <td ><input type="text" name="custom" size="50" value="<%=phone%>" class="TeXtField"><br /><span class="Required"><%= ErrorPhone %></span></td>
               </tr>
              
               <tr>
