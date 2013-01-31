@@ -337,12 +337,13 @@ Do Until objRs.EOF
 	x = UsedPoints
 	
 	Else
-        If ucase(trim(rqDiscountCode1)) ="OSA200" OR ucase(trim(rqDiscountCode1)) ="CSI200" OR ucase(trim(rqDiscountCode1)) ="ST200" Then
+        If ucase(trim(rqDiscountCode1)) ="OSA200" OR ucase(trim(rqDiscountCode1)) ="CSI200" OR ucase(trim(rqDiscountCode1)) ="ST200" OR UCase(trim(rqDiscountCode1)) = "FD200" Then
     '***********Discount Code**************
         Select case ucase(trim(rqDiscountCode1))
                 case "OSA200" : x = 200
                 case "CSI200" : x = 200
                 case "ST200" : x = 200
+				case "FD200" : x = 200
         End Select 
     '***************Discount Code************
         Else
