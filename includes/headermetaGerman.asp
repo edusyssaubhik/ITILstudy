@@ -4,11 +4,11 @@ If InStr(Request.ServerVariables("SERVER_NAME"),"www") = 0 Then
 	Response.Status="301 Moved Permanently"
 	
 	If Request.ServerVariables("URL") = "/indexde.asp" Then
-	Response.AddHeader "Location","http://www." & Request.ServerVariables("HTTP_HOST")
+	'Response.AddHeader "Location","http://www." & Request.ServerVariables("HTTP_HOST")
 	Else
-	Response.AddHeader "Location","http://www." & Request.ServerVariables("HTTP_HOST") & Request.ServerVariables("URL")
+	'Response.AddHeader "Location","http://www." & Request.ServerVariables("HTTP_HOST") & Request.ServerVariables("URL")
     End If
-	Response.End
+	'Response.End
 End if
 %>
 

@@ -3,4 +3,5 @@ User-agent: *
 Disallow: /includes/
 Disallow: /India/
 Disallow: /CRM/
+Disallow: /venue.asp
 Sitemap: http://www.itilstudy.com/sitemap.xml

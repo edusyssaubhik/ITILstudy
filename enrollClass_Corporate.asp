@@ -34,9 +34,9 @@
 	 'This page is coming from dates_location page then if condition will work '
 	 'Otherwise else part will work (if you open this page directly or some clicks on the links)'
 	 If SelectedCourseID <> "" Then
-		 strQuery = "SELECT * FROM itil_course WHERE country = (SELECT country FROM itil_course WHERE courseid = '"&SelectedCourseID&"') And courseType = 'Corporate' AND startdate BETWEEN '"&Now() - 1&"' AND DATEADD(day,180,'"&Now()&"') AND status <> 'Cancelled' order by startdate,city desc"
+		 strQuery = "SELECT * FROM itil_course WHERE country = (SELECT country FROM itil_course WHERE courseid = '"&SelectedCourseID&"') And courseType = 'Corporate' AND startdate BETWEEN '"&Now() - 60&"' AND DATEADD(day,180,'"&Now()&"') AND status <> 'Cancelled' order by startdate,city desc"
 		 Else
-		 strQuery = "SELECT * FROM itil_course WHERE country = '" & Session("CountryOrigin") & "' AND startdate BETWEEN '"&Now() - 1&"' AND DATEADD(day,180,'"&Now()&"') And courseType = 'Corporate' AND  status <> 'Cancelled' order by startdate,city desc"
+		 strQuery = "SELECT * FROM itil_course WHERE country = '" & Session("CountryOrigin") & "' AND startdate BETWEEN '"&Now() - 60&"' AND DATEADD(day,180,'"&Now()&"') And courseType = 'Corporate' AND  status <> 'Cancelled' order by startdate,city desc"
 		 End If
 
 	 Rs.Open strQuery,ConnObj
@@ -399,10 +399,10 @@
 						   
 
 						   
-						   If(CDate(arrAllCourses(2,rowCounter))-(Date())>=0) Then
+						   'If(CDate(arrAllCourses(2,rowCounter))-(Date())>=0) Then
 
    						   'Adding a If condition for dont display the Corporate classes in the enroll class page'
-						   If (IsNull(arrAllCourses(27,rowCounter)) OR arrAllCourses(27,rowCounter) <> "Corporate") Then
+						   'If (IsNull(arrAllCourses(27,rowCounter)) OR arrAllCourses(27,rowCounter) <> "Corporate") Then
 
 						   If (arrAllCourses(25,rowCounter) <> "Full" ) Then
 						%>
@@ -429,8 +429,8 @@
                       </option>
                       <%
                                End If
-                               End If
-                               End If
+                               'End If
+                               'End If
                                Next
                                End If %>
                     </select>

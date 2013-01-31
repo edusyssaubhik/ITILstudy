@@ -33,7 +33,7 @@
  								£195 
   						<% ElseIf  Session("CountryOrigin") <> "United Kingdom"  Then %>
                            
-                               $300
+                               $150
                         
                         <% End If %>
 

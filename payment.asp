@@ -131,7 +131,7 @@
 							'Course Price'
 
 							'If (Session("CountryOrigin") = "United Kingdom" OR Session("CountryOrigin") = "Germany") Then
-							If (Session("CountryOrigin") = "United Kingdom" OR Session("CountryOrigin") = "India" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "Australia") Then
+							If (Session("CountryOrigin") = "United Kingdom" OR Session("CountryOrigin") = "India" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "Australia" OR Session("CountryOrigin") = "Netherlands") Then
 							
 								If Not IsNull(Rs("VAT")) Then
 								
@@ -176,7 +176,7 @@
                       </span></td>
 					   </tr>
                   <% 'If (Session("CountryOrigin") = "United Kingdom" OR Session("CountryOrigin") = "Germany") Then %>
-                  <% If (Session("CountryOrigin") = "United Kingdom" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "India" OR Session("CountryOrigin") = "Australia") Then %>
+                  <% If (Session("CountryOrigin") = "United Kingdom" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "India" OR Session("CountryOrigin") = "Australia" OR Session("CountryOrigin") = "Netherlands") Then %>
                   <% If VAT <> "" AND VAT <> 0 Then %>
                   <tr>
                     <td class="TableRowEven"><span class="TableCopyName">VAT @
@@ -185,7 +185,9 @@
                       <% ElseIf (Session("CountryOrigin") = "India") Then %>
                       10.3%
                        <% ElseIf (Session("CountryOrigin") = "Germany") Then %>
-                      19%
+                         19%
+                        <% ElseIf (Session("CountryOrigin") = "Netherlands") Then %>
+                        21%
                       <% ElseIf (Session("CountryOrigin") = "Australia") Then %>
                       10%
                       <% End If %>
@@ -270,23 +272,10 @@
             <tr>
               <td class="btext">
               <table border="0" width="100%">
-                  <tr>
-                    <td width="25%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>1. Google Checkout </B></td>
-                   <td><form action="https://checkout.google.com/api/checkout/v2/checkoutForm/Merchant/749730688196705" id="BB_BuyButtonForm" method="post" name="BB_BuyButtonForm">
-                  <input name="item_name_1" type="hidden" value="ITILstudy <% = Rs("enrolledfor") %> Training"/>
-                  <input name="item_description_1" type="hidden" value="ITILstudy <% = Rs("enrolledfor") %> Training"/>
-                  <input name="item_quantity_1" type="hidden" value="1"/>
-                 <% If FBdiscount <> "" Then %>
-                        <input name="item_price_1" type="hidden" value="<% = TotalFBdis %>"/>
-                        <% Else %>
-                         <input name="item_price_1" type="hidden" value="<% = Total %>"/>
-                         <% End If %>
-                  <input name="item_currency_1" type="hidden" value="USD"/>
-                  <input name="_charset_" type="hidden" value="utf-8"/>
-                  <input alt="" src="https://checkout.google.com/buttons/buy.gif?merchant_id=749730688196705&amp;w=117&amp;h=48&amp;style=white&amp;variant=text&amp;loc=en_US" type="image" align="middle"/>
-                </form></td></tr>
-					<tr>
-			<td width="25%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>2. Paypal </B></td>
+              
+              
+              <tr>
+			<td width="25%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>1. Paypal </B></td>
               <td><form action="https://www.paypal.com/cgi-bin/webscr" method="post">
                   <input type="hidden" name="cmd" value="_xclick">
                   <input type="hidden" name="business" value="vmeduinc1@gmail.com">
@@ -303,6 +292,25 @@
                 </form></td>
                   </tr>
 				  
+              
+              
+              
+                  <tr>
+                    <td width="25%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>2. Google Checkout </B></td>
+                   <td><form action="https://checkout.google.com/api/checkout/v2/checkoutForm/Merchant/749730688196705" id="BB_BuyButtonForm" method="post" name="BB_BuyButtonForm">
+                  <input name="item_name_1" type="hidden" value="ITILstudy <% = Rs("enrolledfor") %> Training"/>
+                  <input name="item_description_1" type="hidden" value="ITILstudy <% = Rs("enrolledfor") %> Training"/>
+                  <input name="item_quantity_1" type="hidden" value="1"/>
+                 <% If FBdiscount <> "" Then %>
+                        <input name="item_price_1" type="hidden" value="<% = TotalFBdis %>"/>
+                        <% Else %>
+                         <input name="item_price_1" type="hidden" value="<% = Total %>"/>
+                         <% End If %>
+                  <input name="item_currency_1" type="hidden" value="USD"/>
+                  <input name="_charset_" type="hidden" value="utf-8"/>
+                  <input alt="" src="https://checkout.google.com/buttons/buy.gif?merchant_id=749730688196705&amp;w=117&amp;h=48&amp;style=white&amp;variant=text&amp;loc=en_US" type="image" align="middle"/>
+                </form></td></tr>
+					
                 </table></td>
             </tr>
             <tr>
@@ -461,7 +469,7 @@
       
       </tr>  
       
-       <% ElseIf Session("CountryOrigin") = "Germany"  Then %>
+       <% ElseIf Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "Netherlands" Then %>
             <tr>
               <td class="btext"><table border="0" width="100%">
      
@@ -473,7 +481,7 @@
                       <input type="hidden" name="upload" value="1"> 
                       <input type="hidden" name="business" value="edusysservices@gmail.com">    
                       <input type="hidden" name="item_name_1" value="ITILstudy <% = Rs("enrolledfor") %> Training  - <% = Session("CountryOrigin") %>">
-                      <input type="hidden" name="currency_code" value="GBP">  
+                      <input type="hidden" name="currency_code" value="EUR">  
     					<input name="item_name" type="hidden" value="<% = CourseDetails %>"/>
 						 <input type="hidden" name="amount_1" value="<% = Total %> "/> 
 						  <input type="hidden" name="cancel_return" value="http://www.ITILstudy.com">

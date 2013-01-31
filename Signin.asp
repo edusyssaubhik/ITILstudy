@@ -9,6 +9,38 @@
 <script type="text/javascript" src="/js/chrome.js"></script>
 <script type="text/javascript">
 
+<%
+
+       firstName      = Session("FirstName") 
+	   lastName       = Session("LastName") 
+       Email          = Session("Email") 	
+	   phoneno        = Session("PhoneNumber") 
+	   
+	   
+	   Session("FirstName")         = ""	
+	   Session("LastName")          = ""
+	   Session("Email")             = ""
+	   Session("PhoneNumber")       = ""
+	   
+	   
+	   ErrorFirstName = Session("ErrorFirstName") 
+	   ErrorLastName  = Session("ErrorLastName")
+	   ErrorEmail     = Session("ErrorEmail")
+	   ErrorPhone     = Session("ErrorPhone") 
+	   
+	   Session("ErrorFirstName") = ""
+	   Session("ErrorLastName")  = ""
+	   Session("ErrorEmail")     = ""
+	   Session("ErrorPhone")     = ""
+	   	
+
+%>
+
+
+
+
+
+
 function Form_Validator(theform)
 {
 
@@ -180,17 +212,18 @@ end if
 							  <tr>
 						        <td><span class="general-bodyBold">firstname:</span><span class="Required">*</span>:</td>
 						        <td>
-								 <input type="text" name="first_name" value="<%=first_name%>" class="TeXtField"></td>
+								 <input type="text" name="first_name" value="<%=first_name%>" class="TeXtField">&nbsp;<span class="Required"><%=ErrorFirstName %></span></td>
 						      </tr>
 							  <tr>
 						        <td><span class="general-bodyBold">Last Name</span><span class="Required">*</span>:</td>
 						        <td>
-								<input type="text" name="last_name" value="<%=last_name%>" class="TeXtField"></td>
+								<input type="text" name="last_name" value="<%=last_name%>" class="TeXtField">&nbsp;<span class="Required"><%= ErrorLastName %></span></td>
 						      </tr>
 						      <tr>
 						        <td><span class="general-bodyBold">User ID (Email)</span><span class="Required">*</span>:</td>
 						        <td>
-								<input id="email" style="color: rgb(161, 161, 161);width:200px;" size="50"  class="TeXtField" name="payer_email" value="Enter your email address" onfocus='myObj = document.getElementById("email");if(this.value=="Enter your email address") myObj.value="";myObj.style.color = "#000000";' onblur='myObj = document.getElementById("email");if(myObj.value == "") myObj.value="Enter your email address";myObj.style.color = "#a1a1a1";if(myObj.value!="Enter your email address") myObj.style.color="#000000";' size="30" type="text" />
+                                
+								<input id="email" style="color: rgb(161, 161, 161);width:200px;" size="50"  class="TeXtField" name="payer_email" value="Enter your email address" onfocus='myObj = document.getElementById("email");if(this.value=="Enter your email address") myObj.value="";myObj.style.color = "#000000";' onblur='myObj = document.getElementById("email");if(myObj.value == "") myObj.value="Enter your email address";myObj.style.color = "#a1a1a1";if(myObj.value!="Enter your email address") myObj.style.color="#000000";' size="30" type="text" />&nbsp;<span class="Required"><%= ErrorEmail %></span>
 								</td>
                                <!-- <td>
                                 <a href="/fbApp/fb.asp"><img src="/images/flogin.gif"/> </a>
@@ -211,7 +244,7 @@ end if
           <tr>
 						        <td><span class="general-bodyBold">Contact-no</span>:</td>
 						        <td>
-								 <input type="text" name="phone" class="TeXtField"></td>
+								 <input type="text" name="phone" class="TeXtField">&nbsp;<span class="Required"><%= ErrorPhone %></span></td>
 						      </tr>
                              <tr>
 						        <td><span class="general-bodyBold">Company</span>:</td>

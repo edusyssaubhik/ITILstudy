@@ -1,6 +1,4 @@
-<%@ LANGUAGE="VBScript" %>
-<% OPTION EXPLICIT %>
-<!--#include virtual="/includes/URLRedirection.asp"-->
+
 <%
 '======================================================='
 'Written By : Savita'

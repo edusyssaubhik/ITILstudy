@@ -112,7 +112,7 @@ else if (ns6||ie4) ld.display="none";
                  <li>Free RM study course worth 195 GBP  </li>
                 <%ElseIf Session("CountryOrigin") <> "India" Then %>
 
-                  <li>Complementary RMstudy Certification worth $300. <a href="http://itilstudy.com/ITIL-Training/free-onlinecertification.asp" target="_blank">More</a></li>
+                  <li>Complementary RMstudy Certification worth $150. <a href="http://itilstudy.com/ITIL-Training/free-onlinecertification.asp" target="_blank">More</a></li>
 
 				<%Else%>
                 <li>Free online prep course </li>
@@ -431,7 +431,28 @@ else if (ns6||ie4) ld.display="none";
                   <img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1026351431/?label=ks3NCLOnyQIQx8Kz6QM&amp;guid=ON&amp;script=0"/>
                   </div>
                   </noscript>
-				  
+                  
+              <!-- Added by :  Priyanka on date : 18/12/2012 -->     
+                  
+               <!-- Google Code for ITILstudy US-DL Conversion Page -->
+                <script type="text/javascript">
+                /* <![CDATA[ */
+                var google_conversion_id = 947765691;
+                var google_conversion_language = "en";
+                var google_conversion_format = "3";
+                var google_conversion_color = "ffffff";
+                var google_conversion_label = "ljEjCIW3tgkQu4P3wwM";
+                var google_conversion_value = 0;
+                /* ]]> */
+                </script>
+                <script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+                </script>
+                <noscript>
+                <div style="display:inline;">
+                <img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/947765691/?value=0&amp;label=ljEjCIW3tgkQu4P3wwM&amp;guid=ON&amp;script=0"/>
+                </div>
+                </noscript>
+                                  
                 </div>
                 <!--#include virtual="/includes/connectionClose.asp"-->
                 <!-- Content End From Here-->

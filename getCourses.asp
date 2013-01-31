@@ -28,6 +28,11 @@ Set objRs=Server.CreateObject("ADODB.Recordset")
 strCity = Request.QueryString("city")
 strDate = Request.QueryString("date")
 strCountry = Request.QueryString("country")
+
+    If strCountry <> "" Then
+    Session("Virtualclass") = strCountry
+    End If
+
 strCourse = Request.QueryString("Course")
 
 If Request.QueryString("country") <> "" Then
@@ -80,9 +85,13 @@ If strCity <> "" Then
 	strCourses = strCourses & "(course.coursetype = 'Normal' OR course.coursetype = 'Corporate') AND  "
 	
 	End If		
-	
-	strCourses = strCourses & "course.startdate BETWEEN '"&Now() - 1&"' AND DATEADD(day,180,'"&Now()&"') AND course.status <> 'Cancelled' ORDER BY course.startdate"
-
+	If Session("Country1") <> "US" AND Session("Country1") <> "Canada" Then
+	    strCourses = strCourses & "course.startdate BETWEEN '"&Now() - 1&"' AND DATEADD(day,180,'"&Now()&"') AND course.status <> 'Cancelled' ORDER BY course.startdate"
+    Else
+        strCourses = strCourses & "course.startdate BETWEEN '"&Now() - 1&"' AND DATEADD(day,180,'"&Now()&"') AND course.status <> 'Cancelled'"
+        strCourses =strCourses &" Union "
+        strCourses =strCourses &"SELECT course.courseid,course.city,course.startdate,course.enddate, course.starthour,course.startminute,course.startsession,course.endhour,course.endminute,course.endsession,course.pricewithouttax,course.tax,course.pricewithtax,course.applicabledays,course.afterEBdiscountwithouttax,course.afterEBdiscountwithtax,course.status,course.coursetype,city.state_code, course.country FROM ITIL_course course, ITIL_city city WHERE course.startdate BETWEEN '"&Now() - 1&"' AND DATEADD(day,180,'"&Now()&"') And course.city = city.city  And course.coursetype = 'Live' AND  course.country = 'US' And city.country = 'US' AND course.status <> 'Cancelled' ORDER BY course.startdate"
+    End If
 End If
 
 
@@ -120,7 +129,14 @@ If strCountry <> "" AND strCourse <> "" Then
 
     If strCourse = "Normal" Then
 
-	strCourses="SELECT course.courseid,course.city,course.startdate,course.enddate, course.starthour,course.startminute,course.startsession,course.endhour,course.endminute,course.endsession,course.pricewithouttax,course.tax,course.pricewithtax,course.applicabledays,course.afterEBdiscountwithouttax,course.afterEBdiscountwithtax,course.status,course.coursetype,city.state_code, course.country FROM ITIL_course course, ITIL_city city WHERE course.startdate BETWEEN '"&Now() - 1&"' AND DATEADD(day,180,'"&Now()&"') And course.city = city.city And course.coursetype <> 'CSI' AND course.coursetype <> 'OSA'  AND  course.country = '"&strCountry&"' And city.country = '"&strCountry&"' AND course.status <> 'Cancelled' ORDER BY course.startdate"
+                If  strCountry = "Canada" Then
+	                    strCourses="SELECT course.courseid,course.city,course.startdate,course.enddate, course.starthour,course.startminute,course.startsession,course.endhour,course.endminute,course.endsession,course.pricewithouttax,course.tax,course.pricewithtax,course.applicabledays,course.afterEBdiscountwithouttax,course.afterEBdiscountwithtax,course.status,course.coursetype,city.state_code, course.country FROM ITIL_course course, ITIL_city city WHERE course.startdate BETWEEN '"&Now() - 1&"' AND DATEADD(day,180,'"&Now()&"') And course.city = city.city And course.coursetype <> 'CSI' AND course.coursetype <> 'OSA'  AND  course.country = '"&strCountry&"' And city.country = '"&strCountry&"' AND course.status <> 'Cancelled' "
+                    strCourses =strCourses &" Union "
+                     strCourses =strCourses &"SELECT course.courseid,course.city,course.startdate,course.enddate, course.starthour,course.startminute,course.startsession,course.endhour,course.endminute,course.endsession,course.pricewithouttax,course.tax,course.pricewithtax,course.applicabledays,course.afterEBdiscountwithouttax,course.afterEBdiscountwithtax,course.status,course.coursetype,city.state_code, course.country FROM ITIL_course course, ITIL_city city WHERE course.startdate BETWEEN '"&Now() - 1&"' AND DATEADD(day,180,'"&Now()&"') And course.city = city.city  And course.coursetype = 'Live' AND  course.country = 'US' And city.country = 'US' AND course.status <> 'Cancelled' ORDER BY course.startdate"
+            Else
+                        strCourses="SELECT course.courseid,course.city,course.startdate,course.enddate, course.starthour,course.startminute,course.startsession,course.endhour,course.endminute,course.endsession,course.pricewithouttax,course.tax,course.pricewithtax,course.applicabledays,course.afterEBdiscountwithouttax,course.afterEBdiscountwithtax,course.status,course.coursetype,city.state_code, course.country FROM ITIL_course course, ITIL_city city WHERE course.startdate BETWEEN '"&Now() - 1&"' AND DATEADD(day,180,'"&Now()&"') And course.city = city.city And course.coursetype <> 'CSI' AND course.coursetype <> 'OSA'  AND  course.country = '"&strCountry&"' And city.country = '"&strCountry&"' AND course.status <> 'Cancelled' ORDER BY course.startdate"
+                    
+            End If
 	
 	Else
 	
@@ -129,7 +145,7 @@ If strCountry <> "" AND strCourse <> "" Then
 	End If
 
 End If
-
+    'response.write strCourses
 objRs.open strCourses,ConnObj
 
 If Not objRs.EOF Then
@@ -164,17 +180,22 @@ End If
 		Else 
 				bgColor = "TableRowOdd"
 		End If 
-					
-
+				    If arrAllCourses(17,rowCounter) = "Live" Then
+                          'bgColor="TableLiveClass"
+                    End If	
 			'Location - venue'
 			If arrAllCourses(17,rowCounter) = "Corporate" Then
 			str = "<tr onMouseOver=""javascript:highlightTableRowVersionA(this, '#FFFFCC');""><td class="&bgColor &">" & Trim(arrAllCourses(1,rowCounter))
 			Else
-			str = "<tr onMouseOver=""javascript:highlightTableRowVersionA(this, '#FFFFCC');""><td class="&bgColor &"><a href=venue.asp?courseID="&arrAllCourses(0,rowCounter) &" onClick=""return popitup('venue.asp?courseID="&arrAllCourses(0,rowCounter) &"')"">" & Trim(arrAllCourses(1,rowCounter))
+                If Not Trim(arrAllCourses(17,rowCounter)) = "Live" Then
+			            str = "<tr onMouseOver=""javascript:highlightTableRowVersionA(this, '#FFFFCC');""><td class="&bgColor &"><a href=venue.asp?courseID="&arrAllCourses(0,rowCounter) &" onClick=""return popitup('venue.asp?courseID="&arrAllCourses(0,rowCounter) &"')"">" & Trim(arrAllCourses(1,rowCounter))
+                ElseIf Trim(arrAllCourses(17,rowCounter)) = "Live" Then
+                        str = "<tr onMouseOver=""javascript:highlightTableRowVersionA(this, '#FFFFCC');""><td class="&bgColor &"><span Class=""LiveClass"" alt=""Virtual Live Class"">Live</span>&nbsp;<a href=venue.asp?courseID="&arrAllCourses(0,rowCounter) &" onClick=""return popitup('venue.asp?courseID="&arrAllCourses(0,rowCounter) &"')"">Virtual Live Class"
+                End If
 			End If 
 		 If Session("CountryOrigin") <> "United Kingdom" Then 
 			If arrAllCourses(18,rowCounter) <> "" Then
-			str = str & ", "& arrAllCourses(18,rowCounter) 
+			str = str & ", "& trim(arrAllCourses(18,rowCounter)) 
 			End If
 			'If arrAllCourses(18,rowCounter) = "TX" Then
 '			str = str & "<sup><font color=""red""><b>**</b></font></sup>"
@@ -186,13 +207,13 @@ End If
 			str = str & "</a><br>"
 			End If
 			'Date and Timing
-			str = str & "</td><td class="&bgColor &">" & DAY(arrAllCourses(2,rowCounter)) & " " & MonthName(Month(arrAllCourses(2,rowCounter)),3) & " "  & YEAR(arrAllCourses(2,rowCounter)) & " to  <br /> "& DAY(arrAllCourses(3,rowCounter)) & " " & MonthName(Month(arrAllCourses(3,rowCounter)),3) & " "  & YEAR(arrAllCourses(3,rowCounter))
+			str = str & "</td><td class="&bgColor &">" & trim(DAY(arrAllCourses(2,rowCounter))) & " " & Trim(MonthName(Month(arrAllCourses(2,rowCounter)),3)) & " "  & trim(YEAR(arrAllCourses(2,rowCounter))) & " to  <br /> "& trim(DAY(arrAllCourses(3,rowCounter))) & " " & trim(MonthName(Month(arrAllCourses(3,rowCounter)),3)) & " "  & trim(YEAR(arrAllCourses(3,rowCounter)))
 			str = str & "</td>"
 			'End If
 			
 			If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" Then 			
 			Else	  
-			str = str & "<td class="& bgColor &">"&arrAllCourses(4,rowCounter) &" : "& arrAllCourses(5,rowCounter) &""& arrAllCourses(6,rowCounter) &" - "& arrAllCourses(7,rowCounter) &" : "&arrAllCourses(8,rowCounter)&""& arrAllCourses(9,rowCounter) &"</td>"
+			str = str & "<td class="& bgColor &">"&trim(arrAllCourses(4,rowCounter)) &" : "& arrAllCourses(5,rowCounter) &""& arrAllCourses(6,rowCounter) &" - "& arrAllCourses(7,rowCounter) &" : "&arrAllCourses(8,rowCounter)&""& arrAllCourses(9,rowCounter) &"</td>"
 			End If
 			
 			If arrAllCourses(17,rowCounter) = "Corporate" Then

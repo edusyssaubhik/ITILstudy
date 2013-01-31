@@ -1,4 +1,4 @@
-<%@LANGUAGE="VBSCRIPT" CODEPAGE="65001"%>
+﻿<%@LANGUAGE="VBSCRIPT" CODEPAGE="65001"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <% If not  Session("UserId") = "" Then %>
@@ -139,7 +139,10 @@ function validate_required(field,alerttxt)
 		
 		if (validate_required(dateofpassing,"Please enter the Date of Passing")==false)
 			  {dateofpassing.focus();return false}
-  
+	    //Check To See If The feedback type Field Is Balnk     
+
+		if (validate_required(FeedbackType, "Please select a feedback type") == false)
+		{ FeedbackType.focus(); return false }
        //Check To See If The feedback Field Is Balnk     
 		
 		if (validate_required(feedback,"Please enter the Feedback")==false)
@@ -224,6 +227,15 @@ return false;
         Ex: (YYYY-MM-DD)</td>
     </tr>
     <tr>
+      <td valign="top"><h4>Feedback Type</h4></td>
+      <td><select name="FeedbackType" id="FeedbackType">
+          <option value="">---Select---</option>
+          <option value="1">Excellent Feedback</option>
+          <option value="2">Great Feedback</option>
+          <option value="3">Good but short feedback</option>
+          </select></td>
+    </tr>
+    <tr>
       <td valign="top"><h4>Feedback</h4></td>
       <td><textarea cols="24" rows="10" name="feedback"></textarea></td>
     </tr>
@@ -236,7 +248,7 @@ return false;
 <% 
 	ElseIf rqAction="editFeedback" then 
 	rqID=request.QueryString("id")
-	strQuery="SELECT id,fname, company, dateofpassing, feedback FROM classroom_feedback Where country = '"&Session("country")&"' AND id='"&rqID&"' "
+	strQuery="SELECT id,fname, company, dateofpassing, feedback,FeedBackType FROM classroom_feedback Where country = '"&Session("country")&"' AND id='"&rqID&"' "
      rs.open strQuery,Conn
 
 %>
@@ -255,6 +267,15 @@ return false;
     <tr>
       <td><h4>Date of pasing</h4></td>
       <td><input type="text" name="dateofpassing" value="<%=rs("dateofpassing") %>"size="30"/></td>
+    </tr>
+    <tr>
+      <td valign="top"><h4>Feedback Type</h4></td>
+      <td><select name="FeedbackType" id="FeedbackType">
+          <option value="">---Select---</option>
+          <option value="1" <%If rs("feedBackType") ="1" Then %>Selected="selected"<%End If %>>Excellent Feedback</option>
+          <option value="2" <%If rs("feedBackType") ="2" Then %>Selected="selected"<%End If %>>Great Feedback</option>
+          <option value="3" <%If rs("feedBackType") ="3" Then %>Selected="selected"<%End If %>>Good but short feedback</option>
+          </select></td>
     </tr>
     <tr>
       <td valign="top"><h4>Feedback</h4></td>
@@ -278,7 +299,7 @@ return false;
 
 <table border="1" width="100%" cellpadding="5" cellspacing="0">
 <tr>
-  <td colspan="7"><table border="0" cellpadding="5" cellspacing="0" width="60%">
+  <td colspan="8"><table border="0" cellpadding="5" cellspacing="0" width="60%">
       <tr>
         <form action="classroom_feedback.asp" method="post" onsubmit="return Form_Validator2(this)">
           <td>Company:
@@ -297,13 +318,14 @@ return false;
 </tr>
 
 <tr>
-  <td colspan="7" align="right"><a href="classroom_feedback.asp?action=addFeedback">Add</a></td>
+  <td colspan="8" align="right"><a href="classroom_feedback.asp?action=addFeedback">Add</a></td>
 </tr>
 <tr>
   <td width="50px"><h4>SrNo</h4></td>
   <td width="100px"><h4>Name</h4></td>
   <td width="100px"><h4>Company</h4></td>
   <td width="50px"><h4>Date of pasing</h4></td>
+    <td width="60px"><h4>Feedback Type</h4></td>
   <td width="150px"><h4>Feedback</h4></td>
   <td width="50px"><h4>Edit</h4></td>
   <td width="50px"><h4>Delete</h4></td>
@@ -314,12 +336,21 @@ If IsArray(arrAllEmpDet) Then
 
       FOR rowcounter = firstRow TO lastRow
 
+         rqFeedBacktype= ""
+        If arrAllEmpDet(6,rowcounter) = "1" Then
+            rqFeedBacktype = "Excellent Feedback"
+        ElseIf arrAllEmpDet(6,rowcounter) = "2" then
+            rqFeedBacktype ="Great Feedback"
+        ElseIf arrAllEmpDet(6,rowcounter) = "3" then
+            rqFeedBacktype ="Good but short feedback"
+        End If
   %>
 <tr>
   <td><% = SrNo + 1 %></td>
   <td><% = arrAllEmpDet(1,rowcounter) %></td>
   <td><% = arrAllEmpDet(2,rowcounter) %></td>
   <td><% = arrAllEmpDet(3,rowcounter) %></td>
+     <td><% = rqFeedBacktype %></td>
   <td><% = arrAllEmpDet(4,rowcounter) %></td>
   <td><a href="classroom_feedback.asp?action=editFeedback&id=<% = arrAllEmpDet(0,rowcounter) %>">Edit</a></td>
   <td><a href="addEditDelFeedback.asp?action=deleteFeedback&id=<% = arrAllEmpDet(0,rowcounter) %>" onclick="return DeleteAlert(this.href);">Delete</a></td>

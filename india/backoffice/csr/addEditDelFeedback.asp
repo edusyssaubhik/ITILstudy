@@ -34,6 +34,7 @@ rqName=request.form("name")
 rqCompany=request.form("company")
 rqDateOfPassing=request.form("dateofpassing")
 rqFeedback=request.form("feedback")
+rqFeedbackType = request.form("FeedbackType")
 
 'Inserting'
 If rqType="submit" then
@@ -45,10 +46,11 @@ Dop = (YEAR(rqDateOfPassing) & "-" & (Month(rqDateOfPassing)) & "-" & (DAY(rqDat
 Feedback = Replace(rqFeedback,"'","''")
 Company = Replace(rqCompany,"'","''")
 
-strAdd="INSERT into classroom_feedback(fname,company,dateofpassing,feedback,country) values "
+strAdd="INSERT into classroom_feedback(fname,company,dateofpassing,feedbackType,feedback,country) values "
  strAdd=strAdd &"('" &rqName& "',"
  strAdd=strAdd &"'" &Company& "',"
  strAdd=strAdd &"'" &Dop& "',"
+ strAdd=strAdd &"'" &rqFeedbackType& "',"
  strAdd=strAdd &"'" &Feedback& "',"
  strAdd=strAdd &"'" &Session("country")& "')"
  
@@ -71,6 +73,7 @@ strEdit="UPDATE classroom_feedback SET"
 strEdit=strEdit& " fname= '" &rqName& " ',"
 strEdit=strEdit& " company= '" &Company& " ',"
 strEdit=strEdit& " dateofpassing= '" &Dop& " ',"
+ strEdit=strEdit& " feedbackType= '" &rqfeedbackType& " ',"
 strEdit=strEdit& " feedback= '" &Feedback& " '"
 
 strEdit=strEdit& " WHERE id= '" &rqEditId& "' And country = '"&Session("country")&"'"

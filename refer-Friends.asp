@@ -1,8 +1,6 @@
-<%@LANGUAGE="VBSCRIPT" CODEPAGE="65001"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<!--#include virtual="/includes/header.asp"-->
-<!--#include virtual="/includes/innerbanner.html"-->
+
+<!--#include virtual="/includes/headermeta.asp"-->
+<!--#include virtual="/includes/guaranteed-success-banner.asp"-->
 <!--#include virtual="/includes/connection.asp"-->
 <!--#include virtual="/includes/connectionRef.asp"-->
 
@@ -168,8 +166,15 @@
             <td width="73%" class="PageTitle">Referral Program</td>
           </tr>
           <tr>
-            <!--#include virtual="/includes/innerLeftMenu.asp"-->
-            <td width="73%" rowspan="4" background="/images/back/left_line.jpg" class="general-body"><div style="margin-top:-12px;">
+             <%
+				  'code by chandan to remove session of state in mycourses page
+				  newstate=Session("State")
+				  Session.Contents.Remove("State")
+	   %>
+          <!--#include virtual="/includes/innerLeftMenu.asp"-->
+		  <%   Session("State") =newstate %>
+            <td width="73%" rowspan="4" background="/images/back/left_line.jpg" class="general-body">
+            <div style="margin-top:-12px;">
               <table width="100%" cellpadding="0" cellspacing="0">
                 <%  
 				    'Declaring the variables'
@@ -247,9 +252,13 @@
           <tr>
           <td><b>Remember:</b> Your friend/colleague should use the link specified in the email that would be sent to them to enroll to get the referral benefits. For terms and conditions, please click <a href="http://www.itilstudy.com/termsAndConditions.asp" target="_blank">here</a>. <br /><br />
           If you have any questions, feel free to email us at <a href="mailto:marketing@ITILstudy.com" target="_blank">marketing@ITILstudy.com</a>. 
+        </div></td>
+          </tr>
         </table></td>
     </tr>
   </table>
+
+</td></tr></table>
 </div>
 <!-- Body Ends -->
 <!--#include virtual="/includes/footer.html"-->

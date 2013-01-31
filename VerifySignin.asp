@@ -3,6 +3,62 @@
 <!--#include virtual="/includes/connection.asp"-->
 <script language="JavaScript" type="text/javascript" src="/js/jquery-1.7.2.js"></script>
 
+<%
+
+first_name   =  Request.Form(first_name)
+last_name    =  Request.Form(last_name)
+phone 		 =  Request.Form(phone)
+PayerEmail  =  Request.Form(payer_email)
+
+
+Session("FirstName")        =  first_name
+Session("LastName")         =  last_name
+Session("Email")            =  PayerEmail 
+Session("PhoneNumber")      =  phone 
+
+
+'****************Server Side validation for the form start******************
+
+	If first_name ="" Then
+	Session("ErrorFirstName") = valueRequired(first_name)
+	Else
+    Session("ErrorFirstName") = ForNames(first_name)
+	End If
+
+
+     If last_name ="" Then
+	Session("ErrorLastName") = valueRequired(last_name)
+	Else
+    Session("ErrorLastName") = ForNames(last_name)
+	End If
+	
+	If PayerEmail ="" Then
+	Session("ErrorEmail") = valueRequired(PayerEmail)
+	Else
+	Session("ErrorEmail") = ForEmail(PayerEmail)
+    End If
+	
+	If phone ="" Then
+	Session("ErrorPhone") = valueRequired(phone)
+	Else
+    Session("ErrorPhone") = ForNumber(phone)
+	End If
+	
+	
+	
+If Session("ErrorFirstName") <> "" OR Session("ErrorLastName") <> "" OR Session("ErrorEmail") <> "" OR  Session("ErrorPhone") <> "" Then
+		  Response.redirect("/Signin.asp")     
+End If
+
+
+
+
+%>
+
+
+
+
+
 <script type="text/javascript">
 
 function Form_Validator(theform)

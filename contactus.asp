@@ -169,8 +169,8 @@ function closeimgContainer(){
                   <td colspan="2" class="general-body"><br />
                     <h1 class="PageTitle">Contact Details:<br />
                       <br />
-                    <%If session("CountryOrigin") = "Germany" Then %>
-                      PLEASE NOTE: ITILstudy is a brand of EEdusys Services GmbH
+                    <%If session("CountryOrigin") = "Germany" OR session("CountryOrigin") = "Netherlands" Then %>
+                      PLEASE NOTE: ITILstudy is a brand of Edusys Services GmbH
                     <%Else %>
                         PLEASE NOTE: ITILstudy is a brand of Edusys Services Pvt. Limited, UK
                         <%End If %>
@@ -232,18 +232,6 @@ function closeimgContainer(){
 						Phoenix, AZ 85004
 
                     </td>
-                     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                      <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                      <td>
-                    VMEdu, Inc. <br>
-                    4539 Metropolitan Ct.<br>
-                    Frederick, MD 21704 <br>
-                    <br />
-                    </td>
-                    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
                     </tr>
                     </table>
                    

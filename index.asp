@@ -213,7 +213,8 @@ End If
             <td width="24%" class="Header"><img src="/images/buttons/Why_ITIL.jpg" alt="Services" ></td>
 			 <td width="30%" class="Header">
 			 <% If Session("CountryOrigin") = "Other" Then  %>
-           	 <img src="images/buttons/title_news.jpg" alt="Services" /> 
+           	 <!--<img src="images/buttons/title_news.jpg" alt="Services" />--> 
+             <img src="/images/buttons/itilstudy_anywhere.jpg" alt="Services" >
              <% Else %>
              <img src="/images/buttons/title_courses.jpg" alt="Services" />
 			 <% End If %></td>
@@ -240,16 +241,16 @@ End If
 				  <td>
 				  <table width="100%">   
                   
-                   <% If Session("CountryOrigin") <> "India" AND Session("CountryOrigin") <> "US" AND Session("CountryOrigin") <> "Canada" Then %>
+                   <% If Session("CountryOrigin") <> "India" AND Session("CountryOrigin") <> "US" AND Session("CountryOrigin") <> "Canada" AND Session("CountryOrigin") <> "Other" Then %>
                   
                   <tr>
                   <td id="imageHover" style="text-align:left"><a href="/qualityPromise.asp" style="padding-left:-20px;"><img border="0" src="/images/buttons/QP.png" /></a></td>
 				   </tr>
 
-                   <% ElseIf Session("CountryOrigin") = "India" OR Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" Then %>
+                   <% ElseIf Session("CountryOrigin") = "India" OR Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada"  OR Session("CountryOrigin") = "Other" Then%>
                    
 					<tr>
-                  <td id="imageHover" ><img border="0" src="/images/buttons/percent98-US.png" /></td>
+                    <td id="imageHover" ><img border="0" src="/images/buttons/percent98-US.png" /></td>
 				   <td>Our students enjoy a pass rate of 99.2% - the best in the industry <br/></td>
                    </tr>
                   
@@ -257,7 +258,7 @@ End If
                 
 		</table>
 				 </td></tr>
-                 <% If Session("CountryOrigin") <> "UAE" AND Session("CountryOrigin") <> "Other" Then %>
+                 <% If Session("CountryOrigin") <> "UAE" Then %>
 				 <tr>
                  <td>
 					<iframe width="200" height="150" src="http://www.youtube.com/embed/G7sizMIi9K4?wmode=transparent" frameborder="0" allowfullscreen></iframe>
@@ -266,16 +267,16 @@ End If
 				<% End If %>                 
 				 <tr>
                         <td width="60%">
-						<% If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "Netherlands" OR Session("CountryOrigin") = "UAE" OR Session("CountryOrigin") = "Singapore" OR Session("CountryOrigin")="United Kingdom" OR Session("CountryOrigin") = "Australia"  Then %>
+						<% If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "Netherlands" OR Session("CountryOrigin") = "UAE" OR Session("CountryOrigin") = "Singapore" OR Session("CountryOrigin")="United Kingdom" OR Session("CountryOrigin") = "Australia" OR Session("CountryOrigin") = "Other"  Then %>
 						<iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fitilstudy&amp;width=292&amp;height=62&amp;colorscheme=light&amp;show_faces=false&amp;border_color&amp;stream=false&amp;header=false" scrolling="no" frameborder="0" style="border:1px solid #94A3C4; overflow:hidden; width:205px; height:62px;" allowTransparency="true"></iframe><br /><br />
 						<% End If%>
-                        <% If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "Netherlands" Then %>
+                        <% If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "Netherlands" OR Session("CountryOrigin") = "Other" Then %>
                         <a href="http://www.facebook.com/ITILstudy/app_203351739677351" target="_blank">Like Us</a> on Facebook for Discount vouchers<br /><br />
 						<% End If%>
-                        <% If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" Then %>
+                        <% If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Other" Then %>
                        Overall performance rating of 94% declared by Dun & Bradstreet Open Ratings. <a href="/DunandBradstreet-Report.pdf" target="_blank">More</a><br /><br />
                         <% End If%>
-				   <% If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "Netherlands" OR Session("CountryOrigin") = "UAE" OR Session("CountryOrigin") = "Singapore" OR Session("CountryOrigin") = "India"  OR  Session("CountryOrigin") = "Australia"  Then %>
+				   <% If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "Netherlands" OR Session("CountryOrigin") = "UAE" OR Session("CountryOrigin") = "Singapore" OR Session("CountryOrigin") = "India"  OR  Session("CountryOrigin") = "Australia" OR  Session("CountryOrigin") = "Other" Then %>
                       
                           Classroom Benefits
                           
@@ -291,8 +292,8 @@ End If
 						   <li>2-day Training with Accelerated Learning Techniques. <a href="/2-Day-ITIL-Training.asp">More</a></li>
                            <li>Approved by 2 leading ITIL Examination Institutes - APMG and CSME. <a href="/aboutCSME-APMG.asp">More</a></li>
                            <li>Several convenient ITIL Training locations. <a href="/ITIL-Courses.asp">More</a></li>
-                           <% If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" Then %>
-                             <li>Complementary Risk Management course and 20 Project Management Institute (PMI)<sup>&reg;</sup> PDUs worth $300. <a href="http://itilstudy.com/ITIL-Training/free-onlinecertification.asp" target="_blank">More</a></li>                                       
+                           <% If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Other"  Then %>
+                             <li>Complementary Risk Management course and 20 Project Management Institute (PMI)<sup>&reg;</sup> PDUs worth $150. <a href="http://itilstudy.com/ITIL-Training/free-onlinecertification.asp" target="_blank">More</a></li>                                       
 							 <% End If %>
                            <li>Comprehensive ITIL courses with globally proven training methodology. <a href="/ITIL-Training/comprehensive.asp">More</a></li>
                            <li>Experienced faculty for ITIL Certification courses. <a href="/ITIL-Training/instructors.asp">More</a></li>
@@ -363,6 +364,15 @@ End If
 			
 			
 			 <% If Session("CountryOrigin") = "Other"  Then %>
+             <p id="imageHover"><a href="/ITIL-Training/ITIL-Training-Led-Live-Online-Course.asp"><img src="/images/buttons/WBT1.jpg" height="29px" border="0"></a><br />
+                    
+                  <span id="subImage">For ITIL<sup>&reg;</sup> Virtual Live Class</span></span>
+			    <br /> <br />
+                 <a href="/ITIL-Training/ITIL-Training-Led-Live-Online-Course.asp">Instructor-led Virtual Live Class</a><br />
+                 Courses starting at $ 1049
+                (Prices are inclusive of exam fees and 100% Money Back Guarantee)
+             
+             
              <h1 class="HomePageTitle">
            ITILstudy offers the best online courses (highest success rates) at the most economical prices for ITIL Foundation exam preparation.  <br /><br />View our ITILstudy classes in other countries.</h1><br />
 		    
@@ -461,9 +471,9 @@ End If
               |
               <% = CourseDate %>
   
-              </a>&nbsp;&nbsp;&nbsp;
+              </a>
               <% If Status = "Full" Then %>
-              <font color="red">Full</font>
+              <font color="red">&nbsp;&nbsp;&nbsp;Full</font>
               <% End If %>
               <br>
               <%
@@ -480,7 +490,7 @@ End If
            <%If (Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada") Then%>
         
          <br />  View classes in <a href="http://www.itilstudy.com/ITIL-Training-Atlanta.asp">Atlanta</a>, <a href="http://www.itilstudy.com/ITIL-Training-Chicago.asp">Chicago</a>, <a href="http://www.itilstudy.com/ITIL-Training-Charlotte.asp">Charlotte</a>, <a href="http://www.itilstudy.com/ITIL-Training-Los-Angeles.asp">Los Angeles</a>, <a href="http://www.itilstudy.com/ITIL-Training-Miami.asp">Miami</a>, <a href="http://www.itilstudy.com/ITIL-Training-New-York.asp">New York</a>, <a href="http://www.itilstudy.com/ITIL-Training-Orlando.asp">Orlando</a>, <a href="http://www.itilstudy.com/ITIL-Training-Phoenix.asp">Phoenix</a>, <a href="http://www.itilstudy.com/ITIL-Training-San-Francisco.asp">San Francisco</a>, <a href="http://www.itilstudy.com/ITIL-Training-Seattle.asp">Seattle</a>, <a href="http://www.itilstudy.com/ITIL-Training-Toronto.asp">Toronto</a>, <a href="http://www.itilstudy.com/ITIL-Training-Washington-D.C.-(Fairfax).asp">Washington DC</a>, and <a href="http://www.itilstudy.com/ITIL-Courses.asp">other cities</a>.</span>
-         
+         <br /><br /><span align="right"><a href="/ITIL-Courses.asp">Click here for more classes </span>
           <%End If%>
           
           <%If Session("CountryOrigin") = "Australia" then %>
@@ -551,9 +561,9 @@ End If
               |
               <% = CourseDate %>
   
-              </a>&nbsp;&nbsp;&nbsp;
+              </a>
               <% If Status = "Full" Then %>
-              <font color="red">Full</font>
+              <font color="red">&nbsp;&nbsp;&nbsp;Full</font>
               <% End If %>
               <br>
               <%
@@ -619,9 +629,9 @@ ITIL Lifecycle Certificate in Continual Service Improvement (3 Days) Courses sta
               |
               <% = CourseDate %>
   
-              </a>&nbsp;&nbsp;&nbsp;
+              </a>
               <% If Status = "Full" Then %>
-              <font color="red">Full</font>
+              <font color="red">&nbsp;&nbsp;&nbsp;Full</font>
               <% End If %>
               <br>
               <%
@@ -721,9 +731,9 @@ ITIL Lifecycle Certificate in Continual Service Improvement (3 Days) Courses sta
               |
               <% = CourseDate %>
   
-              </a>&nbsp;&nbsp;&nbsp;
+              </a>
               <% If Status = "Full" Then %>
-              <font color="red">Full</font>
+              <font color="red">&nbsp;&nbsp;&nbsp;Full</font>
               <% End If %>
               <br>
               <%
@@ -753,11 +763,12 @@ ITIL Lifecycle Certificate in Continual Service Improvement (3 Days) Courses sta
 					
 						   
               <!--ITIL Online Course -->
-              	<% If (Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin")="United Kingdom") Then %>
+    <% If (Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin")="United Kingdom" ) Then %>
                 <p id="imageHover"><a href="/ITIL-Training/ITIL-Led-Live-Online-Course.asp"><img src="/images/buttons/WBT1.jpg" height="29px" border="0"></a><br />
-                  <span id="subImage">For ITIL<sup>&reg;</sup> Live Online Courses</span></span>
+                    
+                  <span id="subImage">For ITIL<sup>&reg;</sup> Virtual Live Class</span></span>
 			    <br /> <br />
-                 <a href="/ITIL-Training/ITIL-Led-Live-Online-Course.asp">Instructor-led Virtual Classes</a><br />
+                 <a href="/ITIL-Training/ITIL-Led-Live-Online-Course.asp">Instructor-led Virtual Live Class</a><br />
                  Courses starting at <% If Session("CountryOrigin")="United Kingdom" Then %> £ 900 (Prices are inclusive of exam fees and 100% Moneyback Guarantee)<% Else %>$ 1049
                 (Prices are inclusive of exam fees and 100% Money Back Guarantee)<% End If %>
                <br /><br /></p>

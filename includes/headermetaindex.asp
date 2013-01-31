@@ -1,16 +1,4 @@
-<%
- If InStr(Request.ServerVariables("SERVER_NAME"),"www") = 0 Then
 
-	 Response.Status="301 Moved Permanently"
-
-	 If Request.ServerVariables("URL") = "/index.asp" Then
-		'Response.AddHeader "Location","http://www." & Request.ServerVariables("HTTP_HOST")
-	 Else
-	 	'Response.AddHeader "Location","http://www." & Request.ServerVariables("HTTP_HOST") & Request.ServerVariables("URL")
-     End If
-	 'Response.End
- End if
-%>
 
 <link rel="shortcut icon" href="/images/buttons/favicon.ico">
 <link rel="stylesheet" type="text/css" href="/css/chromestyle.css">
@@ -189,9 +177,7 @@ function getCountry() {
 			  <%end if %>
 <% If(Session("CountryOrigin")="United Kingdom") Then %>
 <!--Script to record the mouse movement of users on website-->
-<script type="text/javascript">
-document.write(unescape("%3Cscript src='" + (("https:" == document.location.protocol) ? "https" : "http") + "://cdn.mouseflow.com/projects/46bfe97f-a3a7-4871-8ea4-4f2204f4f235.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
+
 
 <% End If %>
 <%
@@ -388,7 +374,14 @@ End If
 
             </span>
              <% End If %>
+            <% If Session("CountryOrigin") = "Netherlands" Then %>
 
+            <span class="floatRight">
+				<span class="lang-Eng">
+                <a href="/indexduc.asp">Dutch</a> |</span>
+
+            </span>
+             <% End If %>
                <!--End When aligned to right , need to put last coming content to first-->              </td>
           </tr>
         </table>
@@ -472,7 +465,7 @@ End If
       </td>
       <%ElseIf Session("CountryOrigin") = "Australia" then %>
         <td id="imageHover"><div style="position:relative" id="imageHover"><img src="/images/buttons/logo_top.jpg" alt="ITILstudy" border="0" usemap="#Map" id="imageHover"/>
-	   <div class="contactInTopLogo"> <span id="callUsAt">Call: <span style="color:#0673b9">+61 2 88964376 </span> <span id="emailUs">Email: <a href="mailto:marketing@ITILstudy.com" style="color:#0673b9">marketing@ITILstudy.com</a></span></span> <span id="info"><a href="/ITIL-Training/Success-Rate.asp">99.2% Pass Rate with 100% Moneyback Guarantee</a></span> </div>
+	   <div class="contactInTopLogo"> <span id="info"><a href="/ITIL-Training/Success-Rate.asp">99.2% Pass Rate with 100% Moneyback Guarantee</a></span> </div>
        <map name="Map" id="Map">
   <area shape="rect" coords="5,13,230,96" href="/index.asp" />
   <area shape="rect" coords="563,10,724,95" href="http://www.csme.us/training-organizations.php" target="_blank" />

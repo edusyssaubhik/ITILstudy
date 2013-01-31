@@ -138,7 +138,8 @@ ElseIf Session("CRM_Country") = "Germany" Then
 	strCountry = "(country = 'Germany')"
 ElseIf Session("CRM_Country") = "Netherlands" Then
 	strCountry = "(country = 'Netherlands')"
-
+ElseIf Session("CRM_Country") = "Saudi Arabia" Then
+	strCountry = "(country = 'Saudi Arabia')"
 ElseIf Session("CRM_Country") = "Global" Then	
 	strCountry = "(country = 'US' OR country = 'Canada')"
 	Session("CRM_Country") = "US"
@@ -456,36 +457,36 @@ If rqAction = "noFollowUp"  Then
 	If rqState <> "" Then
 
 	'Retrive the not follow up calls details based on city search'
-	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM ITIL_callsreceived_new WHERE call_status1 = '4' And callerstate = '"&rqState&"' And "& strCountry &" And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
+	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website,country FROM ITIL_callsreceived_new WHERE call_status1 = '4' And callerstate = '"&rqState&"' And "& strCountry &" And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
 
 	'If user entered name in the serach of Follow Up calls that will come here'
 	ElseIf rqName <> "" Then
 
 	'Retrive the follow up calls details based on lastname'
-	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM ITIL_callsreceived_new WHERE call_status1 = '4' And (callername like '%"&searchName&"%' OR emailid like '%"& searchName &"%') And "& strCountry &" And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
+	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website,country FROM ITIL_callsreceived_new WHERE call_status1 = '4' And (callername like '%"&searchName&"%' OR emailid like '%"& searchName &"%') And "& strCountry &" And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
 	
 	'If user as a admin, i am showing all the cities'
 	ElseIf Session("TypeOfUser") = "Admin" And rqType = "" Then
 
 	'Retrive the follow up calls details for all the cities (ADMIN)'
-	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM ITIL_callsreceived_new WHERE call_status1 = '4'  And "& strCountry &" ORDER BY callid desc"
+	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website,country FROM ITIL_callsreceived_new WHERE call_status1 = '4'  And "& strCountry &" ORDER BY callid desc"
 
 	'If user as a admin, i am showing all the cities'
 	ElseIf Session("TypeOfUser") = "Admin" And rqType = "Online" Then
 
 	'Retrive the follow up calls details for all the cities (ADMIN)'
-	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM ITIL_callsreceived_new WHERE call_status1 = '4' And "& strCountry &" And callfor = 'Online' ORDER BY callid desc"
+	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website,country FROM ITIL_callsreceived_new WHERE call_status1 = '4' And "& strCountry &" And callfor = 'Online' ORDER BY callid desc"
 	
 	ElseIf Session("TypeOfUser") = "Faculty" And rqType = "" Then
 
-	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM ITIL_callsreceived_new WHERE call_status1 = '4'  And (callerstate in ("& assignedStates &")  OR addedby = '"& Session("USBUserId") &"') And ("& strCountry &") And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
+	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website,country FROM ITIL_callsreceived_new WHERE call_status1 = '4'  And (callerstate in ("& assignedStates &")  OR addedby = '"& Session("USBUserId") &"') And ("& strCountry &") And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
 
 	'Response.Write(strCallDet)
 
 	ElseIf Session("TypeOfUser") = "Faculty" And rqType = "Online" Then
 	
 	'Retrive the not follow up calls details based on city'
-	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM ITIL_callsreceived_new WHERE call_status1 = '4'  And (callerstate in ("& assignedStates &")  OR addedby = '"& Session("USBUserId") &"') And ("& strCountry &") And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
+	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website,country FROM ITIL_callsreceived_new WHERE call_status1 = '4'  And (callerstate in ("& assignedStates &")  OR addedby = '"& Session("USBUserId") &"') And ("& strCountry &") And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
 	
 	
 	ElseIf rqType = "ByFaculty" Then
@@ -501,7 +502,7 @@ If rqAction = "noFollowUp"  Then
 	Do Until objRsCallID.EOF
 	
 	'Retrive the follow up calls details based on city'
-	strCallDet1 = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM ITIL_callsreceived_new WHERE call_status1 = '4' And (call_status2 Is Null OR call_status2 <> 'Dummy')  And "& strCountry &" And callid = '"& objRsCallID("callid") &"'"
+	strCallDet1 = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website,country FROM ITIL_callsreceived_new WHERE call_status1 = '4' And (call_status2 Is Null OR call_status2 <> 'Dummy')  And "& strCountry &" And callid = '"& objRsCallID("callid") &"'"
 	
 	If i = 0 Then
 	
@@ -782,6 +783,18 @@ function getQueries() {
 }
 
 </script>
+<script language="javascript" type="text/javascript">
+<!--
+
+function popitup(url) {
+	newwindow=window.open(url,'name','toolbar=0,location=0,directories=0,status,menubar=0,scrollbars=0,minimizable=0,resizable=0,height=300,width=300,top=250,left=400');
+	if (window.focus) {newwindow.focus()}
+	return false;
+}
+
+// -->
+<!--  PMstudy -->
+</script>
 </head>
 <body>
 <div id="wrapper">
@@ -1005,8 +1018,9 @@ function getQueries() {
           <tr>
             <td bgcolor="#A7DBFB" align="center"><b>Name</b></td>
             <td bgcolor="#A7DBFB" align="center" width="50%"><b>Course Details</b></td>
-            <td bgcolor="#A7DBFB" align="center"><b>Phone Number</b></td>
-            <td bgcolor="#A7DBFB" align="center"><b>Email Id</b></td>
+            <td bgcolor="#A7DBFB" align="center"><b>Details</b></td>
+          <!--  <td bgcolor="#A7DBFB" align="center"><b>Phone Number</b></td>
+            <td bgcolor="#A7DBFB" align="center"><b>Email Id</b></td>-->
             <td bgcolor="#A7DBFB" align="center"><b>Name of Employer</b></td>
             <td bgcolor="#A7DBFB" align="center"><b>Date of Enrollment</b></td>
             <td bgcolor="#A7DBFB" align="center"><b>Comments</b></td>
@@ -1027,8 +1041,9 @@ function getQueries() {
               &nbsp;
               <% = arrAllPayNotRec(1,payNotRecRowcounter) %></td>
             <td><% = arrAllPayNotRec(5,payNotRecRowcounter) %></td>
-            <td><% = arrAllPayNotRec(4,payNotRecRowcounter) %></td>
-            <td><% = arrAllPayNotRec(2,payNotRecRowcounter) %></td>
+            <td><a href="/USBackoffice/userClassDetails.asp?EnrollID=<% = enrollId %>" onClick="return popitup('/USBackoffice/userClassDetails.asp?EnrollID=<% = enrollId %>')">Details</a></td>
+           <!-- <td><% '= arrAllPayNotRec(4,payNotRecRowcounter) %></td>
+            <td><%' = arrAllPayNotRec(2,payNotRecRowcounter) %></td>-->
             <td><% = arrAllPayNotRec(3,payNotRecRowcounter) %></td>
             <td><% = arrAllPayNotRec(6,payNotRecRowcounter) %></td>
             <form name="comment" action="addEnrollComments.asp" method="post" onsubmit="return Form_Validator(this)">
@@ -1207,6 +1222,9 @@ function getQueries() {
         <fieldset>
         <table border="2" cellpadding="0" cellspacing="0" class="table1" width="950px">
           <tr>
+           <%If rqAction = "freeEnrollment" Then %>
+              <td bgcolor="#A7DBFB" align="center"><b>Country</b></td>
+             <%End If %>
 		    <%' If Session("CRM_Country") = "US" OR Session("CRM_Country") = "Canada" Then %>
 			<td bgcolor="#A7DBFB" align="center"><b>State</b></td>
 			<% 'Else %>
@@ -1214,8 +1232,8 @@ function getQueries() {
 			<%' End If %>
             <td bgcolor="#A7DBFB" align="center"><b>City</b></td>
             <td bgcolor="#A7DBFB" align="center"><b>Name</b></td>
-            <td bgcolor="#A7DBFB" align="center"><b>Phone Number</b></td>
-            <td bgcolor="#A7DBFB" align="center"><b>Email Id</b></td>
+           <!-- <td bgcolor="#A7DBFB" align="center"><b>Phone Number</b></td>
+            <td bgcolor="#A7DBFB" align="center"><b>Email Id</b></td>-->
 			<td bgcolor="#A7DBFB" align="center"><b>Type of Call</b></td>			
             <td bgcolor="#A7DBFB" align="center"><b>Question</b></td>
             <td bgcolor="#A7DBFB" align="center"><b>Comments</b></td>
@@ -1231,6 +1249,9 @@ function getQueries() {
 			 For rowcounter = firstRow To lastRow
 			 CallID = arrAllCallDet(0,rowcounter) %>
           <tr>
+               <%If rqAction = "freeEnrollment" Then%>
+              <td><% = arrAllCallDet(11,rowcounter) %></td>
+              <%End If %>
             <td><% 'If arrAllCallDet(1,rowcounter) <> "" Then %>
               <% = arrAllCallDet(1,rowcounter) %>
               <%' Else %>
@@ -1239,9 +1260,10 @@ function getQueries() {
             </td>
             <td><% = arrAllCallDet(2,rowcounter) %></td>
             <td><% = arrAllCallDet(3,rowcounter) %></td>
-            <td><% = arrAllCallDet(4,rowcounter) %></td>
+            <td><a href="/USBackoffice/userCallDetails.asp?callID=<% = CallID %>" onClick="return popitup('/USBackoffice/userCallDetails.asp?callID=<% = CallID %>')">Details</a></td>
+            <!--<td><% '= arrAllCallDet(4,rowcounter) %></td>
 	
-            <td><% = arrAllCallDet(5,rowcounter) %></td>
+            <td><% '= arrAllCallDet(5,rowcounter) %></td>-->
 						<td><% = arrAllCallDet(9,rowcounter) %></td>		
             <td><% = arrAllCallDet(6,rowcounter) %>
               <br />

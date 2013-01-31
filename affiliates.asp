@@ -47,7 +47,7 @@
              
                   <div id="faqPanel1_5"><br />
                 <div style="background-color: rgb(107, 121, 165); color: rgb(51, 51, 51); font-weight: normal;" id="faqHeader1_2" class="collapsed">
-                  <h3> <span class="SubHeader">Scrum and Agile Certification: </span> :  Certified Scrum Expert and Certified Agile Expert certification training offered by  <a href="http://www.SCRUMstudy.com" target="_blank">SCRUMstudy.com</a>.</h3>
+                  <h3> <span class="SubHeader">Scrum and Agile Certification: </span> :  Scrum Master Certified and Agile Expert Certified training offered by  <a href="http://www.SCRUMstudy.com" target="_blank">SCRUMstudy.com</a>.</h3>
                 </div>
                 <div style="border-style: solid; border-color: rgb(107, 121, 165); border-width: 0px 1px; margin: 0px; overflow: hidden; display: none; height: 1px;" id="panel1_2" class="answer">
                   <div class="faqItemContent">
@@ -193,7 +193,7 @@
                           <br>
                           Our course methodology includes Guides, Comprehensive Tests and Case Study, which covers all concepts required for Program Management Certification. And helps in preparation for Program Management Certification Exam offered by Program Management Institute(PMI). <BR>
                           <BR>
-                          PGMPstudy provides comprehensive study materials to help you become an expert at Program Management. </P>
+                          PROGstudy provides comprehensive study materials to help you become an expert at Program Management. </P>
                       </div>
                     </div>
                     <div class="outerFAQContainerBottom">&nbsp;</div>

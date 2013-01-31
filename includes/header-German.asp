@@ -3,6 +3,7 @@
     
         <a href="/german/besser-als-die-Konkurrenz.asp" onmouseover="MM_swapImage('a','','/images/German/Why_us_Green.png',1)" onmouseout="MM_swapImgRestore()">Besser als die konkurrenz </a>
         <a href="/german/erfolgsquote.asp" onmouseover="MM_swapImage('a','','/images/German/Why_us_Green.png',1)" onmouseout="MM_swapImgRestore()">99.2% ERFOLGSQUOTE</a>
+     <a href="/german/reale-Lebenserfahrung.asp" onmouseover="MM_swapImage('a','','/images/German/Why_us_Green.png',1)" onmouseout="MM_swapImgRestore()">Praxisnahe Anwendung Der Konzepte</a>
 			<a href="/german/Geld-zurück-Garantie.asp" onmouseover="MM_swapImage('a','','/images/German/Why_us_Green.png',1)" onmouseout="MM_swapImgRestore()">100% Geld-zurück-garantie</a>		
       <a href="/german/2-Tage-ITIL-Training.asp" onmouseover="MM_swapImage('a','','/images/German/Why_us_Green.png',1)" onmouseout="MM_swapImgRestore()">2-Tage-training mit techniken des "beschleunigten lernens"</a>
 	  	   <a href="/german/Kursvorteile.asp" onmouseover="MM_swapImage('a','','/images/German/Why_us_Green.png',1)" onmouseout="MM_swapImgRestore()">Kurse Vorteile</span> </a>
@@ -57,6 +58,6 @@
 	    <a href="/german/Partner.asp" onmouseover="MM_swapImage('e','','/images/German/About_us_Green.png',1)" onmouseout="MM_swapImgRestore()">ITILstudy Affiliate-Kurse</a> 
 		 <a href="/german/Kontakt.asp" onmouseover="MM_swapImage('e','','/images/German/About_us_Green.png',1)" onmouseout="MM_swapImgRestore()">Kontakt / Rückkopplung</a> 
           <a href="/german/einenRückrufanfordern.asp" onmouseover="MM_swapImage('e','','/images/German/About_us_Green.png',1)" onmouseout="MM_swapImgRestore()">Einen Rückruf anfordern</a>
-          
+          <a href="/german/Investoren.asp" onmouseover="MM_swapImage('e','','/images/German/About_us_Green.png',1)" onmouseout="MM_swapImgRestore()">Investoren</a>
          </div>
      

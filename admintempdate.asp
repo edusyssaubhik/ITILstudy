@@ -31,7 +31,9 @@ rqModeOfPayment = Request.Form("ModeOfPayment")
 rqPaymentdate = Request.Form("Paymentdate")
 rqTraDetails = Request.Form("TraDetails")	
 
-
+If Trim(payer_email) = "" Then
+    Response.redirect "adminupdatedb.asp"
+End If
 'updateExpiryDate = (YEAR(date) & "/" & (Month(date)) & "/" & (DAY(date)))
 
 ConnObj.Execute "UPDATE PaypalDB SET date_valid = '"&date&"' WHERE payer_email='"&payer_email&"'"

@@ -5,10 +5,41 @@
 <!--#include virtual="/includes/displayFormat.asp"-->
 <!--#include virtual="/includes/generator4datesandlocation.asp"-->
 <!--#include virtual="/includes/location.html"-->
+
+
+
+
+
+
+<style type="text/css">
+    td.TableLiveClass {
+        border-top:1px solid #c3dcc0;
+        
+        background:#e1fede;
+        color: #000000;
+        font-family: Arial,Helvetica,sans-serif;
+        font-size: 12px;
+        height: 23px;
+        padding: 5px;
+        vertical-align: middle;
+    }
+    span.LiveClass {
+        border:1px solid #000000;
+        background-color:#0026ff;
+        color:#ffffff;
+        font-size:9px;
+        width:20px;
+        height:9px;
+    }
+
+
+</style>
+
 <script language="JavaScript" type="text/javascript" src="/js/tableH.js"></script>
 <script language="JavaScript" type="text/javascript" src="/js/courses.js"></script>
 <script type="text/javascript" src="/js/cities_combo.js"></script>
 <script language="javascript" type="text/javascript">
+
 
 <!--
 
@@ -93,7 +124,7 @@ else if (ns6||ie4) ld.display="none";
 			<li>High quality, comprehensive classroom study materials in line with the ITIL Foundation exam is provided. <a href="/Classroom-Courseware.asp">More</a></li>
 			<li> Lunch and refreshments during classroom sessions</li>
 		  <li>Everything required for ITIL Foundation exam would be provided, you don't need to bring anything else to the class</li>
-          <li>Complementary RMstudy Certification worth $ 300. <a href="http://itilstudy.com/ITIL-Training/free-onlinecertification.asp" target="_blank">More</a></li>
+          <li>Complementary RMstudy Certification worth $ 150. <a href="http://itilstudy.com/ITIL-Training/free-onlinecertification.asp" target="_blank">More</a></li>
 			            <li> Provides Online access to ITIL Foundation course material offering 6 hours of pre-classroom study</li>
 
                 <li>Valuable tips to pass the ITIL Foundation exam</li>
@@ -190,7 +221,7 @@ else if (ns6||ie4) ld.display="none";
                   <%End If %>
                 			   <%If Session("CountryOrigin") <> "India" then %>
 
-  <li>Complimentary RMstudy Certification worth $300. <a href="http://itilstudy.com/ITIL-Training/free-onlinecertification.asp">More</a></li>
+  <li>Complimentary RMstudy Certification worth $150. <a href="http://itilstudy.com/ITIL-Training/free-onlinecertification.asp">More</a></li>
      <% End if %>
  <li>Refreshments during classroom sessions</li>
  <li>Everything required for ITIL Foundation exam would be provided, you don't need to bring anything else to the class</li>
@@ -408,7 +439,7 @@ else if (ns6||ie4) ld.display="none";
 					  
 					  'Function For Displaying Question Format'
 					 
-					'Set tsoObject = fsoObject.OpenTextFile("C:\inetpub\wwwroot\dateslocation\ITILstudy-Classes-ITILstudy-Training-"&Session("CountryOrigin")&".txt")
+					'Set tsoObject = fsoObject.OpenTextFile("C:\GitHub\ITILstudy\dateslocation\ITILstudy-Classes-ITILstudy-Training-"&Session("CountryOrigin")&".txt")
 					Set tsoObject = fsoObject.OpenTextFile("E:\vhosts\ITILstudy.com\httpdocs\dateslocation\ITILstudy-Classes-ITILstudy-Training-"&Session("CountryOrigin")&".txt")
  
 					  StrMain = tsoObject.ReadAll
@@ -690,6 +721,33 @@ var google_conversion_value = 0;
 </div>
 </noscript>
 <% End If %>
+
+
+
+
+      <!-- Added by :  Priyanka on date : 18/12/2012 -->     
+                  
+               <!-- Google Code for ITILstudy US-DL Conversion Page -->
+                <script type="text/javascript">
+                /* <![CDATA[ */
+                var google_conversion_id = 947765691;
+                var google_conversion_language = "en";
+                var google_conversion_format = "3";
+                var google_conversion_color = "ffffff";
+                var google_conversion_label = "ljEjCIW3tgkQu4P3wwM";
+                var google_conversion_value = 0;
+                /* ]]> */
+                </script>
+                <script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+                </script>
+                <noscript>
+                <div style="display:inline;">
+                <img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/947765691/?value=0&amp;label=ljEjCIW3tgkQu4P3wwM&amp;guid=ON&amp;script=0"/>
+                </div>
+                </noscript>
+
+
+
 </div>
 <!-- Body Ends -->
 <!--#include virtual="/includes/footer.html"-->

@@ -10,7 +10,7 @@
           <tr>
             <td width="2%" >&nbsp;</td>
             <td width="25%" >&nbsp;</td>
-            <td width="73%" class="breadcrumb">Home &raquo; UBER UNS &raquo; Wer wir sind  </td>
+            <td width="73%" class="breadcrumb">Startseite &raquo; UBER UNS &raquo; Wer wir sind  </td>
           </tr>
           <tr>
             <!--#include virtual="/includes/innerLeftMenu-German.asp"-->

@@ -1,5 +1,8 @@
 <!--#include virtual="/metatags/Instructor-Led-Virtual-Training_metatag.html"-->
 <!--#include virtual="/includes/headermeta.asp"-->
+<%If Session("CountryOrigin") <> "United Kingdom" AND Session("CountryOrigin") <> "US" AND  Session("CountryOrigin") <> "Canada" Then 
+    response.Redirect "/index.asp"
+    End If %>
 <!--#include virtual="/includes/classroombanner.html"-->
 <!-- Body Starts -->
 
@@ -10,29 +13,20 @@
           <tr>
             <td width="2%">&nbsp;</td>
             <td width="25%" >&nbsp;</td>
-            <td width="73%" class="breadcrumb"><a href="/index.asp" title="Home">Home</a> &raquo; Methodology &raquo; FOUNDATION - INSTRUCTOR LED VIRTUAL CLASS   </td>
+            <td width="73%" class="breadcrumb"><a href="/index.asp" title="Home">Home</a> &raquo; Methodology &raquo; FOUNDATION - INSTRUCTOR LED VIRTUAL LIVE CLASS</td>
           </tr>
           <tr>
             <!--#include virtual="/includes/innerLeftMenu.asp"-->
             <td width="73%" rowspan="4" background="/images/back/left_line.jpg" class="general-body">
-			 <h1 class="PageTitle">Instructor Led Virtual Class Methodology</h1>
+			 <h1 class="PageTitle">INSTRUCTOR-LED VIRTUAL LIVE CLASS METHODOLOGY</h1>
             <div >
             <p >
-            
+                <img src="/images/virtual_live_class/VIRTUAL-LIVE-CLASS .jpg" alt="VIRTUAL LIVE CLASS" title="VIRTUAL LIVE CLASS"  width="640" height="480"/>
 
-1. You enrol with us at least 5 days before the course date and pay the course fee by <a href="/ITIL-Courses.asp">clicking here</a><br />
-                2. We ship the study material and send the course access code to you<br />
-                3. You attend the ITIL Live course by logging in with the course access code sent in Step 2. <br />
-                4. At the end of the class, generate the exam voucher on our portal, take the exam, and become ITIL Foundation certified.<br />
-                            
-            
+                <ol><li>You can log in from anywhere in the world. All you need is a computer with a webcam, a headset and an internet connection.</li> 
+<li>Apart from the comfort, there would be no travel expenses and time spent in commuting.</li> </ol>
 
-
-<BR>
-</p>
-<br /><a href="/course-syllabus.asp">Syllabus and Time Table</a>
-    <br><br>
-            
+            </p>
 				</td>
                 
           </tr>
