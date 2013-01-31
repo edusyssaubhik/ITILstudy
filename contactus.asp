@@ -188,7 +188,7 @@ function closeimgContainer(){
                      
                       <%If Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada"  Then  %>
          
-                             +1-855-234-8454 or 480-882-0706 / 520-226-4988 (available only during business hours i.e. 7:00 AM to 5:00 PM MST)<br /><br />
+                             +1-855-MYVMedu or 480-882-0706 / 520-226-4988 (available only during business hours i.e. 7:00 AM to 5:00 PM MST)<br /><br />
                     <font color="red"><B>Call us now: </B> ITILstudy also offers customized weekend courses and corporate classes.</font><BR>
                     <br>
                     Fax number : 240-238-2987 <br />
