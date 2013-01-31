@@ -67,9 +67,9 @@ strQuery = "SELECT TOP 1 * FROM facebookDiscounts Order by Id desc"
 
 End If
 
-If rqVoucher = rqDiscountCode OR UCase(trim(rqVoucher)) = "OSA200" OR UCase(trim(rqVoucher)) = "CSI200" OR UCase(trim(rqVoucher)) ="ST200" Then
+If rqVoucher = rqDiscountCode OR UCase(trim(rqVoucher)) = "OSA200" OR UCase(trim(rqVoucher)) = "CSI200" OR UCase(trim(rqVoucher)) ="ST200" OR UCase(trim(rqVoucher)) = "FD200" Then
     '**********************************Madhav Start*************************************************
-If UCase(trim(rqVoucher)) = "OSA200" OR UCase(trim(rqVoucher)) = "CSI200" OR UCase(trim(rqVoucher)) ="ST200" Then
+If UCase(trim(rqVoucher)) = "OSA200" OR UCase(trim(rqVoucher)) = "CSI200" OR UCase(trim(rqVoucher)) ="ST200" OR UCase(trim(rqVoucher)) = "FD200" Then
     If rqClassType = "OSA" Then 
         If UCase(trim(rqVoucher)) = "OSA200" Then
           Str = "<font style=""color:#009900"">Discount Code Valid</font> <input type=""hidden"" name=""Discount"" value=""Valid"">"
@@ -82,6 +82,16 @@ If UCase(trim(rqVoucher)) = "OSA200" OR UCase(trim(rqVoucher)) = "CSI200" OR UCa
         Else 
             Str = "<font style=""color:#FF0000"">Discount Code Not Valid</font><input type=""hidden"" name=""Discount"" value=""NotValid""><input type=""BUTTON"" value=""Validate"" id =""facebookValidate"" class=""button"" onClick=""findEmail(this.value);"" />"
         End If
+		
+				
+    ElseIf rqClassType = "Normal" Then
+         If UCase(trim(rqVoucher)) = "FD200" Then
+           Str = "<font style=""color:#009900"">Discount Code Valid</font> <input type=""hidden"" name=""Discount"" value=""Valid"">"
+        Else 
+            Str = "<font style=""color:#FF0000"">Discount Code Not Valid</font><input type=""hidden"" name=""Discount"" value=""NotValid""><input type=""BUTTON"" value=""Validate"" id =""facebookValidate"" class=""button"" onClick=""findEmail(this.value);"" />"
+        End If
+		
+		
      ElseIf rqClassType = "ST" Then
          If UCase(trim(rqVoucher)) = "ST200" Then
            Str = "<font style=""color:#009900"">Discount Code Valid</font> <input type=""hidden"" name=""Discount"" value=""Valid"">"
