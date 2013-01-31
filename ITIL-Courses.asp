@@ -5,12 +5,6 @@
 <!--#include virtual="/includes/displayFormat.asp"-->
 <!--#include virtual="/includes/generator4datesandlocation.asp"-->
 <!--#include virtual="/includes/location.html"-->
-
-
-
-
-
-
 <style type="text/css">
     td.TableLiveClass {
         border-top:1px solid #c3dcc0;
@@ -527,7 +521,7 @@ else if (ns6||ie4) ld.display="none";
                 <%End If%>
                 
                
-                <p><a href="enrollClass.asp" class="Header"><% If Session("CountryOrigin") = "United Kingdom" Then %>ENROL<% Else %>ENROLL <% End If %> in ITILstudy
+                <p><a href="enrollClass.asp?coursetype=Normal" class="Header"><% If Session("CountryOrigin") = "United Kingdom" Then %>ENROL<% Else %>ENROLL <% End If %> in ITILstudy
                   <% = Session("CountryOrigin") %>
                   classroom training </a> </p>
          
