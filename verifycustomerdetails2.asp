@@ -2,7 +2,10 @@
 <!--#include virtual="/includes/innerindustryrecognizedbanner.html"-->
 <!--#include virtual="/includes/connection.asp"-->
 <!--#include virtual="/metatags/index_metatag.html"-->
+<!-- #include virtual = "/includes/formvalidation.asp"-->
 <!-- Body Starts -->
+
+
 
 <div>
   <table width="930" border="0" align="center" cellpadding="0" cellspacing="0">
@@ -76,6 +79,58 @@
 						rqCity        =  Request.Form("city")
                         rqState      =  Request.Form("state")
 						rqcountry     =  Request.Form("country")
+						
+						
+						
+										
+						
+						
+				'****************Server Side validation for the form start******************
+				
+					If first_name ="" Then
+					Session("ErrorFirstName") = valueRequired(first_name)
+					Else
+					Session("ErrorFirstName") = ForNames(first_name)
+					End If
+				
+				
+					If last_name ="" Then
+					Session("ErrorLastName") = valueRequired(last_name)
+					Else
+					Session("ErrorLastName") = ForNames(last_name)
+					End If
+					
+					If payer_email = "" Then
+					 response.Write(ErrorFirstName & "hhhiiknnn")
+					Session("ErrorEmail") = valueRequired(payer_email)
+					Else
+					Session("ErrorEmail") = ForEmail(payer_email)
+					End If
+					
+					If ebay_address_id ="" Then
+					Session("ErrorPhone") = valueRequired(ebay_address_id)
+					Else
+					Session("ErrorPhone") = ForNumber(ebay_address_id)
+					End If
+					
+					
+				  If Session("ErrorFirstName") <> "" OR Session("ErrorLastName") <> "" OR Session("ErrorEmail") <> "" OR  Session("ErrorPhone") <> "" Then
+					
+					  Response.redirect("/customerdetails.asp")     
+				
+				End If
+																
+										
+				'**********************validation ends *********************'
+										
+						
+						
+						
+						
+						
+						
+						
+						
 						
 						payer_payment_email=Request.Form("payer_payment_email") 'added by cm to get last inserted row behave of email id and update the same row with newly changed values.
 						
