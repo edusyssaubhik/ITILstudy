@@ -308,7 +308,7 @@ Else
 	strEnding= strEnding &"<td class="& bgColor &"><div align=""center""><form action=""/enrollclass.asp"" method=""post""><input type=""hidden"" name=""SelCourseID"" value="& arrAllCourses(0,rowCounter) &" /><input type=""submit"" name=""TypeCourse"" value=""Live"" class=""ButtonSmall""/></form></div></td>"
 	End If
 	Else
-	strEnding= strEnding &"<td class="& bgColor &"><div align=""center""><form action=""/enrollclass.asp"" method=""post""><input type=""hidden"" name=""SelCourseID"" value="& arrAllCourses(0,rowCounter) &" />"
+	strEnding= strEnding &"<td class="& bgColor &"><div align=""center""><form action=""/enrollclass.asp"" method=""post""><input type=""hidden"" name=""coursetype"" value=""Normal"" /><input type=""hidden"" name=""SelCourseID"" value="& arrAllCourses(0,rowCounter) &" />"
 	
 	If Session("CountryOrigin") = "United Kingdom" Then 
 	strEnding= strEnding &	"<input type=""submit"" name=""TypeCourse"" value=""Enrol"" class=""ButtonSmall""/></form></div></td>"
