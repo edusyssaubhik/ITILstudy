@@ -197,7 +197,7 @@ If rqType = "review" Then
 		Case "BOA - Check"
 			 text1 = "Check Number"	 
 			 
-		Case "BOA - Wire Transfer", "BOA-Counter Credit" , "Cash" , "Bank Transfer - ANZ"
+		Case "BOA - Wire Transfer", "BOA-Counter Credit" , "Cash" , "Bank Transfer - ANZ","Bank Transfer - DB"
 			 text1 = ""	 				
 		
 	  End Select
@@ -206,7 +206,7 @@ If rqType = "review" Then
 	  
 
 	 
-	 If (rqModeofPayment  <> "BOA - Wire Transfer" AND rqModeofPayment <> "BOA-Counter Credit" AND rqModeofPayment <> "Cash" AND rqModeofPayment <> "Bank Transfer - ANZ") Then
+	 If (rqModeofPayment  <> "BOA - Wire Transfer" AND rqModeofPayment <> "BOA-Counter Credit" AND rqModeofPayment <> "Bank Transfer - DB" AND rqModeofPayment <> "Cash" AND rqModeofPayment <> "Bank Transfer - ANZ") Then
 
  		rqComment  =  "receipt of "& Currency_Format_Front &""& rqTotal &""& Currency_Format_Back &" through "& rqModeofPayment &" with "&text1&" : "& rqorderNo &" dated " & MonthName(Month((rqPaymentdate))) & " " & Day(rqPaymentdate) & ", " & Year(rqPaymentdate)
 		
