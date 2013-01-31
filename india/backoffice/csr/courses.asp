@@ -2254,9 +2254,9 @@ function update(a){
 
    				var now = new Date()
    				now.setHours(0,0,0,0)
-   				if (dateCheckOut < now)
-   					// check out date can not be befor today if startDate NOT defined
-   					return true;
+   				//if (dateCheckOut < now)
+//   					// check out date can not be befor today if startDate NOT defined
+//   					return true;
 
    				return false;
    			}
@@ -2275,9 +2275,9 @@ function update(a){
    				var now = new Date()
    				now.setHours(0,0,0,0)
 
-   				if (dateCheckIn < now)
-   					// endDate NOT defined, calendar date can not be before today
-   					return true;
+   				//if (dateCheckIn < now)
+//   					// endDate NOT defined, calendar date can not be before today
+//   					return true;
 
    				return false;
    			}
