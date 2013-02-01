@@ -267,7 +267,7 @@ Else
 	
 	If arrAllCourses(16,rowCounter) <> "Full" Then
 	
-	strEnding= strEnding &"<td class="& bgColor &"><div align=""center""><form action=""/enrollclass.asp"" method=""post""><input type=""hidden"" name=""SelCourseID"" value="& arrAllCourses(0,rowCounter) &" /><input type=""submit"" name=""TypeCourse"" value=""Book"" class=""ButtonSmall""/></form></div></td>"
+	strEnding= strEnding &"<td class="& bgColor &"><div align=""center""><form action=""/enrollclass.asp"" method=""post""><input type=""hidden"" name=""SelCourseID"" value="& arrAllCourses(0,rowCounter) &" /><input type=""hidden"" name=""coursetype"" value=""Normal"" /><input type=""submit"" name=""TypeCourse"" value=""Book"" class=""ButtonSmall""/></form></div></td>"
 	
 	Else
 	strEnding= strEnding &"<td class="& bgColor &"><div align=""center""><img src=""/images/back/full.gif"" /></div></td>"

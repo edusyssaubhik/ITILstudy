@@ -138,6 +138,8 @@ ElseIf Session("CRM_Country") = "Germany" Then
 	strCountry = "(country = 'Germany')"
 ElseIf Session("CRM_Country") = "Netherlands" Then
 	strCountry = "(country = 'Netherlands')"
+ElseIf Session("CRM_Country") = "Switzerland" Then
+	strCountry = "(country = 'Switzerland')" 
 ElseIf Session("CRM_Country") = "Saudi Arabia" Then
 	strCountry = "(country = 'Saudi Arabia')"
 ElseIf Session("CRM_Country") = "Global" Then	

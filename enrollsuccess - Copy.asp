@@ -343,7 +343,7 @@ Do Until objRs.EOF
                 case "OSA200" : x = 200
                 case "CSI200" : x = 200
                 case "ST200" : x = 200
-				case "FD200" : x = 100
+				case "FD200" : x = 200
         End Select 
     '***************Discount Code************
         Else
@@ -522,16 +522,7 @@ objRs.Close
 EnrollId = Session("EnrollId")
 
 'Sending proforma invoice email'
-		  strBody = "<table width=""100%"" bgcolor=""#CCCCCC"" style=""margin:0px;0px;0px;0px;""><tr><td>&nbsp;</td></tr><tr><td><table width=""600px"" border=""0"" align=""center"" cellpadding=""2"" cellspacing=""12"" bgcolor=""#FFFFFF"">"
-		  
-		  If (Session("CountryOrigin") = "Germany") Then 
-		  
- strBody = "<tr><td width=""595px"" bgcolor=""#FFFFFF""><span><img src=""http://www.itilstudy.com/images/banners/Email-Header-Exin.png"" alt=""ITIlstudy"" width=""600px"" height=""103"" /></span></td></tr>"
- Else 
-  strBody = "<tr><td width=""595px"" bgcolor=""#FFFFFF""><span><img src=""http://www.itilstudy.com/images/banners/Email-Header.jpg"" alt=""ITIlstudy"" width=""600px"" height=""103"" /></span></td></tr>"
-  End If
- 
- 
+		  strBody = "<table width=""100%"" bgcolor=""#CCCCCC"" style=""margin:0px;0px;0px;0px;""><tr><td>&nbsp;</td></tr><tr><td><table width=""600px"" border=""0"" align=""center"" cellpadding=""2"" cellspacing=""12"" bgcolor=""#FFFFFF""><tr><td width=""595px"" bgcolor=""#FFFFFF""><span><img src=""http://www.itilstudy.com/images/banners/Email-Header.jpg"" alt=""ITIlstudy"" width=""600px"" height=""103"" /></span></td></tr>"
 		  strBody = strBody & "<tr><td align=""center"" colspan=""2"" width=""560px""><table border=""0"" align=""center"" width=""560px""><tr><td align=""center""><br><br><font face=""Arial"" size=""3"" color=""#0359b4""><b>COURSE ENROLLMENT DETAILS (INVOICE)"
 		  If (Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "UAE" OR Session("CountryOrigin") = "Singapore" OR Session("CountryOrigin") = "United Kingdom"  OR Session("CountryOrigin") = "Australia" ) Then
 		  If rqClasstype = "CSI" OR rqClasstype = "OSA" OR rqClasstype = "ST" Then
@@ -759,7 +750,7 @@ EnrollId = Session("EnrollId")
 		
 		  Else
 		  
-		  strBody = strBody & "Please Note: ITILstudy offers <a href=""http://itilstudy.com/ITIL-Training/moneyBack.asp"" target=""_blank"">Moneyback Guarantee</a> on its "&rqCourseType&" programs.<br/>ITILstudy classroom training<a href=""http://www.itilstudy.com/termsAndConditions.asp"" target=""_blank""> terms and conditions</a>."
+		  strBody = strBody & "Please Note: ITILstudy offers <a href=""http://itilstudy.com/ITIL-Training/moneyBack.asp"" target=""_blank"">Moneyback Guarantee</a> on its "&rqCourseType&" programs.<br/><a href=""http://www.itilstudy.com/termsAndConditions.asp"" target=""_blank"">ITILstudy classroom training terms and conditions</a>."
 		  End IF
 		  End If
 		  End If
@@ -991,13 +982,7 @@ End If
 		'Generating unique order id'
 		orderid = "ITILCS"&Session("CountryOrigin")
 
-		Order_ID = orderid &""& Session("EnrollID")	
-		
-		
-		 ' Displaying Vat No for Germany
-		  If (Session("CountryOrigin") = "Germany") Then%>
-		   <tr><td align="left" colspan="2"><b>Please Note:</b> This is not a VAT Invoice<br/><br/> Tax No: 3523206447<br/>VAT No: Applied<br/><br/> </td></tr>
-			<% End If	
+		Order_ID = orderid &""& Session("EnrollID")		
 			  
 	   'Here i am showing hotel details for particular class'
 				'Only for US and Canada Courses'
@@ -1111,7 +1096,7 @@ End If
           </table></td>
       </tr>
       
-        <% ElseIf  Session("CountryOrigin") = "Netherlands" Then %>
+        <% ElseIf (Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "Netherlands") Then %>
       <tr>
         <td class="btext"><table border="0" width="100%">
            
@@ -1129,45 +1114,13 @@ End If
                   <input type="hidden" name="return" value="http://www.ITILstudy.com/payment-success.asp">
 						<input type="image" src="/images/back/buybutton.gif" alt="BuyNow" />
                 </form>
-                
-               </td>
-			  </tr>
+				
+				</td>
+            </tr>
+         
+  
           </table></td>
       </tr>
-      
-      
-      
-         <% ElseIf (Session("CountryOrigin") = "Germany") then %>
-         
-          <tr>
-        <td class="btext"><table border="0" width="100%">
-         
-             <tr>
-              <td width="25%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Paypal: </B></td>
-              <td><form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                      <input type="hidden" name="cmd" value="_cart"> 
-                      <input type="hidden" name="upload" value="1"> 
-                      <input type="hidden" name="business" value="edusysservices@gmail.com">    
-                      <input type="hidden" name="item_name_1" value="ITILstudy <% = rqCourseType %> Training - <% = Session("CountryOrigin") %>">
-                      <input type="hidden" name="currency_code" value="EUR">  
-    					<input name="item_name" type="hidden" value="<% = CourseDetails %>"/>
-						 <input type="hidden" name="amount_1" value="<% = Total %> "/> 
-						  <input type="hidden" name="cancel_return" value="http://www.ITILstudy.com">
-                  <input type="hidden" name="return" value="http://www.ITILstudy.com/payment-success.asp">
-					<li type="none"><input type="image" src="/images/back/buybutton.gif" alt="BuyNow" /></li>
-                </form>
-                
-                
-               </td>
-			  </tr>
-              <tr><td width="25%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Bank Transfer:</b><br/></td><td>Client:Edusys Services GmbH i.Gr.<br/>Account No.:040394900<br/>Branch:Deutsche Bank Privat- und Geschäftskunden AG, Hanau<br/>IBAN:DE47 5067 0024 0040 3949 00<br/>SWIFT-Code:DEUTDEDB506</td></tr>
-          </table></td>
-      </tr>
-           
-	
-          
-          
-          
       <% ElseIf Session("CountryOrigin") = "UAE" Then %>
       <tr>
         <td class="btext"><table border="0">
@@ -1395,12 +1348,8 @@ We have reserved a place for you in this course. However, your participation wil
       </tr>
       <tr>
         <td colspan="2" class="general-body">
-           <% If (Session("CountryOrigin") <> "US" And Session("CountryOrigin") <> "Canada" And Session("CountryOrigin") <> "Germany") Then %>
+           <% If (Session("CountryOrigin") <> "US" And Session("CountryOrigin") <> "Canada") Then %>
         <p><span class="general-bodyBold">Please Note : </span>You will be provided access to the free 100% Online Preparatory Course for <a href="http://www.ITILstudy.com">ITILstudy.com</a> <% = rqCourseType %> Course only after we receive your payment: this is a simple online course which can be completed with a few hours of study and will provide you with the 18 PMI approved PDUs after the completion of the <% = rqCourseType %> training program.</p>
-        
-          <% ElseIf Session("CountryOrigin") = "Germany" Then %>
-        <p><span class="general-bodyBold">Please Note : </span> You will be provided access to the Online Preparatory Course for after we receive your payment.This is a simple online course which can be completed with a few hours of study and will provide you with the 18 PMI approved PDUs after the completion of the <% = rqCourseType %> training program.<br></p>
-        
           <% End If %>
           <% If (Session("CountryOrigin") = "India") Then %>
           <p>For ITILstudy <% = rqCourseType %> training terms and conditions, please visit <a href="/termsAndConditions.asp">http://www.ITILstudy.com/termsAndConditions.asp</a></p>
@@ -1408,20 +1357,12 @@ We have reserved a place for you in this course. However, your participation wil
           <% If rqClasstype = "CSI" OR rqClasstype = "OSA" OR rqClasstype = "ST" Then %>
           <p>For ITILstudy <% = rqCourseType %> training terms and conditions, please visit <a href="/Intermediate-TermsAndConditions.asp">www.ITILstudy.com/Intermediate-TermsAndConditions.asp</a></p>
           <% Else %>
-          <% If Session("CountryOrigin") <> "Germany" Then %>
-               <p>ITILstudy offers Moneyback Guarantee on its <% = rqCourseType %> programs. For details, visit <a href="/ITIL-Training/moneyBack.asp">www.ITILstudy.com/ITIL-Training/moneyBack.asp</a>; Also, please refer to ITILstudy <% = rqCourseType %> training terms and conditions: <a href="/termsAndConditions.asp">www.ITILstudy.com/termsAndConditions.asp</a></p>
-          
-          <% Else %>
-          
-         <p><b> Please Note:</b> ITILstudy offers <a href="http://itilstudy.com/ITIL-Training/moneyBack.asp" target="_blank">Moneyback Guarantee</a> on its <% =rqCourseType%> programs.<br/>ITILstudy classroom training<a href="http://www.itilstudy.com/termsAndConditions.asp" target="_blank"> terms and conditions</a></p>
-         
-         
-          <% End If %>
+          <p>ITILstudy offers Moneyback Guarantee on its <% = rqCourseType %> programs. For details, visit <a href="/ITIL-Training/moneyBack.asp">www.ITILstudy.com/ITIL-Training/moneyBack.asp</a>; Also, please refer to ITILstudy <% = rqCourseType %> training terms and conditions: <a href="/termsAndConditions.asp">www.ITILstudy.com/termsAndConditions.asp</a></p>
           <% End If %>
           <% End If %>
         </td>
       </tr>
-      <%  If Session("CountryOrigin") <> "India" And Session("CountryOrigin") <> "Germany" Then  %>
+      <%  If Session("CountryOrigin") <> "India"  Then  %>
        <tr><td align="center" colspan="3">
            <a href="https://www.facebook.com/ITILstudy/app_128953167177144" target="_blank">Stay connected to get more from ITILstudy on Facebook</a>.</td>
       </tr>

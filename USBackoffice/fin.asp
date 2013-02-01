@@ -365,6 +365,8 @@ function validate_form2(thisform)
 
 			strQuery = "SELECT firstname, lastname, emailid1 FROM ITIL_instructor WHERE "& strCountry & " And typeofuser = 'Faculty' ORDER BY firstname"
 			
+			'Response.Write(strQuery)
+			
 		    objRs.Open strQuery,connObj
 	  
 	    %>
