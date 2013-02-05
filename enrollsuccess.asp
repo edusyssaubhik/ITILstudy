@@ -524,11 +524,12 @@ EnrollId = Session("EnrollId")
 'Sending proforma invoice email'
 		  strBody = "<table width=""100%"" bgcolor=""#CCCCCC"" style=""margin:0px;0px;0px;0px;""><tr><td>&nbsp;</td></tr><tr><td><table width=""600px"" border=""0"" align=""center"" cellpadding=""2"" cellspacing=""12"" bgcolor=""#FFFFFF"">"
 		  
+		  
 		  If (Session("CountryOrigin") = "Germany") Then 
 		  
- strBody = "<tr><td width=""595px"" bgcolor=""#FFFFFF""><span><img src=""http://www.itilstudy.com/images/banners/Email-Header-Exin.png"" alt=""ITIlstudy"" width=""600px"" height=""103"" /></span></td></tr>"
+ strBody = strBody & "<tr><td width=""595px"" bgcolor=""#FFFFFF""><span><img src=""http://www.itilstudy.com/images/banners/Email-Header-Exin.png"" alt=""ITIlstudy"" width=""600px"" height=""103"" /></span></td></tr>"
  Else 
-  strBody = "<tr><td width=""595px"" bgcolor=""#FFFFFF""><span><img src=""http://www.itilstudy.com/images/banners/Email-Header.jpg"" alt=""ITIlstudy"" width=""600px"" height=""103"" /></span></td></tr>"
+  strBody = strBody & "<tr><td width=""595px"" bgcolor=""#FFFFFF""><span><img src=""http://www.itilstudy.com/images/banners/Email-Header.jpg"" alt=""ITIlstudy"" width=""600px"" height=""103"" /></span></td></tr>"
   End If
  
  
