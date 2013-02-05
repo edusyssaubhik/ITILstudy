@@ -193,7 +193,7 @@ ElseIf rqAction = "Submit" Then
 	If rqPayMode = "Check" Then
 	body = body &"<BR><BR>You will be receiving the check soon.<br><br>For details about this payment, please login into ITILstudy Backoffice and look up the 'Finance' module."
 	End If
-    body = body &"<BR><BR>Please note with this payment, all payments due to "&rqComp_Name&" till December 31, 2012 have been paid."
+    body = body &"<BR><BR>Please note with this payment, all payments due to "&rqComp_Name&" till "& Month_Payment &" have been paid."
 
 	body = body &"<br><br>If the total payment for the month "& Month_Payment &" differs with your records, please email marketing@ITILstudy.com and copy t_satpathy@yahoo.com.<br><br>Regards,<br>Finance Team<br>VMEdu Inc</font></td></tr></table></td></tr><tr height=""30px""><td>&nbsp;</td></tr></table></td></tr><tr height=""45px""><td>&nbsp;</td></tr></table>"
 	
@@ -273,7 +273,7 @@ ElseIf rqAction = "Edit Payment Detail" Then
 	If rqPayMode = "Check" Then
 	body = body &"<BR><BR>You will be receiving the check soon.<br><br>For details about this payment, please login into ITILstudy GlobalBackoffice and look up the 'Finance' module."
 	End If
-    body = body &"<BR><BR>Please note with this payment, all payments due to "&rqComp_Name&" till December 31, 2012 have been paid."
+    body = body &"<BR><BR>Please note with this payment, all payments due to "&rqComp_Name&" till "& Month_Payment &" have been paid."
 
 	body = body &"<br><br>If the total payment for the month "& Month_Payment &" differs with your records, please email marketing@ITILstudy.com and copy t_satpathy@yahoo.com.<br><br>Regards,<br>Finance Team<br>VMEdu Inc</font></td></tr></table></td></tr><tr height=""30px""><td>&nbsp;</td></tr></table></td></tr><tr height=""45px""><td>&nbsp;</td></tr></table>"
 	

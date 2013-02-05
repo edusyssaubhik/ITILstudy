@@ -9,7 +9,9 @@
       <!--2nd drop down menu -->
       <div style="top: 26px; left: 203px; clip: rect(0pt, auto, 94.8717px, 0pt); visibility: hidden; margin-left:28px; margin-top:5px;" id="dropmenu2" class="dropmenudiv">
      
-       <a href="/ITIL-Online-Courses.asp" onmouseover="MM_swapImage('b','','/images/back/link_02_courses_enroll_green.jpg',1)" onmouseout="MM_swapImgRestore()">ITIL Online Courses</a> </div>
+       <a href="/ITIL-Online-Courses.asp" onmouseover="MM_swapImage('b','','/images/back/link_02_courses_enroll_green.jpg',1)" onmouseout="MM_swapImgRestore()">ITIL Online Courses</a>
+       <a href="../ITIL-Training/ITIL-Training-Led-Live-Online-Course.asp" onmouseover="MM_swapImage('b','','/images/back/link_02_courses_enroll_green.jpg',1)" onmouseout="MM_swapImgRestore()">ITIL Foundation Courses </a>
+        </div>
 	   
 	    <!--3nd drop down menu -->
       <div style="top: 26px; left: 203px; clip: rect(0pt, auto, 94.8717px, 0pt); visibility: hidden; margin-left:28px; margin-top:5px;" id="dropmenu5" class="dropmenudiv">

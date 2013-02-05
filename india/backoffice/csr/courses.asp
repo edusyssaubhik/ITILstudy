@@ -1133,6 +1133,7 @@ function update(a){
               <option value="OSA">OSA Course</option>
               <option value="CSI">CSI Course</option>
               <option value="ST">Service Transition</option>
+              <option value="CSI-Live">CSI Live Course</option>
                  <%' End If %>   
             </select>
           </td>
@@ -1373,6 +1374,7 @@ function update(a){
                 <option <% If Rs4("coursetype") = "OSA" Then %> selected="selected" <% End If %> value="OSA">OSA Course</option>
                   <option <% If Rs4("coursetype") = "CSI" Then %> selected="selected" <% End If %> value="CSI">CSI Course</option>
                    <option <% If Rs4("coursetype") = "ST" Then %> selected="selected" <% End If %> value="ST">Service Transition</option>
+                    <option <% If Rs4("coursetype") = "CSI-Live" Then %> selected="selected" <% End If %> value="CSI-Live">CSI LIVE Course</option>
                   <%' End If %>          
             </select>
           </td>
@@ -1689,6 +1691,8 @@ function update(a){
               CSI Course
                <% ElseIf (arrAllRecords(5,rowcounter) = "ST") Then %>
               Service Transition
+              <% ElseIf (arrAllRecords(5,rowcounter) = "CSI-Live") Then %>
+              CSI Live Course
               <% Else %>
               Normal ITIL Course
               <% End If %>
@@ -1774,7 +1778,9 @@ function update(a){
                <% ElseIf (Rs1("coursetype") = "CSI") Then %>
               CSI Course
                <% ElseIf (Rs1("coursetype") = "ST") Then %>
-             Service Transition
+              Service Transition
+             <% ElseIf (Rs1("coursetype") = "CSI-Live") Then %>
+              CSI Live Course
               <% Else %>
               Normal ITIL Course
               <% End If %>

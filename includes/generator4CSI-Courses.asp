@@ -1,5 +1,4 @@
 <!--#include virtual="/includes/displayFormat.asp"-->
-
 <%
 	'---------------------------------------------------------------'
 	'Written By : Praveen'
@@ -33,7 +32,7 @@
 	
 	'Query For Selecting top Record from table to check the generator have to run or not'
 	'making Queries to not work when new course habeen added'
-
+	
 	If generate = "" Then
 	
 		strQuery1 ="select TOP 1 * from generate_course WHERE country = '"& Session("CountryOrigin") &"-CSI' ORDER BY id DESC"
@@ -94,7 +93,7 @@
 			
 			 
 	End If
-	response.write strQuery2
+	
 	If generate <> "" Then
 	Rs.Open strQuery2,Conn
 	Else
@@ -263,11 +262,11 @@ Else
 	'Creating a text file using file systm object.
 	
 	
-	'Set tsObject = fsoObject.CreateTextFile("E:\vhosts\ITILstudy.com\httpdocs\dateslocation\ITILstudy-Classes-ITILstudy-Training-CSI-"&Session("CountryOrigin")&".txt")
+	Set tsObject = fsoObject.CreateTextFile("E:\vhosts\ITILstudy.com\httpdocs\dateslocation\ITILstudy-Classes-ITILstudy-Training-CSI-"&Session("CountryOrigin")&".txt")
 	
-	Set tsObject = fsoObject.CreateTextFile("C:\GITHUB\ITILstudy\dateslocation\ITILstudy-Classes-ITILstudy-Training-CSI-"&Session("CountryOrigin")&".txt")
+	'Set tsObject = fsoObject.CreateTextFile("C:\inetpub\wwwroot\dateslocation\ITILstudy-Classes-ITILstudy-Training-CSI-"&Session("CountryOrigin")&".txt")
 	
-	response.write "ITILstudy-Classes-ITILstudy-Training-CSI-"&Session("CountryOrigin")&".txt"
+	
 	'Witing the string containing question format into an asp file using file system object.'
 	tsObject.Write strEnding
 	

@@ -186,7 +186,7 @@
    
  
     If arrAllCourses(19,rowCounter) = "US" Then
-    strEnding= strEnding & "&nbsp;CST"
+    strEnding= strEnding & "&nbsp;CST (US)"
 	
 	Else 
     strEnding= strEnding & "&nbsp;UK"

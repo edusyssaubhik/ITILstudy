@@ -114,7 +114,7 @@
  rqCourseType        =  Request.Form("coursetype")
  rqCompany           =  Request.Form("company")
  
- 
+ Response.Write(rqCourseType & "This is the course type")
 If addCourse = "Add Course" Then
 
  strQuery = "INSERT INTO ITIL_course (city,startdate,enddate,starthour,startminute,startsession,endhour,endminute,endsession,pricewithouttax,tax,pricewithtax,instructor,backupinstructor,applicabledays,earlybirddiscount,afterEBdiscountwithouttax,afterEBdiscountwithtax,hotelname,hotelphonenumber,hotelurl,hoteladdress,createddate,country,coursedates,coursetype,status,company)"

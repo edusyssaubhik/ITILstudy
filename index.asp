@@ -370,7 +370,50 @@ End If
 			    <br /> <br />
                  <a href="/ITIL-Training/ITIL-Training-Led-Live-Online-Course.asp">Instructor-led Virtual Live Class</a><br />
                  Courses starting at $ 1049
-                (Prices are inclusive of exam fees and 100% Money Back Guarantee)
+                (Prices are inclusive of exam fees and 100% Money Back Guarantee)<br/><br/>
+                
+                 <%
+
+			Set Rs = Server.CreateObject("ADODB.Recordset")
+			todayDate = now()
+
+                   strQuery = "SELECT Top 4 city,startdate,status,afterEBdiscountwithouttax, afterEBdiscountwithtax,applicabledays,pricewithtax, pricewithouttax FROM ITIL_course WHERE coursetype = 'Live' AND country='US' AND status <> 'Cancelled' AND startdate >= '" & todayDate & "' ORDER BY startdate ASC"
+'response.Write(strQuery)
+                     Rs.Open strQuery,ConnObj
+
+					 Do Until Rs.EOF 
+						
+						City      =  Rs("city")
+						StartDate =  Rs("startdate")
+						Status    =  Rs("status")
+						Price     =  Rs("afterEBdiscountwithtax")
+						PriceUK     =  Rs("afterEBdiscountwithouttax")
+						PriceUK1   =  Rs("pricewithouttax")
+						ApplicableDays = Rs("applicabledays")
+						Price1     =  Rs("pricewithtax")
+						
+						CourseDate = Day(StartDate) & " " & MonthName(Month(StartDate), true) & ", " & Year(StartDate)
+'response.Write(CourseDate)
+						If(CDate(StartDate)-Date()>0) Then
+						
+				  %>
+              <a href="ITIL-Training/ITIL-Training-Led-Live-Online-Course.asp">
+              <% = City %>
+              |
+              <% = CourseDate %>
+  
+              </a>
+              <% If Status = "Full" Then %>
+              <font color="red">&nbsp;&nbsp;&nbsp;Full</font>
+              <% End If %>
+              <br>
+              <%
+				     
+					 End If
+					 Rs.Movenext
+					 Loop
+                     Rs.Close
+				  %>
              
              
              <h1 class="HomePageTitle">

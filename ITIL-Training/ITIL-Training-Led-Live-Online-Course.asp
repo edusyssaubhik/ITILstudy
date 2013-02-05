@@ -191,7 +191,7 @@ else if (ns6||ie4) ld.display="none";
                 </tr>
               </tbody></table>
                
-                <span class="Header">ITILstudy ITIL Foundation classroom program includes:</span>
+                <span class="Header">ITILstudy ITIL Foundation Live classroom program includes:</span>
               <ol id="new" type="1">
                
 			   <li>Take the exam on the 2nd day and pass. (Pass percentage of 99.2%<span class="Required">**</span>)</li>
@@ -206,7 +206,7 @@ else if (ns6||ie4) ld.display="none";
                <li>Free Six Sigma Green Belt Certification and 25 PMI PDUs worth 250 USD or Human Resource Development Certification and 20 PMI PDUs worth 250 USD. <a href="ITIL-Training/free-onlinecertification.asp">More</a></li>                             
                              <% 'End If %>-->
                  <li>The course fee includes the cost of ITIL Foundation exam</li>
-                 <li>2-day classroom training by experienced trainers. </li>
+                 <li>2-day live training by experienced trainers. </li>
  <% If Session("CountryOrigin") <> "US" And Session("CountryOrigin") <> "Canada" Then %>
                  <li>Free online prep course </li>
                 <% End if %>
@@ -225,7 +225,7 @@ else if (ns6||ie4) ld.display="none";
 
   <li>Complimentary RMstudy Certification worth $150. <a href="http://itilstudy.com/ITIL-Training/free-onlinecertification.asp">More</a></li>
      <% End if %>
- <li>Refreshments during classroom sessions</li>
+<!-- <li>Refreshments during classroom sessions</li>-->
  <li>Everything required for ITIL Foundation exam would be provided, you don't need to bring anything else to the class</li>
  <li>Valuable tips to pass the  ITIL Foundation exam</li>
  <li>Free 18 PMI<sup>&reg;</sup> approved PDUs with our courses <a href="http://itilstudy.com/ITIL-Training/PMI_PDU.asp">More</a></li>
