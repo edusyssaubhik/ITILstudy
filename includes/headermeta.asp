@@ -1,15 +1,15 @@
 <%
- If InStr(Request.ServerVariables("SERVER_NAME"),"www") = 0 Then
-
-	 Response.Status="301 Moved Permanently"
-
-	 If Request.ServerVariables("URL") = "/index.asp" Then
-	 Response.AddHeader "Location","http://www." & Request.ServerVariables("HTTP_HOST")
-	 Else
-	 Response.AddHeader "Location","http://www." & Request.ServerVariables("HTTP_HOST") & Request.ServerVariables("URL")
-     End If
-	 Response.End
- End if
+ 'If InStr(Request.ServerVariables("SERVER_NAME"),"www") = 0 Then
+'
+'	 Response.Status="301 Moved Permanently"
+'
+'	 If Request.ServerVariables("URL") = "/index.asp" Then
+'	 Response.AddHeader "Location","http://www." & Request.ServerVariables("HTTP_HOST")
+'	 Else
+'	 Response.AddHeader "Location","http://www." & Request.ServerVariables("HTTP_HOST") & Request.ServerVariables("URL")
+'     End If
+'	 Response.End
+' End if
 %>
 
 <link rel="shortcut icon" href="/images/buttons/favicon.ico">
