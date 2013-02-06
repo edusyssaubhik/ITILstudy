@@ -10,6 +10,15 @@
    If Session("UserId")  = "" Then
      Response.Redirect("../login.asp")
    Else
+   
+   
+   
+   Function StrQuoteReplace(strValue)
+
+   StrQuoteReplace = Replace(strValue, "'", "")
+	  
+   End Function
+   
 %>
 <!--#include virtual ="/includes/connection.asp"-->
 <!--#include virtual="/includes/displayFormat.asp"-->
@@ -66,7 +75,7 @@ Do Until Rs.EOF
   Course   = Rs("coursedetails")
   Session("CourseDate") = Rs("coursedate")
  Session("PhoneNo")   = Rs("phoneno")
- Session("address")   = Rs("address")
+ Session("address")   = StrQuoteReplace(Rs("address"))
 
  Session("country") = Rs("country")
  Session("courseType") = Rs("courseType")
