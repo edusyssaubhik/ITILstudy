@@ -1,4 +1,4 @@
-﻿<%@LANGUAGE="VBSCRIPT"%>
+<%@LANGUAGE="VBSCRIPT" CODEPAGE="1252"%>
 <% 
 If Session("USBUserId")="" Then
 	Response.Redirect("login.asp")
@@ -363,9 +363,7 @@ function validate_form2(thisform)
         <%
 	   	If rqAction = "addPayment" Then
 
-			strQuery = "SELECT firstname, lastname, emailid1 FROM ITIL_instructor WHERE "& strCountry & " And typeofuser = 'Faculty' ORDER BY firstname"
-			
-			'Response.Write(strQuery)
+			strQuery = "SELECT  firstname, lastname, emailid1 FROM ITIL_instructor WHERE "& strCountry & " And typeofuser = 'Faculty' ORDER BY firstname"
 			
 		    objRs.Open strQuery,connObj
 	  
@@ -455,7 +453,7 @@ function validate_form2(thisform)
         </form>
         <%    ElseIf rqAction = "" OR rqAction = "paymentDetails" Then
 				    		
-				strQuery = "SELECT firstname, lastname, emailid1 FROM ITIL_instructor WHERE "& strCountry & " And typeofuser = 'Faculty' ORDER BY firstname"
+				strQuery = "SELECT  firstname, lastname, emailid1 FROM ITIL_instructor WHERE "& strCountry & " And typeofuser = 'Faculty' ORDER BY firstname"
 			
 				objRs.Open strQuery,ConnObj 
 		%>
@@ -509,7 +507,8 @@ function validate_form2(thisform)
 			
 			'For Table 1  i.e. finance table'
 			strQuery="select ITIL_finance.finid, ITIL_finance.pay_cat, ITIL_finance.details, ITIL_finance.amount, ITIL_finance.added_date, ITIL_finance.added_by, ITIL_finance.last_mod_date, ITIL_finance.last_mod_by,ITIL_instructor.comp_name,ITIL_instructor.comp_addr,ITIL_finance.status,ITIL_finance.Approved_by,ITIL_finance.Approved_date,ITIL_finance.Tax  From ITIL_finance INNER JOIN ITIL_instructor ON ITIL_finance.faculty=ITIL_instructor.emailid1  WHERE faculty = '"& rqFaculty &"' AND (CONVERT(varchar(2), DATEPART(month, added_date)) = '"& strMonth &"' AND DATEPART(yyyy, added_date) = '"& strYear &"')"
-            response.write strQuery
+
+'response.Write(strQuery)
 		    objRs1.open strQuery ,ConnObj 
 			
 			If Not objRs1.EOF Then
@@ -527,7 +526,7 @@ function validate_form2(thisform)
 			Else
 			str = MonthName(Month(Now()),3) & "-" & Year(Now())
 			End If
-			strQuery2="select Top 1 * from ITIL_finance_pay WHERE faculty = '"& rqFaculty &"' AND month_of_pay = '"& str &"' ORDER BY payid desc"
+			strQuery2="select  * from ITIL_finance_pay WHERE faculty = '"& rqFaculty &"' AND month_of_pay = '"& str &"' ORDER BY payid desc"
 			
 			objRs4.open strQuery2 ,ConnObj
 			
@@ -744,7 +743,7 @@ function validate_form2(thisform)
             <tr>
               <td>Faculty:</td>
               <td><% 
-			  rs1.Open "SELECT firstname, lastname FROM ITIL_instructor WHERE emailid1 = '"& objRs2("faculty") &"'", ConnObj
+			  rs1.Open "SELECT  firstname, lastname FROM ITIL_instructor WHERE emailid1 = '"& objRs2("faculty") &"'", ConnObj
 			  Do Until rs1.EOF
 				
 				firstname = rs1("firstname")
@@ -862,7 +861,7 @@ function validate_form2(thisform)
             <tr>
               <td><b>Faculty:</b></td>
               <td><% 
-			  rs1.Open "SELECT firstname, lastname, comp_name FROM ITIL_instructor WHERE emailid1 = '"& rqFaculty &"'", ConnObj
+			  rs1.Open "SELECT  firstname, lastname, comp_name FROM ITIL_instructor WHERE emailid1 = '"& rqFaculty &"'", ConnObj
 			  Do Until rs1.EOF
 				
 				firstname = rs1("firstname")
@@ -986,7 +985,7 @@ function validate_form2(thisform)
             <tr>
               <td><b>Faculty:</b></td>
               <td><% 
-			  rs1.Open "SELECT firstname, lastname FROM ITIL_instructor WHERE emailid1 = '"& rqFaculty &"'", ConnObj
+			  rs1.Open "SELECT  firstname, lastname FROM ITIL_instructor WHERE emailid1 = '"& rqFaculty &"'", ConnObj
 			  Do Until rs1.EOF
 				
 				firstname = rs1("firstname")
