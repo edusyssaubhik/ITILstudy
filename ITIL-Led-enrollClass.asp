@@ -115,7 +115,7 @@
                 End If
                 IF Session("CountryOrigin") ="Other" Then
                     
-                     strQuery = strQuery & " SELECT * FROM itil_course WHERE country = 'US' AND startdate BETWEEN '"&Now() - 1&"' AND DATEADD(day,180,'"&Now()&"') AND courseType = 'Live' AND status <> 'Cancelled' order by startdate,city desc "
+                     strQuery = strQuery & " SELECT * FROM itil_course WHERE country = 'US' or country = 'United Kingdom' AND startdate BETWEEN '"&Now() - 1&"' AND DATEADD(day,180,'"&Now()&"') AND courseType = 'Live' AND status <> 'Cancelled' order by startdate,city desc "
 					  'response.Write(strQuery)
                 End if
               Else

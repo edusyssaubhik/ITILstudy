@@ -8,10 +8,10 @@
 <%'***** include  validation file **************' %>
 <!-- #include virtual = "/includes/formvalidation.asp"-->
 <%
-'If course id is nothing then redirect to enrollClass.asp page'
+'If course id is nothing then redirect to ITIL-Led-enrollClass.asp page'
 rqCourseId =  Request.Form("courseid")
 If rqCourseId = "" Then
-    Response.Redirect("/enrollClass.asp")
+    Response.Redirect("/ITIL-Led-enrollClass.asp")
 End If
 %>
 <!-- Body Starts -->
@@ -42,7 +42,7 @@ todaysDate = now()
 'Increment 5 Days and Displaying purpose'
 PayBefore = DateAdd("d", +4,CDate(todaysDate))
 
-'Retrive The Enrolluser Details from enrollClass.asp page'
+'Retrive The Enrolluser Details from ITIL-Led-enrollClass.asp page'
 rqCourseId         =  Request.Form("courseid")
 rqFirstName 	   =  Trim(Request.Form("firstname"))
 rqLastName 		   =  Trim(Request.Form("lastname"))
@@ -72,7 +72,7 @@ Else
     rqCourseType = "Classroom"
 End If
 
-'If we directly open enrollclass.asp , empty value is stored in enrolled for column    
+'If we directly open ITIL-Led-enrollClass.asp , empty value is stored in enrolled for column    
 If Trim(rqCourseType) = "" Then
     Set rsEnrolledfor = Server.CreateObject("ADODB.Recordset")
     Qu = "Select Coursetype from ITIL_course where courseid = '" & Trim(rqCourseId) &"'"
@@ -200,7 +200,7 @@ If Session("ErrorFirstName") <> "" OR Session("ErrorLastName") <> "" OR Session(
 
 	'Query to insert values if they enter wrong values
 		ConnObj.Execute("INSERT INTO dummy_enrolledusers (courseid,firstname, lastname, email, phoneno,street,city,state,postalCode,dateentered) VALUES ('"&rqCourseId&"', '"&rqFirstName&"','"&rqLastName&"', '"&rqEmail&"', '"&rqPhoneNumber&"', '"&rqStreet&"', '"&rqCity&"', '"&rqState&"', '"&rqPostalCode&"','"&today&"')")
-	Response.redirect("enrollclass.asp")
+	Response.redirect("ITIL-Led-enrollClass.asp")
 	
 	'*********validation ends ******************'
 Else
@@ -236,31 +236,15 @@ End If
 'Server side validation'
 If rqCourseId = "" OR rqFirstName = "" Then 
 
-Response.Redirect("/enrollClass.asp")
+Response.Redirect("/ITIL-Led-enrollClass.asp")
 
 End If
 
 
 
-'Retriving country based on course id if session is expired'
-If rqCourseId <> "" Then
-
- strCountry = "SELECT country FROM ITIL_course WHERE courseid = '"& rqCourseId &"'"
-
- objRs.Open strCountry, ConnObj
-
- Do Until objRs.EOF
-   Session("CountryOrigin") = Trim(objRs("Country"))
-   
- objRs.Movenext
- Loop		
- objRs.Close	
-
-Else
 
 Session("CountryOrigin") = Session("CountryOrigin")
 
-End If
 
 'Currency Format Display Functions'
 Currency_Format_Front = CurrencyFormat_Front(Session("CountryOrigin"))
@@ -282,12 +266,12 @@ Do Until objRs.EOF
 	EndDate        =  objRs("enddate")
 	ApplicableDays =  objRs("applicabledays")
 
-	If Session("CountryOrigin") = "US" Or Session("CountryOrigin") = "Canada" Then
+	If Session("CountryOrigin") = "US" Or Session("CountryOrigin") = "Canada" Or Session("CountryOrigin") = "United Kingdom" Then
          If  Session("Virtualclass") <> "" then
             Country = Session("Virtualclass")
         End If
     Else
-	    Country 	   =  objRs("country")
+	    Country 	   =  Session("CountryOrigin")
     End If
 	HotelName      =  objRs("hotelname")
 	HotelPhNo      =  objRs("hotelphonenumber")
@@ -433,7 +417,7 @@ If stateCode = "TX" And rqNameOfEmployeer = "" Then
 	 Session("SelectedCourseID") = rqCourseId
 	 Session("message") = "All participants attending our programs in Texas should be sponsored by their employer, and should provide the employer details while enrolling for the ITILstudy course.<br><br>"
 
-	Response.Redirect("enrollClass.asp")
+	Response.Redirect("ITIL-Led-ITIL-Led-enrollClass.asp")
 
 End If
 
@@ -630,7 +614,7 @@ EnrollId = Session("EnrollId")
 					  
 		  strBody = strBody & "<span>Alternate Payment Mechanism: </span>If you have problems in making payments through Cheque or Demand Draft, please email us at <a href=""mailto:marketing@ITILstudy.com"" target=""_blank"">marketing@ITILstudy.com</a>; we will suggest alternate payment options to you."
 		  
-		  ElseIf (Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" ) Then
+		  ElseIf (Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Other" ) Then
 		  
 		    strBody = strBody & "<ul><li><font face=""Arial"" size=""2""><b>PayPal: </b></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href=""http://www.itilstudy.com/payment.asp?enrollUserID="& Session("EnrollId") &"&Country="& Session("CountryOrigin") &"""><font face=""Arial"" size=""2"" color=""#0359b4""><input type=""image"" src=""http://www.itilstudy.com/images/back/buybutton.gif"" alt=""BuyNow"" /></font></a></li><br/>"
 		  		  
@@ -639,6 +623,8 @@ EnrollId = Session("EnrollId")
 		
 		  
 		    strBody = strBody & "<li><font face=""Arial"" size=""2""><b>Bank Transfer: </b></font><br><b>Bank Name: </b>Bank of America, Frederick, MD, USA<br /><b>Type of Account:</b> Current<br /><b>Account Name:</b> VMedu Inc<br><b>Account Number: </b>4460 0519 5480<br><b>Routing Number:</b> 052001633 (paper & electronic) / 026009593 (wires)<br /></li></ul>"
+			
+		
 			
 			 ElseIf (Session("CountryOrigin") = "Germany" OR Session("CountryOrigin") = "Netherlands") Then
 		  		  
@@ -1011,7 +997,7 @@ End If
 		    <li>Alternate Payment Mechanism: If you have problems in making payments through Cheque or Demand Draft, please email us at <a href="mailto:marketing@ITILstudy.com" target="_blank">marketing@ITILstudy.com</a>; we will suggest alternate payment options to you.</li>
           </ul>
       </tr>
-      <% ElseIf (Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada") Then %>
+      <% ElseIf (Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Other") Then %>
       <tr>
         <td class="btext"><table border="0" width="100%">
         

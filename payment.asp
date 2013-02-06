@@ -268,7 +268,7 @@
           </tr>
         
           
-          <% ElseIf (Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" ) Then %>
+          <% ElseIf (Session("CountryOrigin") = "US" OR Session("CountryOrigin") = "Canada" OR Session("CountryOrigin") = "Other" ) Then %>
             <tr>
               <td class="btext">
               <table border="0" width="100%">
