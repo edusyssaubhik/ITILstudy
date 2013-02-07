@@ -75,7 +75,16 @@ Do Until Rs.EOF
   Course   = Rs("coursedetails")
   Session("CourseDate") = Rs("coursedate")
  Session("PhoneNo")   = Rs("phoneno")
+ Session("address")   = Rs("address")
+ 
+ If (Session("address") <> "" OR NOT ISNULL(Session("address"))) Then
+ 
  Session("address")   = StrQuoteReplace(Rs("address"))
+ 
+ Else
+ Session("address")   = Rs("address")
+ 
+ End If
 
  Session("country") = Rs("country")
  Session("courseType") = Rs("courseType")
