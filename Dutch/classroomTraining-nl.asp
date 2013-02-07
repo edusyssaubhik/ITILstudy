@@ -1,4 +1,4 @@
-<!--#include virtual="/metatags/classroomTraining_metetag.html"-->
+<!--#include virtual="/Dutch/metatags/classroomTraining_metetag.html"-->
 <!--#include virtual="/includes/headermetaDutch.asp"-->
 <!--#include virtual="/includes/classroombanner.html"-->
 <!-- Body Starts -->

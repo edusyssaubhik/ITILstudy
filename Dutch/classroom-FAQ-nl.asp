@@ -1,4 +1,4 @@
-<!--#include virtual="/metatags/classroom-FAQ_metatag.html"-->
+<!--#include virtual="/Dutch/metatags/classroom-FAQ_metatag.html"-->
 <!--#include virtual="/includes/headermetaDutch.asp"-->
 <!--#include virtual="/includes/guaranteed-success-FAQ-banner.asp"-->
 <!--#include virtual="/includes/connection.asp"-->
