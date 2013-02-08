@@ -608,7 +608,7 @@ EnrollId = Session("EnrollId")
 		   
 		   
 		    If (Session("CountryOrigin") = "Germany") Then
-		    strBody = strBody & "<tr><td align=""left"" colspan=""2""><b>Please Note:</b> This is not a VAT Invoice<br/><br/> Tax No: 3523206447<br/>VAT No: Applied<br/><br/> </td></tr>"
+		    strBody = strBody & "<tr><td align=""left"" colspan=""2""><b>Please Note:</b> This is not a VAT Invoice<br/><br/> German VAT number - DE286897548<br/><br/> </td></tr>"
 			End If
 		  
 		    'Here i am showing in the email hotel details for us and canada classes only'
@@ -997,7 +997,7 @@ End If
 		
 		 ' Displaying Vat No for Germany
 		  If (Session("CountryOrigin") = "Germany") Then%>
-		   <tr><td align="left" colspan="2"><b>Please Note:</b> This is not a VAT Invoice<br/><br/> Tax No: 3523206447<br/>VAT No: Applied<br/><br/> </td></tr>
+		   <tr><td align="left" colspan="2"><b>Please Note:</b> This is not a VAT Invoice<br/><br/> German VAT number - DE286897548<br/><br/> </td></tr>
 			<% End If	
 			  
 	   'Here i am showing hotel details for particular class'

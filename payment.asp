@@ -222,10 +222,12 @@
                       <% = Currency_Format_Back %>
                       </span></td>
                   </tr>
-					                
+                  
+			<%If (Session("CountryOrigin") = "Germany") Then%>		                
 	       <tr>
-            <td colspan="2">&nbsp;</td>
+            <td colspan="2"><b>Please Note:</b> This is not a VAT Invoice<br/><br/> German VAT number - DE286897548<br/><br/></td>
           </tr>
+          <% End If %>
           <tr>
               <td colspan="2" class="general-body"><span class="general-bodyBold">Please Note : </span><br>
                 Full payment of the enrollment fee <strong>(
