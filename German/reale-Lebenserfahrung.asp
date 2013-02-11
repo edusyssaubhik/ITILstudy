@@ -1,4 +1,4 @@
-<!--#include virtual="/metatags/comprehensive_metatag.html"-->
+<!--#include virtual="/German/metatags/comprehensive_metatag.html"-->
 <!--#include virtual="/includes/headermetaGerman.asp"-->
 <!--#include virtual="/includes/guaranteed-success-banner.asp"-->
 <!-- Body Starts -->

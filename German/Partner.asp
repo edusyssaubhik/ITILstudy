@@ -1,4 +1,4 @@
-<!--#include virtual="/metatags/Affiliates_metetag.html"-->
+<!--#include virtual="/German/metatags/Affiliates_metetag.html"-->
 <!--#include virtual="/includes/headermetaGerman.asp"-->
 <!--#include virtual="/includes/inneraboutusbanner.html"-->
 <!-- Body Starts -->

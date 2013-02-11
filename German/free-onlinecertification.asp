@@ -1,4 +1,4 @@
-<!--#include virtual="/metatags/better-than-competitors_metatag.html"-->
+<!--#include virtual="/German/metatags/better-than-competitors_metatag.html"-->
 <!--#include virtual="/includes/headermetaGerman.asp"-->
 <!--#include virtual="/includes/quality-study-aids-banner.asp"-->
 <!-- Body Starts -->

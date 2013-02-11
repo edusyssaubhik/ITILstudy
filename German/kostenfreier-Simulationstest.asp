@@ -1,7 +1,7 @@
-<!--#include virtual="/metatags/aboutITIL_metatag.html"-->
+<!--#include virtual="/German/metatags/aboutITIL_metatag.html"-->
 <!--#include virtual="/includes/headermetaGerman.asp"-->
 <!--#include virtual="/includes/innerwhyusbanner.html"-->
-<!--#include virtual="/metatags/courseBenefits_metatag.html"-->
+<!--#include virtual="/German/metatags/courseBenefits_metatag.html"-->
 <!-- Body Starts -->
 
 <div>

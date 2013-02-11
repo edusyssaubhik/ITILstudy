@@ -1,4 +1,4 @@
-<!--#include virtual="/metatags/courseBenefits_metatag.html"-->
+<!--#include virtual="/German/metatags/courseBenefits_metatag.html"-->
 <!--#include virtual="/includes/headermetaGerman.asp"-->
 <!--#include virtual="/includes/innerwhyusbanner.html"-->
 <!--#include virtual="/includes/connection.asp"-->

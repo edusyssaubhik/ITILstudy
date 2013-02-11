@@ -1,4 +1,4 @@
-<!--#include virtual="/metatags/index_metatag.html"-->
+<!--#include virtual="/German/metatags/index_metatag.html"-->
 <!--#include virtual="/includes/headermetaGerman.asp"-->
 <!--#include virtual="/includes/classroombanner.html"-->
 <!-- Body Starts -->
