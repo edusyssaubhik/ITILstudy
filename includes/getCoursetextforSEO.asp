@@ -1,4 +1,12 @@
-<%  Session("CountryOrigin") = countries %>
+<%  Session("CountryOrigin") = countries
+
+svrUrl = request.servervariables("URL")
+RqRetriveURLCount = Split(svrUrl,"-",3)
+RqRetriveURLCount1 = Split(RqRetriveURLCount(2),".")
+'Response.write(RqRetriveURLCount1(0)) 
+
+Response.Redirect("http://www.myitstudy.com/ITIL/ITIL-Training-"&RqRetriveURLCount1(0)&".asp")
+%>
 
 <ol id="new" type="1"> 
 <li>Everything required for ITIL Foundation exam would be provided, you don’t need to bring anything else to the class</li>

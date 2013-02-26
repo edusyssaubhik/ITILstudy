@@ -1125,6 +1125,8 @@ function update(a){
             <select name="coursetype" id="coursetype" onChange="update(this)">
               <option value="">--Select--</option>
               <option value="Normal">Normal</option>
+               <option value="2day-live">2 Day Live</option>
+                <option value="3day-live">3 Day Live</option>
              <!-- <option value="Weekend">Weekend</option>-->
               <option value="Corporate">Corporate</option>
               <option value="Live">Live</option>         
@@ -1133,7 +1135,6 @@ function update(a){
               <option value="OSA">OSA Course</option>
               <option value="CSI">CSI Course</option>
               <option value="ST">Service Transition</option>
-              <option value="CSI-Live">CSI Live Course</option>
                  <%' End If %>   
             </select>
           </td>
@@ -1366,6 +1367,8 @@ function update(a){
             <select name="coursetype" id="coursetype">
               <option>--Select--</option>
               <option <% If Rs4("coursetype") = "Normal" Then %> selected="selected" <% End If %> value="Normal">Normal</option>
+              <option <% If Rs4("coursetype") = "2day-live" Then %> selected="selected" <% End If %> value="2day-live">2 Day Live</option>
+              <option <% If Rs4("coursetype") = "3day-live" Then %> selected="selected" <% End If %> value="3day-live">3 Day Live</option>
              <!-- <option <%' If Rs4("coursetype") = "Weekend" Then %> selected="selected" <% 'End If %> value="Weekend">Weekend</option>-->
               <option <% If Rs4("coursetype") = "Corporate" Then %> selected="selected" <% End If %> value="Corporate">Corporate</option>
                 <option <% If Rs4("coursetype") = "Live" Then %> selected="selected" <% End If %> value="Live">Live</option> 
@@ -1374,7 +1377,6 @@ function update(a){
                 <option <% If Rs4("coursetype") = "OSA" Then %> selected="selected" <% End If %> value="OSA">OSA Course</option>
                   <option <% If Rs4("coursetype") = "CSI" Then %> selected="selected" <% End If %> value="CSI">CSI Course</option>
                    <option <% If Rs4("coursetype") = "ST" Then %> selected="selected" <% End If %> value="ST">Service Transition</option>
-                    <option <% If Rs4("coursetype") = "CSI-Live" Then %> selected="selected" <% End If %> value="CSI-Live">CSI LIVE Course</option>
                   <%' End If %>          
             </select>
           </td>
@@ -1689,10 +1691,11 @@ function update(a){
               OSA Course
               <% ElseIf (arrAllRecords(5,rowcounter) = "CSI") Then %>
               CSI Course
-               <% ElseIf (arrAllRecords(5,rowcounter) = "ST") Then %>
-              Service Transition
-              <% ElseIf (arrAllRecords(5,rowcounter) = "CSI-Live") Then %>
-              CSI Live Course
+               <% ElseIf (arrAllRecords(5,rowcounter) = "2day-live") Then %>
+              2 Day Live
+               <% ElseIf (arrAllRecords(5,rowcounter) = "3day-live") Then %>
+             3 Day Live
+              
               <% Else %>
               Normal ITIL Course
               <% End If %>
@@ -1778,9 +1781,11 @@ function update(a){
                <% ElseIf (Rs1("coursetype") = "CSI") Then %>
               CSI Course
                <% ElseIf (Rs1("coursetype") = "ST") Then %>
-              Service Transition
-             <% ElseIf (Rs1("coursetype") = "CSI-Live") Then %>
-              CSI Live Course
+             Service Transition
+              <% ElseIf (arrAllRecords(5,rowcounter) = "2day-live") Then %>
+              2 Day Live
+               <% ElseIf (arrAllRecords(5,rowcounter) = "3day-live") Then %>
+             3 Day Live
               <% Else %>
               Normal ITIL Course
               <% End If %>
