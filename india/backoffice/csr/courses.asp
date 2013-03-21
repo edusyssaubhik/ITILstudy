@@ -64,7 +64,7 @@
  Set Rs7 = Server.CreateObject("ADODB.Recordset")
 
  rqEnrollUsers = Request.Querystring("enrollusers")
- response.Write(rqEnrollUsers)
+ 'response.Write(rqEnrollUsers)
  
 If Request.Form("CourseId") <> "" then
 
@@ -85,7 +85,7 @@ If rqCourse = "pastcourses" Then
 ElseIf (rqCourse = "futurecourses" OR rqCourse = "") Then 
 
 	strQuery = "SELECT courseid, city, startdate, enddate, status, coursetype, coursedates from ITIL_course WHERE country = '"& session("country") &"' AND  startdate >= '"& Now() &"' order by startdate asc"
-
+    'response.Write(strQuery)
 End If
 
 	 Rs.Open strQuery,Conn
@@ -1743,9 +1743,9 @@ function update(a){
         <td colspan="8" valign="top" ><table border="1" cellspacing="0">
             <tr>
               <td bgcolor="#A7DBFB" align="center"><b>Coursename</b></td>
-                <% If (Rs1("coursetype") = "Corporate") Then %>
+              <% If (Rs1("coursetype") = "Corporate") Then %>
               <td bgcolor="#A7DBFB" align="center"><b>Company</b></td>
-              <% End If %>
+              <% End If %>  
               <td bgcolor="#A7DBFB" align="center"><b>Location</b></td>
               <td bgcolor="#A7DBFB" align="center"><b>Course</b></td>
               <td bgcolor="#A7DBFB" align="center"><b>Timing</b></td>
@@ -1782,11 +1782,12 @@ function update(a){
               CSI Course
                <% ElseIf (Rs1("coursetype") = "ST") Then %>
              Service Transition
-              <% ElseIf (arrAllRecords(5,rowcounter) = "2day-live") Then %>
+              <% ElseIf  (Rs1("coursetype") = "2day-live") Then %>
               2 Day Live
-               <% ElseIf (arrAllRecords(5,rowcounter) = "3day-live") Then %>
+               <% ElseIf  (Rs1("coursetype") = "3day-live") Then %>
              3 Day Live
               <% Else %>
+               
               Normal ITIL Course
               <% End If %>
                             
