@@ -8,7 +8,7 @@
 <meta name="keywords" content="itil training, itil certification, itil v3 training, itil foundation, itil v3 foundation, itil foundation certification, itil v3 certification, itil courses, itil foundation certification, itil v3 exam, itil classes, itil boot camps, ITSM, Service Management">
 <meta name="description" content="The best in ITIL certification training - We offer ITIL classes, ITIL boot camp and ITIL online courses for ITIL certification. Enrol for ITIL training with the Best Faculty and 98% Pass rate.">
 <meta charset="utf-8">
-<script type="text/javascript">
+<!--<script type="text/javascript">
 function countAndRedirect(){counter--;document.getElementById("count").innerHTML="0"+counter;if(counter==0){clearInterval(t);window.location="http://www.myitstudy.com/ITIL/"}}var counter=5;var t=setInterval(countAndRedirect,1e3)
 </script>
 <style type="text/css">
@@ -208,7 +208,7 @@ body
 
 
 
-
+-->
 <!--#include virtual="/includes/URLRedirection.asp"-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -399,7 +399,7 @@ End If
 <div align="center" class="MainTableBack" style="width:100%;">
 
 <!-- Header Start -->
-<div align="center" style="margin-top:-12px;display:none;" >
+<div align="center" style="margin-top:-12px;" >
 <div style="width:930px;" align="center">
   <table width="930" border="0" cellspacing="0" cellpadding="0">
     <tr>
