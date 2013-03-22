@@ -1135,6 +1135,7 @@ function update(a){
               <option value="OSA">OSA Course</option>
               <option value="CSI">CSI Course</option>
               <option value="ST">Service Transition</option>
+              <option value="SS"> Service Strategy</option>
                  <%' End If %>   
             </select>
           </td>
@@ -1377,6 +1378,7 @@ function update(a){
                 <option <% If Rs4("coursetype") = "OSA" Then %> selected="selected" <% End If %> value="OSA">OSA Course</option>
                   <option <% If Rs4("coursetype") = "CSI" Then %> selected="selected" <% End If %> value="CSI">CSI Course</option>
                    <option <% If Rs4("coursetype") = "ST" Then %> selected="selected" <% End If %> value="ST">Service Transition</option>
+                   <option <% If Rs4("coursetype") = "SS" Then %> selected="selected" <% End If %> value="SS"> Service Strategy</option>
                   <%' End If %>          
             </select>
           </td>
@@ -1782,6 +1784,8 @@ function update(a){
               CSI Course
                <% ElseIf (Rs1("coursetype") = "ST") Then %>
              Service Transition
+              <% ElseIf (Rs1("coursetype") = "SS") Then %>
+              Service Strategy
               <% ElseIf  (Rs1("coursetype") = "2day-live") Then %>
               2 Day Live
                <% ElseIf  (Rs1("coursetype") = "3day-live") Then %>
