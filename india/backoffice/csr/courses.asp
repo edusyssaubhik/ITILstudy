@@ -1136,6 +1136,7 @@ function update(a){
               <option value="CSI">CSI Course</option>
               <option value="ST">Service Transition</option>
               <option value="SS"> Service Strategy</option>
+
                  <%' End If %>   
             </select>
           </td>
@@ -1697,6 +1698,8 @@ function update(a){
               2 Day Live
                <% ElseIf (arrAllRecords(5,rowcounter) = "3day-live") Then %>
              3 Day Live
+             <% ElseIf (arrAllRecords(5,rowcounter) = "SS") Then %>
+             Service Strategy 
               
               <% Else %>
               Normal ITIL Course
@@ -1790,7 +1793,7 @@ function update(a){
               2 Day Live
                <% ElseIf  (Rs1("coursetype") = "3day-live") Then %>
              3 Day Live
-              <% Else %>
+               <% Else %>
                
               Normal ITIL Course
               <% End If %>
