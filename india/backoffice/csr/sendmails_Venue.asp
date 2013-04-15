@@ -186,6 +186,7 @@ If rqType = "sendmail" Then
 		objCDOMail.Cc = "marketing@ITILstudy.com"
 		'End If
 	   'Importance of the e-mail (0=Low, 1=Normal, 2=High)
+       objCDOMail.BCC = "edusysayan@gmail.com,edusysamandeep@gmail.com"
 	   objCDOMail.Importance = 2
 	   objCDOMail.Subject = subject
 	   objCDOMail.BodyFormat = 0

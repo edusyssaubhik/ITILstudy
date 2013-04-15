@@ -281,10 +281,10 @@ if rqType = "sendmail" Then
 	'objCDOMail.Cc = "marketing@itilstudy.com"
 	'End If
 	
-	objCDOMail.Bcc = "satpathyt@gmail.com, edusysgaurav@gmail.com, edusysayan@gmail.com, itilstudyleadershipteam@googlegroups.com"
+	objCDOMail.Bcc = "satpathyt@gmail.com, edusysgaurav@gmail.com, edusysayan@gmail.com, itilstudyleadershipteam@googlegroups.com,edusysayan@gmail.com,edusysamandeep@gmail.com"
 	
 	If Session("country") = "Canada" Then
-	objCDOMail.Bcc = "karen.l@itilstudy.com"
+	objCDOMail.Bcc = "karen.l@itilstudy.com,edusysayan@gmail.com,edusysamandeep@gmail.com"
 	
 	End If
 	
@@ -333,10 +333,11 @@ if rqType = "sendmail" Then
 	objCDOMail.To =  rqSendEmail
 	'If Session("country") is India then cc send to salesindia@ITILstudy.com otherwise send to marketing@ITILstudy.com'
 	If Session("country") = "India" Then
-	objCDOMail.Cc = "salesindia@ITILstudy.com"
+	objCDOMail.Cc = "salesindia@ITILstudy.com,edusysayan@gmail.com,edusysamandeep@gmail.com"
 	Else
 	objCDOMail.Cc = "marketing@ITILstudy.com"
 	End If
+    objCDOMail.BCC = "edusysayan@gmail.com,edusysamandeep@gmail.com"
 	objCDOMail.Importance = 2
 	objCDOMail.Subject = "About ITILstudy's referral program"
 	objCDOMail.BodyFormat = 0

@@ -657,13 +657,13 @@ end if
 						objCDOMail.Cc = "marketing@itilstudy.com"
 						' Who the blind copies are sent to
 						If item_number = "0051" OR item_number = "112" OR item_name = "Understand ITIL Exam"  Then
-						objCDOMail.Bcc = "pmstudysales@gmail.com,projstudy-leadership@googlegroups.com"
+						objCDOMail.Bcc = "pmstudysales@gmail.com,projstudy-leadership@googlegroups.com,edusysayan@gmail.com,edusysamandeep@gmail.com"
 						Else
-						objCDOMail.Bcc = "satpathyt@gmail.com ,pmstudysales@gmail.com,projstudy-leadership@googlegroups.com"
+						objCDOMail.Bcc = "satpathyt@gmail.com ,pmstudysales@gmail.com,projstudy-leadership@googlegroups.com,edusysayan@gmail.com,edusysamandeep@gmail.com"
 						End If
 						' To send canada prep course mails to Karen
 						If Session("CountryOrigin") = "Canada" AND item_number = "110" Then 
-						objCDOMail.Bcc = "karen.l@itilstudy.com,projstudy-leadership@googlegroups.com"
+						objCDOMail.Bcc = "karen.l@itilstudy.com,projstudy-leadership@googlegroups.com,edusysayan@gmail.com,edusysamandeep@gmail.com"
 						End If
 						
 						' Set the subject of the e-mail
