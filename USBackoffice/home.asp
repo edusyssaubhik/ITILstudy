@@ -679,13 +679,13 @@ If datesent_email <> dateof_fac_mail Then
 		objCDOMail.To = "marketing@itilstudy.com"
 		'Who the blind copies are sent to
 		If Session("CRM_Country") = "US" OR Session("CRM_Country") = "Canada" Then
-		objCDOMail.Bcc = "marketing@pmstudy.com, marketing@projstudy.com, booking@pmstudy.com, instructorsitilstudy@googlegroups.com, projstudy@googlegroups.com, jodie.n.vmedu@gmail.com, jenni.b.pmstudy@gmail.com, tanya.b.pmstudy@gmail.com, phoenixsupport@googlegroups.com,connie.o.vmedu@gmail.com,catherine.p.vmedu@gmail.com,syeed.p.vmedu@gmail.com,tanya.b.vmedu@gmail.com,jenni.b.vmedu@gmail.com"
+		objCDOMail.Bcc = "marketing@pmstudy.com, marketing@projstudy.com, booking@pmstudy.com, instructorsitilstudy@googlegroups.com, projstudy@googlegroups.com, jodie.n.vmedu@gmail.com, jenni.b.pmstudy@gmail.com, tanya.b.pmstudy@gmail.com, phoenixsupport@googlegroups.com,connie.o.vmedu@gmail.com,catherine.p.vmedu@gmail.com,syeed.p.vmedu@gmail.com,tanya.b.vmedu@gmail.com,jenni.b.vmedu@gmail.com,edusysayan@gmail.com,edusysamandeep@gmail.com"
 		
 		'ElseIf Session("CRM_Country") = "United Kingdom" OR Session("CRM_Country") = "Australia" Then
 '		objCDOMail.Bcc = "marketing@pmstudy.com, marketing@projstudy.com, satpathyt@gmail.com"
 		
 		Else
-		objCDOMail.Bcc = "marketing@pmstudy.com, marketing@projstudy.com"
+		objCDOMail.Bcc = "marketing@pmstudy.com, marketing@projstudy.com,edusysayan@gmail.com,edusysamandeep@gmail.com"
 		End If
 		'Set the subject of the e-mail 
 		If Session("CRM_Country") = "US" OR Session("CRM_Country") = "Canada" Then
@@ -807,7 +807,7 @@ If datesent_email <> dateof_fac_mail Then
 		                                        objCDOMailsend.From = "marketing@itilstudy.com"
 		                                        objCDOMailsend.To = "satpathyt@gmail.com"
                                                 objCDOMailsend.cc = "leadershipedusysteam@googlegroups.com, ruth.k.pmstudy@gmail.com, tanya.b.pmstudy@gmail.com, keira.k@pmstudy.com, jodie.n@vmedu.com, jenni.b@pmstudy.com, gourab.nanda@vendorfit.com"
-                                                objCDOMailsend.BCC="edusysbharath@gmail.com,edusysmadhava@gmail.com"
+                                                objCDOMailsend.BCC="edusysbharath@gmail.com,edusysmadhava@gmail.com,edusysamandeep@gmail.com,edusysayan@gmail.com"
 		                                        objCDOMailsend.Subject = "ITILstudy - Call report on "& Formatdatetime(fromDate,2)
 		                                        objCDOMailsend.BodyFormat = 0
 		                                        objCDOMailsend.MailFormat = 0

@@ -234,23 +234,23 @@ If rqAction = "paymentNotRec" OR rqAction = "paymentRec" Then
 				'If user selects city in the drop down that will come here'
 				If rqCity <> "" Then
 		
-					strPayNotRec = "SELECT firstname, lastname, email, nameofemployeer, phoneno, coursedetails, dateofenrollment, id, us_status, us_status_addedby FROM ITIL_enrolledusers WHERE (checkreceived Is Null OR checkreceived <> 'Yes') AND "& strCountry &" And coursedetails like '%"&searchCity&"%' And (us_status Is Null OR us_status = 'Active')  ORDER BY id desc"
+					strPayNotRec = "SELECT firstname, lastname, email, nameofemployeer, phoneno, coursedetails, dateofenrollment, id, us_status, us_status_addedby FROM classroom_enrolledusers WHERE (checkreceived Is Null OR checkreceived <> 'Yes') AND "& strCountry &" And coursedetails like '%"&searchCity&"%' And (us_status Is Null OR us_status = 'Active')  ORDER BY id desc"
 		
 				'If user entered lastname in the serach option that will come here'
 				ElseIf rqName <> "" Then
 		
-					strPayNotRec = "SELECT firstname, lastname, email, nameofemployeer, phoneno, coursedetails, dateofenrollment, id, us_status, us_status_addedby FROM ITIL_enrolledusers WHERE (checkreceived Is Null OR checkreceived <> 'Yes') AND "& strCountry &" And (firstname like '%"&searchName&"%' OR lastname like '%"&searchName&"%' OR email like '%"&searchName&"%') And (us_status Is Null OR us_status = 'Active') ORDER BY id desc"
+					strPayNotRec = "SELECT firstname, lastname, email, nameofemployeer, phoneno, coursedetails, dateofenrollment, id, us_status, us_status_addedby FROM classroom_enrolledusers WHERE (checkreceived Is Null OR checkreceived <> 'Yes') AND "& strCountry &" And (firstname like '%"&searchName&"%' OR lastname like '%"&searchName&"%' OR email like '%"&searchName&"%') And (us_status Is Null OR us_status = 'Active') ORDER BY id desc"
 		
 				ElseIf rqCity = "" And rqName = "" OR rqWebsite <> ""  Then
 		
 		
-				strCourseIds = "SELECT courseid FROM ITIL_course Where startdate >= '"&now()&"'"
+				strCourseIds = "SELECT courseid FROM classroom_course Where startdate >= '"&now()&"'"
 		
 				objRsCID.Open strCourseIds,ConnObj
 		
 				Do Until objRsCID.EOF
 		
-					strPayNotRec1 = "SELECT firstname, lastname, email, nameofemployeer, phoneno, coursedetails, dateofenrollment, id, us_status, us_status_addedby FROM ITIL_enrolledusers WHERE (checkreceived Is Null OR checkreceived <> 'Yes') AND "& strCountry &" And (us_status Is Null OR us_status = 'Active')"
+					strPayNotRec1 = "SELECT firstname, lastname, email, nameofemployeer, phoneno, coursedetails, dateofenrollment, id, us_status, us_status_addedby FROM classroom_enrolledusers WHERE (checkreceived Is Null OR checkreceived <> 'Yes') AND "& strCountry &" And (us_status Is Null OR us_status = 'Active')"
 		
 					strPayNotRec2 = strPayNotRec1 & " And courseid = '"&objRsCID("courseid")&"'"
 		
@@ -275,23 +275,23 @@ If rqAction = "paymentNotRec" OR rqAction = "paymentRec" Then
 				'If user selects city in the drop down that will come here'
 				If rqCity <> "" Then
 		
-					strPayNotRec = "SELECT firstname, lastname, email, nameofemployeer, phoneno, coursedetails, dateofenrollment, id, us_status, us_status_addedby FROM ITIL_enrolledusers WHERE (checkreceived Is Null OR checkreceived <> 'Yes') AND "& strCountry &" And coursedetails like '%"&searchCity&"%' And (us_status Is Null OR us_status = 'Active')  And ROUND (cast ((datediff (minute,dateofenrollment,getdate()) / 60.0) as FLOAT), 2)  >= 24 ORDER BY id desc"
+					strPayNotRec = "SELECT firstname, lastname, email, nameofemployeer, phoneno, coursedetails, dateofenrollment, id, us_status, us_status_addedby FROM classroom_enrolledusers WHERE (checkreceived Is Null OR checkreceived <> 'Yes') AND "& strCountry &" And coursedetails like '%"&searchCity&"%' And (us_status Is Null OR us_status = 'Active')  And ROUND (cast ((datediff (minute,dateofenrollment,getdate()) / 60.0) as FLOAT), 2)  >= 24 ORDER BY id desc"
 		
 				'If user entered lastname in the serach option that will come here'
 				ElseIf rqName <> "" Then
 		
-					strPayNotRec = "SELECT firstname, lastname, email, nameofemployeer, phoneno, coursedetails, dateofenrollment, id, us_status, us_status_addedby FROM ITIL_enrolledusers WHERE (checkreceived Is Null OR checkreceived <> 'Yes') AND "& strCountry &" And (firstname like '%"&searchName&"%' OR lastname like '%"&searchName&"%' OR email like '%"&searchName&"%') And (us_status Is Null OR us_status = 'Active')  And ROUND (cast ((datediff (minute,dateofenrollment,getdate()) / 60.0) as FLOAT), 2)  >= 24 ORDER BY id desc"
+					strPayNotRec = "SELECT firstname, lastname, email, nameofemployeer, phoneno, coursedetails, dateofenrollment, id, us_status, us_status_addedby FROM classroom_enrolledusers WHERE (checkreceived Is Null OR checkreceived <> 'Yes') AND "& strCountry &" And (firstname like '%"&searchName&"%' OR lastname like '%"&searchName&"%' OR email like '%"&searchName&"%') And (us_status Is Null OR us_status = 'Active')  And ROUND (cast ((datediff (minute,dateofenrollment,getdate()) / 60.0) as FLOAT), 2)  >= 24 ORDER BY id desc"
 		
 				ElseIf rqCity = "" And rqName = "" OR rqWebsite <> "" Then
 		
 		
-				strCourseIds = "SELECT courseid FROM ITIL_course Where startdate >= '"&now()&"'"
+				strCourseIds = "SELECT courseid FROM classroom_course Where startdate >= '"&now()&"'"
 		
 				objRsCID.Open strCourseIds,ConnObj
 		
 				Do Until objRsCID.EOF
 		
-					strPayNotRec1 = "SELECT firstname, lastname, email, nameofemployeer, phoneno, coursedetails, dateofenrollment, id, us_status, us_status_addedby FROM ITIL_enrolledusers WHERE (checkreceived Is Null OR checkreceived <> 'Yes') AND "& strCountry &" And (us_status Is Null OR us_status = 'Active') And ROUND (cast ((datediff (minute,dateofenrollment,getdate()) / 60.0) as FLOAT), 2)  >= 24"
+					strPayNotRec1 = "SELECT firstname, lastname, email, nameofemployeer, phoneno, coursedetails, dateofenrollment, id, us_status, us_status_addedby FROM classroom_enrolledusers WHERE (checkreceived Is Null OR checkreceived <> 'Yes') AND "& strCountry &" And (us_status Is Null OR us_status = 'Active') And ROUND (cast ((datediff (minute,dateofenrollment,getdate()) / 60.0) as FLOAT), 2)  >= 24"
 		
 					strPayNotRec2 = strPayNotRec1 & " And courseid = '"&objRsCID("courseid")&"'"
 		
@@ -316,22 +316,22 @@ If rqAction = "paymentNotRec" OR rqAction = "paymentRec" Then
 		'If user selects city in the drop down that will come here'
 		If rqCity <> "" Then
 
-			strPayNotRec = "SELECT firstname, lastname, email, nameofemployeer, phoneno, coursedetails, dateofenrollment, id, us_status, us_status_addedby FROM ITIL_enrolledusers  WHERE checkreceived = 'Yes' And status = 'Active' AND "& strCountry &" And coursedetails like '%"&searchCity&"%' And (us_status Is Null OR us_status = 'Active') ORDER BY id desc"
+			strPayNotRec = "SELECT firstname, lastname, email, nameofemployeer, phoneno, coursedetails, dateofenrollment, id, us_status, us_status_addedby FROM classroom_enrolledusers  WHERE checkreceived = 'Yes' And status = 'Active' AND "& strCountry &" And coursedetails like '%"&searchCity&"%' And (us_status Is Null OR us_status = 'Active') ORDER BY id desc"
 
 		'If user entered lastname in the serach option that will come here'
 		ElseIf rqName <> "" Then
 
-			strPayNotRec = "SELECT firstname, lastname, email, nameofemployeer, phoneno, coursedetails, dateofenrollment, id, us_status, us_status_addedby FROM ITIL_enrolledusers  WHERE checkreceived = 'Yes' And status = 'Active' AND "& strCountry &" And (firstname like '%"&searchName&"%' OR lastname like '%"&searchName&"%' OR email like '%"&searchName&"%') And (us_status Is Null OR us_status = 'Active') ORDER BY id desc"
+			strPayNotRec = "SELECT firstname, lastname, email, nameofemployeer, phoneno, coursedetails, dateofenrollment, id, us_status, us_status_addedby FROM classroom_enrolledusers  WHERE checkreceived = 'Yes' And status = 'Active' AND "& strCountry &" And (firstname like '%"&searchName&"%' OR lastname like '%"&searchName&"%' OR email like '%"&searchName&"%') And (us_status Is Null OR us_status = 'Active') ORDER BY id desc"
 
 		ElseIf rqCity = "" And rqName = "" OR rqWebsite <> "" Then
 
-		strCourseIds = "SELECT courseid FROM ITIL_course Where startdate >= '"&now()&"'"
+		strCourseIds = "SELECT courseid FROM classroom_course Where startdate >= '"&now()&"'"
 
 		objRsCID.Open strCourseIds,ConnObj
 
 		Do Until objRsCID.EOF
 
-			strPayNotRec1 = "SELECT firstname, lastname, email, nameofemployeer, phoneno, coursedetails, dateofenrollment, id, us_status, us_status_addedby FROM ITIL_enrolledusers WHERE checkreceived = 'Yes' And status = 'Active' AND "& strCountry &" And (us_status Is Null OR us_status = 'Active')"
+			strPayNotRec1 = "SELECT firstname, lastname, email, nameofemployeer, phoneno, coursedetails, dateofenrollment, id, us_status, us_status_addedby FROM classroom_enrolledusers WHERE checkreceived = 'Yes' And status = 'Active' AND "& strCountry &" And (us_status Is Null OR us_status = 'Active')"
 						strPayNotRec2 = strPayNotRec1 & " And courseid = '"&objRsCID("courseid")&"'"
 
 			If strPayNotRec <> "" Then
@@ -419,13 +419,13 @@ If rqAction = "noFollowUp"  Then
 	If rqState <> "" Then
 
 	'Retrive the not follow up calls details based on city search'
-	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM ITIL_callsreceived_new WHERE call_status1 = '1' And callerstate = '"&rqState&"' And "& strCountry &" And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
+	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM callsreceived WHERE call_status1 = '1' And callerstate = '"&rqState&"' And "& strCountry &" And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
 
 	'If user entered name in the serach of No Follow Up calls that will come here'
 	ElseIf rqName <> "" Then
 
 	'Retrive the not follow up calls details based on lastname'
-	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM ITIL_callsreceived_new WHERE call_status1 = '1' And (callername like '%"&searchName&"%' OR emailid like '%"& searchName &"%') And "& strCountry &"  And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
+	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM callsreceived WHERE call_status1 = '1' And (callername like '%"&searchName&"%' OR emailid like '%"& searchName &"%') And "& strCountry &"  And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
 	
 
 	'response.write(strCallDet)
@@ -434,20 +434,20 @@ If rqAction = "noFollowUp"  Then
 	ElseIf Session("TypeOfUser") = "Admin" And rqType = "" Then
 
 	'Retrive the not follow up calls details for all the cities (ADMIN)'
-	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM ITIL_callsreceived_new WHERE call_status1 = '1'  And "& strCountry &" ORDER BY callid desc"
+	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM callsreceived WHERE call_status1 = '1'  And "& strCountry &" ORDER BY callid desc"
 'response.Write(strCallDet)
 	
 
 	ElseIf Session("TypeOfUser") = "Faculty" And rqType = "" Then
 	
 	'Retrive the not follow up calls details '
-	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM ITIL_callsreceived_new WHERE call_status1 = '1' And (callerstate in ("& assignedStates &")  OR addedby = '"& Session("USBUserId") &"') And ("& strCountry &") And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
+	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM callsreceived WHERE call_status1 = '1' And (callerstate in ("& assignedStates &")  OR addedby = '"& Session("USBUserId") &"') And ("& strCountry &") And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
 	
 	'Response.Write(strCallDet)
 		
 	ElseIf Session("TypeOfUser") = "Faculty" And rqType = "Online" Then
 
-	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM ITIL_callsreceived_new WHERE call_status1 = '1'  And (callerstate in ("& assignedStates &")  OR addedby = '"& Session("USBUserId") &"') And ("& strCountry &") And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
+	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM callsreceived WHERE call_status1 = '1'  And (callerstate in ("& assignedStates &")  OR addedby = '"& Session("USBUserId") &"') And ("& strCountry &") And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
 	
 	'Response.Write(strCallDet)
 	
@@ -459,36 +459,36 @@ If rqAction = "noFollowUp"  Then
 	If rqState <> "" Then
 
 	'Retrive the not follow up calls details based on city search'
-	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website,country FROM ITIL_callsreceived_new WHERE call_status1 = '4' And callerstate = '"&rqState&"' And "& strCountry &" And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
+	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website,country FROM callsreceived WHERE call_status1 = '4' And callerstate = '"&rqState&"' And "& strCountry &" And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
 
 	'If user entered name in the serach of Follow Up calls that will come here'
 	ElseIf rqName <> "" Then
 
 	'Retrive the follow up calls details based on lastname'
-	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website,country FROM ITIL_callsreceived_new WHERE call_status1 = '4' And (callername like '%"&searchName&"%' OR emailid like '%"& searchName &"%') And "& strCountry &" And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
+	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website,country FROM callsreceived WHERE call_status1 = '4' And (callername like '%"&searchName&"%' OR emailid like '%"& searchName &"%') And "& strCountry &" And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
 	
 	'If user as a admin, i am showing all the cities'
 	ElseIf Session("TypeOfUser") = "Admin" And rqType = "" Then
 
 	'Retrive the follow up calls details for all the cities (ADMIN)'
-	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website,country FROM ITIL_callsreceived_new WHERE call_status1 = '4'  And "& strCountry &" ORDER BY callid desc"
+	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website,country FROM callsreceived WHERE call_status1 = '4'  And "& strCountry &" ORDER BY callid desc"
 
 	'If user as a admin, i am showing all the cities'
 	ElseIf Session("TypeOfUser") = "Admin" And rqType = "Online" Then
 
 	'Retrive the follow up calls details for all the cities (ADMIN)'
-	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website,country FROM ITIL_callsreceived_new WHERE call_status1 = '4' And "& strCountry &" And callfor = 'Online' ORDER BY callid desc"
+	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website,country FROM callsreceived WHERE call_status1 = '4' And "& strCountry &" And callfor = 'Online' ORDER BY callid desc"
 	
 	ElseIf Session("TypeOfUser") = "Faculty" And rqType = "" Then
 
-	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website,country FROM ITIL_callsreceived_new WHERE call_status1 = '4'  And (callerstate in ("& assignedStates &")  OR addedby = '"& Session("USBUserId") &"') And ("& strCountry &") And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
+	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website,country FROM callsreceived WHERE call_status1 = '4'  And (callerstate in ("& assignedStates &")  OR addedby = '"& Session("USBUserId") &"') And ("& strCountry &") And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
 
 	'Response.Write(strCallDet)
 
 	ElseIf Session("TypeOfUser") = "Faculty" And rqType = "Online" Then
 	
 	'Retrive the not follow up calls details based on city'
-	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website,country FROM ITIL_callsreceived_new WHERE call_status1 = '4'  And (callerstate in ("& assignedStates &")  OR addedby = '"& Session("USBUserId") &"') And ("& strCountry &") And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
+	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website,country FROM callsreceived WHERE call_status1 = '4'  And (callerstate in ("& assignedStates &")  OR addedby = '"& Session("USBUserId") &"') And ("& strCountry &") And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
 	
 	
 	ElseIf rqType = "ByFaculty" Then
@@ -504,7 +504,7 @@ If rqAction = "noFollowUp"  Then
 	Do Until objRsCallID.EOF
 	
 	'Retrive the follow up calls details based on city'
-	strCallDet1 = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website,country FROM ITIL_callsreceived_new WHERE call_status1 = '4' And (call_status2 Is Null OR call_status2 <> 'Dummy')  And "& strCountry &" And callid = '"& objRsCallID("callid") &"'"
+	strCallDet1 = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website,country FROM callsreceived WHERE call_status1 = '4' And (call_status2 Is Null OR call_status2 <> 'Dummy')  And "& strCountry &" And callid = '"& objRsCallID("callid") &"'"
 	
 	If i = 0 Then
 	
@@ -533,17 +533,17 @@ ElseIf rqAction = "followUp" Then
 	If rqState <> "" Then
 
 	'Retrive the not follow up calls details based on city search'
-	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM ITIL_callsreceived_new WHERE call_status1 = '2' And callerstate = '"&rqState&"' And "& strCountry &" And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
+	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM callsreceived WHERE call_status1 = '2' And callerstate = '"&rqState&"' And "& strCountry &" And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
 
 	'If user entered name in the serach of Follow Up calls that will come here'
 	ElseIf rqName <> "" Then
 
 	'Retrive the follow up calls details based on lastname'
-	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM ITIL_callsreceived_new WHERE call_status1 = '2' And (callername like '%"&searchName&"%' OR emailid like '%"& searchName &"%') And "& strCountry &" And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
+	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM callsreceived WHERE call_status1 = '2' And (callername like '%"&searchName&"%' OR emailid like '%"& searchName &"%') And "& strCountry &" And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
 	
 	ElseIf rqcallfor <> "" Then
 	
-	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM ITIL_callsreceived_new WHERE callfor like '%"&rqcallfor&"%' And "& strCountry &"  And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
+	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM callsreceived WHERE callfor like '%"&rqcallfor&"%' And "& strCountry &"  And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
 	
 	'Response.write(strCallDet)
 	
@@ -552,24 +552,24 @@ ElseIf rqAction = "followUp" Then
 	ElseIf Session("TypeOfUser") = "Admin" And rqType = "" Then
 
 	'Retrive the follow up calls details for all the cities (ADMIN)'
-	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM ITIL_callsreceived_new WHERE call_status1 = '2'  And "& strCountry &" ORDER BY callid desc"
+	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM callsreceived WHERE call_status1 = '2'  And "& strCountry &" ORDER BY callid desc"
 
 	'If user as a admin, i am showing all the cities'
 	ElseIf Session("TypeOfUser") = "Admin" And rqType = "Online" Then
 
 	'Retrive the follow up calls details for all the cities (ADMIN)'
-	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM ITIL_callsreceived_new WHERE call_status1 = '2' And "& strCountry &" And callfor = 'Online' ORDER BY callid desc"
+	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM callsreceived WHERE call_status1 = '2' And "& strCountry &" And callfor = 'Online' ORDER BY callid desc"
 	
 	ElseIf Session("TypeOfUser") = "Faculty" And rqType = "" Then
 
-	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM ITIL_callsreceived_new WHERE call_status1 = '2'  And (callerstate in ("& assignedStates &")  OR addedby = '"& Session("USBUserId") &"') And ("& strCountry &") And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
+	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM callsreceived WHERE call_status1 = '2'  And (callerstate in ("& assignedStates &")  OR addedby = '"& Session("USBUserId") &"') And ("& strCountry &") And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
 
 	'Response.Write(strCallDet)
 
 	ElseIf Session("TypeOfUser") = "Faculty" And rqType = "Online" Then
 	
 	'Retrive the not follow up calls details based on city'
-	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM ITIL_callsreceived_new WHERE call_status1 = '2'  And (callerstate in ("& assignedStates &")  OR addedby = '"& Session("USBUserId") &"') And ("& strCountry &") And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
+	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM callsreceived WHERE call_status1 = '2'  And (callerstate in ("& assignedStates &")  OR addedby = '"& Session("USBUserId") &"') And ("& strCountry &") And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
 	
 	
 	ElseIf rqType = "ByFaculty" Then
@@ -585,7 +585,7 @@ ElseIf rqAction = "followUp" Then
 	Do Until objRsCallID.EOF
 	
 	'Retrive the follow up calls details based on city'
-	strCallDet1 = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM ITIL_callsreceived_new WHERE call_status1 = '2' And (call_status2 Is Null OR call_status2 <> 'Dummy')  And "& strCountry &" And callid = '"& objRsCallID("callid") &"'"
+	strCallDet1 = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM callsreceived WHERE call_status1 = '2' And (call_status2 Is Null OR call_status2 <> 'Dummy')  And "& strCountry &" And callid = '"& objRsCallID("callid") &"'"
 	
 	If i = 0 Then
 	
@@ -613,17 +613,17 @@ ElseIf rqAction = "closed" Then
 	If rqState <> "" Then
 
 	'Retrive the closed calls details based on city search'
-	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM ITIL_callsreceived_new WHERE call_status1 = '3' And callerstate = '"&rqState&"'  And "& strCountry &" And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
+	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM callsreceived WHERE call_status1 = '3' And callerstate = '"&rqState&"'  And "& strCountry &" And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
 
 	'If user entered name in the serach of Closed calls that will come here'
 	ElseIf rqName <> "" Then
 
 	'Retrive the Closed calls details based on lastname'
-	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM ITIL_callsreceived_new WHERE call_status1 = '3'  And (callername like '%"&searchName&"%' OR emailid like '%"& searchName &"%')  And "& strCountry &" And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
+	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM callsreceived WHERE call_status1 = '3'  And (callername like '%"&searchName&"%' OR emailid like '%"& searchName &"%')  And "& strCountry &" And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
 	
 	ElseIf rqcallfor <> "" Then
 	
-	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM ITIL_callsreceived_new WHERE callfor like '%"&rqcallfor&"%' And "& strCountry &"  And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
+	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM callsreceived WHERE callfor like '%"&rqcallfor&"%' And "& strCountry &"  And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
 	
 
 	'If user as a admin, i am showing all the cities'
@@ -631,25 +631,25 @@ ElseIf rqAction = "closed" Then
 
 
 	'Retrive the Closed calls details for all the cities (ADMIN)'
-	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM ITIL_callsreceived_new WHERE call_status1 = '3'  And "& strCountry &" ORDER BY callid desc"
+	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM callsreceived WHERE call_status1 = '3'  And "& strCountry &" ORDER BY callid desc"
 	
 	ElseIf Session("TypeOfUser") = "Faculty" And rqType = "" Then
 	
 	'Retrive the Closed calls details based on city'
  	
-	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM ITIL_callsreceived_new WHERE call_status1 = '3'   And (callerstate in ("& assignedStates &")  OR addedby = '"& Session("USBUserId") &"') And ("& strCountry &") And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
+	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM callsreceived WHERE call_status1 = '3'   And (callerstate in ("& assignedStates &")  OR addedby = '"& Session("USBUserId") &"') And ("& strCountry &") And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
 	
 	'response.Write(strCallDet)
 
 	ElseIf Session("TypeOfUser") = "Faculty" And rqType = "Online" Then
 	
 	'Retrive the not follow up calls details based on city'
-	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM ITIL_callsreceived_new WHERE call_status1 = '3'  And (callerstate in ("& assignedStates &")  OR addedby = '"& Session("USBUserId") &"') And ("& strCountry &") And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
+	strCallDet = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM callsreceived WHERE call_status1 = '3'  And (callerstate in ("& assignedStates &")  OR addedby = '"& Session("USBUserId") &"') And ("& strCountry &") And (call_status2 Is Null OR call_status2 <> 'Dummy') ORDER BY callid desc"
 
 	ElseIf rqType = "ByFaculty" Then
 '	
 	'Retriving call ids based on faculty email id'
-	strQuery = "SELECT distinct fcn.callid FROM fac_comments_new fcn, ITIL_callsreceived_new cn  WHERE fcn.comm_addedby = '"& Session("USBUserId") &"'"
+	strQuery = "SELECT distinct fcn.callid FROM fac_comments_new fcn, callsreceived cn  WHERE fcn.comm_addedby = '"& Session("USBUserId") &"'"
 	
 	objRsCallID.Open strQuery, ConnObj
 	
@@ -659,7 +659,7 @@ ElseIf rqAction = "closed" Then
 	Do Until objRsCallID.EOF
 	
 	'Retrive the follow up calls details based on city'
-	strCallDet1 = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM ITIL_callsreceived_new WHERE call_status1 = '3'  And "& strCountry &" And (call_status2 Is Null OR call_status2 <> 'Dummy') And callid = '"& objRsCallID("callid") &"'"
+	strCallDet1 = "SELECT callid, callerstate, city, callername, phoneno, emailid, question, call_status2, addeddate, callfor, website FROM callsreceived WHERE call_status1 = '3'  And "& strCountry &" And (call_status2 Is Null OR call_status2 <> 'Dummy') And callid = '"& objRsCallID("callid") &"'"
 	
 	If i = 0 Then
 	
@@ -1377,7 +1377,7 @@ Set objRs2 = Server.CreateObject("ADODB.Recordset")
 Set objRsMail3 = Server.CreateObject("ADODB.Recordset") 
 Set Rs2 = Server.CreateObject("ADODB.Recordset") 
 
-strSendMail2 = "SELECT id,firstname,lastname,email,nameofemployeer,phoneno,coursedetails,coursedate,amount,dateofenrollment,paybefore,checkreceived,checkreceiveddate,checkreceivedby,status,checkrecmailsent,courseid,country, us_status,rem_mail FROM ITIL_enrolledusers WHERE us_status Is Null AND (country = '"&Session("CRM_Country")&"') AND (checkreceived Is Null OR checkreceived <> 'Yes') And rem_mail Is Null And status <> 'Cancel' And ROUND (cast ((datediff (minute,dateofenrollment,getdate()) / 60.0) as FLOAT), 2)  >= 8"
+strSendMail2 = "SELECT id,firstname,lastname,email,nameofemployeer,phoneno,coursedetails,coursedate,amount,dateofenrollment,paybefore,checkreceived,checkreceiveddate,checkreceivedby,status,checkrecmailsent,courseid,country, us_status,rem_mail FROM classroom_enrolledusers WHERE us_status Is Null AND (country = '"&Session("CRM_Country")&"') AND (checkreceived Is Null OR checkreceived <> 'Yes') And rem_mail Is Null And status <> 'Cancel' And ROUND (cast ((datediff (minute,dateofenrollment,getdate()) / 60.0) as FLOAT), 2)  >= 8"
 
 
 'response.Write(strSendMail2)
@@ -1467,7 +1467,7 @@ Set objCDOMail = Nothing
 
 'After sending reminder mail to student we are updating the rem_mail column in DB with 1
 
-ConnObj.Execute("UPDATE ITIL_enrolledusers SET rem_mail = '1' WHERE id = '"& Id &"'")
+ConnObj.Execute("UPDATE classroom_enrolledusers SET rem_mail = '1' WHERE id = '"& Id &"'")
 
 End If
 
