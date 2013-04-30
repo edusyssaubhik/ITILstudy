@@ -66,6 +66,8 @@ Set RsVAT = Server.CreateObject("ADODB.Recordset")
 	rqCountryOrigin 	= Request.Form("CountryOrigin")
 
 
+    Response.Write rqType
+
 'Checking the VAT is null'
 	
 	If IsNull(rqVAT) or rqVAT = "" Then
@@ -102,6 +104,9 @@ Currency_Format_Front = CurrencyFormat_Front(Session("country"))
 
 Currency_Format_Back = CurrencyFormat_Back(Session("country"))
 
+
+
+'$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Payment Received column from OnlineCourses Page$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
 If rqType = "review" Then
 
 	If  (rqActive = "Yes") Then
@@ -154,30 +159,7 @@ If rqType = "review" Then
      'Response.redirect("OnlineCourses.asp  ?CourseId="&rqCourseId)
 	 
 	 
-'******************** Here starts the updating records in the Refrall module *******************************'	
-	
-	 'Checking user/studnet has an Referral account and updating the payment status as paid in Ref_Account' 
-		  
-		
-		  'Checking user/student is reffred by any one so that user/student get the points'
-           strQuery1 = "SELECT * FROM Ref_Enrollments WHERE EnrollId = '"& rqOnlineEnrollUserId &"'"
-		   
-		   Rs.Open strQuery1,ConnObjRef
-		   
-		   If NOT Rs.EOF Then
-           
-			   RefID = Rs("RefID")
 
-			
-			   'Updating the points'
-	ConnObjRef.Execute "UPDATE Ref_Enrollments SET Dateofpayment = '" & rqPaymentdate & "', EnrollStatus = '2' WHERE EnrollId = '"&rqOnlineEnrollUserId &"' AND RefID = '"& RefID &"' AND Website = 'ITILstudy' AND CourseType = 'Class'"
-			
-			   'Query to check if he is already having points'
-			   
-			  
-           End If
-	       Rs.Close
-'******************** Here Ends updating records in the Refrall module *******************************'		
 
 	  
 	  
@@ -216,7 +198,7 @@ If rqType = "review" Then
 	 End If
 	
 
-	 strQuery1 = "Insert Into ITIL_enrolledusercomments (comment,enteredby,createddate,OnlineEnrollUserId)"
+	 strQuery1 = "Insert Into ITIL_onlineenrolledusercomments (comment,enteredby,createddate,OnlineEnrollUserId)"
 	 strQuery1 = strQuery1 & " Values "
 	 strQuery1 = strQuery1 & "('" & StrQuoteReplace(rqComment) & "',"
 	 strQuery1 = strQuery1 & "'" & Session("UserId") & "',"
@@ -230,6 +212,10 @@ If rqType = "review" Then
     Response.redirect("OnlineCourses.asp?CourseId="&rqCourseId)
 
 	End If
+
+'$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Payment Received column from OnlineCourses Page Ends $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
+ 
+ '$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Status column from OnlineCourses Page starts $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
 
 ElseIf rqType = "status" then
 
@@ -257,12 +243,16 @@ ElseIf rqType = "status" then
 
     Response.Redirect("OnlineCourses.asp?CourseId="&rqCourseId)
 
-ElseIf rqType = "comment" then
 
+ '$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Status column from OnlineCourses Page Ends $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
+
+'*******************************If They Enter comments in OnlineCourses.asp Under comments column it will come here *****************************************************
+ElseIf rqType = "comment" then
+    response.Write("jjdjhdj")
  rqComment  =  Request.Form("notes")
  rqRevLevel =  Session("maxRevLevel")
 
- strQuery1 = "Insert Into ITIL_enrolledusercomments (comment,enteredby,createddate,revlevel,OnlineEnrollUserId)"
+ strQuery1 = "Insert Into ITIL_onlineenrolledusercomments (comment,enteredby,createddate,revlevel,OnlineEnrollUserId)"
  strQuery1 = strQuery1 & " Values "
  strQuery1 = strQuery1 & "('" & StrQuoteReplace(rqComment) & "',"
  strQuery1 = strQuery1 & "'" & Session("UserId") & "',"
@@ -276,6 +266,9 @@ ElseIf rqType = "comment" then
  Response.Redirect("OnlineCourses.asp?CourseId="&rqCourseId)
  
  
+'************************************************************ Entering comments ends *************************************************************************************
+
+
  ElseIf rqType = "comments" then
  
  rqComments  =  Request.Form("notes")
@@ -322,7 +315,8 @@ Conn.Execute "UPDATE ITIL_callsreceived_new SET call_status2 = '" & rqStatus2 & 
  Response.Redirect("enrolments.asp?type=preview&CountryOrigin="&rqaddress_country&"&SrNo="&rqSrNo&"&SrNo2="&rqSrNo2&"")
 
 
-''''''******************************************************************* On selecting Option in Enroll Status Column************************************
+''''******************************************** On selecting Option in Enroll Status Column in OnlineCourses.asp page************************************
+
 ElseIf rqType = "enrollStatus" And POExpectedDate1 = "" Then
 
 	Conn.Execute "UPDATE PayPalDbTest SET us_status = '" & rqEnrollStatus & "', us_status_addedby = '"& Session("UserId") &"' WHERE id = '" & rqOnlineEnrollUserId &"'"

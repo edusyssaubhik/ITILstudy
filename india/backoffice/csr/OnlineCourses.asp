@@ -255,7 +255,7 @@ End If
 
   rqOnlineEnrollUserId = Request.Querystring("OnlineEnrollUserId")
 
-   strQuery5 = "SELECT max(revlevel) FROM ITIL_enrolledusercomments where enrolluserid =  '" & rqOnlineEnrollUserId & "'"
+   strQuery5 = "SELECT max(revlevel) FROM ITIL_onlineenrolledusercomments where OnlineEnrollUserId =  '" & rqOnlineEnrollUserId & "'"
 
    Rs5.Open strQuery5,Conn
 
@@ -1856,7 +1856,7 @@ If session("brand") = "" Then %>
                 <input type="submit" class="buttonc" value="Save">
               </td>
             </form>
-        <td><iframe src="enrollUserComments.asp?OnlineEnrollUserId=<% = arrAllQueries(0,enrollrowcounter) %>" frameborder="0" height="100" scrolling="yes" width="250"> </iframe></td>
+        <td><iframe src="OnlineEnrollUserComments.asp?OnlineEnrollUserId=<% = arrAllQueries(0,enrollrowcounter) %>" frameborder="0" height="100" scrolling="yes" width="250"> </iframe></td>
           
           
         <!--------------------------------------------- Enroll Status ------------------------------------------------------------->  
