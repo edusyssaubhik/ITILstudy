@@ -1,4 +1,4 @@
-<%@ Language = "VBScript" %>
+﻿<%@ Language = "VBScript" %>
 <%
  'Written By : Bharath'
  'Created Date: 12/11/2007'
@@ -132,7 +132,7 @@ rqType = Request.QueryString("type")
 
  subject="Payment Receipt: " & City & " program"
 
-  body = "<table width=""100%"" bordrer=""1"" bgcolor=""#CCCCCC"" style=""margin:0px;0px;0px;0px;""><tr><td height=""45px"">&nbsp;</td></tr><tr><td><table width=""600"" border=""0"" align=""center"" cellpadding=""2"" cellspacing=""12"" bgcolor=""#FFFFFF""><tr><td width=""600px"" bgcolor=""#FFFFFF""><span><img src=""http://www.itilstudy.com/images/banners/Email-Header.jpg"" alt=""ITILstudy"" width=""600px"" height=""103"" /></span></td></tr>"
+  body = "<table width=""100%"" bordrer=""1"" bgcolor=""#CCCCCC"" style=""margin:0px;0px;0px;0px;""><tr><td height=""45px"">&nbsp;</td></tr><tr><td><table width=""600"" border=""0"" align=""center"" cellpadding=""2"" cellspacing=""12"" bgcolor=""#FFFFFF""><tr><td width=""600px"" bgcolor=""#FFFFFF""><span><img src=""http://www.itilstudy.com/images/banners/Email-Header.jpg"" alt=""MyITstudy"" width=""600px"" height=""103"" /></span></td></tr>"
   body = body & "<tr><td><table align=""center"" border=""0"" width=""580px""><tr><td align=""center""><font face=""Arial"" size=""3"" color=""#0359b4""><b>"
    If (Session("country") = "United Kingdom") Then
   body = body & "VAT Invoice (Payment Receipt)" 
@@ -153,10 +153,10 @@ rqType = Request.QueryString("type")
   body = body & "<tr><td align=""left""><font face=""Arial"" size=""2"">Email : " & Session("EmailId") & " </font></td></tr>"
   body = body & "<tr><td align=""left""><font face=""Arial"" size=""2"">Phone Number : " & Session("PhoneNo") & "</font></td></tr>"
   body = body & "<tr><td align=""left""><font face=""Arial"" size=""2"">Name of Employer/Business : " & Session("NameOfEmployer") & "</font></td></tr>"
-  body = body & "<tr><td align=""left""><br><font face=""Arial"" size=""2"">Thank you for enrolling in ITILstudy.com Classroom Training Program.</font></td></tr>"
+  body = body & "<tr><td align=""left""><br><font face=""Arial"" size=""2"">Thank you for enrolling in MyITstudy.com Classroom Training Program.</font></td></tr>"
   body = body & "<tr><td align=""left"" colspan=""2""><br><font face=""Arial"" size=""2"">Details of your course and Payment:</font><br><table border=""1"" cellspacing=""0"" align=""center"" width=""570px"">"
   body = body & "<tr><td width=""60%""><b><font face=""Arial"" size=""3"" color=""#0359b4"">Details</font></b></td><td width=""15%"" align=""center""><b><font face=""Arial"" size=""3"" color=""#0359b4"">Payment</font></b></td></tr>"
-  body = body & "<tr><td><font face=""Arial"" size=""2""><b>ITIL Classroom Training Program"
+  body = body & "<tr><td><font face=""Arial"" size=""2""><b>MyITstudy ITIL Classroom Training Program"
  ' If Session("country") = "India" Then 
 '  body = body & "2 "
 '  Else 
@@ -195,22 +195,22 @@ rqType = Request.QueryString("type")
   End If
   End If
     
-  body = body & "<tr><td align=""left"" colspan=""2"" align=""center""><br><font face=""Arial"" color = ""green"" size=""3""><b>We look forward to having you as a delegate with ITILstudy.com!!!</b></font></td></tr>"
-  body = body & "<tr><td align=""left"" colspan=""2""><font face=""Arial"" size=""2""><br>We acknowledge with thanks receipt of your cheque number -------------- dated ----------- towards the course fee for ITILstudy Classroom Training Program  to be held on <b>"& FormatDateTime(StartDate,1) &"</b></font></td></tr>"
-  body = body & "<tr><td align=""left"" colspan=""2""><font face=""Arial"" size=""2""><br>For ITILstudy Classroom Training Program terms and conditions, please visit the link - <a href=""http://www.itilstudy.com/termsAndConditions.asp"" target=""_blank"">http://www.itilstudy.com/termsAndConditions.asp</a>.</font></td></tr>"
+  body = body & "<tr><td align=""left"" colspan=""2"" align=""center""><br><font face=""Arial"" color = ""green"" size=""3""><b>We look forward to having you as a delegate with MyITstudy.com!!!</b></font></td></tr>"
+  body = body & "<tr><td align=""left"" colspan=""2""><font face=""Arial"" size=""2""><br>We acknowledge with thanks receipt of your cheque number -------------- dated ----------- towards the course fee for MyITstudy Classroom Training Program  to be held on <b>"& FormatDateTime(StartDate,1) &"</b></font></td></tr>"
+  body = body & "<tr><td align=""left"" colspan=""2""><font face=""Arial"" size=""2""><br>For MyITstudy  Classroom Training Program terms and conditions, please visit the link - <a href=""http://www.myitstudy.com/termsAndConditions.asp"" target=""_blank"">http://www.myitstudy.com/termsAndConditions.asp</a>.</font></td></tr>"
    
    If Session("country") <> "India" Then
 	
-   body = body & "<tr><td align=""left"" colspan=""2""><br> <a href=""https://www.facebook.com/ITILstudy/app_128953167177144"" target=""_blank"">Stay connected to get more from ITILstudy on Facebook</a>.</td></tr>"
+   body = body & "<tr><td align=""left"" colspan=""2""><br> <a href=""https://www.facebook.com/ITILstudy/app_128953167177144"" target=""_blank"">Stay connected to get more from MyITstudy  on Facebook</a>.</td></tr>"
    End If
-  body = body & "<tr><td align=""left"" colspan=""2""><font face=""Arial"" size=""2""><br>We look forward to your participation in our ITILstudy Classroom Training Program.</font></td></tr>"  
+  body = body & "<tr><td align=""left"" colspan=""2""><font face=""Arial"" size=""2""><br>We look forward to your participation in our MyITstudy  Classroom Training Program.</font></td></tr>"  
   
  
   body = body & "<tr><td colspan=""3""><br><font face=""Arial"" size=2><b>Best Regards,</b></td></tr>"
   
   body = body & "<tr><td colspan=""3""><br><font face=""Arial"" size=2>Customer Support</td></tr>"
   
-  body = body & "<tr><td colspan=""3""><font face=""Arial"" size=2>ITILstudy.com</td></tr></table></td></tr><tr height=""30px""><td align=""center""><font face=""Arial"" size=2 style=""color:#808080"">"
+  body = body & "<tr><td colspan=""3""><font face=""Arial"" size=2>MyITstudy.com</td></tr></table></td></tr><tr height=""30px""><td align=""center""><font face=""Arial"" size=2 style=""color:#808080"">"
    If (Session("country") = "United Kingdom" ) Then
   body = body & "Edusys Services Pvt. Ltd.<br>29th Floor | One Canada Square | Canary Wharf | London - E14 5DY | United Kingdom"
   ElseIf (Session("country") = "India" ) Then
@@ -276,9 +276,9 @@ if rqType = "sendmail" Then
 	objCDOMail.To =  rqSendEmail
 	
 	'If Session("country") = "India" Then
-	objCDOMail.Cc = "marketing@itilstudy.com"
+	objCDOMail.Cc = "studyitil@myitstudy.com"
 	'Else
-	'objCDOMail.Cc = "marketing@itilstudy.com"
+	'objCDOMail.Cc = "studyitil@myitstudy.com"
 	'End If
 	
 	objCDOMail.Bcc = "satpathyt@gmail.com, edusysgaurav@gmail.com, edusysayan@gmail.com, itilstudyleadershipteam@googlegroups.com,edusysayan@gmail.com,edusysamandeep@gmail.com"
@@ -324,7 +324,7 @@ if rqType = "sendmail" Then
 	
 	
 	
-	strBody = strBody & "<table width=""100%"" bgcolor=""#CCCCCC"" style=""margin:0px;0px;0px;0px;""><tr><td>&nbsp;</td></tr><tr><td><table width=""500px"" border=""0"" align=""center"" cellpadding=""2"" cellspacing=""12"" bgcolor=""#FFFFFF""><tr><td width=""595px"" bgcolor=""#FFFFFF""><span><img src=""http://www.itilstudy.com/images/banners/Email-Header.jpg"" alt=""ITILstudy"" width=""600px"" height=""103"" /></span></td></tr><tr><td><table width=""600px"" border=""0"" align=""center"" cellpadding=""2"" cellspacing=""12""><tr><td><font face=""Arial"" size=""2"">Dear " & Session("FirstName") & " " & Session("Lastname") & ",<br><br>Thank you for choosing ITILstudy - the leading ITIL Exam Prep training provider. <br><br>While you embark on your journey, we invite you to our industry leading referral program. You can now help your friends/colleagues to get the best of exam prep training for the prestigious ITIL certification while both you and your friends/colleagues earn attractive rewards along the way. And the benefits are unlimited � you can refer as many friends/colleagues as you want!<br/><br/><b>Here is how the referral scheme works:</b><br/><br/>If a friend/colleague you refer to ITILstudy completes the ITIL Exam Prep classroom course with us, within 6 months of receiving this email, you will earn gift voucher, from <a href=""http://www.amazon.com"" target=_blank >www.amazon.com</a>, worth <b>$50 and your friend</b> will get a <b>discount of $50</b> on the classroom program fee.<br/><br/>Once your friend/colleague completes the classroom program, you will receive the gift voucher.<br/><br/>All you have to do is click <a href = ""http://www.ITILstudy.com/refer-friends.asp?refEmail="&rqSendEmail&""" target = ""_blank"">here</a>  to refer your friends/colleagues or share this link with them through email, Twitter, or Facebook or LinkedIn: <b>http://www.ITILstudy.com/referral.asp?tag="&GenTag&"</b><br/><br/><b>Remember</b>: Your friend/colleague should use the above link to enroll to get the referral benefits. For terms and conditions, <a href=""/termsAndConditions.asp"" target=""_blank""> please click here.</a><br/><br/>If you have any questions, feel free to email us at <a href=""mailto:marketing@ITILstudy.com"">marketing@ITILstudy.com</a>.<br/><br/>Best Regards,<br/><br/>Marketing Team<br/>www.ITILstudy.com</td></tr></table></td></tr></table></td></tr></table>"
+	strBody = strBody & "<table width=""100%"" bgcolor=""#CCCCCC"" style=""margin:0px;0px;0px;0px;""><tr><td>&nbsp;</td></tr><tr><td><table width=""500px"" border=""0"" align=""center"" cellpadding=""2"" cellspacing=""12"" bgcolor=""#FFFFFF""><tr><td width=""595px"" bgcolor=""#FFFFFF""><span><img src=""http://www.itilstudy.com/images/banners/Email-Header.jpg"" alt=""MyITstudy"" width=""600px"" height=""103"" /></span></td></tr><tr><td><table width=""600px"" border=""0"" align=""center"" cellpadding=""2"" cellspacing=""12""><tr><td><font face=""Arial"" size=""2"">Dear " & Session("FirstName") & " " & Session("Lastname") & ",<br><br>Thank you for choosing MyITstudy - the leading MyITstudy ITIL Exam Prep training provider. <br><br>While you embark on your journey, we invite you to our industry leading referral program. You can now help your friends/colleagues to get the best of exam prep training for the prestigious MyITstudy ITIL certification while both you and your friends/colleagues earn attractive rewards along the way. And the benefits are unlimited – you can refer as many friends/colleagues as you want!<br/><br/><b>Here is how the referral scheme works:</b><br/><br/>If a friend/colleague you refer to MyITstudy completes the MyITstudy ITIL Exam Prep classroom course with us, within 6 months of receiving this email, you will earn gift voucher, from <a href=""http://www.amazon.com"" target=_blank >www.amazon.com</a>, worth <b>$50 and your friend</b> will get a <b>discount of $50</b> on the classroom program fee.<br/><br/>Once your friend/colleague completes the classroom program, you will receive the gift voucher.<br/><br/>All you have to do is click <a href = ""http://www.ITILstudy.com/refer-friends.asp?refEmail="&rqSendEmail&""" target = ""_blank"">here</a>  to refer your friends/colleagues or share this link with them through email, Twitter, or Facebook or LinkedIn: <b>http://www.ITILstudy.com/referral.asp?tag="&GenTag&"</b><br/><br/><b>Remember</b>: Your friend/colleague should use the above link to enroll to get the referral benefits. For terms and conditions, <a href=""/termsAndConditions.asp"" target=""_blank""> please click here.</a><br/><br/>If you have any questions, feel free to email us at <a href=""mailto:marketing@ITILstudy.com"">marketing@ITILstudy.com</a>.<br/><br/>Best Regards,<br/><br/>Marketing Team<br/>www.MyITstudy.com</td></tr></table></td></tr></table></td></tr></table>"
 
    ' response.Write(strBody)
 	
@@ -333,13 +333,13 @@ if rqType = "sendmail" Then
 	objCDOMail.To =  rqSendEmail
 	'If Session("country") is India then cc send to salesindia@ITILstudy.com otherwise send to marketing@ITILstudy.com'
 	If Session("country") = "India" Then
-	objCDOMail.Cc = "salesindia@ITILstudy.com,edusysayan@gmail.com,edusysamandeep@gmail.com"
+	objCDOMail.Cc = "salesindia@ITILstudy.com,edusysayan@gmail.com,edusysamandeep@gmail.com,studyitil@myitstudy.com"
 	Else
-	objCDOMail.Cc = "marketing@ITILstudy.com"
+	objCDOMail.Cc = "studyitil@myitstudy.com"
 	End If
     objCDOMail.BCC = "edusysayan@gmail.com,edusysamandeep@gmail.com"
 	objCDOMail.Importance = 2
-	objCDOMail.Subject = "About ITILstudy's referral program"
+	objCDOMail.Subject = "About MyITstudy's referral program"
 	objCDOMail.BodyFormat = 0
 	objCDOMail.MailFormat = 0
 	objCDOMail.Body = strBody
