@@ -1,5 +1,4 @@
-<%@ Language = "VBScript" %>
-<% 'OPTION EXPLICIT %>
+
 <% 
    If Session("UserId")  = "" Then
     Response.Redirect("login.asp")

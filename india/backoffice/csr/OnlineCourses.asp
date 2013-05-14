@@ -961,7 +961,7 @@ End If
 
         if (theform.changestatus.value == "Re-Schedule") {
 
-            newWindow = window.open('reScheduledCourses.asp?courseDate=' + courseDate + '&OnlineEnrollUserId=' + enrolledUserId, 'myWindow', 'toolbar,scrollbars,location,status=yes,menubar,resizable,minimizable=0,width=800,height=333,left = 175,top = 140');
+            newWindow = window.open('OnlineReScheduledCourses.asp?courseDate=' + courseDate + '&OnlineEnrollUserId=' + enrolledUserId, 'myWindow', 'toolbar,scrollbars,location,status=yes,menubar,resizable,minimizable=0,width=800,height=333,left = 175,top = 140');
 
         }
     }
@@ -1799,7 +1799,7 @@ If session("brand") = "" Then %>
           <% If  (arrAllQueries(65,enrollrowcounter)  = "Dummy") Then%>
           Dummy Enrollment
           <% Else %>
-          <form name="form1" action="reScheduledCourses.asp" method="post" onsubmit="return Form_Validator5(this)">
+          <form name="form1" action="OnlineReScheduledCourses.asp" method="post" onsubmit="return Form_Validator5(this)">
               <input type="hidden" name="OnlineEnrollUserId" value="<% = arrAllQueries(0,enrollrowcounter) %>">
               <input type="hidden" name="enrollUserFirstName" value="<% = arrAllQueries(1,enrollrowcounter) %>">
               <input type="hidden" name="enrollUserLastName" value="<% = arrAllQueries(2,enrollrowcounter) %>">
@@ -1818,22 +1818,18 @@ If session("brand") = "" Then %>
 			  <% = arrAllQueries(15,enrollrowcounter) %>
 			  <% End If %>
 			  <br /><br />
-           <select name="changestatus" >
-                         <option value="">--Select--</option>
-               <option value="Cancel">Cancel</option>
-               <option value="Re-Schedule">Re-Schedule</option>
-			   	<option value="MBG">MBG</option>
-                      <% If arrAllQueries(57,enrollrowcounter) <> "Re-Schedule Not Confirmed" Then %>
-                               <option value="Re-Schedule Not Confirmed">Re-Schedule Not Confirmed</option>
-               <% ElseIf arrAllQueries(57,enrollrowcounter) = "Re-Schedule Not Confirmed" Then %>
-               <option value="Active">Reinstate</option>
-                               <% End if %>
-                               
+
+             <select name="changestatus" >              
+             <option value="">--Select--</option>
+             <option value="Cancel">Cancel</option>
+             <option value="Re-Schedule">Extend</option>
+			 <option value="MBG">MBG</option>                                                   
              </select><br /><br />
+
               <input type="Submit" class="buttonc"  Value="Change status">
               
               <% Else %>
-            <% = arrAllQueries(57,enrollrowcounter) %>
+             <% = arrAllQueries(57,enrollrowcounter) %>
               <br />
               <% = arrAllQueries(15,enrollrowcounter) %>
             <% End if %>
