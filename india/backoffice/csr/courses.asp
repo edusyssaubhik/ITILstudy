@@ -1136,7 +1136,7 @@ function update(a){
               <option value="CSI">CSI Course</option>
               <option value="ST">Service Transition</option>
               <option value="SS"> Service Strategy</option>
-
+              <option value="SS"> Service Strategy - Live</option>
                  <%' End If %>   
             </select>
           </td>
@@ -1380,6 +1380,7 @@ function update(a){
                   <option <% If Rs4("coursetype") = "CSI" Then %> selected="selected" <% End If %> value="CSI">CSI Course</option>
                    <option <% If Rs4("coursetype") = "ST" Then %> selected="selected" <% End If %> value="ST">Service Transition</option>
                    <option <% If Rs4("coursetype") = "SS" Then %> selected="selected" <% End If %> value="SS"> Service Strategy</option>
+                    <option <% If Rs4("coursetype") = "SS-Live" Then %> selected="selected" <% End If %> value="SS-Live"> Service Strategy - Live</option>
                   <%' End If %>          
             </select>
           </td>
