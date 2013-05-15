@@ -1136,7 +1136,13 @@ function update(a){
               <option value="CSI">CSI Course</option>
               <option value="ST">Service Transition</option>
               <option value="SS"> Service Strategy</option>
-              <option value="SS"> Service Strategy - Live</option>
+              <option value="SS-Live"> Service Strategy - Live</option>
+                 <option value="Corporate-SO">Corporate-SO</option>
+               <option value="Corporate-SS">Corporate-SS</option>
+               <option value="Corporate-SD">Corporate-SD</option>
+                   <option value="Corporate-ST"> Corporate-ST</option>
+                <option value="Corporate-CSI">Corporate-CSI</option>
+
                  <%' End If %>   
             </select>
           </td>
@@ -1381,6 +1387,16 @@ function update(a){
                    <option <% If Rs4("coursetype") = "ST" Then %> selected="selected" <% End If %> value="ST">Service Transition</option>
                    <option <% If Rs4("coursetype") = "SS" Then %> selected="selected" <% End If %> value="SS"> Service Strategy</option>
                     <option <% If Rs4("coursetype") = "SS-Live" Then %> selected="selected" <% End If %> value="SS-Live"> Service Strategy - Live</option>
+                <option <% If Rs4("coursetype") = "Corporate-SO" Then %> selected="selected" <% End If %> value="Corporate-SO">Corporate-SO</option>
+                  <option <% If Rs4("coursetype") = "Corporate-SS" Then %> selected="selected" <% End If %> value="Corporate-SS">Corporate-SS
+</option>
+                   <option <% If Rs4("coursetype") = "Corporate-SD" Then %> selected="selected" <% End If %> value="Corporate-SD">Corporate-SD
+</option>
+                   <option <% If Rs4("coursetype") = "Corporate-ST" Then %> selected="selected" <% End If %> value="Corporate-ST">Corporate-ST
+</option>
+                   <option <% If Rs4("coursetype") = "Corporate-CSI" Then %> selected="selected" <% End If %> value="Corporate-CSI"> Corporate-CSI
+</option>
+
                   <%' End If %>          
             </select>
           </td>
@@ -1701,7 +1717,21 @@ function update(a){
              3 Day Live
              <% ElseIf (arrAllRecords(5,rowcounter) = "SS") Then %>
              Service Strategy 
-              
+             <% ElseIf (arrAllRecords(5,rowcounter) = "SS-Live") Then %>
+             Service Strategy-Live
+           
+                  <% ElseIf (arrAllRecords(5,rowcounter) = "Corporate-SO") Then %>
+              corporate class-SO
+               <% ElseIf (arrAllRecords(5,rowcounter) = "Corporate-SS") Then %>
+              corporate class-SS 
+              <% ElseIf (arrAllRecords(5,rowcounter) = "Corporate-SD") Then %>
+              corporate class-SD 
+              <% ElseIf  (arrAllRecords(5,rowcounter) = "Corporate-ST") Then %>
+              corporate class-ST 
+               <% ElseIf  (arrAllRecords(5,rowcounter) = "Corporate-CSI") Then %>
+              corporate class-CSI 
+           
+                
               <% Else %>
               Normal ITIL Course
               <% End If %>
@@ -1794,7 +1824,18 @@ function update(a){
               2 Day Live
                <% ElseIf  (Rs1("coursetype") = "3day-live") Then %>
              3 Day Live
-               <% Else %>
+                              <% ElseIf (Rs1("coursetype") = "Corporate-SO") Then %>
+              corporate class-SO
+               <% ElseIf (Rs1("coursetype") = "Corporate-SS") Then %>
+              corporate class-SS 
+              <% ElseIf (Rs1("coursetype") = "Corporate-SD") Then %>
+              corporate class-SD 
+              <% ElseIf  (Rs1("coursetype") = "Corporate-ST") Then %>
+              corporate class-ST 
+              <% ElseIf  (Rs1("coursetype") = "Corporate-CSI") Then %>
+              corporate class-CSI 
+
+                  <% Else %>
                
               Normal ITIL Course
               <% End If %>
@@ -2335,6 +2376,7 @@ function update(a){
 </html>
 <!--#include virtual="/includes/connectionCloseGlobal.asp"-->
 <%
+
  Rs.Close
  Rs1.Close
  Rs2.Close

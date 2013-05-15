@@ -17,8 +17,9 @@ Set Rs = Server.CreateObject("ADODB.Recordset")
 'Conn.Open "Provider = SQLOLEDB; Data Source=PSATPATHY-PC\SQLEXPRESS; Initial Catalog=ITILstudy; User Id=raju; Password=raju123#"
 
 'Conn.Open "Provider = SQLOLEDB; Data Source=db.winwinhosting.com; Initial Catalog=itilstudy; User Id=itilstudy; Password=nQ7R9lzDzLCMuh"
+    Conn.Open "Provider=SQLOLEDB;Data Source=SAUBHIK-PC; Initial Catalog=itilstudy; User Id=sa; Password=saubhik1@"
 
-Conn.Open "Provider=SQLOLEDB;Data Source=Madhava-vaio; Initial Catalog=ITILstudy_DB; User Id=sa; Password=madhava"
+'Conn.Open "Provider=SQLOLEDB;Data Source=Madhava-vaio; Initial Catalog=ITILstudy_DB; User Id=sa; Password=madhava"
 
 
 %>
