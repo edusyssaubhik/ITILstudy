@@ -1142,7 +1142,7 @@ function update(a){
                <option value="Corporate-SD">Corporate-SD</option>
                    <option value="Corporate-ST"> Corporate-ST</option>
                 <option value="Corporate-CSI">Corporate-CSI</option>
-
+                <option value="Corporate-MALC">Corporate-MALC</option>
                  <%' End If %>   
             </select>
           </td>
@@ -1396,7 +1396,8 @@ function update(a){
 </option>
                    <option <% If Rs4("coursetype") = "Corporate-CSI" Then %> selected="selected" <% End If %> value="Corporate-CSI"> Corporate-CSI
 </option>
-
+                 <option <% If Rs4("coursetype") = "Corporate-MALC" Then %> selected="selected" <% End If %> value="Corporate-MALC"> Corporate-MALC
+</option>
                   <%' End If %>          
             </select>
           </td>
@@ -1730,6 +1731,8 @@ function update(a){
               corporate class-ST 
                <% ElseIf  (arrAllRecords(5,rowcounter) = "Corporate-CSI") Then %>
               corporate class-CSI 
+            <% ElseIf  (arrAllRecords(5,rowcounter) = "Corporate-MALC") Then %>
+              corporate class-MALC
            
                 
               <% Else %>
@@ -1834,7 +1837,8 @@ function update(a){
               corporate class-ST 
               <% ElseIf  (Rs1("coursetype") = "Corporate-CSI") Then %>
               corporate class-CSI 
-
+                   <% ElseIf  (Rs1("coursetype") = "Corporate-MALC") Then %>
+              corporate class-MALC 
                   <% Else %>
                
               Normal ITIL Course
